@@ -395,6 +395,7 @@ Partial Class Form3
         Label136 = New Label()
         Label149 = New Label()
         pnlSummaryReport = New Panel()
+        Label152 = New Label()
         DataGridView4 = New DataGridView()
         DataGridView3 = New DataGridView()
         pnlOverallSummary20 = New roundedpanel()
@@ -457,7 +458,6 @@ Partial Class Form3
         pnlDataModel2 = New Panel()
         pnlDataModel1 = New Panel()
         pnlCompleted = New Panel()
-        Label152 = New Label()
         Panel1.SuspendLayout()
         CType(picSummary, ComponentModel.ISupportInitialize).BeginInit()
         CType(picVisitIcon, ComponentModel.ISupportInitialize).BeginInit()
@@ -1161,10 +1161,10 @@ Partial Class Form3
         txtSearchStudentID1.Cursor = Cursors.IBeam
         txtSearchStudentID1.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtSearchStudentID1.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtSearchStudentID1.Location = New Point(214, 111)
+        txtSearchStudentID1.Location = New Point(237, 111)
         txtSearchStudentID1.Multiline = True
         txtSearchStudentID1.Name = "txtSearchStudentID1"
-        txtSearchStudentID1.Size = New Size(432, 38)
+        txtSearchStudentID1.Size = New Size(409, 38)
         txtSearchStudentID1.TabIndex = 116
         ' 
         ' dgvStudentSearch
@@ -1962,11 +1962,11 @@ Partial Class Form3
         ' Label17
         ' 
         Label17.AutoSize = True
-        Label17.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label17.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label17.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         Label17.Location = New Point(28, 114)
         Label17.Name = "Label17"
-        Label17.Size = New Size(182, 28)
+        Label17.Size = New Size(204, 31)
         Label17.TabIndex = 222
         Label17.Text = "Enter Name or ID:"
         ' 
@@ -2006,12 +2006,12 @@ Partial Class Form3
         ' lblInternshipId
         ' 
         lblInternshipId.AutoSize = True
-        lblInternshipId.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblInternshipId.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblInternshipId.Location = New Point(28, 114)
         lblInternshipId.Name = "lblInternshipId"
-        lblInternshipId.Size = New Size(179, 28)
+        lblInternshipId.Size = New Size(204, 31)
         lblInternshipId.TabIndex = 215
-        lblInternshipId.Text = "Enter Name or Id:"
+        lblInternshipId.Text = "Enter Name or ID:"
         ' 
         ' btnSearch4
         ' 
@@ -2090,10 +2090,10 @@ Partial Class Form3
         txtSearchID4.Cursor = Cursors.IBeam
         txtSearchID4.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         txtSearchID4.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID4.Location = New Point(214, 111)
+        txtSearchID4.Location = New Point(237, 111)
         txtSearchID4.Multiline = True
         txtSearchID4.Name = "txtSearchID4"
-        txtSearchID4.Size = New Size(432, 38)
+        txtSearchID4.Size = New Size(409, 38)
         txtSearchID4.TabIndex = 116
         ' 
         ' Label47
@@ -2449,10 +2449,10 @@ Partial Class Form3
         txtSearchID5.Cursor = Cursors.IBeam
         txtSearchID5.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtSearchID5.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID5.Location = New Point(214, 111)
+        txtSearchID5.Location = New Point(237, 111)
         txtSearchID5.Multiline = True
         txtSearchID5.Name = "txtSearchID5"
-        txtSearchID5.Size = New Size(432, 38)
+        txtSearchID5.Size = New Size(409, 38)
         txtSearchID5.TabIndex = 116
         ' 
         ' Label74
@@ -2470,13 +2470,13 @@ Partial Class Form3
         ' lblEvaluationID
         ' 
         lblEvaluationID.AutoSize = True
-        lblEvaluationID.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblEvaluationID.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblEvaluationID.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         lblEvaluationID.Location = New Point(28, 114)
         lblEvaluationID.Name = "lblEvaluationID"
-        lblEvaluationID.Size = New Size(179, 28)
+        lblEvaluationID.Size = New Size(204, 31)
         lblEvaluationID.TabIndex = 219
-        lblEvaluationID.Text = "Enter Name or Id:"
+        lblEvaluationID.Text = "Enter Name or ID:"
         ' 
         ' pnlCompanyInformation
         ' 
@@ -3338,7 +3338,7 @@ Partial Class Form3
         pnlEditCompanyContactRecord.Controls.Add(txtPosition13)
         pnlEditCompanyContactRecord.Controls.Add(txtCompanyContactID13)
         pnlEditCompanyContactRecord.CornerRadius = 10
-        pnlEditCompanyContactRecord.Location = New Point(541, 78)
+        pnlEditCompanyContactRecord.Location = New Point(940, 61)
         pnlEditCompanyContactRecord.Name = "pnlEditCompanyContactRecord"
         pnlEditCompanyContactRecord.Size = New Size(415, 750)
         pnlEditCompanyContactRecord.TabIndex = 233
@@ -3615,7 +3615,7 @@ Partial Class Form3
         pnlAddNewCompanyContactRecord.Controls.Add(txtPosition12)
         pnlAddNewCompanyContactRecord.Controls.Add(txtCompanyContactID12)
         pnlAddNewCompanyContactRecord.CornerRadius = 10
-        pnlAddNewCompanyContactRecord.Location = New Point(114, 82)
+        pnlAddNewCompanyContactRecord.Location = New Point(510, 61)
         pnlAddNewCompanyContactRecord.Name = "pnlAddNewCompanyContactRecord"
         pnlAddNewCompanyContactRecord.Size = New Size(398, 750)
         pnlAddNewCompanyContactRecord.TabIndex = 230
@@ -3954,10 +3954,10 @@ Partial Class Form3
         txtSearchID11.Cursor = Cursors.IBeam
         txtSearchID11.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtSearchID11.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID11.Location = New Point(214, 111)
+        txtSearchID11.Location = New Point(238, 111)
         txtSearchID11.Multiline = True
         txtSearchID11.Name = "txtSearchID11"
-        txtSearchID11.Size = New Size(432, 38)
+        txtSearchID11.Size = New Size(408, 38)
         txtSearchID11.TabIndex = 116
         ' 
         ' Label102
@@ -3975,11 +3975,11 @@ Partial Class Form3
         ' Label144
         ' 
         Label144.AutoSize = True
-        Label144.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label144.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label144.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         Label144.Location = New Point(28, 114)
         Label144.Name = "Label144"
-        Label144.Size = New Size(182, 28)
+        Label144.Size = New Size(204, 31)
         Label144.TabIndex = 234
         Label144.Text = "Enter Name or ID:"
         ' 
@@ -4478,7 +4478,7 @@ Partial Class Form3
         ' 
         ' btnAdd14
         ' 
-        btnAdd14.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnAdd14.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnAdd14.FlatAppearance.BorderSize = 0
         btnAdd14.FlatStyle = FlatStyle.Flat
         btnAdd14.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
@@ -4493,7 +4493,7 @@ Partial Class Form3
         ' 
         ' btnEdit14
         ' 
-        btnEdit14.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnEdit14.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnEdit14.FlatAppearance.BorderSize = 0
         btnEdit14.FlatStyle = FlatStyle.Flat
         btnEdit14.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
@@ -4508,7 +4508,7 @@ Partial Class Form3
         ' 
         ' btnDelete14
         ' 
-        btnDelete14.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnDelete14.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnDelete14.FlatAppearance.BorderSize = 0
         btnDelete14.FlatStyle = FlatStyle.Flat
         btnDelete14.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
@@ -4598,10 +4598,10 @@ Partial Class Form3
         txtSearchID14.Cursor = Cursors.IBeam
         txtSearchID14.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtSearchID14.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtSearchID14.Location = New Point(214, 111)
+        txtSearchID14.Location = New Point(237, 111)
         txtSearchID14.Multiline = True
         txtSearchID14.Name = "txtSearchID14"
-        txtSearchID14.Size = New Size(432, 38)
+        txtSearchID14.Size = New Size(409, 38)
         txtSearchID14.TabIndex = 116
         ' 
         ' Label121
@@ -4620,13 +4620,13 @@ Partial Class Form3
         ' 
         Label148.AutoSize = True
         Label148.BackColor = Color.Transparent
-        Label148.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label148.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label148.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         Label148.Location = New Point(28, 114)
         Label148.Name = "Label148"
-        Label148.Size = New Size(173, 30)
+        Label148.Size = New Size(204, 31)
         Label148.TabIndex = 236
-        Label148.Text = "Enter Faculty ID:"
+        Label148.Text = "Enter Name or ID:"
         ' 
         ' pnlVisitInformation
         ' 
@@ -5267,13 +5267,13 @@ Partial Class Form3
         ' 
         Label149.AutoSize = True
         Label149.BackColor = Color.Transparent
-        Label149.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label149.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label149.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         Label149.Location = New Point(28, 114)
         Label149.Name = "Label149"
-        Label149.Size = New Size(173, 30)
+        Label149.Size = New Size(160, 31)
         Label149.TabIndex = 237
-        Label149.Text = "Enter Faculty ID:"
+        Label149.Text = "Enter Visit ID:"
         ' 
         ' pnlSummaryReport
         ' 
@@ -5293,6 +5293,18 @@ Partial Class Form3
         pnlSummaryReport.Name = "pnlSummaryReport"
         pnlSummaryReport.Size = New Size(1529, 902)
         pnlSummaryReport.TabIndex = 236
+        ' 
+        ' Label152
+        ' 
+        Label152.AutoSize = True
+        Label152.BackColor = Color.Transparent
+        Label152.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label152.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label152.Location = New Point(28, 114)
+        Label152.Name = "Label152"
+        Label152.Size = New Size(204, 31)
+        Label152.TabIndex = 240
+        Label152.Text = "Enter Name or ID:"
         ' 
         ' DataGridView4
         ' 
@@ -5390,10 +5402,10 @@ Partial Class Form3
         txtSearchID20.Cursor = Cursors.IBeam
         txtSearchID20.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         txtSearchID20.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID20.Location = New Point(214, 111)
+        txtSearchID20.Location = New Point(237, 111)
         txtSearchID20.Multiline = True
         txtSearchID20.Name = "txtSearchID20"
-        txtSearchID20.Size = New Size(432, 38)
+        txtSearchID20.Size = New Size(409, 38)
         txtSearchID20.TabIndex = 116
         ' 
         ' Label153
@@ -6045,32 +6057,20 @@ Partial Class Form3
         pnlCompleted.Size = New Size(340, 310)
         pnlCompleted.TabIndex = 269
         ' 
-        ' Label152
-        ' 
-        Label152.AutoSize = True
-        Label152.BackColor = Color.Transparent
-        Label152.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label152.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label152.Location = New Point(28, 114)
-        Label152.Name = "Label152"
-        Label152.Size = New Size(190, 30)
-        Label152.TabIndex = 240
-        Label152.Text = "Enter Name or ID:"
-        ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1902, 1033)
-        Controls.Add(pnlSummaryReport)
         Controls.Add(pnlVisitInformation)
-        Controls.Add(pnlFacultyInformation)
-        Controls.Add(pnlCompanyInformation)
-        Controls.Add(pnlCompanyContactInformation)
+        Controls.Add(pnlSummaryReport)
         Controls.Add(pnlStudentInformation)
-        Controls.Add(pnlEvaluationInformation)
         Controls.Add(pnlInternshipInformation)
+        Controls.Add(pnlCompanyContactInformation)
+        Controls.Add(pnlCompanyInformation)
+        Controls.Add(pnlEvaluationInformation)
+        Controls.Add(pnlFacultyInformation)
         Controls.Add(Panel1)
         Controls.Add(pnlHeader)
         Controls.Add(Label6)
