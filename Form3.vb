@@ -26,6 +26,15 @@ Public Class Form3
         btnStudents.FlatAppearance.MouseDownBackColor = Color.Honeydew
         btnStudents.BackColor = Color.FromArgb(188, 221, 203)
 
+        'Panel add Edit Location - STUDENT
+        'Add
+        pnlAddNewStudentRecord.Location = New Point(90, 78)
+        pnlAddNewStudentRecord.Size = New Size(1100, 750)
+        'Edit
+        pnlEditStudentRecord.Location = New Point(90, 78)
+        pnlEditStudentRecord.Size = New Size(1100, 750)
+
+        'For buttons
         hidePanel()
 
 
@@ -1556,6 +1565,9 @@ Public Class Form3
     Private Sub picStudentIcon_Click(sender As Object, e As EventArgs) Handles picStudentIcon.Click
 
     End Sub
+
+
+
 
 
 
