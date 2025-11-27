@@ -25,13 +25,8 @@ Partial Class Form4
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         dgvCompanyLogs8 = New DataGridView()
         Label80 = New Label()
-        pnlAddNewInternshipRecord = New roundedpanel()
-        pnlEditInternshipEvaluationRecord = New roundedpanel()
-        btnSearch7 = New RoundedButton()
-        btnCancel7 = New RoundedButton()
         txtSearchID7 = New TextBox()
         Label19 = New Label()
-        btnEdit7 = New RoundedButton()
         txtFacultyID7 = New TextBox()
         Label20 = New Label()
         Label22 = New Label()
@@ -42,9 +37,7 @@ Partial Class Form4
         txtEvaluationReport7 = New TextBox()
         txtInternshipID7 = New TextBox()
         txtEvaluationID7 = New TextBox()
-        btnCancel6 = New RoundedButton()
         Label64 = New Label()
-        btnAdd6 = New RoundedButton()
         txtFacultyID6 = New TextBox()
         Label65 = New Label()
         Label66 = New Label()
@@ -57,49 +50,27 @@ Partial Class Form4
         txtEvaluationID6 = New TextBox()
         lblTotalRecords5 = New Label()
         txtSearchID8 = New TextBox()
-        btnAdd5 = New RoundedButton()
-        btnEdit5 = New RoundedButton()
-        btnDelete5 = New RoundedButton()
-        btnSearch5 = New RoundedButton()
         Label57 = New Label()
-        pnlAddNewCompanyandCompanyContact = New roundedpanel()
-        btnAddCompanyContact8 = New RoundedButton()
-        btnAddCompany8 = New RoundedButton()
         Label62 = New Label()
-        Roundedpanel6 = New roundedpanel()
-        Roundedpanel7 = New roundedpanel()
-        RoundedButton9 = New RoundedButton()
-        RoundedButton10 = New RoundedButton()
         Label82 = New Label()
-        Roundedpanel4 = New roundedpanel()
-        Roundedpanel5 = New roundedpanel()
         pnlDataModel1 = New Panel()
         txtEmail9 = New TextBox()
         Label54 = New Label()
         txtContactNumber9 = New TextBox()
-        pnlAddNewCompanyRecord = New roundedpanel()
         Label53 = New Label()
         txtAddress9 = New TextBox()
-        btnCancel9 = New RoundedButton()
         Label61 = New Label()
-        btnAdd9 = New RoundedButton()
         txtIndustryType9 = New TextBox()
         Label63 = New Label()
         Label71 = New Label()
         Label75 = New Label()
         txtCompanyName9 = New TextBox()
         txtCompanyID9 = New TextBox()
-        pnlEditCompanyCompanyContact = New roundedpanel()
-        btnAdd8 = New RoundedButton()
-        btnEdit8 = New RoundedButton()
-        btnDelete8 = New RoundedButton()
-        btnSearch8 = New RoundedButton()
         lblTotalRecords8 = New Label()
         Label78 = New Label()
         Label79 = New Label()
         dgvCompanyFiles8 = New DataGridView()
         Label72 = New Label()
-        RoundedButton6 = New RoundedButton()
         ComboBox4 = New ComboBox()
         Label39 = New Label()
         TextBox8 = New TextBox()
@@ -108,19 +79,13 @@ Partial Class Form4
         Label41 = New Label()
         Label42 = New Label()
         Label43 = New Label()
-        RoundedButton1 = New RoundedButton()
-        RoundedButton2 = New RoundedButton()
-        RoundedButton7 = New RoundedButton()
         TextBox2 = New TextBox()
-        RoundedButton8 = New RoundedButton()
-        RoundedButton3 = New RoundedButton()
         pnlCompleted = New Panel()
         pnlDataModel2 = New Panel()
         pnlOnGoing = New Panel()
         OpenFileDialog1 = New OpenFileDialog()
         Label56 = New Label()
         Label29 = New Label()
-        RoundedButton4 = New RoundedButton()
         ComboBox1 = New ComboBox()
         Label30 = New Label()
         TextBox3 = New TextBox()
@@ -144,7 +109,6 @@ Partial Class Form4
         dgvEvaluationLogs5 = New DataGridView()
         txtSearchID5 = New TextBox()
         Label74 = New Label()
-        btnSearch4 = New RoundedButton()
         lblTotalRecords4 = New Label()
         Label45 = New Label()
         dgvInternshipFiles4 = New DataGridView()
@@ -152,25 +116,17 @@ Partial Class Form4
         dgvInternshipLogs4 = New DataGridView()
         Label38 = New Label()
         txtSearchID4 = New TextBox()
-        Roundedpanel1 = New roundedpanel()
-        Roundedpanel2 = New roundedpanel()
         ComboBox2 = New ComboBox()
         Label37 = New Label()
         TextBox5 = New TextBox()
         ComboBox3 = New ComboBox()
         TextBox6 = New TextBox()
         TextBox7 = New TextBox()
-        RoundedButton5 = New RoundedButton()
         dgvEvaluationFiles5 = New DataGridView()
         Label47 = New Label()
         Label24 = New Label()
-        pnlAddNewStudentRecord = New roundedpanel()
-        pnlEditStudentRecord = New roundedpanel()
-        btnSearch3 = New RoundedButton()
         txtSearchID3 = New TextBox()
-        btnCancel3 = New RoundedButton()
         Label7 = New Label()
-        btnEdit3 = New RoundedButton()
         cmbProgram3 = New ComboBox()
         Label11 = New Label()
         txtContactNumber3 = New TextBox()
@@ -187,9 +143,7 @@ Partial Class Form4
         cmbGender3 = New ComboBox()
         txtFName3 = New TextBox()
         txtStudentID3 = New TextBox()
-        btnCancel2 = New RoundedButton()
         Label5 = New Label()
-        btnAdd2 = New RoundedButton()
         cmbProgram2 = New ComboBox()
         Label4 = New Label()
         txtContactNumber2 = New TextBox()
@@ -206,21 +160,10 @@ Partial Class Form4
         txtFName2 = New TextBox()
         txtStudentID2 = New TextBox()
         txtCompanyID10 = New TextBox()
-        btnImport1 = New RoundedButton()
-        btnAdd1 = New RoundedButton()
-        btnSummaryReport = New RoundedButton()
-        btnVisitLog = New RoundedButton()
-        btnFaculty = New RoundedButton()
-        btnCompany = New RoundedButton()
-        btnEvaluation = New RoundedButton()
-        btnInternships = New RoundedButton()
-        btnStudents = New RoundedButton()
-        btnHome = New RoundedButton()
         PictureBox1 = New PictureBox()
         Panel1 = New Panel()
         Label6 = New Label()
         pnlTtotalInterns = New Panel()
-        btnLogout = New RoundedButton()
         pnlHeader = New Panel()
         PictureBox3 = New PictureBox()
         pctBox2 = New PictureBox()
@@ -231,9 +174,6 @@ Partial Class Form4
         lblSignInAs = New Label()
         pctBoxHide1 = New PictureBox()
         pctBoxExit1 = New PictureBox()
-        btnEdit1 = New RoundedButton()
-        btnDelete1 = New RoundedButton()
-        btnSearch1 = New RoundedButton()
         lblTotalRecords1 = New Label()
         Label10 = New Label()
         dgvStudentFiles1 = New DataGridView()
@@ -241,8 +181,6 @@ Partial Class Form4
         dgvStudentLogs1 = New DataGridView()
         txtSearchStudentID1 = New TextBox()
         Label9 = New Label()
-        pnlEditCompanyRecord = New roundedpanel()
-        btnSearch10 = New RoundedButton()
         txtSearchID10 = New TextBox()
         Label58 = New Label()
         txtEmail10 = New TextBox()
@@ -250,39 +188,31 @@ Partial Class Form4
         txtContactNumber10 = New TextBox()
         Label60 = New Label()
         txtAddress10 = New TextBox()
-        btnCancel10 = New RoundedButton()
         Label67 = New Label()
-        btnEdit10 = New RoundedButton()
         txtIndustryType10 = New TextBox()
         Label76 = New Label()
         Label77 = New Label()
         Label81 = New Label()
         txtCompanyName10 = New TextBox()
         pnlCompanyLogs = New Panel()
+        pnlCompanyContactLogs = New Panel()
+        lblTotalRecords11 = New Label()
+        Label100 = New Label()
+        dgvCompanyContactFiles = New DataGridView()
+        Label101 = New Label()
+        dgvCompanyContactLogs11 = New DataGridView()
+        txtSearchID11 = New TextBox()
+        Label102 = New Label()
         pnlEvaluaionLogs = New Panel()
         pnlInternshipLogs = New Panel()
         pnlStudentLogs = New Panel()
-        Label102 = New Label()
-        txtSearchID11 = New TextBox()
-        dgvCompanyContactLogs11 = New DataGridView()
-        Label101 = New Label()
-        dgvCompanyContactFiles = New DataGridView()
-        Label100 = New Label()
-        lblTotalRecords11 = New Label()
-        btnSearch11 = New RoundedButton()
-        btnDelete11 = New RoundedButton()
-        btnEdit11 = New RoundedButton()
-        btnAdd11 = New RoundedButton()
-        pnlAddNewCompanyContactRecord = New roundedpanel()
         txtCompanyContactID12 = New TextBox()
         txtPosition12 = New TextBox()
         Label89 = New Label()
         Label88 = New Label()
         Label87 = New Label()
         txtLName12 = New TextBox()
-        btnAdd12 = New RoundedButton()
         Label86 = New Label()
-        btnCancel = New RoundedButton()
         txtCompany12 = New TextBox()
         Label85 = New Label()
         txtFName12 = New TextBox()
@@ -291,9 +221,6 @@ Partial Class Form4
         Label90 = New Label()
         txtContactNumber12 = New TextBox()
         Label83 = New Label()
-        pnlCompanyContactLogs = New Panel()
-        Roundedpanel3 = New roundedpanel()
-        RoundedButton20 = New RoundedButton()
         TextBox26 = New TextBox()
         Label126 = New Label()
         TextBox19 = New TextBox()
@@ -301,9 +228,7 @@ Partial Class Form4
         TextBox20 = New TextBox()
         Label128 = New Label()
         TextBox21 = New TextBox()
-        RoundedButton14 = New RoundedButton()
         Label129 = New Label()
-        RoundedButton15 = New RoundedButton()
         TextBox22 = New TextBox()
         Label130 = New Label()
         Label131 = New Label()
@@ -311,20 +236,11 @@ Partial Class Form4
         TextBox23 = New TextBox()
         TextBox24 = New TextBox()
         CType(dgvCompanyLogs8, ComponentModel.ISupportInitialize).BeginInit()
-        pnlAddNewInternshipRecord.SuspendLayout()
-        pnlEditInternshipEvaluationRecord.SuspendLayout()
-        pnlAddNewCompanyandCompanyContact.SuspendLayout()
-        pnlAddNewCompanyRecord.SuspendLayout()
-        pnlEditCompanyCompanyContact.SuspendLayout()
         CType(dgvCompanyFiles8, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvEvaluationLogs5, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).BeginInit()
-        Roundedpanel1.SuspendLayout()
-        Roundedpanel2.SuspendLayout()
         CType(dgvEvaluationFiles5, ComponentModel.ISupportInitialize).BeginInit()
-        pnlAddNewStudentRecord.SuspendLayout()
-        pnlEditStudentRecord.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         pnlHeader.SuspendLayout()
@@ -335,16 +251,13 @@ Partial Class Form4
         CType(pctBoxExit1, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvStudentFiles1, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvStudentLogs1, ComponentModel.ISupportInitialize).BeginInit()
-        pnlEditCompanyRecord.SuspendLayout()
         pnlCompanyLogs.SuspendLayout()
+        pnlCompanyContactLogs.SuspendLayout()
+        CType(dgvCompanyContactFiles, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvCompanyContactLogs11, ComponentModel.ISupportInitialize).BeginInit()
         pnlEvaluaionLogs.SuspendLayout()
         pnlInternshipLogs.SuspendLayout()
         pnlStudentLogs.SuspendLayout()
-        CType(dgvCompanyContactLogs11, ComponentModel.ISupportInitialize).BeginInit()
-        CType(dgvCompanyContactFiles, ComponentModel.ISupportInitialize).BeginInit()
-        pnlAddNewCompanyContactRecord.SuspendLayout()
-        pnlCompanyContactLogs.SuspendLayout()
-        Roundedpanel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' dgvCompanyLogs8
@@ -369,81 +282,6 @@ Partial Class Form4
         Label80.TabIndex = 114
         Label80.Text = "COMPANY LOGS"
         ' 
-        ' pnlAddNewInternshipRecord
-        ' 
-        pnlAddNewInternshipRecord.BackColor = Color.WhiteSmoke
-        pnlAddNewInternshipRecord.Controls.Add(pnlEditInternshipEvaluationRecord)
-        pnlAddNewInternshipRecord.Controls.Add(btnCancel6)
-        pnlAddNewInternshipRecord.Controls.Add(Label64)
-        pnlAddNewInternshipRecord.Controls.Add(btnAdd6)
-        pnlAddNewInternshipRecord.Controls.Add(txtFacultyID6)
-        pnlAddNewInternshipRecord.Controls.Add(Label65)
-        pnlAddNewInternshipRecord.Controls.Add(Label66)
-        pnlAddNewInternshipRecord.Controls.Add(Label68)
-        pnlAddNewInternshipRecord.Controls.Add(Label69)
-        pnlAddNewInternshipRecord.Controls.Add(cmbStatus6)
-        pnlAddNewInternshipRecord.Controls.Add(Label70)
-        pnlAddNewInternshipRecord.Controls.Add(txtEvaluationReport6)
-        pnlAddNewInternshipRecord.Controls.Add(txtInternshipID6)
-        pnlAddNewInternshipRecord.Controls.Add(txtEvaluationID6)
-        pnlAddNewInternshipRecord.CornerRadius = 10
-        pnlAddNewInternshipRecord.Location = New Point(71, 128)
-        pnlAddNewInternshipRecord.Name = "pnlAddNewInternshipRecord"
-        pnlAddNewInternshipRecord.Size = New Size(1383, 730)
-        pnlAddNewInternshipRecord.TabIndex = 218
-        ' 
-        ' pnlEditInternshipEvaluationRecord
-        ' 
-        pnlEditInternshipEvaluationRecord.BackColor = Color.WhiteSmoke
-        pnlEditInternshipEvaluationRecord.Controls.Add(btnSearch7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(btnCancel7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtSearchID7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label19)
-        pnlEditInternshipEvaluationRecord.Controls.Add(btnEdit7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtFacultyID7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label20)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label22)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label23)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label50)
-        pnlEditInternshipEvaluationRecord.Controls.Add(cmbStatus7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label52)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtEvaluationReport7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtInternshipID7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtEvaluationID7)
-        pnlEditInternshipEvaluationRecord.CornerRadius = 10
-        pnlEditInternshipEvaluationRecord.Location = New Point(1, 1)
-        pnlEditInternshipEvaluationRecord.Name = "pnlEditInternshipEvaluationRecord"
-        pnlEditInternshipEvaluationRecord.Size = New Size(1383, 730)
-        pnlEditInternshipEvaluationRecord.TabIndex = 221
-        ' 
-        ' btnSearch7
-        ' 
-        btnSearch7.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnSearch7.FlatAppearance.BorderSize = 0
-        btnSearch7.FlatStyle = FlatStyle.Flat
-        btnSearch7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnSearch7.ForeColor = Color.White
-        btnSearch7.Location = New Point(1206, 56)
-        btnSearch7.Name = "btnSearch7"
-        btnSearch7.Size = New Size(132, 38)
-        btnSearch7.TabIndex = 224
-        btnSearch7.Text = "SEARCH"
-        btnSearch7.UseVisualStyleBackColor = False
-        ' 
-        ' btnCancel7
-        ' 
-        btnCancel7.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnCancel7.FlatAppearance.BorderSize = 0
-        btnCancel7.FlatStyle = FlatStyle.Flat
-        btnCancel7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnCancel7.ForeColor = Color.White
-        btnCancel7.Location = New Point(1073, 648)
-        btnCancel7.Name = "btnCancel7"
-        btnCancel7.Size = New Size(132, 51)
-        btnCancel7.TabIndex = 220
-        btnCancel7.Text = "CANCEL"
-        btnCancel7.UseVisualStyleBackColor = False
-        ' 
         ' txtSearchID7
         ' 
         txtSearchID7.Cursor = Cursors.IBeam
@@ -467,20 +305,6 @@ Partial Class Form4
         Label19.Size = New Size(120, 30)
         Label19.TabIndex = 203
         Label19.Text = "Faculty ID*"
-        ' 
-        ' btnEdit7
-        ' 
-        btnEdit7.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnEdit7.FlatAppearance.BorderSize = 0
-        btnEdit7.FlatStyle = FlatStyle.Flat
-        btnEdit7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnEdit7.ForeColor = Color.White
-        btnEdit7.Location = New Point(1211, 648)
-        btnEdit7.Name = "btnEdit7"
-        btnEdit7.Size = New Size(132, 51)
-        btnEdit7.TabIndex = 219
-        btnEdit7.Text = "EDIT"
-        btnEdit7.UseVisualStyleBackColor = False
         ' 
         ' txtFacultyID7
         ' 
@@ -547,7 +371,7 @@ Partial Class Form4
         cmbStatus7.FormattingEnabled = True
         cmbStatus7.Location = New Point(144, 544)
         cmbStatus7.Name = "cmbStatus7"
-        cmbStatus7.Size = New Size(471, 39)
+        cmbStatus7.Size = New Size(471, 40)
         cmbStatus7.TabIndex = 196
         ' 
         ' Label52
@@ -595,20 +419,6 @@ Partial Class Form4
         txtEvaluationID7.Size = New Size(471, 38)
         txtEvaluationID7.TabIndex = 191
         ' 
-        ' btnCancel6
-        ' 
-        btnCancel6.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnCancel6.FlatAppearance.BorderSize = 0
-        btnCancel6.FlatStyle = FlatStyle.Flat
-        btnCancel6.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnCancel6.ForeColor = Color.White
-        btnCancel6.Location = New Point(1073, 648)
-        btnCancel6.Name = "btnCancel6"
-        btnCancel6.Size = New Size(132, 51)
-        btnCancel6.TabIndex = 220
-        btnCancel6.Text = "CANCEL"
-        btnCancel6.UseVisualStyleBackColor = False
-        ' 
         ' Label64
         ' 
         Label64.AutoSize = True
@@ -620,20 +430,6 @@ Partial Class Form4
         Label64.Size = New Size(120, 30)
         Label64.TabIndex = 203
         Label64.Text = "Faculty ID*"
-        ' 
-        ' btnAdd6
-        ' 
-        btnAdd6.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAdd6.FlatAppearance.BorderSize = 0
-        btnAdd6.FlatStyle = FlatStyle.Flat
-        btnAdd6.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnAdd6.ForeColor = Color.White
-        btnAdd6.Location = New Point(1211, 648)
-        btnAdd6.Name = "btnAdd6"
-        btnAdd6.Size = New Size(132, 51)
-        btnAdd6.TabIndex = 219
-        btnAdd6.Text = "ADD"
-        btnAdd6.UseVisualStyleBackColor = False
         ' 
         ' txtFacultyID6
         ' 
@@ -700,7 +496,7 @@ Partial Class Form4
         cmbStatus6.FormattingEnabled = True
         cmbStatus6.Location = New Point(144, 544)
         cmbStatus6.Name = "cmbStatus6"
-        cmbStatus6.Size = New Size(471, 39)
+        cmbStatus6.Size = New Size(471, 40)
         cmbStatus6.TabIndex = 196
         ' 
         ' Label70
@@ -772,62 +568,6 @@ Partial Class Form4
         txtSearchID8.TabIndex = 116
         txtSearchID8.Text = "Search Student ID"
         ' 
-        ' btnAdd5
-        ' 
-        btnAdd5.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAdd5.FlatAppearance.BorderSize = 0
-        btnAdd5.FlatStyle = FlatStyle.Flat
-        btnAdd5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnAdd5.ForeColor = Color.White
-        btnAdd5.Location = New Point(1082, 819)
-        btnAdd5.Name = "btnAdd5"
-        btnAdd5.Size = New Size(132, 51)
-        btnAdd5.TabIndex = 216
-        btnAdd5.Text = "ADD"
-        btnAdd5.UseVisualStyleBackColor = False
-        ' 
-        ' btnEdit5
-        ' 
-        btnEdit5.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnEdit5.FlatAppearance.BorderSize = 0
-        btnEdit5.FlatStyle = FlatStyle.Flat
-        btnEdit5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnEdit5.ForeColor = Color.White
-        btnEdit5.Location = New Point(1220, 819)
-        btnEdit5.Name = "btnEdit5"
-        btnEdit5.Size = New Size(132, 51)
-        btnEdit5.TabIndex = 215
-        btnEdit5.Text = "EDIT"
-        btnEdit5.UseVisualStyleBackColor = False
-        ' 
-        ' btnDelete5
-        ' 
-        btnDelete5.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnDelete5.FlatAppearance.BorderSize = 0
-        btnDelete5.FlatStyle = FlatStyle.Flat
-        btnDelete5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnDelete5.ForeColor = Color.White
-        btnDelete5.Location = New Point(1358, 818)
-        btnDelete5.Name = "btnDelete5"
-        btnDelete5.Size = New Size(132, 51)
-        btnDelete5.TabIndex = 214
-        btnDelete5.Text = "DELETE"
-        btnDelete5.UseVisualStyleBackColor = False
-        ' 
-        ' btnSearch5
-        ' 
-        btnSearch5.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnSearch5.FlatAppearance.BorderSize = 0
-        btnSearch5.FlatStyle = FlatStyle.Flat
-        btnSearch5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnSearch5.ForeColor = Color.White
-        btnSearch5.Location = New Point(491, 98)
-        btnSearch5.Name = "btnSearch5"
-        btnSearch5.Size = New Size(132, 38)
-        btnSearch5.TabIndex = 213
-        btnSearch5.Text = "SEARCH"
-        btnSearch5.UseVisualStyleBackColor = False
-        ' 
         ' Label57
         ' 
         Label57.AutoSize = True
@@ -839,48 +579,6 @@ Partial Class Form4
         Label57.Size = New Size(76, 30)
         Label57.TabIndex = 226
         Label57.Text = "Email*"
-        ' 
-        ' pnlAddNewCompanyandCompanyContact
-        ' 
-        pnlAddNewCompanyandCompanyContact.BackColor = Color.WhiteSmoke
-        pnlAddNewCompanyandCompanyContact.Controls.Add(btnAddCompanyContact8)
-        pnlAddNewCompanyandCompanyContact.Controls.Add(btnAddCompany8)
-        pnlAddNewCompanyandCompanyContact.Controls.Add(Label62)
-        pnlAddNewCompanyandCompanyContact.Controls.Add(Roundedpanel6)
-        pnlAddNewCompanyandCompanyContact.Controls.Add(Roundedpanel7)
-        pnlAddNewCompanyandCompanyContact.CornerRadius = 40
-        pnlAddNewCompanyandCompanyContact.Location = New Point(441, 302)
-        pnlAddNewCompanyandCompanyContact.Name = "pnlAddNewCompanyandCompanyContact"
-        pnlAddNewCompanyandCompanyContact.Size = New Size(565, 340)
-        pnlAddNewCompanyandCompanyContact.TabIndex = 217
-        ' 
-        ' btnAddCompanyContact8
-        ' 
-        btnAddCompanyContact8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAddCompanyContact8.FlatAppearance.BorderSize = 0
-        btnAddCompanyContact8.FlatStyle = FlatStyle.Flat
-        btnAddCompanyContact8.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
-        btnAddCompanyContact8.ForeColor = Color.White
-        btnAddCompanyContact8.Location = New Point(90, 210)
-        btnAddCompanyContact8.Name = "btnAddCompanyContact8"
-        btnAddCompanyContact8.Size = New Size(378, 90)
-        btnAddCompanyContact8.TabIndex = 220
-        btnAddCompanyContact8.Text = "COMPANY CONTACT"
-        btnAddCompanyContact8.UseVisualStyleBackColor = False
-        ' 
-        ' btnAddCompany8
-        ' 
-        btnAddCompany8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAddCompany8.FlatAppearance.BorderSize = 0
-        btnAddCompany8.FlatStyle = FlatStyle.Flat
-        btnAddCompany8.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnAddCompany8.ForeColor = Color.White
-        btnAddCompany8.Location = New Point(90, 87)
-        btnAddCompany8.Name = "btnAddCompany8"
-        btnAddCompany8.Size = New Size(378, 90)
-        btnAddCompany8.TabIndex = 219
-        btnAddCompany8.Text = "COMPANY"
-        btnAddCompany8.UseVisualStyleBackColor = False
         ' 
         ' Label62
         ' 
@@ -894,52 +592,6 @@ Partial Class Form4
         Label62.TabIndex = 218
         Label62.Text = "ADD NEW RECORD"
         ' 
-        ' Roundedpanel6
-        ' 
-        Roundedpanel6.BackColor = Color.FromArgb(CByte(164), CByte(210), CByte(185))
-        Roundedpanel6.CornerRadius = 20
-        Roundedpanel6.Location = New Point(83, 203)
-        Roundedpanel6.Name = "Roundedpanel6"
-        Roundedpanel6.Size = New Size(394, 104)
-        Roundedpanel6.TabIndex = 218
-        ' 
-        ' Roundedpanel7
-        ' 
-        Roundedpanel7.BackColor = Color.FromArgb(CByte(164), CByte(210), CByte(185))
-        Roundedpanel7.CornerRadius = 20
-        Roundedpanel7.Location = New Point(83, 81)
-        Roundedpanel7.Name = "Roundedpanel7"
-        Roundedpanel7.Size = New Size(394, 104)
-        Roundedpanel7.TabIndex = 219
-        ' 
-        ' RoundedButton9
-        ' 
-        RoundedButton9.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton9.FlatAppearance.BorderSize = 0
-        RoundedButton9.FlatStyle = FlatStyle.Flat
-        RoundedButton9.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
-        RoundedButton9.ForeColor = Color.White
-        RoundedButton9.Location = New Point(90, 210)
-        RoundedButton9.Name = "RoundedButton9"
-        RoundedButton9.Size = New Size(378, 90)
-        RoundedButton9.TabIndex = 220
-        RoundedButton9.Text = "COMPANY CONTACT"
-        RoundedButton9.UseVisualStyleBackColor = False
-        ' 
-        ' RoundedButton10
-        ' 
-        RoundedButton10.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton10.FlatAppearance.BorderSize = 0
-        RoundedButton10.FlatStyle = FlatStyle.Flat
-        RoundedButton10.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        RoundedButton10.ForeColor = Color.White
-        RoundedButton10.Location = New Point(90, 87)
-        RoundedButton10.Name = "RoundedButton10"
-        RoundedButton10.Size = New Size(378, 90)
-        RoundedButton10.TabIndex = 219
-        RoundedButton10.Text = "COMPANY"
-        RoundedButton10.UseVisualStyleBackColor = False
-        ' 
         ' Label82
         ' 
         Label82.AutoSize = True
@@ -951,24 +603,6 @@ Partial Class Form4
         Label82.Size = New Size(190, 37)
         Label82.TabIndex = 218
         Label82.Text = "EDIT RECORD"
-        ' 
-        ' Roundedpanel4
-        ' 
-        Roundedpanel4.BackColor = Color.FromArgb(CByte(164), CByte(210), CByte(185))
-        Roundedpanel4.CornerRadius = 20
-        Roundedpanel4.Location = New Point(83, 203)
-        Roundedpanel4.Name = "Roundedpanel4"
-        Roundedpanel4.Size = New Size(394, 104)
-        Roundedpanel4.TabIndex = 218
-        ' 
-        ' Roundedpanel5
-        ' 
-        Roundedpanel5.BackColor = Color.FromArgb(CByte(164), CByte(210), CByte(185))
-        Roundedpanel5.CornerRadius = 20
-        Roundedpanel5.Location = New Point(83, 81)
-        Roundedpanel5.Name = "Roundedpanel5"
-        Roundedpanel5.Size = New Size(394, 104)
-        Roundedpanel5.TabIndex = 219
         ' 
         ' pnlDataModel1
         ' 
@@ -1012,30 +646,6 @@ Partial Class Form4
         txtContactNumber9.Size = New Size(471, 38)
         txtContactNumber9.TabIndex = 223
         ' 
-        ' pnlAddNewCompanyRecord
-        ' 
-        pnlAddNewCompanyRecord.BackColor = Color.WhiteSmoke
-        pnlAddNewCompanyRecord.Controls.Add(Label57)
-        pnlAddNewCompanyRecord.Controls.Add(txtEmail9)
-        pnlAddNewCompanyRecord.Controls.Add(Label54)
-        pnlAddNewCompanyRecord.Controls.Add(txtContactNumber9)
-        pnlAddNewCompanyRecord.Controls.Add(Label53)
-        pnlAddNewCompanyRecord.Controls.Add(txtAddress9)
-        pnlAddNewCompanyRecord.Controls.Add(btnCancel9)
-        pnlAddNewCompanyRecord.Controls.Add(Label61)
-        pnlAddNewCompanyRecord.Controls.Add(btnAdd9)
-        pnlAddNewCompanyRecord.Controls.Add(txtIndustryType9)
-        pnlAddNewCompanyRecord.Controls.Add(Label63)
-        pnlAddNewCompanyRecord.Controls.Add(Label71)
-        pnlAddNewCompanyRecord.Controls.Add(Label75)
-        pnlAddNewCompanyRecord.Controls.Add(txtCompanyName9)
-        pnlAddNewCompanyRecord.Controls.Add(txtCompanyID9)
-        pnlAddNewCompanyRecord.CornerRadius = 10
-        pnlAddNewCompanyRecord.Location = New Point(95, 130)
-        pnlAddNewCompanyRecord.Name = "pnlAddNewCompanyRecord"
-        pnlAddNewCompanyRecord.Size = New Size(1383, 730)
-        pnlAddNewCompanyRecord.TabIndex = 221
-        ' 
         ' Label53
         ' 
         Label53.AutoSize = True
@@ -1059,20 +669,6 @@ Partial Class Form4
         txtAddress9.Size = New Size(471, 38)
         txtAddress9.TabIndex = 221
         ' 
-        ' btnCancel9
-        ' 
-        btnCancel9.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnCancel9.FlatAppearance.BorderSize = 0
-        btnCancel9.FlatStyle = FlatStyle.Flat
-        btnCancel9.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnCancel9.ForeColor = Color.White
-        btnCancel9.Location = New Point(1075, 648)
-        btnCancel9.Name = "btnCancel9"
-        btnCancel9.Size = New Size(132, 51)
-        btnCancel9.TabIndex = 220
-        btnCancel9.Text = "CANCEL"
-        btnCancel9.UseVisualStyleBackColor = False
-        ' 
         ' Label61
         ' 
         Label61.AutoSize = True
@@ -1084,20 +680,6 @@ Partial Class Form4
         Label61.Size = New Size(158, 30)
         Label61.TabIndex = 203
         Label61.Text = "Industry Type*"
-        ' 
-        ' btnAdd9
-        ' 
-        btnAdd9.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAdd9.FlatAppearance.BorderSize = 0
-        btnAdd9.FlatStyle = FlatStyle.Flat
-        btnAdd9.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnAdd9.ForeColor = Color.White
-        btnAdd9.Location = New Point(1213, 648)
-        btnAdd9.Name = "btnAdd9"
-        btnAdd9.Size = New Size(132, 51)
-        btnAdd9.TabIndex = 219
-        btnAdd9.Text = "ADD"
-        btnAdd9.UseVisualStyleBackColor = False
         ' 
         ' txtIndustryType9
         ' 
@@ -1168,76 +750,6 @@ Partial Class Form4
         txtCompanyID9.Size = New Size(471, 38)
         txtCompanyID9.TabIndex = 191
         ' 
-        ' pnlEditCompanyCompanyContact
-        ' 
-        pnlEditCompanyCompanyContact.BackColor = Color.WhiteSmoke
-        pnlEditCompanyCompanyContact.Controls.Add(RoundedButton9)
-        pnlEditCompanyCompanyContact.Controls.Add(RoundedButton10)
-        pnlEditCompanyCompanyContact.Controls.Add(Label82)
-        pnlEditCompanyCompanyContact.Controls.Add(Roundedpanel4)
-        pnlEditCompanyCompanyContact.Controls.Add(Roundedpanel5)
-        pnlEditCompanyCompanyContact.CornerRadius = 40
-        pnlEditCompanyCompanyContact.Location = New Point(442, 303)
-        pnlEditCompanyCompanyContact.Name = "pnlEditCompanyCompanyContact"
-        pnlEditCompanyCompanyContact.Size = New Size(565, 340)
-        pnlEditCompanyCompanyContact.TabIndex = 228
-        ' 
-        ' btnAdd8
-        ' 
-        btnAdd8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAdd8.FlatAppearance.BorderSize = 0
-        btnAdd8.FlatStyle = FlatStyle.Flat
-        btnAdd8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnAdd8.ForeColor = Color.White
-        btnAdd8.Location = New Point(1082, 819)
-        btnAdd8.Name = "btnAdd8"
-        btnAdd8.Size = New Size(132, 51)
-        btnAdd8.TabIndex = 216
-        btnAdd8.Text = "ADD"
-        btnAdd8.UseVisualStyleBackColor = False
-        ' 
-        ' btnEdit8
-        ' 
-        btnEdit8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnEdit8.FlatAppearance.BorderSize = 0
-        btnEdit8.FlatStyle = FlatStyle.Flat
-        btnEdit8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnEdit8.ForeColor = Color.White
-        btnEdit8.Location = New Point(1220, 819)
-        btnEdit8.Name = "btnEdit8"
-        btnEdit8.Size = New Size(132, 51)
-        btnEdit8.TabIndex = 215
-        btnEdit8.Text = "EDIT"
-        btnEdit8.UseVisualStyleBackColor = False
-        ' 
-        ' btnDelete8
-        ' 
-        btnDelete8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnDelete8.FlatAppearance.BorderSize = 0
-        btnDelete8.FlatStyle = FlatStyle.Flat
-        btnDelete8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnDelete8.ForeColor = Color.White
-        btnDelete8.Location = New Point(1358, 818)
-        btnDelete8.Name = "btnDelete8"
-        btnDelete8.Size = New Size(132, 51)
-        btnDelete8.TabIndex = 214
-        btnDelete8.Text = "DELETE"
-        btnDelete8.UseVisualStyleBackColor = False
-        ' 
-        ' btnSearch8
-        ' 
-        btnSearch8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnSearch8.FlatAppearance.BorderSize = 0
-        btnSearch8.FlatStyle = FlatStyle.Flat
-        btnSearch8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnSearch8.ForeColor = Color.White
-        btnSearch8.Location = New Point(491, 98)
-        btnSearch8.Name = "btnSearch8"
-        btnSearch8.Size = New Size(132, 38)
-        btnSearch8.TabIndex = 213
-        btnSearch8.Text = "SEARCH"
-        btnSearch8.UseVisualStyleBackColor = False
-        ' 
         ' lblTotalRecords8
         ' 
         lblTotalRecords8.AutoSize = True
@@ -1298,27 +810,13 @@ Partial Class Form4
         Label72.TabIndex = 124
         Label72.Text = "Total Records:"
         ' 
-        ' RoundedButton6
-        ' 
-        RoundedButton6.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton6.FlatAppearance.BorderSize = 0
-        RoundedButton6.FlatStyle = FlatStyle.Flat
-        RoundedButton6.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton6.ForeColor = Color.White
-        RoundedButton6.Location = New Point(1210, 643)
-        RoundedButton6.Name = "RoundedButton6"
-        RoundedButton6.Size = New Size(132, 51)
-        RoundedButton6.TabIndex = 219
-        RoundedButton6.Text = "ADD"
-        RoundedButton6.UseVisualStyleBackColor = False
-        ' 
         ' ComboBox4
         ' 
         ComboBox4.Font = New Font("Segoe UI", 14F)
         ComboBox4.FormattingEnabled = True
         ComboBox4.Location = New Point(753, 530)
         ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(471, 39)
+        ComboBox4.Size = New Size(471, 40)
         ComboBox4.TabIndex = 206
         ' 
         ' Label39
@@ -1403,48 +901,6 @@ Partial Class Form4
         Label43.TabIndex = 199
         Label43.Text = "Gender*"
         ' 
-        ' RoundedButton1
-        ' 
-        RoundedButton1.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton1.FlatAppearance.BorderSize = 0
-        RoundedButton1.FlatStyle = FlatStyle.Flat
-        RoundedButton1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton1.ForeColor = Color.White
-        RoundedButton1.Location = New Point(536, 498)
-        RoundedButton1.Name = "RoundedButton1"
-        RoundedButton1.Size = New Size(132, 51)
-        RoundedButton1.TabIndex = 222
-        RoundedButton1.Text = "ADD"
-        RoundedButton1.UseVisualStyleBackColor = False
-        ' 
-        ' RoundedButton2
-        ' 
-        RoundedButton2.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton2.FlatAppearance.BorderSize = 0
-        RoundedButton2.FlatStyle = FlatStyle.Flat
-        RoundedButton2.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton2.ForeColor = Color.White
-        RoundedButton2.Location = New Point(1206, 65)
-        RoundedButton2.Name = "RoundedButton2"
-        RoundedButton2.Size = New Size(132, 38)
-        RoundedButton2.TabIndex = 222
-        RoundedButton2.Text = "SEARCH"
-        RoundedButton2.UseVisualStyleBackColor = False
-        ' 
-        ' RoundedButton7
-        ' 
-        RoundedButton7.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton7.FlatAppearance.BorderSize = 0
-        RoundedButton7.FlatStyle = FlatStyle.Flat
-        RoundedButton7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton7.ForeColor = Color.White
-        RoundedButton7.Location = New Point(674, 498)
-        RoundedButton7.Name = "RoundedButton7"
-        RoundedButton7.Size = New Size(132, 51)
-        RoundedButton7.TabIndex = 221
-        RoundedButton7.Text = "EDIT"
-        RoundedButton7.UseVisualStyleBackColor = False
-        ' 
         ' TextBox2
         ' 
         TextBox2.Cursor = Cursors.IBeam
@@ -1456,34 +912,6 @@ Partial Class Form4
         TextBox2.Size = New Size(212, 38)
         TextBox2.TabIndex = 221
         TextBox2.Text = "Search Student ID"
-        ' 
-        ' RoundedButton8
-        ' 
-        RoundedButton8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton8.FlatAppearance.BorderSize = 0
-        RoundedButton8.FlatStyle = FlatStyle.Flat
-        RoundedButton8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton8.ForeColor = Color.White
-        RoundedButton8.Location = New Point(812, 497)
-        RoundedButton8.Name = "RoundedButton8"
-        RoundedButton8.Size = New Size(132, 51)
-        RoundedButton8.TabIndex = 220
-        RoundedButton8.Text = "DELETE"
-        RoundedButton8.UseVisualStyleBackColor = False
-        ' 
-        ' RoundedButton3
-        ' 
-        RoundedButton3.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton3.FlatAppearance.BorderSize = 0
-        RoundedButton3.FlatStyle = FlatStyle.Flat
-        RoundedButton3.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton3.ForeColor = Color.White
-        RoundedButton3.Location = New Point(1072, 644)
-        RoundedButton3.Name = "RoundedButton3"
-        RoundedButton3.Size = New Size(132, 51)
-        RoundedButton3.TabIndex = 220
-        RoundedButton3.Text = "CANCEL"
-        RoundedButton3.UseVisualStyleBackColor = False
         ' 
         ' pnlCompleted
         ' 
@@ -1537,27 +965,13 @@ Partial Class Form4
         Label29.TabIndex = 207
         Label29.Text = "Program*"
         ' 
-        ' RoundedButton4
-        ' 
-        RoundedButton4.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton4.FlatAppearance.BorderSize = 0
-        RoundedButton4.FlatStyle = FlatStyle.Flat
-        RoundedButton4.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton4.ForeColor = Color.White
-        RoundedButton4.Location = New Point(1210, 643)
-        RoundedButton4.Name = "RoundedButton4"
-        RoundedButton4.Size = New Size(132, 51)
-        RoundedButton4.TabIndex = 219
-        RoundedButton4.Text = "EDIT"
-        RoundedButton4.UseVisualStyleBackColor = False
-        ' 
         ' ComboBox1
         ' 
         ComboBox1.Font = New Font("Segoe UI", 14F)
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(753, 530)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(471, 39)
+        ComboBox1.Size = New Size(471, 40)
         ComboBox1.TabIndex = 206
         ' 
         ' Label30
@@ -1719,7 +1133,7 @@ Partial Class Form4
         ComboBox6.FormattingEnabled = True
         ComboBox6.Location = New Point(144, 340)
         ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(471, 39)
+        ComboBox6.Size = New Size(471, 40)
         ComboBox6.TabIndex = 193
         ' 
         ' TextBox11
@@ -1815,20 +1229,6 @@ Partial Class Form4
         Label74.TabIndex = 114
         Label74.Text = "EVALUATION LOGS"
         ' 
-        ' btnSearch4
-        ' 
-        btnSearch4.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnSearch4.FlatAppearance.BorderSize = 0
-        btnSearch4.FlatStyle = FlatStyle.Flat
-        btnSearch4.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnSearch4.ForeColor = Color.White
-        btnSearch4.Location = New Point(490, 97)
-        btnSearch4.Name = "btnSearch4"
-        btnSearch4.Size = New Size(132, 38)
-        btnSearch4.TabIndex = 214
-        btnSearch4.Text = "SEARCH"
-        btnSearch4.UseVisualStyleBackColor = False
-        ' 
         ' lblTotalRecords4
         ' 
         lblTotalRecords4.AutoSize = True
@@ -1910,74 +1310,13 @@ Partial Class Form4
         txtSearchID4.TabIndex = 116
         txtSearchID4.Text = "Search Student ID"
         ' 
-        ' Roundedpanel1
-        ' 
-        Roundedpanel1.BackColor = Color.WhiteSmoke
-        Roundedpanel1.Controls.Add(Roundedpanel2)
-        Roundedpanel1.Controls.Add(RoundedButton5)
-        Roundedpanel1.Controls.Add(Label38)
-        Roundedpanel1.Controls.Add(RoundedButton6)
-        Roundedpanel1.Controls.Add(ComboBox4)
-        Roundedpanel1.Controls.Add(Label39)
-        Roundedpanel1.Controls.Add(TextBox8)
-        Roundedpanel1.Controls.Add(Label40)
-        Roundedpanel1.Controls.Add(TextBox9)
-        Roundedpanel1.Controls.Add(Label41)
-        Roundedpanel1.Controls.Add(Label42)
-        Roundedpanel1.Controls.Add(Label43)
-        Roundedpanel1.Controls.Add(Label44)
-        Roundedpanel1.Controls.Add(Label48)
-        Roundedpanel1.Controls.Add(Label49)
-        Roundedpanel1.Controls.Add(TextBox10)
-        Roundedpanel1.Controls.Add(ComboBox6)
-        Roundedpanel1.Controls.Add(TextBox11)
-        Roundedpanel1.Controls.Add(TextBox12)
-        Roundedpanel1.CornerRadius = 10
-        Roundedpanel1.Location = New Point(386, 467)
-        Roundedpanel1.Name = "Roundedpanel1"
-        Roundedpanel1.Size = New Size(1068, 391)
-        Roundedpanel1.TabIndex = 277
-        ' 
-        ' Roundedpanel2
-        ' 
-        Roundedpanel2.BackColor = Color.WhiteSmoke
-        Roundedpanel2.Controls.Add(RoundedButton1)
-        Roundedpanel2.Controls.Add(RoundedButton2)
-        Roundedpanel2.Controls.Add(RoundedButton7)
-        Roundedpanel2.Controls.Add(TextBox2)
-        Roundedpanel2.Controls.Add(RoundedButton8)
-        Roundedpanel2.Controls.Add(RoundedButton3)
-        Roundedpanel2.Controls.Add(Label29)
-        Roundedpanel2.Controls.Add(RoundedButton4)
-        Roundedpanel2.Controls.Add(ComboBox1)
-        Roundedpanel2.Controls.Add(Label30)
-        Roundedpanel2.Controls.Add(TextBox3)
-        Roundedpanel2.Controls.Add(Label31)
-        Roundedpanel2.Controls.Add(TextBox4)
-        Roundedpanel2.Controls.Add(Label32)
-        Roundedpanel2.Controls.Add(Label33)
-        Roundedpanel2.Controls.Add(Label34)
-        Roundedpanel2.Controls.Add(Label35)
-        Roundedpanel2.Controls.Add(Label36)
-        Roundedpanel2.Controls.Add(ComboBox2)
-        Roundedpanel2.Controls.Add(Label37)
-        Roundedpanel2.Controls.Add(TextBox5)
-        Roundedpanel2.Controls.Add(ComboBox3)
-        Roundedpanel2.Controls.Add(TextBox6)
-        Roundedpanel2.Controls.Add(TextBox7)
-        Roundedpanel2.CornerRadius = 10
-        Roundedpanel2.Location = New Point(172, 199)
-        Roundedpanel2.Name = "Roundedpanel2"
-        Roundedpanel2.Size = New Size(1212, 532)
-        Roundedpanel2.TabIndex = 221
-        ' 
         ' ComboBox2
         ' 
         ComboBox2.Font = New Font("Segoe UI", 14F)
         ComboBox2.FormattingEnabled = True
         ComboBox2.Location = New Point(144, 530)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(471, 39)
+        ComboBox2.Size = New Size(471, 40)
         ComboBox2.TabIndex = 196
         ' 
         ' Label37
@@ -2009,7 +1348,7 @@ Partial Class Form4
         ComboBox3.FormattingEnabled = True
         ComboBox3.Location = New Point(144, 340)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(471, 39)
+        ComboBox3.Size = New Size(471, 40)
         ComboBox3.TabIndex = 193
         ' 
         ' TextBox6
@@ -2033,20 +1372,6 @@ Partial Class Form4
         TextBox7.Name = "TextBox7"
         TextBox7.Size = New Size(471, 38)
         TextBox7.TabIndex = 191
-        ' 
-        ' RoundedButton5
-        ' 
-        RoundedButton5.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton5.FlatAppearance.BorderSize = 0
-        RoundedButton5.FlatStyle = FlatStyle.Flat
-        RoundedButton5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton5.ForeColor = Color.White
-        RoundedButton5.Location = New Point(1072, 644)
-        RoundedButton5.Name = "RoundedButton5"
-        RoundedButton5.Size = New Size(132, 51)
-        RoundedButton5.TabIndex = 220
-        RoundedButton5.Text = "CANCEL"
-        RoundedButton5.UseVisualStyleBackColor = False
         ' 
         ' dgvEvaluationFiles5
         ' 
@@ -2082,79 +1407,6 @@ Partial Class Form4
         Label24.TabIndex = 201
         Label24.Text = "ADD NEW STUDENT RECORD"
         ' 
-        ' pnlAddNewStudentRecord
-        ' 
-        pnlAddNewStudentRecord.BackColor = Color.WhiteSmoke
-        pnlAddNewStudentRecord.Controls.Add(pnlEditStudentRecord)
-        pnlAddNewStudentRecord.Controls.Add(btnCancel2)
-        pnlAddNewStudentRecord.Controls.Add(Label5)
-        pnlAddNewStudentRecord.Controls.Add(btnAdd2)
-        pnlAddNewStudentRecord.Controls.Add(cmbProgram2)
-        pnlAddNewStudentRecord.Controls.Add(Label4)
-        pnlAddNewStudentRecord.Controls.Add(txtContactNumber2)
-        pnlAddNewStudentRecord.Controls.Add(Label2)
-        pnlAddNewStudentRecord.Controls.Add(txtLName2)
-        pnlAddNewStudentRecord.Controls.Add(Label24)
-        pnlAddNewStudentRecord.Controls.Add(Label28)
-        pnlAddNewStudentRecord.Controls.Add(Label27)
-        pnlAddNewStudentRecord.Controls.Add(Label26)
-        pnlAddNewStudentRecord.Controls.Add(Label25)
-        pnlAddNewStudentRecord.Controls.Add(cmbDepartment2)
-        pnlAddNewStudentRecord.Controls.Add(Label21)
-        pnlAddNewStudentRecord.Controls.Add(txtEmail2)
-        pnlAddNewStudentRecord.Controls.Add(cmbGender2)
-        pnlAddNewStudentRecord.Controls.Add(txtFName2)
-        pnlAddNewStudentRecord.Controls.Add(txtStudentID2)
-        pnlAddNewStudentRecord.CornerRadius = 10
-        pnlAddNewStudentRecord.Location = New Point(71, 128)
-        pnlAddNewStudentRecord.Name = "pnlAddNewStudentRecord"
-        pnlAddNewStudentRecord.Size = New Size(1383, 730)
-        pnlAddNewStudentRecord.TabIndex = 218
-        ' 
-        ' pnlEditStudentRecord
-        ' 
-        pnlEditStudentRecord.BackColor = Color.WhiteSmoke
-        pnlEditStudentRecord.Controls.Add(btnSearch3)
-        pnlEditStudentRecord.Controls.Add(txtSearchID3)
-        pnlEditStudentRecord.Controls.Add(btnCancel3)
-        pnlEditStudentRecord.Controls.Add(Label7)
-        pnlEditStudentRecord.Controls.Add(btnEdit3)
-        pnlEditStudentRecord.Controls.Add(cmbProgram3)
-        pnlEditStudentRecord.Controls.Add(Label11)
-        pnlEditStudentRecord.Controls.Add(txtContactNumber3)
-        pnlEditStudentRecord.Controls.Add(Label12)
-        pnlEditStudentRecord.Controls.Add(txtLName3)
-        pnlEditStudentRecord.Controls.Add(Label13)
-        pnlEditStudentRecord.Controls.Add(Label14)
-        pnlEditStudentRecord.Controls.Add(Label15)
-        pnlEditStudentRecord.Controls.Add(Label16)
-        pnlEditStudentRecord.Controls.Add(Label17)
-        pnlEditStudentRecord.Controls.Add(cmbDepartment3)
-        pnlEditStudentRecord.Controls.Add(Label18)
-        pnlEditStudentRecord.Controls.Add(txtEmail3)
-        pnlEditStudentRecord.Controls.Add(cmbGender3)
-        pnlEditStudentRecord.Controls.Add(txtFName3)
-        pnlEditStudentRecord.Controls.Add(txtStudentID3)
-        pnlEditStudentRecord.CornerRadius = 10
-        pnlEditStudentRecord.Location = New Point(0, 1)
-        pnlEditStudentRecord.Name = "pnlEditStudentRecord"
-        pnlEditStudentRecord.Size = New Size(1384, 730)
-        pnlEditStudentRecord.TabIndex = 221
-        ' 
-        ' btnSearch3
-        ' 
-        btnSearch3.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnSearch3.FlatAppearance.BorderSize = 0
-        btnSearch3.FlatStyle = FlatStyle.Flat
-        btnSearch3.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnSearch3.ForeColor = Color.White
-        btnSearch3.Location = New Point(1206, 65)
-        btnSearch3.Name = "btnSearch3"
-        btnSearch3.Size = New Size(132, 38)
-        btnSearch3.TabIndex = 222
-        btnSearch3.Text = "SEARCH"
-        btnSearch3.UseVisualStyleBackColor = False
-        ' 
         ' txtSearchID3
         ' 
         txtSearchID3.Cursor = Cursors.IBeam
@@ -2166,20 +1418,6 @@ Partial Class Form4
         txtSearchID3.Size = New Size(212, 38)
         txtSearchID3.TabIndex = 221
         txtSearchID3.Text = "Search Student ID"
-        ' 
-        ' btnCancel3
-        ' 
-        btnCancel3.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnCancel3.FlatAppearance.BorderSize = 0
-        btnCancel3.FlatStyle = FlatStyle.Flat
-        btnCancel3.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnCancel3.ForeColor = Color.White
-        btnCancel3.Location = New Point(1072, 644)
-        btnCancel3.Name = "btnCancel3"
-        btnCancel3.Size = New Size(132, 51)
-        btnCancel3.TabIndex = 220
-        btnCancel3.Text = "CANCEL"
-        btnCancel3.UseVisualStyleBackColor = False
         ' 
         ' Label7
         ' 
@@ -2193,27 +1431,13 @@ Partial Class Form4
         Label7.TabIndex = 207
         Label7.Text = "Program*"
         ' 
-        ' btnEdit3
-        ' 
-        btnEdit3.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnEdit3.FlatAppearance.BorderSize = 0
-        btnEdit3.FlatStyle = FlatStyle.Flat
-        btnEdit3.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnEdit3.ForeColor = Color.White
-        btnEdit3.Location = New Point(1210, 643)
-        btnEdit3.Name = "btnEdit3"
-        btnEdit3.Size = New Size(132, 51)
-        btnEdit3.TabIndex = 219
-        btnEdit3.Text = "EDIT"
-        btnEdit3.UseVisualStyleBackColor = False
-        ' 
         ' cmbProgram3
         ' 
         cmbProgram3.Font = New Font("Segoe UI", 14F)
         cmbProgram3.FormattingEnabled = True
         cmbProgram3.Location = New Point(753, 530)
         cmbProgram3.Name = "cmbProgram3"
-        cmbProgram3.Size = New Size(471, 39)
+        cmbProgram3.Size = New Size(471, 40)
         cmbProgram3.TabIndex = 206
         ' 
         ' Label11
@@ -2328,7 +1552,7 @@ Partial Class Form4
         cmbDepartment3.FormattingEnabled = True
         cmbDepartment3.Location = New Point(144, 530)
         cmbDepartment3.Name = "cmbDepartment3"
-        cmbDepartment3.Size = New Size(471, 39)
+        cmbDepartment3.Size = New Size(471, 40)
         cmbDepartment3.TabIndex = 196
         ' 
         ' Label18
@@ -2360,7 +1584,7 @@ Partial Class Form4
         cmbGender3.FormattingEnabled = True
         cmbGender3.Location = New Point(144, 340)
         cmbGender3.Name = "cmbGender3"
-        cmbGender3.Size = New Size(471, 39)
+        cmbGender3.Size = New Size(471, 40)
         cmbGender3.TabIndex = 193
         ' 
         ' txtFName3
@@ -2385,20 +1609,6 @@ Partial Class Form4
         txtStudentID3.Size = New Size(471, 38)
         txtStudentID3.TabIndex = 191
         ' 
-        ' btnCancel2
-        ' 
-        btnCancel2.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnCancel2.FlatAppearance.BorderSize = 0
-        btnCancel2.FlatStyle = FlatStyle.Flat
-        btnCancel2.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnCancel2.ForeColor = Color.White
-        btnCancel2.Location = New Point(1072, 644)
-        btnCancel2.Name = "btnCancel2"
-        btnCancel2.Size = New Size(132, 51)
-        btnCancel2.TabIndex = 220
-        btnCancel2.Text = "CANCEL"
-        btnCancel2.UseVisualStyleBackColor = False
-        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
@@ -2411,27 +1621,13 @@ Partial Class Form4
         Label5.TabIndex = 207
         Label5.Text = "Program*"
         ' 
-        ' btnAdd2
-        ' 
-        btnAdd2.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAdd2.FlatAppearance.BorderSize = 0
-        btnAdd2.FlatStyle = FlatStyle.Flat
-        btnAdd2.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnAdd2.ForeColor = Color.White
-        btnAdd2.Location = New Point(1210, 643)
-        btnAdd2.Name = "btnAdd2"
-        btnAdd2.Size = New Size(132, 51)
-        btnAdd2.TabIndex = 219
-        btnAdd2.Text = "ADD"
-        btnAdd2.UseVisualStyleBackColor = False
-        ' 
         ' cmbProgram2
         ' 
         cmbProgram2.Font = New Font("Segoe UI", 14F)
         cmbProgram2.FormattingEnabled = True
         cmbProgram2.Location = New Point(753, 530)
         cmbProgram2.Name = "cmbProgram2"
-        cmbProgram2.Size = New Size(471, 39)
+        cmbProgram2.Size = New Size(471, 40)
         cmbProgram2.TabIndex = 206
         ' 
         ' Label4
@@ -2534,7 +1730,7 @@ Partial Class Form4
         cmbDepartment2.FormattingEnabled = True
         cmbDepartment2.Location = New Point(144, 530)
         cmbDepartment2.Name = "cmbDepartment2"
-        cmbDepartment2.Size = New Size(471, 39)
+        cmbDepartment2.Size = New Size(471, 40)
         cmbDepartment2.TabIndex = 196
         ' 
         ' Label21
@@ -2566,7 +1762,7 @@ Partial Class Form4
         cmbGender2.FormattingEnabled = True
         cmbGender2.Location = New Point(144, 340)
         cmbGender2.Name = "cmbGender2"
-        cmbGender2.Size = New Size(471, 39)
+        cmbGender2.Size = New Size(471, 40)
         cmbGender2.TabIndex = 193
         ' 
         ' txtFName2
@@ -2602,146 +1798,6 @@ Partial Class Form4
         txtCompanyID10.Size = New Size(471, 38)
         txtCompanyID10.TabIndex = 191
         ' 
-        ' btnImport1
-        ' 
-        btnImport1.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnImport1.FlatAppearance.BorderSize = 0
-        btnImport1.FlatStyle = FlatStyle.Flat
-        btnImport1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnImport1.ForeColor = Color.White
-        btnImport1.Location = New Point(944, 820)
-        btnImport1.Name = "btnImport1"
-        btnImport1.Size = New Size(132, 51)
-        btnImport1.TabIndex = 217
-        btnImport1.Text = "IMPORT"
-        btnImport1.UseVisualStyleBackColor = False
-        ' 
-        ' btnAdd1
-        ' 
-        btnAdd1.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAdd1.FlatAppearance.BorderSize = 0
-        btnAdd1.FlatStyle = FlatStyle.Flat
-        btnAdd1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnAdd1.ForeColor = Color.White
-        btnAdd1.Location = New Point(1082, 819)
-        btnAdd1.Name = "btnAdd1"
-        btnAdd1.Size = New Size(132, 51)
-        btnAdd1.TabIndex = 216
-        btnAdd1.Text = "ADD"
-        btnAdd1.UseVisualStyleBackColor = False
-        ' 
-        ' btnSummaryReport
-        ' 
-        btnSummaryReport.BackColor = Color.White
-        btnSummaryReport.FlatAppearance.BorderSize = 0
-        btnSummaryReport.FlatStyle = FlatStyle.Flat
-        btnSummaryReport.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
-        btnSummaryReport.ForeColor = Color.Black
-        btnSummaryReport.Location = New Point(27, 765)
-        btnSummaryReport.Name = "btnSummaryReport"
-        btnSummaryReport.Size = New Size(316, 78)
-        btnSummaryReport.TabIndex = 117
-        btnSummaryReport.Text = "SUMMARY REPORT"
-        btnSummaryReport.UseVisualStyleBackColor = False
-        ' 
-        ' btnVisitLog
-        ' 
-        btnVisitLog.BackColor = Color.White
-        btnVisitLog.FlatAppearance.BorderSize = 0
-        btnVisitLog.FlatStyle = FlatStyle.Flat
-        btnVisitLog.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnVisitLog.ForeColor = Color.Black
-        btnVisitLog.Location = New Point(27, 656)
-        btnVisitLog.Name = "btnVisitLog"
-        btnVisitLog.Size = New Size(316, 78)
-        btnVisitLog.TabIndex = 116
-        btnVisitLog.Text = "VISIT LOG"
-        btnVisitLog.UseVisualStyleBackColor = False
-        ' 
-        ' btnFaculty
-        ' 
-        btnFaculty.BackColor = Color.White
-        btnFaculty.FlatAppearance.BorderSize = 0
-        btnFaculty.FlatStyle = FlatStyle.Flat
-        btnFaculty.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnFaculty.ForeColor = Color.Black
-        btnFaculty.Location = New Point(27, 550)
-        btnFaculty.Name = "btnFaculty"
-        btnFaculty.Size = New Size(316, 78)
-        btnFaculty.TabIndex = 115
-        btnFaculty.Text = "FACULTY"
-        btnFaculty.UseVisualStyleBackColor = False
-        ' 
-        ' btnCompany
-        ' 
-        btnCompany.BackColor = Color.White
-        btnCompany.FlatAppearance.BorderSize = 0
-        btnCompany.FlatStyle = FlatStyle.Flat
-        btnCompany.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnCompany.ForeColor = Color.Black
-        btnCompany.Location = New Point(27, 445)
-        btnCompany.Name = "btnCompany"
-        btnCompany.Size = New Size(316, 78)
-        btnCompany.TabIndex = 114
-        btnCompany.Text = "COMPANY"
-        btnCompany.UseVisualStyleBackColor = False
-        ' 
-        ' btnEvaluation
-        ' 
-        btnEvaluation.BackColor = Color.White
-        btnEvaluation.FlatAppearance.BorderSize = 0
-        btnEvaluation.FlatStyle = FlatStyle.Flat
-        btnEvaluation.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnEvaluation.ForeColor = Color.Black
-        btnEvaluation.Location = New Point(27, 338)
-        btnEvaluation.Name = "btnEvaluation"
-        btnEvaluation.Size = New Size(316, 78)
-        btnEvaluation.TabIndex = 113
-        btnEvaluation.Text = "EVALUATION"
-        btnEvaluation.UseVisualStyleBackColor = False
-        ' 
-        ' btnInternships
-        ' 
-        btnInternships.BackColor = Color.White
-        btnInternships.FlatAppearance.BorderSize = 0
-        btnInternships.FlatStyle = FlatStyle.Flat
-        btnInternships.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnInternships.ForeColor = Color.Black
-        btnInternships.Location = New Point(27, 232)
-        btnInternships.Name = "btnInternships"
-        btnInternships.Size = New Size(316, 78)
-        btnInternships.TabIndex = 112
-        btnInternships.Text = "INTERNSHIPS"
-        btnInternships.UseVisualStyleBackColor = False
-        ' 
-        ' btnStudents
-        ' 
-        btnStudents.BackColor = Color.White
-        btnStudents.FlatAppearance.BorderSize = 0
-        btnStudents.FlatStyle = FlatStyle.Flat
-        btnStudents.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnStudents.ForeColor = Color.Black
-        btnStudents.Location = New Point(27, 126)
-        btnStudents.Name = "btnStudents"
-        btnStudents.Size = New Size(316, 78)
-        btnStudents.TabIndex = 111
-        btnStudents.Text = "STUDENTS"
-        btnStudents.UseVisualStyleBackColor = False
-        ' 
-        ' btnHome
-        ' 
-        btnHome.BackColor = Color.White
-        btnHome.FlatAppearance.BorderSize = 0
-        btnHome.FlatStyle = FlatStyle.Flat
-        btnHome.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
-        btnHome.ForeColor = Color.Black
-        btnHome.Location = New Point(84, 22)
-        btnHome.Name = "btnHome"
-        btnHome.Size = New Size(140, 49)
-        btnHome.TabIndex = 110
-        btnHome.Text = "HOME"
-        btnHome.UseVisualStyleBackColor = False
-        ' 
         ' PictureBox1
         ' 
         PictureBox1.BackColor = Color.Transparent
@@ -2758,14 +1814,6 @@ Partial Class Form4
         Panel1.BackColor = Color.Transparent
         Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), Image)
         Panel1.BackgroundImageLayout = ImageLayout.Stretch
-        Panel1.Controls.Add(btnSummaryReport)
-        Panel1.Controls.Add(btnVisitLog)
-        Panel1.Controls.Add(btnFaculty)
-        Panel1.Controls.Add(btnCompany)
-        Panel1.Controls.Add(btnEvaluation)
-        Panel1.Controls.Add(btnInternships)
-        Panel1.Controls.Add(btnStudents)
-        Panel1.Controls.Add(btnHome)
         Panel1.Controls.Add(PictureBox1)
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 131)
@@ -2793,24 +1841,9 @@ Partial Class Form4
         pnlTtotalInterns.Size = New Size(340, 310)
         pnlTtotalInterns.TabIndex = 281
         ' 
-        ' btnLogout
-        ' 
-        btnLogout.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnLogout.FlatAppearance.BorderSize = 0
-        btnLogout.FlatStyle = FlatStyle.Flat
-        btnLogout.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnLogout.ForeColor = Color.White
-        btnLogout.Location = New Point(1731, 62)
-        btnLogout.Name = "btnLogout"
-        btnLogout.Size = New Size(132, 51)
-        btnLogout.TabIndex = 118
-        btnLogout.Text = "LOG OUT"
-        btnLogout.UseVisualStyleBackColor = False
-        ' 
         ' pnlHeader
         ' 
         pnlHeader.BackColor = Color.FromArgb(CByte(233), CByte(234), CByte(235))
-        pnlHeader.Controls.Add(btnLogout)
         pnlHeader.Controls.Add(PictureBox3)
         pnlHeader.Controls.Add(pctBox2)
         pnlHeader.Controls.Add(Label1)
@@ -2930,48 +1963,6 @@ Partial Class Form4
         pctBoxExit1.TabIndex = 105
         pctBoxExit1.TabStop = False
         ' 
-        ' btnEdit1
-        ' 
-        btnEdit1.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnEdit1.FlatAppearance.BorderSize = 0
-        btnEdit1.FlatStyle = FlatStyle.Flat
-        btnEdit1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnEdit1.ForeColor = Color.White
-        btnEdit1.Location = New Point(1220, 819)
-        btnEdit1.Name = "btnEdit1"
-        btnEdit1.Size = New Size(132, 51)
-        btnEdit1.TabIndex = 215
-        btnEdit1.Text = "EDIT"
-        btnEdit1.UseVisualStyleBackColor = False
-        ' 
-        ' btnDelete1
-        ' 
-        btnDelete1.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnDelete1.FlatAppearance.BorderSize = 0
-        btnDelete1.FlatStyle = FlatStyle.Flat
-        btnDelete1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnDelete1.ForeColor = Color.White
-        btnDelete1.Location = New Point(1358, 818)
-        btnDelete1.Name = "btnDelete1"
-        btnDelete1.Size = New Size(132, 51)
-        btnDelete1.TabIndex = 214
-        btnDelete1.Text = "DELETE"
-        btnDelete1.UseVisualStyleBackColor = False
-        ' 
-        ' btnSearch1
-        ' 
-        btnSearch1.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnSearch1.FlatAppearance.BorderSize = 0
-        btnSearch1.FlatStyle = FlatStyle.Flat
-        btnSearch1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnSearch1.ForeColor = Color.White
-        btnSearch1.Location = New Point(491, 98)
-        btnSearch1.Name = "btnSearch1"
-        btnSearch1.Size = New Size(132, 38)
-        btnSearch1.TabIndex = 213
-        btnSearch1.Text = "SEARCH"
-        btnSearch1.UseVisualStyleBackColor = False
-        ' 
         ' lblTotalRecords1
         ' 
         lblTotalRecords1.AutoSize = True
@@ -3052,46 +2043,6 @@ Partial Class Form4
         Label9.Size = New Size(268, 46)
         Label9.TabIndex = 114
         Label9.Text = "STUDENT LOGS"
-        ' 
-        ' pnlEditCompanyRecord
-        ' 
-        pnlEditCompanyRecord.BackColor = Color.WhiteSmoke
-        pnlEditCompanyRecord.Controls.Add(btnSearch10)
-        pnlEditCompanyRecord.Controls.Add(txtSearchID10)
-        pnlEditCompanyRecord.Controls.Add(Label58)
-        pnlEditCompanyRecord.Controls.Add(txtEmail10)
-        pnlEditCompanyRecord.Controls.Add(Label59)
-        pnlEditCompanyRecord.Controls.Add(txtContactNumber10)
-        pnlEditCompanyRecord.Controls.Add(Label60)
-        pnlEditCompanyRecord.Controls.Add(txtAddress10)
-        pnlEditCompanyRecord.Controls.Add(btnCancel10)
-        pnlEditCompanyRecord.Controls.Add(Label67)
-        pnlEditCompanyRecord.Controls.Add(btnEdit10)
-        pnlEditCompanyRecord.Controls.Add(txtIndustryType10)
-        pnlEditCompanyRecord.Controls.Add(Label76)
-        pnlEditCompanyRecord.Controls.Add(Label77)
-        pnlEditCompanyRecord.Controls.Add(Label81)
-        pnlEditCompanyRecord.Controls.Add(txtCompanyName10)
-        pnlEditCompanyRecord.Controls.Add(txtCompanyID10)
-        pnlEditCompanyRecord.CornerRadius = 10
-        pnlEditCompanyRecord.Location = New Point(96, 131)
-        pnlEditCompanyRecord.Name = "pnlEditCompanyRecord"
-        pnlEditCompanyRecord.Size = New Size(1383, 730)
-        pnlEditCompanyRecord.TabIndex = 227
-        ' 
-        ' btnSearch10
-        ' 
-        btnSearch10.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnSearch10.FlatAppearance.BorderSize = 0
-        btnSearch10.FlatStyle = FlatStyle.Flat
-        btnSearch10.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnSearch10.ForeColor = Color.White
-        btnSearch10.Location = New Point(1202, 53)
-        btnSearch10.Name = "btnSearch10"
-        btnSearch10.Size = New Size(132, 38)
-        btnSearch10.TabIndex = 228
-        btnSearch10.Text = "SEARCH"
-        btnSearch10.UseVisualStyleBackColor = False
         ' 
         ' txtSearchID10
         ' 
@@ -3174,20 +2125,6 @@ Partial Class Form4
         txtAddress10.Size = New Size(471, 38)
         txtAddress10.TabIndex = 221
         ' 
-        ' btnCancel10
-        ' 
-        btnCancel10.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnCancel10.FlatAppearance.BorderSize = 0
-        btnCancel10.FlatStyle = FlatStyle.Flat
-        btnCancel10.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnCancel10.ForeColor = Color.White
-        btnCancel10.Location = New Point(1075, 648)
-        btnCancel10.Name = "btnCancel10"
-        btnCancel10.Size = New Size(132, 51)
-        btnCancel10.TabIndex = 220
-        btnCancel10.Text = "CANCEL"
-        btnCancel10.UseVisualStyleBackColor = False
-        ' 
         ' Label67
         ' 
         Label67.AutoSize = True
@@ -3199,20 +2136,6 @@ Partial Class Form4
         Label67.Size = New Size(158, 30)
         Label67.TabIndex = 203
         Label67.Text = "Industry Type*"
-        ' 
-        ' btnEdit10
-        ' 
-        btnEdit10.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnEdit10.FlatAppearance.BorderSize = 0
-        btnEdit10.FlatStyle = FlatStyle.Flat
-        btnEdit10.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnEdit10.ForeColor = Color.White
-        btnEdit10.Location = New Point(1213, 648)
-        btnEdit10.Name = "btnEdit10"
-        btnEdit10.Size = New Size(132, 51)
-        btnEdit10.TabIndex = 219
-        btnEdit10.Text = "EDIT"
-        btnEdit10.UseVisualStyleBackColor = False
         ' 
         ' txtIndustryType10
         ' 
@@ -3276,14 +2199,6 @@ Partial Class Form4
         ' 
         pnlCompanyLogs.BackColor = Color.White
         pnlCompanyLogs.Controls.Add(pnlCompanyContactLogs)
-        pnlCompanyLogs.Controls.Add(pnlEditCompanyRecord)
-        pnlCompanyLogs.Controls.Add(pnlAddNewCompanyRecord)
-        pnlCompanyLogs.Controls.Add(pnlEditCompanyCompanyContact)
-        pnlCompanyLogs.Controls.Add(pnlAddNewCompanyandCompanyContact)
-        pnlCompanyLogs.Controls.Add(btnAdd8)
-        pnlCompanyLogs.Controls.Add(btnEdit8)
-        pnlCompanyLogs.Controls.Add(btnDelete8)
-        pnlCompanyLogs.Controls.Add(btnSearch8)
         pnlCompanyLogs.Controls.Add(lblTotalRecords8)
         pnlCompanyLogs.Controls.Add(Label78)
         pnlCompanyLogs.Controls.Add(dgvCompanyFiles8)
@@ -3296,15 +2211,106 @@ Partial Class Form4
         pnlCompanyLogs.Size = New Size(1531, 902)
         pnlCompanyLogs.TabIndex = 224
         ' 
+        ' pnlCompanyContactLogs
+        ' 
+        pnlCompanyContactLogs.BackColor = Color.White
+        pnlCompanyContactLogs.Controls.Add(lblTotalRecords11)
+        pnlCompanyContactLogs.Controls.Add(Label100)
+        pnlCompanyContactLogs.Controls.Add(dgvCompanyContactFiles)
+        pnlCompanyContactLogs.Controls.Add(Label101)
+        pnlCompanyContactLogs.Controls.Add(dgvCompanyContactLogs11)
+        pnlCompanyContactLogs.Controls.Add(txtSearchID11)
+        pnlCompanyContactLogs.Controls.Add(Label102)
+        pnlCompanyContactLogs.Location = New Point(0, 1)
+        pnlCompanyContactLogs.Name = "pnlCompanyContactLogs"
+        pnlCompanyContactLogs.Size = New Size(1529, 901)
+        pnlCompanyContactLogs.TabIndex = 229
+        ' 
+        ' lblTotalRecords11
+        ' 
+        lblTotalRecords11.AutoSize = True
+        lblTotalRecords11.BackColor = Color.Transparent
+        lblTotalRecords11.Font = New Font("Segoe UI", 11F)
+        lblTotalRecords11.ForeColor = Color.Black
+        lblTotalRecords11.Location = New Point(154, 818)
+        lblTotalRecords11.Name = "lblTotalRecords11"
+        lblTotalRecords11.Size = New Size(34, 25)
+        lblTotalRecords11.TabIndex = 129
+        lblTotalRecords11.Text = "[0]"
+        ' 
+        ' Label100
+        ' 
+        Label100.AutoSize = True
+        Label100.BackColor = Color.Transparent
+        Label100.FlatStyle = FlatStyle.System
+        Label100.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        Label100.ForeColor = Color.Black
+        Label100.Location = New Point(28, 819)
+        Label100.Name = "Label100"
+        Label100.Size = New Size(136, 25)
+        Label100.TabIndex = 124
+        Label100.Text = "Total Records:"
+        ' 
+        ' dgvCompanyContactFiles
+        ' 
+        dgvCompanyContactFiles.BackgroundColor = Color.White
+        dgvCompanyContactFiles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvCompanyContactFiles.Location = New Point(171, 458)
+        dgvCompanyContactFiles.Name = "dgvCompanyContactFiles"
+        dgvCompanyContactFiles.RowHeadersWidth = 51
+        dgvCompanyContactFiles.Size = New Size(1052, 265)
+        dgvCompanyContactFiles.TabIndex = 128
+        ' 
+        ' Label101
+        ' 
+        Label101.AutoSize = True
+        Label101.BackColor = Color.Transparent
+        Label101.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
+        Label101.ForeColor = Color.Black
+        Label101.Location = New Point(76, 400)
+        Label101.Name = "Label101"
+        Label101.Size = New Size(355, 37)
+        Label101.TabIndex = 126
+        Label101.Text = "COMPANY CONTACT FILES"
+        ' 
+        ' dgvCompanyContactLogs11
+        ' 
+        dgvCompanyContactLogs11.BackgroundColor = Color.White
+        dgvCompanyContactLogs11.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvCompanyContactLogs11.Location = New Point(171, 194)
+        dgvCompanyContactLogs11.Name = "dgvCompanyContactLogs11"
+        dgvCompanyContactLogs11.RowHeadersWidth = 51
+        dgvCompanyContactLogs11.Size = New Size(1052, 80)
+        dgvCompanyContactLogs11.TabIndex = 125
+        ' 
+        ' txtSearchID11
+        ' 
+        txtSearchID11.Cursor = Cursors.IBeam
+        txtSearchID11.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        txtSearchID11.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
+        txtSearchID11.Location = New Point(53, 98)
+        txtSearchID11.Multiline = True
+        txtSearchID11.Name = "txtSearchID11"
+        txtSearchID11.Size = New Size(432, 38)
+        txtSearchID11.TabIndex = 116
+        txtSearchID11.Text = "Search Student ID"
+        ' 
+        ' Label102
+        ' 
+        Label102.AutoSize = True
+        Label102.BackColor = Color.Transparent
+        Label102.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        Label102.ForeColor = Color.Black
+        Label102.Location = New Point(20, 27)
+        Label102.Name = "Label102"
+        Label102.Size = New Size(450, 46)
+        Label102.TabIndex = 114
+        Label102.Text = "COMPANY CONTACT LOGS"
+        ' 
         ' pnlEvaluaionLogs
         ' 
         pnlEvaluaionLogs.BackColor = Color.White
         pnlEvaluaionLogs.Controls.Add(pnlCompanyLogs)
-        pnlEvaluaionLogs.Controls.Add(pnlAddNewInternshipRecord)
-        pnlEvaluaionLogs.Controls.Add(btnAdd5)
-        pnlEvaluaionLogs.Controls.Add(btnEdit5)
-        pnlEvaluaionLogs.Controls.Add(btnDelete5)
-        pnlEvaluaionLogs.Controls.Add(btnSearch5)
         pnlEvaluaionLogs.Controls.Add(lblTotalRecords5)
         pnlEvaluaionLogs.Controls.Add(Label72)
         pnlEvaluaionLogs.Controls.Add(dgvEvaluationFiles5)
@@ -3321,7 +2327,6 @@ Partial Class Form4
         ' 
         pnlInternshipLogs.BackColor = Color.White
         pnlInternshipLogs.Controls.Add(pnlEvaluaionLogs)
-        pnlInternshipLogs.Controls.Add(btnSearch4)
         pnlInternshipLogs.Controls.Add(lblTotalRecords4)
         pnlInternshipLogs.Controls.Add(Label45)
         pnlInternshipLogs.Controls.Add(dgvInternshipFiles4)
@@ -3338,12 +2343,6 @@ Partial Class Form4
         ' 
         pnlStudentLogs.BackColor = Color.White
         pnlStudentLogs.Controls.Add(pnlInternshipLogs)
-        pnlStudentLogs.Controls.Add(pnlAddNewStudentRecord)
-        pnlStudentLogs.Controls.Add(btnImport1)
-        pnlStudentLogs.Controls.Add(btnAdd1)
-        pnlStudentLogs.Controls.Add(btnEdit1)
-        pnlStudentLogs.Controls.Add(btnDelete1)
-        pnlStudentLogs.Controls.Add(btnSearch1)
         pnlStudentLogs.Controls.Add(lblTotalRecords1)
         pnlStudentLogs.Controls.Add(Label10)
         pnlStudentLogs.Controls.Add(dgvStudentFiles1)
@@ -3355,169 +2354,6 @@ Partial Class Form4
         pnlStudentLogs.Name = "pnlStudentLogs"
         pnlStudentLogs.Size = New Size(1530, 902)
         pnlStudentLogs.TabIndex = 279
-        ' 
-        ' Label102
-        ' 
-        Label102.AutoSize = True
-        Label102.BackColor = Color.Transparent
-        Label102.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        Label102.ForeColor = Color.Black
-        Label102.Location = New Point(20, 27)
-        Label102.Name = "Label102"
-        Label102.Size = New Size(450, 46)
-        Label102.TabIndex = 114
-        Label102.Text = "COMPANY CONTACT LOGS"
-        ' 
-        ' txtSearchID11
-        ' 
-        txtSearchID11.Cursor = Cursors.IBeam
-        txtSearchID11.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        txtSearchID11.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID11.Location = New Point(53, 98)
-        txtSearchID11.Multiline = True
-        txtSearchID11.Name = "txtSearchID11"
-        txtSearchID11.Size = New Size(432, 38)
-        txtSearchID11.TabIndex = 116
-        txtSearchID11.Text = "Search Student ID"
-        ' 
-        ' dgvCompanyContactLogs11
-        ' 
-        dgvCompanyContactLogs11.BackgroundColor = Color.White
-        dgvCompanyContactLogs11.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvCompanyContactLogs11.Location = New Point(171, 194)
-        dgvCompanyContactLogs11.Name = "dgvCompanyContactLogs11"
-        dgvCompanyContactLogs11.RowHeadersWidth = 51
-        dgvCompanyContactLogs11.Size = New Size(1052, 80)
-        dgvCompanyContactLogs11.TabIndex = 125
-        ' 
-        ' Label101
-        ' 
-        Label101.AutoSize = True
-        Label101.BackColor = Color.Transparent
-        Label101.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
-        Label101.ForeColor = Color.Black
-        Label101.Location = New Point(76, 400)
-        Label101.Name = "Label101"
-        Label101.Size = New Size(355, 37)
-        Label101.TabIndex = 126
-        Label101.Text = "COMPANY CONTACT FILES"
-        ' 
-        ' dgvCompanyContactFiles
-        ' 
-        dgvCompanyContactFiles.BackgroundColor = Color.White
-        dgvCompanyContactFiles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvCompanyContactFiles.Location = New Point(171, 458)
-        dgvCompanyContactFiles.Name = "dgvCompanyContactFiles"
-        dgvCompanyContactFiles.RowHeadersWidth = 51
-        dgvCompanyContactFiles.Size = New Size(1052, 265)
-        dgvCompanyContactFiles.TabIndex = 128
-        ' 
-        ' Label100
-        ' 
-        Label100.AutoSize = True
-        Label100.BackColor = Color.Transparent
-        Label100.FlatStyle = FlatStyle.System
-        Label100.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
-        Label100.ForeColor = Color.Black
-        Label100.Location = New Point(28, 819)
-        Label100.Name = "Label100"
-        Label100.Size = New Size(136, 25)
-        Label100.TabIndex = 124
-        Label100.Text = "Total Records:"
-        ' 
-        ' lblTotalRecords11
-        ' 
-        lblTotalRecords11.AutoSize = True
-        lblTotalRecords11.BackColor = Color.Transparent
-        lblTotalRecords11.Font = New Font("Segoe UI", 11F)
-        lblTotalRecords11.ForeColor = Color.Black
-        lblTotalRecords11.Location = New Point(154, 818)
-        lblTotalRecords11.Name = "lblTotalRecords11"
-        lblTotalRecords11.Size = New Size(34, 25)
-        lblTotalRecords11.TabIndex = 129
-        lblTotalRecords11.Text = "[0]"
-        ' 
-        ' btnSearch11
-        ' 
-        btnSearch11.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnSearch11.FlatAppearance.BorderSize = 0
-        btnSearch11.FlatStyle = FlatStyle.Flat
-        btnSearch11.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnSearch11.ForeColor = Color.White
-        btnSearch11.Location = New Point(491, 98)
-        btnSearch11.Name = "btnSearch11"
-        btnSearch11.Size = New Size(132, 38)
-        btnSearch11.TabIndex = 213
-        btnSearch11.Text = "SEARCH"
-        btnSearch11.UseVisualStyleBackColor = False
-        ' 
-        ' btnDelete11
-        ' 
-        btnDelete11.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnDelete11.FlatAppearance.BorderSize = 0
-        btnDelete11.FlatStyle = FlatStyle.Flat
-        btnDelete11.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnDelete11.ForeColor = Color.White
-        btnDelete11.Location = New Point(1358, 818)
-        btnDelete11.Name = "btnDelete11"
-        btnDelete11.Size = New Size(132, 51)
-        btnDelete11.TabIndex = 214
-        btnDelete11.Text = "DELETE"
-        btnDelete11.UseVisualStyleBackColor = False
-        ' 
-        ' btnEdit11
-        ' 
-        btnEdit11.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnEdit11.FlatAppearance.BorderSize = 0
-        btnEdit11.FlatStyle = FlatStyle.Flat
-        btnEdit11.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnEdit11.ForeColor = Color.White
-        btnEdit11.Location = New Point(1220, 819)
-        btnEdit11.Name = "btnEdit11"
-        btnEdit11.Size = New Size(132, 51)
-        btnEdit11.TabIndex = 215
-        btnEdit11.Text = "EDIT"
-        btnEdit11.UseVisualStyleBackColor = False
-        ' 
-        ' btnAdd11
-        ' 
-        btnAdd11.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAdd11.FlatAppearance.BorderSize = 0
-        btnAdd11.FlatStyle = FlatStyle.Flat
-        btnAdd11.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnAdd11.ForeColor = Color.White
-        btnAdd11.Location = New Point(1082, 819)
-        btnAdd11.Name = "btnAdd11"
-        btnAdd11.Size = New Size(132, 51)
-        btnAdd11.TabIndex = 216
-        btnAdd11.Text = "ADD"
-        btnAdd11.UseVisualStyleBackColor = False
-        ' 
-        ' pnlAddNewCompanyContactRecord
-        ' 
-        pnlAddNewCompanyContactRecord.BackColor = Color.WhiteSmoke
-        pnlAddNewCompanyContactRecord.Controls.Add(Label83)
-        pnlAddNewCompanyContactRecord.Controls.Add(txtContactNumber12)
-        pnlAddNewCompanyContactRecord.Controls.Add(Label90)
-        pnlAddNewCompanyContactRecord.Controls.Add(txtEmail12)
-        pnlAddNewCompanyContactRecord.Controls.Add(Label84)
-        pnlAddNewCompanyContactRecord.Controls.Add(txtFName12)
-        pnlAddNewCompanyContactRecord.Controls.Add(Label85)
-        pnlAddNewCompanyContactRecord.Controls.Add(txtCompany12)
-        pnlAddNewCompanyContactRecord.Controls.Add(btnCancel)
-        pnlAddNewCompanyContactRecord.Controls.Add(Label86)
-        pnlAddNewCompanyContactRecord.Controls.Add(btnAdd12)
-        pnlAddNewCompanyContactRecord.Controls.Add(txtLName12)
-        pnlAddNewCompanyContactRecord.Controls.Add(Label87)
-        pnlAddNewCompanyContactRecord.Controls.Add(Label88)
-        pnlAddNewCompanyContactRecord.Controls.Add(Label89)
-        pnlAddNewCompanyContactRecord.Controls.Add(txtPosition12)
-        pnlAddNewCompanyContactRecord.Controls.Add(txtCompanyContactID12)
-        pnlAddNewCompanyContactRecord.CornerRadius = 10
-        pnlAddNewCompanyContactRecord.Location = New Point(90, 363)
-        pnlAddNewCompanyContactRecord.Name = "pnlAddNewCompanyContactRecord"
-        pnlAddNewCompanyContactRecord.Size = New Size(1383, 495)
-        pnlAddNewCompanyContactRecord.TabIndex = 230
         ' 
         ' txtCompanyContactID12
         ' 
@@ -3588,20 +2424,6 @@ Partial Class Form4
         txtLName12.Size = New Size(471, 38)
         txtLName12.TabIndex = 202
         ' 
-        ' btnAdd12
-        ' 
-        btnAdd12.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAdd12.FlatAppearance.BorderSize = 0
-        btnAdd12.FlatStyle = FlatStyle.Flat
-        btnAdd12.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnAdd12.ForeColor = Color.White
-        btnAdd12.Location = New Point(1213, 648)
-        btnAdd12.Name = "btnAdd12"
-        btnAdd12.Size = New Size(132, 51)
-        btnAdd12.TabIndex = 219
-        btnAdd12.Text = "ADD"
-        btnAdd12.UseVisualStyleBackColor = False
-        ' 
         ' Label86
         ' 
         Label86.AutoSize = True
@@ -3613,20 +2435,6 @@ Partial Class Form4
         Label86.Size = New Size(127, 30)
         Label86.TabIndex = 203
         Label86.Text = "Last Name*"
-        ' 
-        ' btnCancel
-        ' 
-        btnCancel.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnCancel.FlatAppearance.BorderSize = 0
-        btnCancel.FlatStyle = FlatStyle.Flat
-        btnCancel.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnCancel.ForeColor = Color.White
-        btnCancel.Location = New Point(1075, 648)
-        btnCancel.Name = "btnCancel"
-        btnCancel.Size = New Size(132, 51)
-        btnCancel.TabIndex = 220
-        btnCancel.Text = "CANCEL"
-        btnCancel.UseVisualStyleBackColor = False
         ' 
         ' txtCompany12
         ' 
@@ -3720,67 +2528,6 @@ Partial Class Form4
         Label83.TabIndex = 232
         Label83.Text = "Contact Number*"
         ' 
-        ' pnlCompanyContactLogs
-        ' 
-        pnlCompanyContactLogs.BackColor = Color.White
-        pnlCompanyContactLogs.Controls.Add(Roundedpanel3)
-        pnlCompanyContactLogs.Controls.Add(pnlAddNewCompanyContactRecord)
-        pnlCompanyContactLogs.Controls.Add(btnAdd11)
-        pnlCompanyContactLogs.Controls.Add(btnEdit11)
-        pnlCompanyContactLogs.Controls.Add(btnDelete11)
-        pnlCompanyContactLogs.Controls.Add(btnSearch11)
-        pnlCompanyContactLogs.Controls.Add(lblTotalRecords11)
-        pnlCompanyContactLogs.Controls.Add(Label100)
-        pnlCompanyContactLogs.Controls.Add(dgvCompanyContactFiles)
-        pnlCompanyContactLogs.Controls.Add(Label101)
-        pnlCompanyContactLogs.Controls.Add(dgvCompanyContactLogs11)
-        pnlCompanyContactLogs.Controls.Add(txtSearchID11)
-        pnlCompanyContactLogs.Controls.Add(Label102)
-        pnlCompanyContactLogs.Location = New Point(0, 1)
-        pnlCompanyContactLogs.Name = "pnlCompanyContactLogs"
-        pnlCompanyContactLogs.Size = New Size(1529, 901)
-        pnlCompanyContactLogs.TabIndex = 229
-        ' 
-        ' Roundedpanel3
-        ' 
-        Roundedpanel3.BackColor = Color.WhiteSmoke
-        Roundedpanel3.Controls.Add(RoundedButton20)
-        Roundedpanel3.Controls.Add(TextBox26)
-        Roundedpanel3.Controls.Add(Label126)
-        Roundedpanel3.Controls.Add(TextBox19)
-        Roundedpanel3.Controls.Add(Label127)
-        Roundedpanel3.Controls.Add(TextBox20)
-        Roundedpanel3.Controls.Add(Label128)
-        Roundedpanel3.Controls.Add(TextBox21)
-        Roundedpanel3.Controls.Add(RoundedButton14)
-        Roundedpanel3.Controls.Add(Label129)
-        Roundedpanel3.Controls.Add(RoundedButton15)
-        Roundedpanel3.Controls.Add(TextBox22)
-        Roundedpanel3.Controls.Add(Label130)
-        Roundedpanel3.Controls.Add(Label131)
-        Roundedpanel3.Controls.Add(Label132)
-        Roundedpanel3.Controls.Add(TextBox23)
-        Roundedpanel3.Controls.Add(TextBox24)
-        Roundedpanel3.CornerRadius = 10
-        Roundedpanel3.Location = New Point(73, 85)
-        Roundedpanel3.Name = "Roundedpanel3"
-        Roundedpanel3.Size = New Size(1383, 730)
-        Roundedpanel3.TabIndex = 235
-        ' 
-        ' RoundedButton20
-        ' 
-        RoundedButton20.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton20.FlatAppearance.BorderSize = 0
-        RoundedButton20.FlatStyle = FlatStyle.Flat
-        RoundedButton20.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton20.ForeColor = Color.White
-        RoundedButton20.Location = New Point(1218, 52)
-        RoundedButton20.Name = "RoundedButton20"
-        RoundedButton20.Size = New Size(132, 38)
-        RoundedButton20.TabIndex = 237
-        RoundedButton20.Text = "SEARCH"
-        RoundedButton20.UseVisualStyleBackColor = False
-        ' 
         ' TextBox26
         ' 
         TextBox26.Cursor = Cursors.IBeam
@@ -3862,20 +2609,6 @@ Partial Class Form4
         TextBox21.Size = New Size(471, 38)
         TextBox21.TabIndex = 221
         ' 
-        ' RoundedButton14
-        ' 
-        RoundedButton14.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton14.FlatAppearance.BorderSize = 0
-        RoundedButton14.FlatStyle = FlatStyle.Flat
-        RoundedButton14.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton14.ForeColor = Color.White
-        RoundedButton14.Location = New Point(1075, 648)
-        RoundedButton14.Name = "RoundedButton14"
-        RoundedButton14.Size = New Size(132, 51)
-        RoundedButton14.TabIndex = 220
-        RoundedButton14.Text = "CANCEL"
-        RoundedButton14.UseVisualStyleBackColor = False
-        ' 
         ' Label129
         ' 
         Label129.AutoSize = True
@@ -3887,20 +2620,6 @@ Partial Class Form4
         Label129.Size = New Size(172, 30)
         Label129.TabIndex = 203
         Label129.Text = "Department ID*"
-        ' 
-        ' RoundedButton15
-        ' 
-        RoundedButton15.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        RoundedButton15.FlatAppearance.BorderSize = 0
-        RoundedButton15.FlatStyle = FlatStyle.Flat
-        RoundedButton15.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        RoundedButton15.ForeColor = Color.White
-        RoundedButton15.Location = New Point(1213, 648)
-        RoundedButton15.Name = "RoundedButton15"
-        RoundedButton15.Size = New Size(132, 51)
-        RoundedButton15.TabIndex = 219
-        RoundedButton15.Text = "ADD"
-        RoundedButton15.UseVisualStyleBackColor = False
         ' 
         ' TextBox22
         ' 
@@ -3980,7 +2699,6 @@ Partial Class Form4
         Controls.Add(Label56)
         Controls.Add(Label55)
         Controls.Add(Label51)
-        Controls.Add(Roundedpanel1)
         Controls.Add(Panel1)
         Controls.Add(Label6)
         Controls.Add(pnlHeader)
@@ -3994,29 +2712,11 @@ Partial Class Form4
         Name = "Form4"
         Text = "Form4"
         CType(dgvCompanyLogs8, ComponentModel.ISupportInitialize).EndInit()
-        pnlAddNewInternshipRecord.ResumeLayout(False)
-        pnlAddNewInternshipRecord.PerformLayout()
-        pnlEditInternshipEvaluationRecord.ResumeLayout(False)
-        pnlEditInternshipEvaluationRecord.PerformLayout()
-        pnlAddNewCompanyandCompanyContact.ResumeLayout(False)
-        pnlAddNewCompanyandCompanyContact.PerformLayout()
-        pnlAddNewCompanyRecord.ResumeLayout(False)
-        pnlAddNewCompanyRecord.PerformLayout()
-        pnlEditCompanyCompanyContact.ResumeLayout(False)
-        pnlEditCompanyCompanyContact.PerformLayout()
         CType(dgvCompanyFiles8, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvEvaluationLogs5, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).EndInit()
-        Roundedpanel1.ResumeLayout(False)
-        Roundedpanel1.PerformLayout()
-        Roundedpanel2.ResumeLayout(False)
-        Roundedpanel2.PerformLayout()
         CType(dgvEvaluationFiles5, ComponentModel.ISupportInitialize).EndInit()
-        pnlAddNewStudentRecord.ResumeLayout(False)
-        pnlAddNewStudentRecord.PerformLayout()
-        pnlEditStudentRecord.ResumeLayout(False)
-        pnlEditStudentRecord.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         pnlHeader.ResumeLayout(False)
@@ -4028,24 +2728,18 @@ Partial Class Form4
         CType(pctBoxExit1, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvStudentFiles1, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvStudentLogs1, ComponentModel.ISupportInitialize).EndInit()
-        pnlEditCompanyRecord.ResumeLayout(False)
-        pnlEditCompanyRecord.PerformLayout()
         pnlCompanyLogs.ResumeLayout(False)
         pnlCompanyLogs.PerformLayout()
+        pnlCompanyContactLogs.ResumeLayout(False)
+        pnlCompanyContactLogs.PerformLayout()
+        CType(dgvCompanyContactFiles, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvCompanyContactLogs11, ComponentModel.ISupportInitialize).EndInit()
         pnlEvaluaionLogs.ResumeLayout(False)
         pnlEvaluaionLogs.PerformLayout()
         pnlInternshipLogs.ResumeLayout(False)
         pnlInternshipLogs.PerformLayout()
         pnlStudentLogs.ResumeLayout(False)
         pnlStudentLogs.PerformLayout()
-        CType(dgvCompanyContactLogs11, ComponentModel.ISupportInitialize).EndInit()
-        CType(dgvCompanyContactFiles, ComponentModel.ISupportInitialize).EndInit()
-        pnlAddNewCompanyContactRecord.ResumeLayout(False)
-        pnlAddNewCompanyContactRecord.PerformLayout()
-        pnlCompanyContactLogs.ResumeLayout(False)
-        pnlCompanyContactLogs.PerformLayout()
-        Roundedpanel3.ResumeLayout(False)
-        Roundedpanel3.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
