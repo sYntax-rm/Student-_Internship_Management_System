@@ -481,6 +481,7 @@ Partial Class Form3
         btnHome.Font = New Font("Segoe UI", 22F, FontStyle.Bold)
         btnHome.ForeColor = Color.Black
         btnHome.Location = New Point(29, 27)
+        btnHome.MinimumSize = New Size(50, 25)
         btnHome.Name = "btnHome"
         btnHome.Size = New Size(147, 54)
         btnHome.TabIndex = 110
@@ -495,6 +496,7 @@ Partial Class Form3
         btnStudents.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         btnStudents.ForeColor = Color.Black
         btnStudents.Location = New Point(29, 137)
+        btnStudents.MinimumSize = New Size(50, 25)
         btnStudents.Name = "btnStudents"
         btnStudents.Size = New Size(316, 78)
         btnStudents.TabIndex = 111
@@ -509,6 +511,7 @@ Partial Class Form3
         btnInternships.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         btnInternships.ForeColor = Color.Black
         btnInternships.Location = New Point(29, 243)
+        btnInternships.MinimumSize = New Size(50, 25)
         btnInternships.Name = "btnInternships"
         btnInternships.Size = New Size(316, 78)
         btnInternships.TabIndex = 112
@@ -523,6 +526,7 @@ Partial Class Form3
         btnEvaluation.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         btnEvaluation.ForeColor = Color.Black
         btnEvaluation.Location = New Point(29, 349)
+        btnEvaluation.MinimumSize = New Size(50, 25)
         btnEvaluation.Name = "btnEvaluation"
         btnEvaluation.Size = New Size(316, 78)
         btnEvaluation.TabIndex = 113
@@ -537,6 +541,7 @@ Partial Class Form3
         btnCompany.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         btnCompany.ForeColor = Color.Black
         btnCompany.Location = New Point(29, 456)
+        btnCompany.MinimumSize = New Size(50, 25)
         btnCompany.Name = "btnCompany"
         btnCompany.Size = New Size(316, 78)
         btnCompany.TabIndex = 114
@@ -551,6 +556,7 @@ Partial Class Form3
         btnFaculty.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         btnFaculty.ForeColor = Color.Black
         btnFaculty.Location = New Point(29, 561)
+        btnFaculty.MinimumSize = New Size(50, 25)
         btnFaculty.Name = "btnFaculty"
         btnFaculty.Size = New Size(316, 78)
         btnFaculty.TabIndex = 115
@@ -565,6 +571,7 @@ Partial Class Form3
         btnVisitLog.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         btnVisitLog.ForeColor = Color.Black
         btnVisitLog.Location = New Point(29, 667)
+        btnVisitLog.MinimumSize = New Size(50, 25)
         btnVisitLog.Name = "btnVisitLog"
         btnVisitLog.Size = New Size(316, 78)
         btnVisitLog.TabIndex = 116
@@ -579,6 +586,7 @@ Partial Class Form3
         btnSummaryReport.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
         btnSummaryReport.ForeColor = Color.Black
         btnSummaryReport.Location = New Point(29, 776)
+        btnSummaryReport.MinimumSize = New Size(50, 25)
         btnSummaryReport.Name = "btnSummaryReport"
         btnSummaryReport.Size = New Size(316, 78)
         btnSummaryReport.TabIndex = 117
@@ -632,6 +640,7 @@ Partial Class Form3
         btnLogout.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnLogout.ForeColor = Color.White
         btnLogout.Location = New Point(1731, 62)
+        btnLogout.MinimumSize = New Size(50, 25)
         btnLogout.Name = "btnLogout"
         btnLogout.Size = New Size(132, 51)
         btnLogout.TabIndex = 118
@@ -866,6 +875,7 @@ Partial Class Form3
         btnSearch1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch1.ForeColor = Color.White
         btnSearch1.Location = New Point(651, 102)
+        btnSearch1.MinimumSize = New Size(50, 25)
         btnSearch1.Name = "btnSearch1"
         btnSearch1.Size = New Size(132, 38)
         btnSearch1.TabIndex = 213
@@ -880,6 +890,7 @@ Partial Class Form3
         btnHide1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnHide1.ForeColor = Color.White
         btnHide1.Location = New Point(1374, 788)
+        btnHide1.MinimumSize = New Size(50, 25)
         btnHide1.Name = "btnHide1"
         btnHide1.Size = New Size(132, 51)
         btnHide1.TabIndex = 214
@@ -894,6 +905,7 @@ Partial Class Form3
         btnEdit1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit1.ForeColor = Color.White
         btnEdit1.Location = New Point(1085, 789)
+        btnEdit1.MinimumSize = New Size(50, 25)
         btnEdit1.Name = "btnEdit1"
         btnEdit1.Size = New Size(132, 51)
         btnEdit1.TabIndex = 215
@@ -908,6 +920,7 @@ Partial Class Form3
         btnAdd1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd1.ForeColor = Color.White
         btnAdd1.Location = New Point(947, 789)
+        btnAdd1.MinimumSize = New Size(50, 25)
         btnAdd1.Name = "btnAdd1"
         btnAdd1.Size = New Size(132, 51)
         btnAdd1.TabIndex = 216
@@ -922,6 +935,7 @@ Partial Class Form3
         btnImport1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnImport1.ForeColor = Color.White
         btnImport1.Location = New Point(808, 791)
+        btnImport1.MinimumSize = New Size(50, 25)
         btnImport1.Name = "btnImport1"
         btnImport1.Size = New Size(132, 49)
         btnImport1.TabIndex = 217
@@ -988,6 +1002,7 @@ Partial Class Form3
         btnCancel2.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel2.ForeColor = Color.White
         btnCancel2.Location = New Point(1072, 644)
+        btnCancel2.MinimumSize = New Size(50, 25)
         btnCancel2.Name = "btnCancel2"
         btnCancel2.Size = New Size(132, 51)
         btnCancel2.TabIndex = 220
@@ -1014,6 +1029,7 @@ Partial Class Form3
         btnAdd2.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd2.ForeColor = Color.White
         btnAdd2.Location = New Point(1210, 643)
+        btnAdd2.MinimumSize = New Size(50, 25)
         btnAdd2.Name = "btnAdd2"
         btnAdd2.Size = New Size(132, 51)
         btnAdd2.TabIndex = 219
@@ -1232,7 +1248,7 @@ Partial Class Form3
         pnlEditStudentRecord.Controls.Add(cmbGender3)
         pnlEditStudentRecord.Controls.Add(cmbSection3)
         pnlEditStudentRecord.CornerRadius = 10
-        pnlEditStudentRecord.Location = New Point(122, 110)
+        pnlEditStudentRecord.Location = New Point(126, 97)
         pnlEditStudentRecord.Name = "pnlEditStudentRecord"
         pnlEditStudentRecord.Size = New Size(1381, 728)
         pnlEditStudentRecord.TabIndex = 221
@@ -1294,6 +1310,7 @@ Partial Class Form3
         btnSearch3.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch3.ForeColor = Color.White
         btnSearch3.Location = New Point(1206, 65)
+        btnSearch3.MinimumSize = New Size(50, 25)
         btnSearch3.Name = "btnSearch3"
         btnSearch3.Size = New Size(132, 38)
         btnSearch3.TabIndex = 222
@@ -1320,6 +1337,7 @@ Partial Class Form3
         btnCancel3.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel3.ForeColor = Color.White
         btnCancel3.Location = New Point(1072, 643)
+        btnCancel3.MinimumSize = New Size(50, 25)
         btnCancel3.Name = "btnCancel3"
         btnCancel3.Size = New Size(132, 51)
         btnCancel3.TabIndex = 220
@@ -1346,6 +1364,7 @@ Partial Class Form3
         btnEdit3.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit3.ForeColor = Color.White
         btnEdit3.Location = New Point(1210, 642)
+        btnEdit3.MinimumSize = New Size(50, 25)
         btnEdit3.Name = "btnEdit3"
         btnEdit3.Size = New Size(132, 51)
         btnEdit3.TabIndex = 219
@@ -1568,6 +1587,7 @@ Partial Class Form3
         btnShow1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnShow1.ForeColor = Color.White
         btnShow1.Location = New Point(1229, 788)
+        btnShow1.MinimumSize = New Size(50, 25)
         btnShow1.Name = "btnShow1"
         btnShow1.Size = New Size(132, 51)
         btnShow1.TabIndex = 223
@@ -1599,6 +1619,7 @@ Partial Class Form3
         btnSearch4.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch4.ForeColor = Color.White
         btnSearch4.Location = New Point(490, 97)
+        btnSearch4.MinimumSize = New Size(50, 25)
         btnSearch4.Name = "btnSearch4"
         btnSearch4.Size = New Size(132, 38)
         btnSearch4.TabIndex = 214
@@ -1740,6 +1761,7 @@ Partial Class Form3
         btnSearch7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch7.ForeColor = Color.White
         btnSearch7.Location = New Point(1206, 56)
+        btnSearch7.MinimumSize = New Size(50, 25)
         btnSearch7.Name = "btnSearch7"
         btnSearch7.Size = New Size(132, 38)
         btnSearch7.TabIndex = 224
@@ -1754,6 +1776,7 @@ Partial Class Form3
         btnCancel7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel7.ForeColor = Color.White
         btnCancel7.Location = New Point(1073, 648)
+        btnCancel7.MinimumSize = New Size(50, 25)
         btnCancel7.Name = "btnCancel7"
         btnCancel7.Size = New Size(132, 51)
         btnCancel7.TabIndex = 220
@@ -1792,6 +1815,7 @@ Partial Class Form3
         btnEdit7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit7.ForeColor = Color.White
         btnEdit7.Location = New Point(1211, 648)
+        btnEdit7.MinimumSize = New Size(50, 25)
         btnEdit7.Name = "btnEdit7"
         btnEdit7.Size = New Size(132, 51)
         btnEdit7.TabIndex = 219
@@ -1941,6 +1965,7 @@ Partial Class Form3
         btnCancel6.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel6.ForeColor = Color.White
         btnCancel6.Location = New Point(1073, 648)
+        btnCancel6.MinimumSize = New Size(50, 25)
         btnCancel6.Name = "btnCancel6"
         btnCancel6.Size = New Size(132, 51)
         btnCancel6.TabIndex = 220
@@ -1967,6 +1992,7 @@ Partial Class Form3
         btnAdd6.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd6.ForeColor = Color.White
         btnAdd6.Location = New Point(1211, 648)
+        btnAdd6.MinimumSize = New Size(50, 25)
         btnAdd6.Name = "btnAdd6"
         btnAdd6.Size = New Size(132, 51)
         btnAdd6.TabIndex = 219
@@ -2094,6 +2120,7 @@ Partial Class Form3
         btnAdd5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd5.ForeColor = Color.White
         btnAdd5.Location = New Point(1082, 819)
+        btnAdd5.MinimumSize = New Size(50, 25)
         btnAdd5.Name = "btnAdd5"
         btnAdd5.Size = New Size(132, 51)
         btnAdd5.TabIndex = 216
@@ -2108,6 +2135,7 @@ Partial Class Form3
         btnEdit5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit5.ForeColor = Color.White
         btnEdit5.Location = New Point(1220, 819)
+        btnEdit5.MinimumSize = New Size(50, 25)
         btnEdit5.Name = "btnEdit5"
         btnEdit5.Size = New Size(132, 51)
         btnEdit5.TabIndex = 215
@@ -2122,6 +2150,7 @@ Partial Class Form3
         btnDelete5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnDelete5.ForeColor = Color.White
         btnDelete5.Location = New Point(1358, 818)
+        btnDelete5.MinimumSize = New Size(50, 25)
         btnDelete5.Name = "btnDelete5"
         btnDelete5.Size = New Size(132, 51)
         btnDelete5.TabIndex = 214
@@ -2136,6 +2165,7 @@ Partial Class Form3
         btnSearch5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch5.ForeColor = Color.White
         btnSearch5.Location = New Point(491, 98)
+        btnSearch5.MinimumSize = New Size(50, 25)
         btnSearch5.Name = "btnSearch5"
         btnSearch5.Size = New Size(132, 38)
         btnSearch5.TabIndex = 213
@@ -2282,6 +2312,7 @@ Partial Class Form3
         btnSearch10.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch10.ForeColor = Color.White
         btnSearch10.Location = New Point(1202, 53)
+        btnSearch10.MinimumSize = New Size(50, 25)
         btnSearch10.Name = "btnSearch10"
         btnSearch10.Size = New Size(132, 38)
         btnSearch10.TabIndex = 228
@@ -2377,6 +2408,7 @@ Partial Class Form3
         btnCancel10.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel10.ForeColor = Color.White
         btnCancel10.Location = New Point(1075, 648)
+        btnCancel10.MinimumSize = New Size(50, 25)
         btnCancel10.Name = "btnCancel10"
         btnCancel10.Size = New Size(132, 51)
         btnCancel10.TabIndex = 220
@@ -2403,6 +2435,7 @@ Partial Class Form3
         btnEdit10.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit10.ForeColor = Color.White
         btnEdit10.Location = New Point(1213, 648)
+        btnEdit10.MinimumSize = New Size(50, 25)
         btnEdit10.Name = "btnEdit10"
         btnEdit10.Size = New Size(132, 51)
         btnEdit10.TabIndex = 219
@@ -2579,6 +2612,7 @@ Partial Class Form3
         btnCancel9.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel9.ForeColor = Color.White
         btnCancel9.Location = New Point(1075, 648)
+        btnCancel9.MinimumSize = New Size(50, 25)
         btnCancel9.Name = "btnCancel9"
         btnCancel9.Size = New Size(132, 51)
         btnCancel9.TabIndex = 220
@@ -2605,6 +2639,7 @@ Partial Class Form3
         btnAdd9.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd9.ForeColor = Color.White
         btnAdd9.Location = New Point(1213, 648)
+        btnAdd9.MinimumSize = New Size(50, 25)
         btnAdd9.Name = "btnAdd9"
         btnAdd9.Size = New Size(132, 51)
         btnAdd9.TabIndex = 219
@@ -2702,6 +2737,7 @@ Partial Class Form3
         btnEditCompanyContact8.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
         btnEditCompanyContact8.ForeColor = Color.White
         btnEditCompanyContact8.Location = New Point(90, 210)
+        btnEditCompanyContact8.MinimumSize = New Size(50, 25)
         btnEditCompanyContact8.Name = "btnEditCompanyContact8"
         btnEditCompanyContact8.Size = New Size(378, 90)
         btnEditCompanyContact8.TabIndex = 220
@@ -2716,6 +2752,7 @@ Partial Class Form3
         btnEditCompany8.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         btnEditCompany8.ForeColor = Color.White
         btnEditCompany8.Location = New Point(90, 87)
+        btnEditCompany8.MinimumSize = New Size(50, 25)
         btnEditCompany8.Name = "btnEditCompany8"
         btnEditCompany8.Size = New Size(378, 90)
         btnEditCompany8.TabIndex = 219
@@ -2774,6 +2811,7 @@ Partial Class Form3
         btnAddCompanyContact8.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
         btnAddCompanyContact8.ForeColor = Color.White
         btnAddCompanyContact8.Location = New Point(90, 210)
+        btnAddCompanyContact8.MinimumSize = New Size(50, 25)
         btnAddCompanyContact8.Name = "btnAddCompanyContact8"
         btnAddCompanyContact8.Size = New Size(378, 90)
         btnAddCompanyContact8.TabIndex = 220
@@ -2788,6 +2826,7 @@ Partial Class Form3
         btnAddCompany8.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         btnAddCompany8.ForeColor = Color.White
         btnAddCompany8.Location = New Point(90, 87)
+        btnAddCompany8.MinimumSize = New Size(50, 25)
         btnAddCompany8.Name = "btnAddCompany8"
         btnAddCompany8.Size = New Size(378, 90)
         btnAddCompany8.TabIndex = 219
@@ -2832,6 +2871,7 @@ Partial Class Form3
         btnAdd8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd8.ForeColor = Color.White
         btnAdd8.Location = New Point(1082, 819)
+        btnAdd8.MinimumSize = New Size(50, 25)
         btnAdd8.Name = "btnAdd8"
         btnAdd8.Size = New Size(132, 51)
         btnAdd8.TabIndex = 216
@@ -2846,6 +2886,7 @@ Partial Class Form3
         btnEdit8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit8.ForeColor = Color.White
         btnEdit8.Location = New Point(1220, 819)
+        btnEdit8.MinimumSize = New Size(50, 25)
         btnEdit8.Name = "btnEdit8"
         btnEdit8.Size = New Size(132, 51)
         btnEdit8.TabIndex = 215
@@ -2860,6 +2901,7 @@ Partial Class Form3
         btnDelete8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnDelete8.ForeColor = Color.White
         btnDelete8.Location = New Point(1358, 818)
+        btnDelete8.MinimumSize = New Size(50, 25)
         btnDelete8.Name = "btnDelete8"
         btnDelete8.Size = New Size(132, 51)
         btnDelete8.TabIndex = 214
@@ -2874,6 +2916,7 @@ Partial Class Form3
         btnSearch8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch8.ForeColor = Color.White
         btnSearch8.Location = New Point(491, 98)
+        btnSearch8.MinimumSize = New Size(50, 25)
         btnSearch8.Name = "btnSearch8"
         btnSearch8.Size = New Size(132, 38)
         btnSearch8.TabIndex = 213
@@ -2969,6 +3012,7 @@ Partial Class Form3
         btnViewContacts8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnViewContacts8.ForeColor = Color.White
         btnViewContacts8.Location = New Point(832, 818)
+        btnViewContacts8.MinimumSize = New Size(50, 25)
         btnViewContacts8.Name = "btnViewContacts8"
         btnViewContacts8.Size = New Size(244, 51)
         btnViewContacts8.TabIndex = 229
@@ -3059,6 +3103,7 @@ Partial Class Form3
         btnSearch13.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch13.ForeColor = Color.White
         btnSearch13.Location = New Point(1208, 58)
+        btnSearch13.MinimumSize = New Size(50, 25)
         btnSearch13.Name = "btnSearch13"
         btnSearch13.Size = New Size(132, 38)
         btnSearch13.TabIndex = 234
@@ -3177,6 +3222,7 @@ Partial Class Form3
         btnCancel13.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel13.ForeColor = Color.White
         btnCancel13.Location = New Point(1075, 648)
+        btnCancel13.MinimumSize = New Size(50, 25)
         btnCancel13.Name = "btnCancel13"
         btnCancel13.Size = New Size(132, 51)
         btnCancel13.TabIndex = 220
@@ -3203,6 +3249,7 @@ Partial Class Form3
         btnEdit13.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit13.ForeColor = Color.White
         btnEdit13.Location = New Point(1213, 648)
+        btnEdit13.MinimumSize = New Size(50, 25)
         btnEdit13.Name = "btnEdit13"
         btnEdit13.Size = New Size(132, 51)
         btnEdit13.TabIndex = 219
@@ -3378,6 +3425,7 @@ Partial Class Form3
         btnCancel.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel.ForeColor = Color.White
         btnCancel.Location = New Point(1075, 648)
+        btnCancel.MinimumSize = New Size(50, 25)
         btnCancel.Name = "btnCancel"
         btnCancel.Size = New Size(132, 51)
         btnCancel.TabIndex = 220
@@ -3404,6 +3452,7 @@ Partial Class Form3
         btnAdd12.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd12.ForeColor = Color.White
         btnAdd12.Location = New Point(1213, 648)
+        btnAdd12.MinimumSize = New Size(50, 25)
         btnAdd12.Name = "btnAdd12"
         btnAdd12.Size = New Size(132, 51)
         btnAdd12.TabIndex = 219
@@ -3487,6 +3536,7 @@ Partial Class Form3
         btnAdd11.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd11.ForeColor = Color.White
         btnAdd11.Location = New Point(1082, 819)
+        btnAdd11.MinimumSize = New Size(50, 25)
         btnAdd11.Name = "btnAdd11"
         btnAdd11.Size = New Size(132, 51)
         btnAdd11.TabIndex = 216
@@ -3501,6 +3551,7 @@ Partial Class Form3
         btnEdit11.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit11.ForeColor = Color.White
         btnEdit11.Location = New Point(1220, 819)
+        btnEdit11.MinimumSize = New Size(50, 25)
         btnEdit11.Name = "btnEdit11"
         btnEdit11.Size = New Size(132, 51)
         btnEdit11.TabIndex = 215
@@ -3515,6 +3566,7 @@ Partial Class Form3
         btnDelete11.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnDelete11.ForeColor = Color.White
         btnDelete11.Location = New Point(1358, 818)
+        btnDelete11.MinimumSize = New Size(50, 25)
         btnDelete11.Name = "btnDelete11"
         btnDelete11.Size = New Size(132, 51)
         btnDelete11.TabIndex = 214
@@ -3529,6 +3581,7 @@ Partial Class Form3
         btnSearch11.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch11.ForeColor = Color.White
         btnSearch11.Location = New Point(491, 98)
+        btnSearch11.MinimumSize = New Size(50, 25)
         btnSearch11.Name = "btnSearch11"
         btnSearch11.Size = New Size(132, 38)
         btnSearch11.TabIndex = 213
@@ -3672,6 +3725,7 @@ Partial Class Form3
         btnSearch16.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch16.ForeColor = Color.White
         btnSearch16.Location = New Point(1208, 58)
+        btnSearch16.MinimumSize = New Size(50, 25)
         btnSearch16.Name = "btnSearch16"
         btnSearch16.Size = New Size(132, 38)
         btnSearch16.TabIndex = 234
@@ -3767,6 +3821,7 @@ Partial Class Form3
         btnCancel16.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel16.ForeColor = Color.White
         btnCancel16.Location = New Point(1075, 648)
+        btnCancel16.MinimumSize = New Size(50, 25)
         btnCancel16.Name = "btnCancel16"
         btnCancel16.Size = New Size(132, 51)
         btnCancel16.TabIndex = 220
@@ -3793,6 +3848,7 @@ Partial Class Form3
         btnEdit16.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit16.ForeColor = Color.White
         btnEdit16.Location = New Point(1213, 648)
+        btnEdit16.MinimumSize = New Size(50, 25)
         btnEdit16.Name = "btnEdit16"
         btnEdit16.Size = New Size(132, 51)
         btnEdit16.TabIndex = 219
@@ -3969,6 +4025,7 @@ Partial Class Form3
         btnCancel15.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel15.ForeColor = Color.White
         btnCancel15.Location = New Point(1075, 648)
+        btnCancel15.MinimumSize = New Size(50, 25)
         btnCancel15.Name = "btnCancel15"
         btnCancel15.Size = New Size(132, 51)
         btnCancel15.TabIndex = 220
@@ -3995,6 +4052,7 @@ Partial Class Form3
         btnAdd15.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd15.ForeColor = Color.White
         btnAdd15.Location = New Point(1213, 648)
+        btnAdd15.MinimumSize = New Size(50, 25)
         btnAdd15.Name = "btnAdd15"
         btnAdd15.Size = New Size(132, 51)
         btnAdd15.TabIndex = 219
@@ -4078,6 +4136,7 @@ Partial Class Form3
         btnAdd14.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd14.ForeColor = Color.White
         btnAdd14.Location = New Point(1082, 819)
+        btnAdd14.MinimumSize = New Size(50, 25)
         btnAdd14.Name = "btnAdd14"
         btnAdd14.Size = New Size(132, 51)
         btnAdd14.TabIndex = 216
@@ -4092,6 +4151,7 @@ Partial Class Form3
         btnEdit14.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit14.ForeColor = Color.White
         btnEdit14.Location = New Point(1220, 819)
+        btnEdit14.MinimumSize = New Size(50, 25)
         btnEdit14.Name = "btnEdit14"
         btnEdit14.Size = New Size(132, 51)
         btnEdit14.TabIndex = 215
@@ -4106,6 +4166,7 @@ Partial Class Form3
         btnDelete14.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnDelete14.ForeColor = Color.White
         btnDelete14.Location = New Point(1358, 818)
+        btnDelete14.MinimumSize = New Size(50, 25)
         btnDelete14.Name = "btnDelete14"
         btnDelete14.Size = New Size(132, 51)
         btnDelete14.TabIndex = 214
@@ -4120,6 +4181,7 @@ Partial Class Form3
         btnSearch14.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch14.ForeColor = Color.White
         btnSearch14.Location = New Point(491, 98)
+        btnSearch14.MinimumSize = New Size(50, 25)
         btnSearch14.Name = "btnSearch14"
         btnSearch14.Size = New Size(132, 38)
         btnSearch14.TabIndex = 213
@@ -4263,6 +4325,7 @@ Partial Class Form3
         btnSearch19.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch19.ForeColor = Color.White
         btnSearch19.Location = New Point(1206, 60)
+        btnSearch19.MinimumSize = New Size(50, 25)
         btnSearch19.Name = "btnSearch19"
         btnSearch19.Size = New Size(132, 38)
         btnSearch19.TabIndex = 236
@@ -4355,6 +4418,7 @@ Partial Class Form3
         btnCancel19.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel19.ForeColor = Color.White
         btnCancel19.Location = New Point(1075, 648)
+        btnCancel19.MinimumSize = New Size(50, 25)
         btnCancel19.Name = "btnCancel19"
         btnCancel19.Size = New Size(132, 51)
         btnCancel19.TabIndex = 220
@@ -4381,6 +4445,7 @@ Partial Class Form3
         btnEdit19.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit19.ForeColor = Color.White
         btnEdit19.Location = New Point(1213, 648)
+        btnEdit19.MinimumSize = New Size(50, 25)
         btnEdit19.Name = "btnEdit19"
         btnEdit19.Size = New Size(132, 51)
         btnEdit19.TabIndex = 219
@@ -4554,6 +4619,7 @@ Partial Class Form3
         btnCancel18.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel18.ForeColor = Color.White
         btnCancel18.Location = New Point(1075, 648)
+        btnCancel18.MinimumSize = New Size(50, 25)
         btnCancel18.Name = "btnCancel18"
         btnCancel18.Size = New Size(132, 51)
         btnCancel18.TabIndex = 220
@@ -4580,6 +4646,7 @@ Partial Class Form3
         btnAdd18.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd18.ForeColor = Color.White
         btnAdd18.Location = New Point(1213, 648)
+        btnAdd18.MinimumSize = New Size(50, 25)
         btnAdd18.Name = "btnAdd18"
         btnAdd18.Size = New Size(132, 51)
         btnAdd18.TabIndex = 219
@@ -4663,6 +4730,7 @@ Partial Class Form3
         btnAdd17.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd17.ForeColor = Color.White
         btnAdd17.Location = New Point(1082, 819)
+        btnAdd17.MinimumSize = New Size(50, 25)
         btnAdd17.Name = "btnAdd17"
         btnAdd17.Size = New Size(132, 51)
         btnAdd17.TabIndex = 216
@@ -4677,6 +4745,7 @@ Partial Class Form3
         btnEdit17.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit17.ForeColor = Color.White
         btnEdit17.Location = New Point(1220, 819)
+        btnEdit17.MinimumSize = New Size(50, 25)
         btnEdit17.Name = "btnEdit17"
         btnEdit17.Size = New Size(132, 51)
         btnEdit17.TabIndex = 215
@@ -4691,6 +4760,7 @@ Partial Class Form3
         btnDelete17.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnDelete17.ForeColor = Color.White
         btnDelete17.Location = New Point(1358, 818)
+        btnDelete17.MinimumSize = New Size(50, 25)
         btnDelete17.Name = "btnDelete17"
         btnDelete17.Size = New Size(132, 51)
         btnDelete17.TabIndex = 214
@@ -4705,6 +4775,7 @@ Partial Class Form3
         btnSearch17.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch17.ForeColor = Color.White
         btnSearch17.Location = New Point(491, 98)
+        btnSearch17.MinimumSize = New Size(50, 25)
         btnSearch17.Name = "btnSearch17"
         btnSearch17.Size = New Size(132, 38)
         btnSearch17.TabIndex = 213
@@ -4892,6 +4963,7 @@ Partial Class Form3
         btnSearch20.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch20.ForeColor = Color.White
         btnSearch20.Location = New Point(491, 98)
+        btnSearch20.MinimumSize = New Size(50, 25)
         btnSearch20.Name = "btnSearch20"
         btnSearch20.Size = New Size(132, 38)
         btnSearch20.TabIndex = 213
@@ -4991,6 +5063,7 @@ Partial Class Form3
         RoundedButton1.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         RoundedButton1.ForeColor = Color.White
         RoundedButton1.Location = New Point(536, 498)
+        RoundedButton1.MinimumSize = New Size(50, 25)
         RoundedButton1.Name = "RoundedButton1"
         RoundedButton1.Size = New Size(132, 51)
         RoundedButton1.TabIndex = 222
@@ -5005,6 +5078,7 @@ Partial Class Form3
         RoundedButton2.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         RoundedButton2.ForeColor = Color.White
         RoundedButton2.Location = New Point(1206, 65)
+        RoundedButton2.MinimumSize = New Size(50, 25)
         RoundedButton2.Name = "RoundedButton2"
         RoundedButton2.Size = New Size(132, 38)
         RoundedButton2.TabIndex = 222
@@ -5019,6 +5093,7 @@ Partial Class Form3
         RoundedButton7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         RoundedButton7.ForeColor = Color.White
         RoundedButton7.Location = New Point(674, 498)
+        RoundedButton7.MinimumSize = New Size(50, 25)
         RoundedButton7.Name = "RoundedButton7"
         RoundedButton7.Size = New Size(132, 51)
         RoundedButton7.TabIndex = 221
@@ -5045,6 +5120,7 @@ Partial Class Form3
         RoundedButton8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         RoundedButton8.ForeColor = Color.White
         RoundedButton8.Location = New Point(812, 497)
+        RoundedButton8.MinimumSize = New Size(50, 25)
         RoundedButton8.Name = "RoundedButton8"
         RoundedButton8.Size = New Size(132, 51)
         RoundedButton8.TabIndex = 220
@@ -5059,6 +5135,7 @@ Partial Class Form3
         RoundedButton3.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         RoundedButton3.ForeColor = Color.White
         RoundedButton3.Location = New Point(1072, 644)
+        RoundedButton3.MinimumSize = New Size(50, 25)
         RoundedButton3.Name = "RoundedButton3"
         RoundedButton3.Size = New Size(132, 51)
         RoundedButton3.TabIndex = 220
@@ -5085,6 +5162,7 @@ Partial Class Form3
         RoundedButton4.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         RoundedButton4.ForeColor = Color.White
         RoundedButton4.Location = New Point(1210, 643)
+        RoundedButton4.MinimumSize = New Size(50, 25)
         RoundedButton4.Name = "RoundedButton4"
         RoundedButton4.Size = New Size(132, 51)
         RoundedButton4.TabIndex = 219
@@ -5277,6 +5355,7 @@ Partial Class Form3
         RoundedButton5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         RoundedButton5.ForeColor = Color.White
         RoundedButton5.Location = New Point(1072, 644)
+        RoundedButton5.MinimumSize = New Size(50, 25)
         RoundedButton5.Name = "RoundedButton5"
         RoundedButton5.Size = New Size(132, 51)
         RoundedButton5.TabIndex = 220
@@ -5303,6 +5382,7 @@ Partial Class Form3
         RoundedButton6.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         RoundedButton6.ForeColor = Color.White
         RoundedButton6.Location = New Point(1210, 643)
+        RoundedButton6.MinimumSize = New Size(50, 25)
         RoundedButton6.Name = "RoundedButton6"
         RoundedButton6.Size = New Size(132, 51)
         RoundedButton6.TabIndex = 219
