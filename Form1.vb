@@ -7,7 +7,7 @@
 
         Dim DGP As New Drawing2D.GraphicsPath
         DGP.StartFigure()
-        'top left corner
+        'top left corners
         DGP.AddArc(New Rectangle(0, 0, 40, 40), 180, 90)
         DGP.AddLine(40, 0, obj.Width - 40, 0)
 
