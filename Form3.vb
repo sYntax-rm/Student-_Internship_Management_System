@@ -34,6 +34,14 @@ Public Class Form3
         pnlEditStudentRecord.Location = New Point(90, 78)
         pnlEditStudentRecord.Size = New Size(1100, 750)
 
+        'Panel add Edit Location - Evaluation
+        'Add
+        pnlEditInternshipEvaluationRecord.Location = New Point(90, 78)
+        pnlEditInternshipEvaluationRecord.Size = New Size(1100, 750)
+        'Edit
+        pnlEditInternshipEvaluationRecord.Location = New Point(90, 78)
+        pnlEditInternshipEvaluationRecord.Size = New Size(1100, 750)
+
         'For buttons
         hidePanel()
 
@@ -1565,6 +1573,9 @@ Public Class Form3
     Private Sub picStudentIcon_Click(sender As Object, e As EventArgs) Handles picStudentIcon.Click
 
     End Sub
+
+
+
 
 
 

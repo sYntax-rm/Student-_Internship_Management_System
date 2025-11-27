@@ -56,6 +56,22 @@ Partial Class Form3
         lblSignInAs = New Label()
         pctBoxHide1 = New PictureBox()
         pctBoxExit1 = New PictureBox()
+        pnlEditInternshipEvaluationRecord = New roundedpanel()
+        btnSearch7 = New RoundedButton()
+        btnCancel7 = New RoundedButton()
+        txtSearchID7 = New TextBox()
+        Label19 = New Label()
+        btnEdit7 = New RoundedButton()
+        txtFacultyID7 = New TextBox()
+        Label20 = New Label()
+        Label22 = New Label()
+        Label23 = New Label()
+        Label50 = New Label()
+        cmbStatus7 = New ComboBox()
+        Label52 = New Label()
+        txtEvaluationReport7 = New TextBox()
+        txtInternshipID7 = New TextBox()
+        txtEvaluationID7 = New TextBox()
         Label9 = New Label()
         txtSearchStudentID1 = New TextBox()
         dgvStudentSearch = New DataGridView()
@@ -121,6 +137,7 @@ Partial Class Form3
         Label17 = New Label()
         btnShow1 = New RoundedButton()
         pnlInternshipInformation = New Panel()
+        lblInternshipId = New Label()
         btnSearch4 = New RoundedButton()
         lblTotalRecords4 = New Label()
         Label45 = New Label()
@@ -130,23 +147,9 @@ Partial Class Form3
         txtSearchID4 = New TextBox()
         Label47 = New Label()
         pnlEvaluationInformation = New Panel()
-        pnlEditInternshipEvaluationRecord = New roundedpanel()
-        btnSearch7 = New RoundedButton()
-        btnCancel7 = New RoundedButton()
-        txtSearchID7 = New TextBox()
-        Label19 = New Label()
-        btnEdit7 = New RoundedButton()
-        txtFacultyID7 = New TextBox()
-        Label20 = New Label()
-        Label22 = New Label()
-        Label23 = New Label()
-        Label50 = New Label()
-        cmbStatus7 = New ComboBox()
-        Label52 = New Label()
-        txtEvaluationReport7 = New TextBox()
-        txtInternshipID7 = New TextBox()
-        txtEvaluationID7 = New TextBox()
         pnlAddNewInternshipEvaluationRecord = New roundedpanel()
+        Panel2 = New Panel()
+        pnlDesign3 = New Panel()
         btnCancel6 = New RoundedButton()
         Label64 = New Label()
         btnAdd6 = New RoundedButton()
@@ -171,6 +174,7 @@ Partial Class Form3
         dgvEvaluationLogs5 = New DataGridView()
         txtSearchID5 = New TextBox()
         Label74 = New Label()
+        lblEvaluationID = New Label()
         pnlCompanyInformation = New Panel()
         pnlEditCompanyRecord = New roundedpanel()
         btnSearch10 = New RoundedButton()
@@ -435,6 +439,8 @@ Partial Class Form3
         pnlDataModel2 = New Panel()
         pnlDataModel1 = New Panel()
         pnlCompleted = New Panel()
+        Label140 = New Label()
+        Panel3 = New Panel()
         Panel1.SuspendLayout()
         CType(picSummary, ComponentModel.ISupportInitialize).BeginInit()
         CType(picVisitIcon, ComponentModel.ISupportInitialize).BeginInit()
@@ -449,6 +455,7 @@ Partial Class Form3
         CType(pctBoxIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(pctBoxHide1, ComponentModel.ISupportInitialize).BeginInit()
         CType(pctBoxExit1, ComponentModel.ISupportInitialize).BeginInit()
+        pnlEditInternshipEvaluationRecord.SuspendLayout()
         CType(dgvStudentSearch, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvStudentFiles, ComponentModel.ISupportInitialize).BeginInit()
         pnlAddNewStudentRecord.SuspendLayout()
@@ -458,7 +465,6 @@ Partial Class Form3
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).BeginInit()
         pnlEvaluationInformation.SuspendLayout()
-        pnlEditInternshipEvaluationRecord.SuspendLayout()
         pnlAddNewInternshipEvaluationRecord.SuspendLayout()
         CType(dgvEvaluationFiles5, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvEvaluationLogs5, ComponentModel.ISupportInitialize).BeginInit()
@@ -892,6 +898,215 @@ Partial Class Form3
         pctBoxExit1.TabIndex = 105
         pctBoxExit1.TabStop = False
         ' 
+        ' pnlEditInternshipEvaluationRecord
+        ' 
+        pnlEditInternshipEvaluationRecord.BackColor = Color.MintCream
+        pnlEditInternshipEvaluationRecord.Controls.Add(Panel3)
+        pnlEditInternshipEvaluationRecord.Controls.Add(Label140)
+        pnlEditInternshipEvaluationRecord.Controls.Add(btnSearch7)
+        pnlEditInternshipEvaluationRecord.Controls.Add(btnCancel7)
+        pnlEditInternshipEvaluationRecord.Controls.Add(txtSearchID7)
+        pnlEditInternshipEvaluationRecord.Controls.Add(Label19)
+        pnlEditInternshipEvaluationRecord.Controls.Add(btnEdit7)
+        pnlEditInternshipEvaluationRecord.Controls.Add(txtFacultyID7)
+        pnlEditInternshipEvaluationRecord.Controls.Add(Label20)
+        pnlEditInternshipEvaluationRecord.Controls.Add(Label22)
+        pnlEditInternshipEvaluationRecord.Controls.Add(Label23)
+        pnlEditInternshipEvaluationRecord.Controls.Add(Label50)
+        pnlEditInternshipEvaluationRecord.Controls.Add(cmbStatus7)
+        pnlEditInternshipEvaluationRecord.Controls.Add(Label52)
+        pnlEditInternshipEvaluationRecord.Controls.Add(txtEvaluationReport7)
+        pnlEditInternshipEvaluationRecord.Controls.Add(txtInternshipID7)
+        pnlEditInternshipEvaluationRecord.Controls.Add(txtEvaluationID7)
+        pnlEditInternshipEvaluationRecord.CornerRadius = 10
+        pnlEditInternshipEvaluationRecord.Enabled = False
+        pnlEditInternshipEvaluationRecord.Location = New Point(1102, 58)
+        pnlEditInternshipEvaluationRecord.Name = "pnlEditInternshipEvaluationRecord"
+        pnlEditInternshipEvaluationRecord.Size = New Size(322, 750)
+        pnlEditInternshipEvaluationRecord.TabIndex = 221
+        ' 
+        ' btnSearch7
+        ' 
+        btnSearch7.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnSearch7.FlatAppearance.BorderSize = 0
+        btnSearch7.FlatStyle = FlatStyle.Flat
+        btnSearch7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        btnSearch7.ForeColor = Color.White
+        btnSearch7.Location = New Point(948, 35)
+        btnSearch7.MinimumSize = New Size(50, 25)
+        btnSearch7.Name = "btnSearch7"
+        btnSearch7.Size = New Size(132, 38)
+        btnSearch7.TabIndex = 224
+        btnSearch7.Text = "SEARCH"
+        btnSearch7.UseVisualStyleBackColor = False
+        ' 
+        ' btnCancel7
+        ' 
+        btnCancel7.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnCancel7.FlatAppearance.BorderSize = 0
+        btnCancel7.FlatStyle = FlatStyle.Flat
+        btnCancel7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        btnCancel7.ForeColor = Color.White
+        btnCancel7.Location = New Point(766, 653)
+        btnCancel7.MinimumSize = New Size(50, 25)
+        btnCancel7.Name = "btnCancel7"
+        btnCancel7.Size = New Size(132, 51)
+        btnCancel7.TabIndex = 220
+        btnCancel7.Text = "CANCEL"
+        btnCancel7.UseVisualStyleBackColor = False
+        ' 
+        ' txtSearchID7
+        ' 
+        txtSearchID7.Cursor = Cursors.IBeam
+        txtSearchID7.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        txtSearchID7.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtSearchID7.Location = New Point(744, 35)
+        txtSearchID7.Multiline = True
+        txtSearchID7.Name = "txtSearchID7"
+        txtSearchID7.Size = New Size(198, 38)
+        txtSearchID7.TabIndex = 223
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.BackColor = Color.Transparent
+        Label19.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label19.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label19.Location = New Point(567, 231)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(120, 30)
+        Label19.TabIndex = 203
+        Label19.Text = "Faculty ID*"
+        ' 
+        ' btnEdit7
+        ' 
+        btnEdit7.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnEdit7.FlatAppearance.BorderSize = 0
+        btnEdit7.FlatStyle = FlatStyle.Flat
+        btnEdit7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        btnEdit7.ForeColor = Color.White
+        btnEdit7.Location = New Point(907, 653)
+        btnEdit7.MinimumSize = New Size(50, 25)
+        btnEdit7.Name = "btnEdit7"
+        btnEdit7.Size = New Size(132, 51)
+        btnEdit7.TabIndex = 219
+        btnEdit7.Text = "EDIT"
+        btnEdit7.UseVisualStyleBackColor = False
+        ' 
+        ' txtFacultyID7
+        ' 
+        txtFacultyID7.Cursor = Cursors.IBeam
+        txtFacultyID7.Font = New Font("Segoe UI", 14F)
+        txtFacultyID7.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtFacultyID7.Location = New Point(568, 256)
+        txtFacultyID7.Multiline = True
+        txtFacultyID7.Name = "txtFacultyID7"
+        txtFacultyID7.Size = New Size(471, 38)
+        txtFacultyID7.TabIndex = 202
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.BackColor = Color.Transparent
+        Label20.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        Label20.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label20.Location = New Point(62, 33)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(307, 92)
+        Label20.TabIndex = 201
+        Label20.Text = "Edit Internship " & vbCrLf & "Evaluation Record"
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.BackColor = Color.Transparent
+        Label22.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label22.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label22.Location = New Point(66, 529)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(83, 30)
+        Label22.TabIndex = 200
+        Label22.Text = "Status*"
+        ' 
+        ' Label23
+        ' 
+        Label23.AutoSize = True
+        Label23.BackColor = Color.Transparent
+        Label23.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label23.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label23.Location = New Point(66, 227)
+        Label23.Name = "Label23"
+        Label23.Size = New Size(152, 30)
+        Label23.TabIndex = 198
+        Label23.Text = "Internship ID*"
+        ' 
+        ' Label50
+        ' 
+        Label50.AutoSize = True
+        Label50.BackColor = Color.Transparent
+        Label50.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label50.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label50.Location = New Point(66, 131)
+        Label50.Name = "Label50"
+        Label50.Size = New Size(154, 30)
+        Label50.TabIndex = 197
+        Label50.Text = "Evaluation ID*"
+        ' 
+        ' cmbStatus7
+        ' 
+        cmbStatus7.Font = New Font("Segoe UI", 14F)
+        cmbStatus7.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        cmbStatus7.FormattingEnabled = True
+        cmbStatus7.Location = New Point(63, 560)
+        cmbStatus7.Name = "cmbStatus7"
+        cmbStatus7.Size = New Size(471, 39)
+        cmbStatus7.TabIndex = 196
+        ' 
+        ' Label52
+        ' 
+        Label52.AutoSize = True
+        Label52.BackColor = Color.Transparent
+        Label52.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label52.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label52.Location = New Point(66, 314)
+        Label52.Name = "Label52"
+        Label52.Size = New Size(200, 30)
+        Label52.TabIndex = 195
+        Label52.Text = "Evaluation Report*"
+        ' 
+        ' txtEvaluationReport7
+        ' 
+        txtEvaluationReport7.Cursor = Cursors.IBeam
+        txtEvaluationReport7.Font = New Font("Segoe UI", 14F)
+        txtEvaluationReport7.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtEvaluationReport7.Location = New Point(66, 349)
+        txtEvaluationReport7.Multiline = True
+        txtEvaluationReport7.Name = "txtEvaluationReport7"
+        txtEvaluationReport7.Size = New Size(973, 151)
+        txtEvaluationReport7.TabIndex = 194
+        ' 
+        ' txtInternshipID7
+        ' 
+        txtInternshipID7.Cursor = Cursors.IBeam
+        txtInternshipID7.Font = New Font("Segoe UI", 14F)
+        txtInternshipID7.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtInternshipID7.Location = New Point(63, 260)
+        txtInternshipID7.Multiline = True
+        txtInternshipID7.Name = "txtInternshipID7"
+        txtInternshipID7.Size = New Size(471, 38)
+        txtInternshipID7.TabIndex = 192
+        ' 
+        ' txtEvaluationID7
+        ' 
+        txtEvaluationID7.Cursor = Cursors.IBeam
+        txtEvaluationID7.Font = New Font("Segoe UI", 14F)
+        txtEvaluationID7.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtEvaluationID7.Location = New Point(63, 164)
+        txtEvaluationID7.Multiline = True
+        txtEvaluationID7.Name = "txtEvaluationID7"
+        txtEvaluationID7.Size = New Size(471, 38)
+        txtEvaluationID7.TabIndex = 191
+        ' 
         ' Label9
         ' 
         Label9.AutoSize = True
@@ -1078,9 +1293,9 @@ Partial Class Form3
         pnlAddNewStudentRecord.Controls.Add(txtFName2)
         pnlAddNewStudentRecord.Controls.Add(txtStudentID2)
         pnlAddNewStudentRecord.CornerRadius = 10
-        pnlAddNewStudentRecord.Location = New Point(717, 40)
+        pnlAddNewStudentRecord.Location = New Point(761, 40)
         pnlAddNewStudentRecord.Name = "pnlAddNewStudentRecord"
-        pnlAddNewStudentRecord.Size = New Size(367, 750)
+        pnlAddNewStudentRecord.Size = New Size(323, 750)
         pnlAddNewStudentRecord.TabIndex = 218
         ' 
         ' pnlDesign1
@@ -1373,9 +1588,9 @@ Partial Class Form3
         pnlEditStudentRecord.Controls.Add(cmbGender3)
         pnlEditStudentRecord.Controls.Add(cmbSection3)
         pnlEditStudentRecord.CornerRadius = 10
-        pnlEditStudentRecord.Location = New Point(1104, 42)
+        pnlEditStudentRecord.Location = New Point(1117, 40)
         pnlEditStudentRecord.Name = "pnlEditStudentRecord"
-        pnlEditStudentRecord.Size = New Size(383, 750)
+        pnlEditStudentRecord.Size = New Size(335, 750)
         pnlEditStudentRecord.TabIndex = 221
         ' 
         ' pnlDesign2
@@ -1736,6 +1951,7 @@ Partial Class Form3
         ' pnlInternshipInformation
         ' 
         pnlInternshipInformation.BackColor = Color.White
+        pnlInternshipInformation.Controls.Add(lblInternshipId)
         pnlInternshipInformation.Controls.Add(btnSearch4)
         pnlInternshipInformation.Controls.Add(lblTotalRecords4)
         pnlInternshipInformation.Controls.Add(Label45)
@@ -1750,6 +1966,16 @@ Partial Class Form3
         pnlInternshipInformation.Size = New Size(1529, 902)
         pnlInternshipInformation.TabIndex = 135
         ' 
+        ' lblInternshipId
+        ' 
+        lblInternshipId.AutoSize = True
+        lblInternshipId.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblInternshipId.Location = New Point(28, 114)
+        lblInternshipId.Name = "lblInternshipId"
+        lblInternshipId.Size = New Size(179, 28)
+        lblInternshipId.TabIndex = 215
+        lblInternshipId.Text = "Enter Name or Id:"
+        ' 
         ' btnSearch4
         ' 
         btnSearch4.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
@@ -1757,10 +1983,10 @@ Partial Class Form3
         btnSearch4.FlatStyle = FlatStyle.Flat
         btnSearch4.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch4.ForeColor = Color.White
-        btnSearch4.Location = New Point(490, 97)
+        btnSearch4.Location = New Point(661, 107)
         btnSearch4.MinimumSize = New Size(50, 25)
         btnSearch4.Name = "btnSearch4"
-        btnSearch4.Size = New Size(132, 38)
+        btnSearch4.Size = New Size(140, 46)
         btnSearch4.TabIndex = 214
         btnSearch4.Text = "SEARCH"
         btnSearch4.UseVisualStyleBackColor = False
@@ -1769,11 +1995,11 @@ Partial Class Form3
         ' 
         lblTotalRecords4.AutoSize = True
         lblTotalRecords4.BackColor = Color.Transparent
-        lblTotalRecords4.Font = New Font("Segoe UI", 11F)
+        lblTotalRecords4.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblTotalRecords4.ForeColor = Color.Black
-        lblTotalRecords4.Location = New Point(153, 819)
+        lblTotalRecords4.Location = New Point(237, 824)
         lblTotalRecords4.Name = "lblTotalRecords4"
-        lblTotalRecords4.Size = New Size(34, 25)
+        lblTotalRecords4.Size = New Size(48, 38)
         lblTotalRecords4.TabIndex = 129
         lblTotalRecords4.Text = "[0]"
         ' 
@@ -1782,44 +2008,44 @@ Partial Class Form3
         Label45.AutoSize = True
         Label45.BackColor = Color.Transparent
         Label45.FlatStyle = FlatStyle.System
-        Label45.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
-        Label45.ForeColor = Color.Black
-        Label45.Location = New Point(28, 819)
+        Label45.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label45.ForeColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        Label45.Location = New Point(49, 827)
         Label45.Name = "Label45"
-        Label45.Size = New Size(136, 25)
+        Label45.Size = New Size(199, 38)
         Label45.TabIndex = 124
         Label45.Text = "Total Records:"
         ' 
         ' dgvInternshipFiles4
         ' 
-        dgvInternshipFiles4.BackgroundColor = Color.White
+        dgvInternshipFiles4.BackgroundColor = Color.MintCream
         dgvInternshipFiles4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvInternshipFiles4.Location = New Point(171, 458)
+        dgvInternshipFiles4.Location = New Point(87, 423)
         dgvInternshipFiles4.Name = "dgvInternshipFiles4"
         dgvInternshipFiles4.RowHeadersWidth = 51
-        dgvInternshipFiles4.Size = New Size(1052, 171)
+        dgvInternshipFiles4.Size = New Size(1356, 347)
         dgvInternshipFiles4.TabIndex = 128
         ' 
         ' Label46
         ' 
         Label46.AutoSize = True
         Label46.BackColor = Color.Transparent
-        Label46.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
-        Label46.ForeColor = Color.Black
-        Label46.Location = New Point(66, 400)
+        Label46.Font = New Font("Century", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label46.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label46.Location = New Point(82, 355)
         Label46.Name = "Label46"
-        Label46.Size = New Size(251, 37)
+        Label46.Size = New Size(336, 47)
         Label46.TabIndex = 126
-        Label46.Text = "INTERNSHIP FILES"
+        Label46.Text = "Internship Files"
         ' 
         ' dgvInternshipLogs4
         ' 
-        dgvInternshipLogs4.BackgroundColor = Color.White
+        dgvInternshipLogs4.BackgroundColor = Color.MintCream
         dgvInternshipLogs4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvInternshipLogs4.Location = New Point(171, 194)
+        dgvInternshipLogs4.Location = New Point(87, 194)
         dgvInternshipLogs4.Name = "dgvInternshipLogs4"
         dgvInternshipLogs4.RowHeadersWidth = 51
-        dgvInternshipLogs4.Size = New Size(1052, 80)
+        dgvInternshipLogs4.Size = New Size(1353, 142)
         dgvInternshipLogs4.TabIndex = 125
         ' 
         ' txtSearchID4
@@ -1827,19 +2053,18 @@ Partial Class Form3
         txtSearchID4.Cursor = Cursors.IBeam
         txtSearchID4.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         txtSearchID4.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID4.Location = New Point(52, 97)
+        txtSearchID4.Location = New Point(214, 111)
         txtSearchID4.Multiline = True
         txtSearchID4.Name = "txtSearchID4"
         txtSearchID4.Size = New Size(432, 38)
         txtSearchID4.TabIndex = 116
-        txtSearchID4.Text = "Search Internshp ID"
         ' 
         ' Label47
         ' 
         Label47.AutoSize = True
         Label47.BackColor = Color.Transparent
         Label47.Font = New Font("Century", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label47.ForeColor = Color.Black
+        Label47.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         Label47.Location = New Point(20, 25)
         Label47.Name = "Label47"
         Label47.Size = New Size(698, 71)
@@ -1862,221 +2087,18 @@ Partial Class Form3
         pnlEvaluationInformation.Controls.Add(dgvEvaluationLogs5)
         pnlEvaluationInformation.Controls.Add(txtSearchID5)
         pnlEvaluationInformation.Controls.Add(Label74)
+        pnlEvaluationInformation.Controls.Add(lblEvaluationID)
         pnlEvaluationInformation.Dock = DockStyle.Fill
         pnlEvaluationInformation.Location = New Point(373, 131)
         pnlEvaluationInformation.Name = "pnlEvaluationInformation"
         pnlEvaluationInformation.Size = New Size(1529, 902)
         pnlEvaluationInformation.TabIndex = 223
         ' 
-        ' pnlEditInternshipEvaluationRecord
-        ' 
-        pnlEditInternshipEvaluationRecord.BackColor = Color.WhiteSmoke
-        pnlEditInternshipEvaluationRecord.Controls.Add(btnSearch7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(btnCancel7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtSearchID7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label19)
-        pnlEditInternshipEvaluationRecord.Controls.Add(btnEdit7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtFacultyID7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label20)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label22)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label23)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label50)
-        pnlEditInternshipEvaluationRecord.Controls.Add(cmbStatus7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(Label52)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtEvaluationReport7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtInternshipID7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtEvaluationID7)
-        pnlEditInternshipEvaluationRecord.CornerRadius = 10
-        pnlEditInternshipEvaluationRecord.Location = New Point(71, 120)
-        pnlEditInternshipEvaluationRecord.Name = "pnlEditInternshipEvaluationRecord"
-        pnlEditInternshipEvaluationRecord.Size = New Size(1383, 733)
-        pnlEditInternshipEvaluationRecord.TabIndex = 221
-        ' 
-        ' btnSearch7
-        ' 
-        btnSearch7.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnSearch7.FlatAppearance.BorderSize = 0
-        btnSearch7.FlatStyle = FlatStyle.Flat
-        btnSearch7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnSearch7.ForeColor = Color.White
-        btnSearch7.Location = New Point(1206, 56)
-        btnSearch7.MinimumSize = New Size(50, 25)
-        btnSearch7.Name = "btnSearch7"
-        btnSearch7.Size = New Size(132, 38)
-        btnSearch7.TabIndex = 224
-        btnSearch7.Text = "SEARCH"
-        btnSearch7.UseVisualStyleBackColor = False
-        ' 
-        ' btnCancel7
-        ' 
-        btnCancel7.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnCancel7.FlatAppearance.BorderSize = 0
-        btnCancel7.FlatStyle = FlatStyle.Flat
-        btnCancel7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnCancel7.ForeColor = Color.White
-        btnCancel7.Location = New Point(1073, 648)
-        btnCancel7.MinimumSize = New Size(50, 25)
-        btnCancel7.Name = "btnCancel7"
-        btnCancel7.Size = New Size(132, 51)
-        btnCancel7.TabIndex = 220
-        btnCancel7.Text = "CANCEL"
-        btnCancel7.UseVisualStyleBackColor = False
-        ' 
-        ' txtSearchID7
-        ' 
-        txtSearchID7.Cursor = Cursors.IBeam
-        txtSearchID7.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        txtSearchID7.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID7.Location = New Point(988, 56)
-        txtSearchID7.Multiline = True
-        txtSearchID7.Name = "txtSearchID7"
-        txtSearchID7.Size = New Size(212, 38)
-        txtSearchID7.TabIndex = 223
-        txtSearchID7.Text = "Search Evaluation ID"
-        ' 
-        ' Label19
-        ' 
-        Label19.AutoSize = True
-        Label19.BackColor = Color.Transparent
-        Label19.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label19.ForeColor = Color.Black
-        Label19.Location = New Point(754, 211)
-        Label19.Name = "Label19"
-        Label19.Size = New Size(120, 30)
-        Label19.TabIndex = 203
-        Label19.Text = "Faculty ID*"
-        ' 
-        ' btnEdit7
-        ' 
-        btnEdit7.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnEdit7.FlatAppearance.BorderSize = 0
-        btnEdit7.FlatStyle = FlatStyle.Flat
-        btnEdit7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnEdit7.ForeColor = Color.White
-        btnEdit7.Location = New Point(1211, 648)
-        btnEdit7.MinimumSize = New Size(50, 25)
-        btnEdit7.Name = "btnEdit7"
-        btnEdit7.Size = New Size(132, 51)
-        btnEdit7.TabIndex = 219
-        btnEdit7.Text = "EDIT"
-        btnEdit7.UseVisualStyleBackColor = False
-        ' 
-        ' txtFacultyID7
-        ' 
-        txtFacultyID7.Cursor = Cursors.IBeam
-        txtFacultyID7.Font = New Font("Segoe UI", 14F)
-        txtFacultyID7.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtFacultyID7.Location = New Point(751, 244)
-        txtFacultyID7.Multiline = True
-        txtFacultyID7.Name = "txtFacultyID7"
-        txtFacultyID7.Size = New Size(471, 38)
-        txtFacultyID7.TabIndex = 202
-        ' 
-        ' Label20
-        ' 
-        Label20.AutoSize = True
-        Label20.BackColor = Color.Transparent
-        Label20.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        Label20.ForeColor = Color.Black
-        Label20.Location = New Point(56, 28)
-        Label20.Name = "Label20"
-        Label20.Size = New Size(645, 46)
-        Label20.TabIndex = 201
-        Label20.Text = "EDIT INTERNSHIP EVALUTION RECORD"
-        ' 
-        ' Label22
-        ' 
-        Label22.AutoSize = True
-        Label22.BackColor = Color.Transparent
-        Label22.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label22.ForeColor = Color.Black
-        Label22.Location = New Point(147, 511)
-        Label22.Name = "Label22"
-        Label22.Size = New Size(83, 30)
-        Label22.TabIndex = 200
-        Label22.Text = "Status*"
-        ' 
-        ' Label23
-        ' 
-        Label23.AutoSize = True
-        Label23.BackColor = Color.Transparent
-        Label23.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label23.ForeColor = Color.Black
-        Label23.Location = New Point(147, 211)
-        Label23.Name = "Label23"
-        Label23.Size = New Size(152, 30)
-        Label23.TabIndex = 198
-        Label23.Text = "Internship ID*"
-        ' 
-        ' Label50
-        ' 
-        Label50.AutoSize = True
-        Label50.BackColor = Color.Transparent
-        Label50.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label50.ForeColor = Color.Black
-        Label50.Location = New Point(147, 115)
-        Label50.Name = "Label50"
-        Label50.Size = New Size(154, 30)
-        Label50.TabIndex = 197
-        Label50.Text = "Evaluation ID*"
-        ' 
-        ' cmbStatus7
-        ' 
-        cmbStatus7.Font = New Font("Segoe UI", 14F)
-        cmbStatus7.FormattingEnabled = True
-        cmbStatus7.Location = New Point(144, 544)
-        cmbStatus7.Name = "cmbStatus7"
-        cmbStatus7.Size = New Size(471, 39)
-        cmbStatus7.TabIndex = 196
-        ' 
-        ' Label52
-        ' 
-        Label52.AutoSize = True
-        Label52.BackColor = Color.Transparent
-        Label52.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label52.ForeColor = Color.Black
-        Label52.Location = New Point(147, 305)
-        Label52.Name = "Label52"
-        Label52.Size = New Size(200, 30)
-        Label52.TabIndex = 195
-        Label52.Text = "Evaluation Report*"
-        ' 
-        ' txtEvaluationReport7
-        ' 
-        txtEvaluationReport7.Cursor = Cursors.IBeam
-        txtEvaluationReport7.Font = New Font("Segoe UI", 14F)
-        txtEvaluationReport7.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtEvaluationReport7.Location = New Point(144, 338)
-        txtEvaluationReport7.Multiline = True
-        txtEvaluationReport7.Name = "txtEvaluationReport7"
-        txtEvaluationReport7.Size = New Size(1078, 151)
-        txtEvaluationReport7.TabIndex = 194
-        ' 
-        ' txtInternshipID7
-        ' 
-        txtInternshipID7.Cursor = Cursors.IBeam
-        txtInternshipID7.Font = New Font("Segoe UI", 14F)
-        txtInternshipID7.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtInternshipID7.Location = New Point(144, 244)
-        txtInternshipID7.Multiline = True
-        txtInternshipID7.Name = "txtInternshipID7"
-        txtInternshipID7.Size = New Size(471, 38)
-        txtInternshipID7.TabIndex = 192
-        ' 
-        ' txtEvaluationID7
-        ' 
-        txtEvaluationID7.Cursor = Cursors.IBeam
-        txtEvaluationID7.Font = New Font("Segoe UI", 14F)
-        txtEvaluationID7.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtEvaluationID7.Location = New Point(144, 148)
-        txtEvaluationID7.Multiline = True
-        txtEvaluationID7.Name = "txtEvaluationID7"
-        txtEvaluationID7.Size = New Size(471, 38)
-        txtEvaluationID7.TabIndex = 191
-        ' 
         ' pnlAddNewInternshipEvaluationRecord
         ' 
-        pnlAddNewInternshipEvaluationRecord.BackColor = Color.WhiteSmoke
+        pnlAddNewInternshipEvaluationRecord.BackColor = Color.Honeydew
+        pnlAddNewInternshipEvaluationRecord.Controls.Add(Panel2)
+        pnlAddNewInternshipEvaluationRecord.Controls.Add(pnlDesign3)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(btnCancel6)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(Label64)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(btnAdd6)
@@ -2091,10 +2113,26 @@ Partial Class Form3
         pnlAddNewInternshipEvaluationRecord.Controls.Add(txtInternshipID6)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(txtEvaluationID6)
         pnlAddNewInternshipEvaluationRecord.CornerRadius = 10
-        pnlAddNewInternshipEvaluationRecord.Location = New Point(71, 128)
+        pnlAddNewInternshipEvaluationRecord.Location = New Point(746, 58)
         pnlAddNewInternshipEvaluationRecord.Name = "pnlAddNewInternshipEvaluationRecord"
-        pnlAddNewInternshipEvaluationRecord.Size = New Size(1383, 730)
+        pnlAddNewInternshipEvaluationRecord.Size = New Size(345, 750)
         pnlAddNewInternshipEvaluationRecord.TabIndex = 218
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Panel2.Location = New Point(36, 42)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(10, 63)
+        Panel2.TabIndex = 231
+        ' 
+        ' pnlDesign3
+        ' 
+        pnlDesign3.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        pnlDesign3.Location = New Point(1104, 42)
+        pnlDesign3.Name = "pnlDesign3"
+        pnlDesign3.Size = New Size(10, 63)
+        pnlDesign3.TabIndex = 230
         ' 
         ' btnCancel6
         ' 
@@ -2103,7 +2141,7 @@ Partial Class Form3
         btnCancel6.FlatStyle = FlatStyle.Flat
         btnCancel6.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel6.ForeColor = Color.White
-        btnCancel6.Location = New Point(1073, 648)
+        btnCancel6.Location = New Point(766, 653)
         btnCancel6.MinimumSize = New Size(50, 25)
         btnCancel6.Name = "btnCancel6"
         btnCancel6.Size = New Size(132, 51)
@@ -2116,8 +2154,8 @@ Partial Class Form3
         Label64.AutoSize = True
         Label64.BackColor = Color.Transparent
         Label64.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label64.ForeColor = Color.Black
-        Label64.Location = New Point(754, 211)
+        Label64.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label64.Location = New Point(571, 228)
         Label64.Name = "Label64"
         Label64.Size = New Size(120, 30)
         Label64.TabIndex = 203
@@ -2125,12 +2163,12 @@ Partial Class Form3
         ' 
         ' btnAdd6
         ' 
-        btnAdd6.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnAdd6.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnAdd6.FlatAppearance.BorderSize = 0
         btnAdd6.FlatStyle = FlatStyle.Flat
         btnAdd6.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd6.ForeColor = Color.White
-        btnAdd6.Location = New Point(1211, 648)
+        btnAdd6.Location = New Point(907, 653)
         btnAdd6.MinimumSize = New Size(50, 25)
         btnAdd6.Name = "btnAdd6"
         btnAdd6.Size = New Size(132, 51)
@@ -2142,8 +2180,8 @@ Partial Class Form3
         ' 
         txtFacultyID6.Cursor = Cursors.IBeam
         txtFacultyID6.Font = New Font("Segoe UI", 14F)
-        txtFacultyID6.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtFacultyID6.Location = New Point(751, 244)
+        txtFacultyID6.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtFacultyID6.Location = New Point(568, 261)
         txtFacultyID6.Multiline = True
         txtFacultyID6.Name = "txtFacultyID6"
         txtFacultyID6.Size = New Size(471, 38)
@@ -2154,20 +2192,20 @@ Partial Class Form3
         Label65.AutoSize = True
         Label65.BackColor = Color.Transparent
         Label65.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        Label65.ForeColor = Color.Black
-        Label65.Location = New Point(56, 28)
+        Label65.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label65.Location = New Point(62, 46)
         Label65.Name = "Label65"
-        Label65.Size = New Size(734, 46)
+        Label65.Size = New Size(636, 46)
         Label65.TabIndex = 201
-        Label65.Text = "ADD NEW INTERNSHIP EVALUTION RECORD"
+        Label65.Text = "Add New Internship Evaluation Record"
         ' 
         ' Label66
         ' 
         Label66.AutoSize = True
         Label66.BackColor = Color.Transparent
         Label66.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label66.ForeColor = Color.Black
-        Label66.Location = New Point(147, 511)
+        Label66.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label66.Location = New Point(69, 527)
         Label66.Name = "Label66"
         Label66.Size = New Size(83, 30)
         Label66.TabIndex = 200
@@ -2178,8 +2216,8 @@ Partial Class Form3
         Label68.AutoSize = True
         Label68.BackColor = Color.Transparent
         Label68.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label68.ForeColor = Color.Black
-        Label68.Location = New Point(147, 211)
+        Label68.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label68.Location = New Point(69, 227)
         Label68.Name = "Label68"
         Label68.Size = New Size(152, 30)
         Label68.TabIndex = 198
@@ -2190,8 +2228,8 @@ Partial Class Form3
         Label69.AutoSize = True
         Label69.BackColor = Color.Transparent
         Label69.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label69.ForeColor = Color.Black
-        Label69.Location = New Point(147, 115)
+        Label69.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label69.Location = New Point(69, 131)
         Label69.Name = "Label69"
         Label69.Size = New Size(154, 30)
         Label69.TabIndex = 197
@@ -2200,8 +2238,9 @@ Partial Class Form3
         ' cmbStatus6
         ' 
         cmbStatus6.Font = New Font("Segoe UI", 14F)
+        cmbStatus6.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbStatus6.FormattingEnabled = True
-        cmbStatus6.Location = New Point(144, 544)
+        cmbStatus6.Location = New Point(66, 560)
         cmbStatus6.Name = "cmbStatus6"
         cmbStatus6.Size = New Size(471, 39)
         cmbStatus6.TabIndex = 196
@@ -2211,8 +2250,8 @@ Partial Class Form3
         Label70.AutoSize = True
         Label70.BackColor = Color.Transparent
         Label70.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label70.ForeColor = Color.Black
-        Label70.Location = New Point(147, 305)
+        Label70.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label70.Location = New Point(69, 321)
         Label70.Name = "Label70"
         Label70.Size = New Size(200, 30)
         Label70.TabIndex = 195
@@ -2222,19 +2261,19 @@ Partial Class Form3
         ' 
         txtEvaluationReport6.Cursor = Cursors.IBeam
         txtEvaluationReport6.Font = New Font("Segoe UI", 14F)
-        txtEvaluationReport6.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtEvaluationReport6.Location = New Point(144, 338)
+        txtEvaluationReport6.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtEvaluationReport6.Location = New Point(66, 354)
         txtEvaluationReport6.Multiline = True
         txtEvaluationReport6.Name = "txtEvaluationReport6"
-        txtEvaluationReport6.Size = New Size(1078, 151)
+        txtEvaluationReport6.Size = New Size(980, 151)
         txtEvaluationReport6.TabIndex = 194
         ' 
         ' txtInternshipID6
         ' 
         txtInternshipID6.Cursor = Cursors.IBeam
         txtInternshipID6.Font = New Font("Segoe UI", 14F)
-        txtInternshipID6.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtInternshipID6.Location = New Point(144, 244)
+        txtInternshipID6.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtInternshipID6.Location = New Point(66, 260)
         txtInternshipID6.Multiline = True
         txtInternshipID6.Name = "txtInternshipID6"
         txtInternshipID6.Size = New Size(471, 38)
@@ -2244,8 +2283,8 @@ Partial Class Form3
         ' 
         txtEvaluationID6.Cursor = Cursors.IBeam
         txtEvaluationID6.Font = New Font("Segoe UI", 14F)
-        txtEvaluationID6.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtEvaluationID6.Location = New Point(144, 148)
+        txtEvaluationID6.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtEvaluationID6.Location = New Point(66, 164)
         txtEvaluationID6.Multiline = True
         txtEvaluationID6.Name = "txtEvaluationID6"
         txtEvaluationID6.Size = New Size(471, 38)
@@ -2253,12 +2292,12 @@ Partial Class Form3
         ' 
         ' btnAdd5
         ' 
-        btnAdd5.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnAdd5.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnAdd5.FlatAppearance.BorderSize = 0
         btnAdd5.FlatStyle = FlatStyle.Flat
         btnAdd5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd5.ForeColor = Color.White
-        btnAdd5.Location = New Point(1082, 819)
+        btnAdd5.Location = New Point(1088, 824)
         btnAdd5.MinimumSize = New Size(50, 25)
         btnAdd5.Name = "btnAdd5"
         btnAdd5.Size = New Size(132, 51)
@@ -2268,12 +2307,12 @@ Partial Class Form3
         ' 
         ' btnEdit5
         ' 
-        btnEdit5.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnEdit5.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnEdit5.FlatAppearance.BorderSize = 0
         btnEdit5.FlatStyle = FlatStyle.Flat
         btnEdit5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit5.ForeColor = Color.White
-        btnEdit5.Location = New Point(1220, 819)
+        btnEdit5.Location = New Point(1226, 824)
         btnEdit5.MinimumSize = New Size(50, 25)
         btnEdit5.Name = "btnEdit5"
         btnEdit5.Size = New Size(132, 51)
@@ -2283,12 +2322,12 @@ Partial Class Form3
         ' 
         ' btnDelete5
         ' 
-        btnDelete5.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnDelete5.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnDelete5.FlatAppearance.BorderSize = 0
         btnDelete5.FlatStyle = FlatStyle.Flat
         btnDelete5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnDelete5.ForeColor = Color.White
-        btnDelete5.Location = New Point(1358, 818)
+        btnDelete5.Location = New Point(1364, 824)
         btnDelete5.MinimumSize = New Size(50, 25)
         btnDelete5.Name = "btnDelete5"
         btnDelete5.Size = New Size(132, 51)
@@ -2303,10 +2342,10 @@ Partial Class Form3
         btnSearch5.FlatStyle = FlatStyle.Flat
         btnSearch5.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch5.ForeColor = Color.White
-        btnSearch5.Location = New Point(491, 98)
+        btnSearch5.Location = New Point(661, 107)
         btnSearch5.MinimumSize = New Size(50, 25)
         btnSearch5.Name = "btnSearch5"
-        btnSearch5.Size = New Size(132, 38)
+        btnSearch5.Size = New Size(140, 46)
         btnSearch5.TabIndex = 213
         btnSearch5.Text = "SEARCH"
         btnSearch5.UseVisualStyleBackColor = False
@@ -2315,11 +2354,11 @@ Partial Class Form3
         ' 
         lblTotalRecords5.AutoSize = True
         lblTotalRecords5.BackColor = Color.Transparent
-        lblTotalRecords5.Font = New Font("Segoe UI", 11F)
+        lblTotalRecords5.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblTotalRecords5.ForeColor = Color.Black
-        lblTotalRecords5.Location = New Point(154, 818)
+        lblTotalRecords5.Location = New Point(237, 824)
         lblTotalRecords5.Name = "lblTotalRecords5"
-        lblTotalRecords5.Size = New Size(34, 25)
+        lblTotalRecords5.Size = New Size(48, 38)
         lblTotalRecords5.TabIndex = 129
         lblTotalRecords5.Text = "[0]"
         ' 
@@ -2328,69 +2367,79 @@ Partial Class Form3
         Label72.AutoSize = True
         Label72.BackColor = Color.Transparent
         Label72.FlatStyle = FlatStyle.System
-        Label72.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
-        Label72.ForeColor = Color.Black
-        Label72.Location = New Point(28, 819)
+        Label72.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label72.ForeColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        Label72.Location = New Point(49, 827)
         Label72.Name = "Label72"
-        Label72.Size = New Size(136, 25)
+        Label72.Size = New Size(199, 38)
         Label72.TabIndex = 124
         Label72.Text = "Total Records:"
         ' 
         ' dgvEvaluationFiles5
         ' 
-        dgvEvaluationFiles5.BackgroundColor = Color.White
+        dgvEvaluationFiles5.BackgroundColor = Color.MintCream
         dgvEvaluationFiles5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvEvaluationFiles5.Location = New Point(171, 458)
+        dgvEvaluationFiles5.Location = New Point(87, 423)
         dgvEvaluationFiles5.Name = "dgvEvaluationFiles5"
         dgvEvaluationFiles5.RowHeadersWidth = 51
-        dgvEvaluationFiles5.Size = New Size(1052, 265)
+        dgvEvaluationFiles5.Size = New Size(1356, 347)
         dgvEvaluationFiles5.TabIndex = 128
         ' 
         ' Label73
         ' 
         Label73.AutoSize = True
         Label73.BackColor = Color.Transparent
-        Label73.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
-        Label73.ForeColor = Color.Black
-        Label73.Location = New Point(76, 400)
+        Label73.Font = New Font("Century", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label73.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label73.Location = New Point(82, 355)
         Label73.Name = "Label73"
-        Label73.Size = New Size(255, 37)
+        Label73.Size = New Size(343, 47)
         Label73.TabIndex = 126
-        Label73.Text = "EVALUATION FILES"
+        Label73.Text = "Evaluation Files"
         ' 
         ' dgvEvaluationLogs5
         ' 
-        dgvEvaluationLogs5.BackgroundColor = Color.White
+        dgvEvaluationLogs5.BackgroundColor = Color.MintCream
         dgvEvaluationLogs5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvEvaluationLogs5.Location = New Point(171, 194)
+        dgvEvaluationLogs5.Location = New Point(87, 194)
         dgvEvaluationLogs5.Name = "dgvEvaluationLogs5"
         dgvEvaluationLogs5.RowHeadersWidth = 51
-        dgvEvaluationLogs5.Size = New Size(1052, 80)
+        dgvEvaluationLogs5.Size = New Size(1353, 142)
         dgvEvaluationLogs5.TabIndex = 125
         ' 
         ' txtSearchID5
         ' 
         txtSearchID5.Cursor = Cursors.IBeam
-        txtSearchID5.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        txtSearchID5.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtSearchID5.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID5.Location = New Point(53, 98)
+        txtSearchID5.Location = New Point(214, 111)
         txtSearchID5.Multiline = True
         txtSearchID5.Name = "txtSearchID5"
         txtSearchID5.Size = New Size(432, 38)
         txtSearchID5.TabIndex = 116
-        txtSearchID5.Text = "Search Evaluation ID"
         ' 
         ' Label74
         ' 
         Label74.AutoSize = True
         Label74.BackColor = Color.Transparent
-        Label74.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        Label74.ForeColor = Color.Black
+        Label74.Font = New Font("Century", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label74.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         Label74.Location = New Point(20, 27)
         Label74.Name = "Label74"
-        Label74.Size = New Size(481, 46)
+        Label74.Size = New Size(708, 71)
         Label74.TabIndex = 114
-        Label74.Text = "EVALUATION INFORMATION"
+        Label74.Text = "Evaluation Information"
+        ' 
+        ' lblEvaluationID
+        ' 
+        lblEvaluationID.AutoSize = True
+        lblEvaluationID.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblEvaluationID.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblEvaluationID.Location = New Point(28, 114)
+        lblEvaluationID.Name = "lblEvaluationID"
+        lblEvaluationID.Size = New Size(179, 28)
+        lblEvaluationID.TabIndex = 219
+        lblEvaluationID.Text = "Enter Name or Id:"
         ' 
         ' pnlCompanyInformation
         ' 
@@ -5770,16 +5819,36 @@ Partial Class Form3
         pnlCompleted.Size = New Size(340, 310)
         pnlCompleted.TabIndex = 269
         ' 
+        ' Label140
+        ' 
+        Label140.AutoSize = True
+        Label140.BackColor = Color.Transparent
+        Label140.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label140.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label140.Location = New Point(539, 39)
+        Label140.Name = "Label140"
+        Label140.Size = New Size(207, 30)
+        Label140.TabIndex = 225
+        Label140.Text = "Enter Evaluation ID:"
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.DarkSeaGreen
+        Panel3.Location = New Point(36, 42)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(10, 63)
+        Panel3.TabIndex = 232
+        ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1902, 1033)
+        Controls.Add(pnlEvaluationInformation)
         Controls.Add(pnlStudentInformation)
         Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlVisitInformation)
-        Controls.Add(pnlEvaluationInformation)
         Controls.Add(pnlFacultyInformation)
         Controls.Add(pnlSummaryReport)
         Controls.Add(pnlCompanyInformation)
@@ -5812,6 +5881,8 @@ Partial Class Form3
         CType(pctBoxIcon, ComponentModel.ISupportInitialize).EndInit()
         CType(pctBoxHide1, ComponentModel.ISupportInitialize).EndInit()
         CType(pctBoxExit1, ComponentModel.ISupportInitialize).EndInit()
+        pnlEditInternshipEvaluationRecord.ResumeLayout(False)
+        pnlEditInternshipEvaluationRecord.PerformLayout()
         CType(dgvStudentSearch, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvStudentFiles, ComponentModel.ISupportInitialize).EndInit()
         pnlAddNewStudentRecord.ResumeLayout(False)
@@ -5826,8 +5897,6 @@ Partial Class Form3
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).EndInit()
         pnlEvaluationInformation.ResumeLayout(False)
         pnlEvaluationInformation.PerformLayout()
-        pnlEditInternshipEvaluationRecord.ResumeLayout(False)
-        pnlEditInternshipEvaluationRecord.PerformLayout()
         pnlAddNewInternshipEvaluationRecord.ResumeLayout(False)
         pnlAddNewInternshipEvaluationRecord.PerformLayout()
         CType(dgvEvaluationFiles5, ComponentModel.ISupportInitialize).EndInit()
@@ -6291,5 +6360,11 @@ Partial Class Form3
     Friend WithEvents picInternshipIcon As PictureBox
     Friend WithEvents pnlDesign1 As Panel
     Friend WithEvents pnlDesign2 As Panel
+    Friend WithEvents lblInternshipId As Label
+    Friend WithEvents lblEvaluationID As Label
+    Friend WithEvents pnlDesign3 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label140 As Label
+    Friend WithEvents Panel3 As Panel
 
 End Class
