@@ -3,7 +3,26 @@ Imports Mysqlx.Notice
 
 Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim picStudentIcon As New PictureBox()
+
+        picStudentIcon.Name = "picStudentIcon"
+        picStudentIcon.Size = New Size(32, 32)
+        picStudentIcon.Location = New Point(5, 5)
+        picStudentIcon.SizeMode = PictureBoxSizeMode.Zoom
+        picStudentIcon.BackColor = Color.Transparent
+
+        ' Load image from resources or file
+        picStudentIcon.Image = Image.FromFile("C:\Users\acer\Downloads\buttons or icons\Button Icons (1).png")
+        ' OR kung naka-Resources:
+        ' picStudentIcon.Image = My.Resources.student
+
+        ' Add to button
+        btnStudents.Controls.Add(picStudentIcon)
+        picStudentIcon.BringToFront()
+
         hidePanel()
+
+
     End Sub
     Private Sub hidePanel()
         pnlStudentInformation.Hide()

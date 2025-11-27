@@ -1,9 +1,12 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form3
+
+
+
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +23,7 @@ Partial Class Form3
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         btnHome = New RoundedButton()
@@ -32,6 +35,7 @@ Partial Class Form3
         btnVisitLog = New RoundedButton()
         btnSummaryReport = New RoundedButton()
         Panel1 = New Panel()
+        picStudentIcon = New PictureBox()
         Label6 = New Label()
         pnlTtotalInterns = New Panel()
         btnLogout = New RoundedButton()
@@ -424,6 +428,7 @@ Partial Class Form3
         pnlDataModel1 = New Panel()
         pnlCompleted = New Panel()
         Panel1.SuspendLayout()
+        CType(picStudentIcon, ComponentModel.ISupportInitialize).BeginInit()
         pnlHeader.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(pctBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -495,12 +500,14 @@ Partial Class Form3
         btnStudents.FlatStyle = FlatStyle.Flat
         btnStudents.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         btnStudents.ForeColor = Color.Black
-        btnStudents.Location = New Point(29, 137)
+        btnStudents.Image = CType(resources.GetObject("btnStudents.Image"), Image)
+        btnStudents.Location = New Point(29, 131)
         btnStudents.MinimumSize = New Size(50, 25)
         btnStudents.Name = "btnStudents"
         btnStudents.Size = New Size(316, 78)
         btnStudents.TabIndex = 111
-        btnStudents.Text = "STUDENTS"
+        btnStudents.Text = "    STUDENTS"
+        btnStudents.TextAlign = ContentAlignment.MiddleRight
         btnStudents.UseVisualStyleBackColor = False
         ' 
         ' btnInternships
@@ -598,6 +605,7 @@ Partial Class Form3
         Panel1.BackColor = Color.Transparent
         Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), Image)
         Panel1.BackgroundImageLayout = ImageLayout.Stretch
+        Panel1.Controls.Add(picStudentIcon)
         Panel1.Controls.Add(btnSummaryReport)
         Panel1.Controls.Add(btnVisitLog)
         Panel1.Controls.Add(btnFaculty)
@@ -611,6 +619,17 @@ Partial Class Form3
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(373, 902)
         Panel1.TabIndex = 273
+        ' 
+        ' picStudentIcon
+        ' 
+        picStudentIcon.BackColor = Color.White
+        picStudentIcon.Image = CType(resources.GetObject("picStudentIcon.Image"), Image)
+        picStudentIcon.Location = New Point(38, 139)
+        picStudentIcon.Name = "picStudentIcon"
+        picStudentIcon.Size = New Size(71, 62)
+        picStudentIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picStudentIcon.TabIndex = 224
+        picStudentIcon.TabStop = False
         ' 
         ' Label6
         ' 
@@ -5175,7 +5194,7 @@ Partial Class Form3
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(753, 530)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(471, 39)
+        ComboBox1.Size = New Size(471, 40)
         ComboBox1.TabIndex = 206
         ' 
         ' Label30
@@ -5290,7 +5309,7 @@ Partial Class Form3
         ComboBox2.FormattingEnabled = True
         ComboBox2.Location = New Point(144, 530)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(471, 39)
+        ComboBox2.Size = New Size(471, 40)
         ComboBox2.TabIndex = 196
         ' 
         ' Label37
@@ -5322,7 +5341,7 @@ Partial Class Form3
         ComboBox3.FormattingEnabled = True
         ComboBox3.Location = New Point(144, 340)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(471, 39)
+        ComboBox3.Size = New Size(471, 40)
         ComboBox3.TabIndex = 193
         ' 
         ' TextBox6
@@ -5395,7 +5414,7 @@ Partial Class Form3
         ComboBox4.FormattingEnabled = True
         ComboBox4.Location = New Point(753, 530)
         ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(471, 39)
+        ComboBox4.Size = New Size(471, 40)
         ComboBox4.TabIndex = 206
         ' 
         ' Label39
@@ -5533,7 +5552,7 @@ Partial Class Form3
         ComboBox6.FormattingEnabled = True
         ComboBox6.Location = New Point(144, 340)
         ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(471, 39)
+        ComboBox6.Size = New Size(471, 40)
         ComboBox6.TabIndex = 193
         ' 
         ' TextBox11
@@ -5659,6 +5678,7 @@ Partial Class Form3
         Text = "Form3"
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
+        CType(picStudentIcon, ComponentModel.ISupportInitialize).EndInit()
         pnlHeader.ResumeLayout(False)
         pnlHeader.PerformLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
@@ -6136,5 +6156,6 @@ Partial Class Form3
     Friend WithEvents txtStudentID3 As TextBox
     Friend WithEvents Label139 As Label
     Friend WithEvents btnShow1 As RoundedButton
+    Friend WithEvents picStudentIcon As PictureBox
 
 End Class
