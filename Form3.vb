@@ -969,7 +969,7 @@ Public Class Form3
 
     Private Sub btnEditCompany8_Click(sender As Object, e As EventArgs) Handles btnEditCompany8.Click
         pnlEditCompanyRecord.Show()
-        pnlEditCompanyContactRecord.Hide()
+        pnlEditCompanyCompanyContact.Hide()
     End Sub
 
     Private Sub btnEditCompanyContact8_Click(sender As Object, e As EventArgs) Handles btnEditCompanyContact8.Click
