@@ -11,6 +11,7 @@ Public Class Form3
         picStudentIcon.SizeMode = PictureBoxSizeMode.Zoom
         picStudentIcon.BackColor = Color.Transparent
 
+        'Nilagay ko
         btnStudents.Controls.Add(picStudentIcon)
         picStudentIcon.BringToFront()
 
