@@ -59,6 +59,22 @@ Public Class Form3
         pnlEditCompanyCompanyContact.Location = New Point(317, 256)
         pnlEditCompanyCompanyContact.Size = New Size(565, 340)
 
+        'Panel add Edit Location - Company Contact
+        'Add
+        pnlAddNewCompanyContactRecord.Location = New Point(90, 78)
+        pnlAddNewCompanyContactRecord.Size = New Size(1100, 750)
+        'Edit
+        pnlEditCompanyContactRecord.Location = New Point(90, 78)
+        pnlEditCompanyContactRecord.Size = New Size(1100, 750)
+
+        'Panel add Edit Location - Faculty
+        'Add
+        pnlAddNewFacultyRecord.Location = New Point(90, 78)
+        pnlAddNewFacultyRecord.Size = New Size(1100, 750)
+        'Edit
+        pnlEditFacultyRecord.Location = New Point(90, 78)
+        pnlEditFacultyRecord.Size = New Size(1100, 750)
+
         'For buttons
         hidePanel()
 
@@ -958,8 +974,18 @@ Public Class Form3
     End Sub
 
     Private Sub btnAddCompanyContact8_Click(sender As Object, e As EventArgs) Handles btnAddCompanyContact8.Click
-        pnlAddNewCompanyandCompanyContact.Hide()
+
+        ' 1. Show parent panel
+        pnlCompanyContactInformation.Show()
+        pnlCompanyContactInformation.BringToFront()
+
+        ' 2. Show the inside panel
         pnlAddNewCompanyContactRecord.Show()
+        pnlAddNewCompanyContactRecord.BringToFront()
+
+        ' 3. Hide the old panel
+        pnlCompanyInformation.Hide()
+
     End Sub
 
     'Edit company contact or sompany
@@ -975,6 +1001,18 @@ Public Class Form3
     Private Sub btnEditCompanyContact8_Click(sender As Object, e As EventArgs) Handles btnEditCompanyContact8.Click
         pnlEditCompanyContactRecord.Hide()
         pnlEditCompanyRecord.Show()
+
+        ' 1. Show parent panel
+        pnlCompanyContactInformation.Show()
+        pnlCompanyContactInformation.BringToFront()
+
+        ' 2. Show the inside panel
+        pnlEditCompanyContactRecord.Show()
+        pnlEditCompanyContactRecord.BringToFront()
+
+        ' 3. Hide the old panel
+        pnlCompanyInformation.Hide()
+
 
     End Sub
 
@@ -1074,6 +1112,7 @@ Public Class Form3
             pnlAddNewCompanyandCompanyContact.Hide()
             pnlCompanyInformation.Show()
             pnlEditCompanyRecord.Hide()
+
         End If
     End Sub
 
@@ -1113,23 +1152,36 @@ Public Class Form3
     End Sub
 
     Private Sub btnAdd11_Click(sender As Object, e As EventArgs) Handles btnAdd11.Click
-        Dim result As DialogResult = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        pnlCompanyInformation.Show()                  ' show parent
+        pnlAddNewCompanyandCompanyContact.Show()      ' show child
+        pnlAddNewCompanyandCompanyContact.BringToFront()
 
-        If result = DialogResult.Yes Then
-            pnlCompanyInformation.Show()
-            pnlCompanyContactInformation.Hide()
-            pnlAddNewCompanyandCompanyContact.Hide()
-        End If
+        pnlCompanyContactInformation.Show()
+
+        'Dim result As DialogResult = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+
+        'If result = DialogResult.Yes Then
+        'pnlCompanyInformation.Show()
+        'pnlCompanyContactInformation.Hide()
+        'pnlAddNewCompanyandCompanyContact.Hide()
+        'End If
     End Sub
 
     Private Sub btnEdit11_Click(sender As Object, e As EventArgs) Handles btnEdit11.Click
-        Dim result As DialogResult = MessageBox.Show("Record has been successfully edited.", "Edit Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        pnlCompanyContactInformation.Show()          ' parent
+        pnlEditCompanyCompanyContact.Show()          ' child
+        pnlEditCompanyCompanyContact.BringToFront()
 
-        If result = DialogResult.OK Then
-            pnlCompanyInformation.Show()
-            pnlCompanyContactInformation.Hide()
-            pnlAddNewCompanyandCompanyContact.Hide()
-        End If
+        pnlAddNewCompanyContactRecord.Hide()
+
+        'Dim result As DialogResult = MessageBox.Show("Record has been successfully edited.", "Edit Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        'If result = DialogResult.OK Then
+        'pnlCompanyInformation.Show()
+        'pnlCompanyContactInformation.Hide()
+        'pnlAddNewCompanyandCompanyContact.Hide()
+        'End If
 
     End Sub
 
@@ -1593,6 +1645,11 @@ Public Class Form3
     Private Sub picStudentIcon_Click(sender As Object, e As EventArgs) Handles picStudentIcon.Click
 
     End Sub
+
+
+
+
+
 
 
 
