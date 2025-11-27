@@ -427,6 +427,12 @@ Partial Class Form3
         pnlDataModel2 = New Panel()
         pnlDataModel1 = New Panel()
         pnlCompleted = New Panel()
+        picInternshipIcon = New PictureBox()
+        picEvaluationIcon = New PictureBox()
+        picCompanyIcon = New PictureBox()
+        picFacultyIcon = New PictureBox()
+        picVisitIcon = New PictureBox()
+        picSummary = New PictureBox()
         Panel1.SuspendLayout()
         CType(picStudentIcon, ComponentModel.ISupportInitialize).BeginInit()
         pnlHeader.SuspendLayout()
@@ -476,6 +482,12 @@ Partial Class Form3
         pnlOverallSummary20.SuspendLayout()
         Roundedpanel1.SuspendLayout()
         Roundedpanel2.SuspendLayout()
+        CType(picInternshipIcon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picEvaluationIcon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picCompanyIcon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picFacultyIcon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picVisitIcon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picSummary, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnHome
@@ -495,109 +507,109 @@ Partial Class Form3
         ' 
         ' btnStudents
         ' 
-        btnStudents.BackColor = Color.White
+        btnStudents.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
         btnStudents.FlatAppearance.BorderSize = 0
         btnStudents.FlatStyle = FlatStyle.Flat
-        btnStudents.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnStudents.ForeColor = Color.Black
+        btnStudents.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnStudents.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnStudents.Image = CType(resources.GetObject("btnStudents.Image"), Image)
-        btnStudents.Location = New Point(29, 131)
+        btnStudents.Location = New Point(19, 120)
         btnStudents.MinimumSize = New Size(50, 25)
         btnStudents.Name = "btnStudents"
-        btnStudents.Size = New Size(316, 78)
+        btnStudents.Size = New Size(338, 88)
         btnStudents.TabIndex = 111
-        btnStudents.Text = "    STUDENTS"
+        btnStudents.Text = "    Students"
         btnStudents.TextAlign = ContentAlignment.MiddleRight
         btnStudents.UseVisualStyleBackColor = False
         ' 
         ' btnInternships
         ' 
-        btnInternships.BackColor = Color.White
+        btnInternships.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
         btnInternships.FlatAppearance.BorderSize = 0
         btnInternships.FlatStyle = FlatStyle.Flat
-        btnInternships.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnInternships.ForeColor = Color.Black
-        btnInternships.Location = New Point(29, 243)
+        btnInternships.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnInternships.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnInternships.Location = New Point(19, 229)
         btnInternships.MinimumSize = New Size(50, 25)
         btnInternships.Name = "btnInternships"
-        btnInternships.Size = New Size(316, 78)
+        btnInternships.Size = New Size(338, 88)
         btnInternships.TabIndex = 112
-        btnInternships.Text = "INTERNSHIPS"
+        btnInternships.Text = "        Internships"
         btnInternships.UseVisualStyleBackColor = False
         ' 
         ' btnEvaluation
         ' 
-        btnEvaluation.BackColor = Color.White
+        btnEvaluation.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
         btnEvaluation.FlatAppearance.BorderSize = 0
         btnEvaluation.FlatStyle = FlatStyle.Flat
-        btnEvaluation.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnEvaluation.ForeColor = Color.Black
-        btnEvaluation.Location = New Point(29, 349)
+        btnEvaluation.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnEvaluation.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnEvaluation.Location = New Point(20, 340)
         btnEvaluation.MinimumSize = New Size(50, 25)
         btnEvaluation.Name = "btnEvaluation"
-        btnEvaluation.Size = New Size(316, 78)
+        btnEvaluation.Size = New Size(338, 88)
         btnEvaluation.TabIndex = 113
-        btnEvaluation.Text = "EVALUATION"
+        btnEvaluation.Text = "      Evaluation"
         btnEvaluation.UseVisualStyleBackColor = False
         ' 
         ' btnCompany
         ' 
-        btnCompany.BackColor = Color.White
+        btnCompany.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
         btnCompany.FlatAppearance.BorderSize = 0
         btnCompany.FlatStyle = FlatStyle.Flat
-        btnCompany.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnCompany.ForeColor = Color.Black
-        btnCompany.Location = New Point(29, 456)
+        btnCompany.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnCompany.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnCompany.Location = New Point(20, 450)
         btnCompany.MinimumSize = New Size(50, 25)
         btnCompany.Name = "btnCompany"
-        btnCompany.Size = New Size(316, 78)
+        btnCompany.Size = New Size(338, 88)
         btnCompany.TabIndex = 114
-        btnCompany.Text = "COMPANY"
+        btnCompany.Text = "     Company "
         btnCompany.UseVisualStyleBackColor = False
         ' 
         ' btnFaculty
         ' 
-        btnFaculty.BackColor = Color.White
+        btnFaculty.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
         btnFaculty.FlatAppearance.BorderSize = 0
         btnFaculty.FlatStyle = FlatStyle.Flat
-        btnFaculty.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnFaculty.ForeColor = Color.Black
-        btnFaculty.Location = New Point(29, 561)
+        btnFaculty.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnFaculty.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnFaculty.Location = New Point(19, 558)
         btnFaculty.MinimumSize = New Size(50, 25)
         btnFaculty.Name = "btnFaculty"
-        btnFaculty.Size = New Size(316, 78)
+        btnFaculty.Size = New Size(338, 88)
         btnFaculty.TabIndex = 115
-        btnFaculty.Text = "FACULTY"
+        btnFaculty.Text = " Faculty"
         btnFaculty.UseVisualStyleBackColor = False
         ' 
         ' btnVisitLog
         ' 
-        btnVisitLog.BackColor = Color.White
+        btnVisitLog.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
         btnVisitLog.FlatAppearance.BorderSize = 0
         btnVisitLog.FlatStyle = FlatStyle.Flat
-        btnVisitLog.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnVisitLog.ForeColor = Color.Black
-        btnVisitLog.Location = New Point(29, 667)
+        btnVisitLog.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnVisitLog.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnVisitLog.Location = New Point(18, 667)
         btnVisitLog.MinimumSize = New Size(50, 25)
         btnVisitLog.Name = "btnVisitLog"
-        btnVisitLog.Size = New Size(316, 78)
+        btnVisitLog.Size = New Size(338, 88)
         btnVisitLog.TabIndex = 116
-        btnVisitLog.Text = "VISIT LOG"
+        btnVisitLog.Text = "    Visit Log"
         btnVisitLog.UseVisualStyleBackColor = False
         ' 
         ' btnSummaryReport
         ' 
-        btnSummaryReport.BackColor = Color.White
+        btnSummaryReport.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
         btnSummaryReport.FlatAppearance.BorderSize = 0
         btnSummaryReport.FlatStyle = FlatStyle.Flat
-        btnSummaryReport.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
-        btnSummaryReport.ForeColor = Color.Black
-        btnSummaryReport.Location = New Point(29, 776)
+        btnSummaryReport.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSummaryReport.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnSummaryReport.Location = New Point(17, 776)
         btnSummaryReport.MinimumSize = New Size(50, 25)
         btnSummaryReport.Name = "btnSummaryReport"
-        btnSummaryReport.Size = New Size(316, 78)
+        btnSummaryReport.Size = New Size(338, 88)
         btnSummaryReport.TabIndex = 117
-        btnSummaryReport.Text = "SUMMARY REPORT"
+        btnSummaryReport.Text = "      Summary"
         btnSummaryReport.UseVisualStyleBackColor = False
         ' 
         ' Panel1
@@ -605,6 +617,12 @@ Partial Class Form3
         Panel1.BackColor = Color.Transparent
         Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), Image)
         Panel1.BackgroundImageLayout = ImageLayout.Stretch
+        Panel1.Controls.Add(picSummary)
+        Panel1.Controls.Add(picVisitIcon)
+        Panel1.Controls.Add(picFacultyIcon)
+        Panel1.Controls.Add(picCompanyIcon)
+        Panel1.Controls.Add(picEvaluationIcon)
+        Panel1.Controls.Add(picInternshipIcon)
         Panel1.Controls.Add(picStudentIcon)
         Panel1.Controls.Add(btnSummaryReport)
         Panel1.Controls.Add(btnVisitLog)
@@ -622,9 +640,9 @@ Partial Class Form3
         ' 
         ' picStudentIcon
         ' 
-        picStudentIcon.BackColor = Color.White
+        picStudentIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
         picStudentIcon.Image = CType(resources.GetObject("picStudentIcon.Image"), Image)
-        picStudentIcon.Location = New Point(38, 139)
+        picStudentIcon.Location = New Point(38, 134)
         picStudentIcon.Name = "picStudentIcon"
         picStudentIcon.Size = New Size(71, 62)
         picStudentIcon.SizeMode = PictureBoxSizeMode.StretchImage
@@ -735,7 +753,7 @@ Partial Class Form3
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Black
-        Label3.Location = New Point(109, 79)
+        Label3.Location = New Point(121, 79)
         Label3.Name = "Label3"
         Label3.Size = New Size(367, 23)
         Label3.TabIndex = 85
@@ -5194,7 +5212,7 @@ Partial Class Form3
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(753, 530)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(471, 40)
+        ComboBox1.Size = New Size(471, 39)
         ComboBox1.TabIndex = 206
         ' 
         ' Label30
@@ -5309,7 +5327,7 @@ Partial Class Form3
         ComboBox2.FormattingEnabled = True
         ComboBox2.Location = New Point(144, 530)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(471, 40)
+        ComboBox2.Size = New Size(471, 39)
         ComboBox2.TabIndex = 196
         ' 
         ' Label37
@@ -5341,7 +5359,7 @@ Partial Class Form3
         ComboBox3.FormattingEnabled = True
         ComboBox3.Location = New Point(144, 340)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(471, 40)
+        ComboBox3.Size = New Size(471, 39)
         ComboBox3.TabIndex = 193
         ' 
         ' TextBox6
@@ -5414,7 +5432,7 @@ Partial Class Form3
         ComboBox4.FormattingEnabled = True
         ComboBox4.Location = New Point(753, 530)
         ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(471, 40)
+        ComboBox4.Size = New Size(471, 39)
         ComboBox4.TabIndex = 206
         ' 
         ' Label39
@@ -5552,7 +5570,7 @@ Partial Class Form3
         ComboBox6.FormattingEnabled = True
         ComboBox6.Location = New Point(144, 340)
         ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(471, 40)
+        ComboBox6.Size = New Size(471, 39)
         ComboBox6.TabIndex = 193
         ' 
         ' TextBox11
@@ -5649,6 +5667,72 @@ Partial Class Form3
         pnlCompleted.Name = "pnlCompleted"
         pnlCompleted.Size = New Size(340, 310)
         pnlCompleted.TabIndex = 269
+        ' 
+        ' picInternshipIcon
+        ' 
+        picInternshipIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picInternshipIcon.Image = CType(resources.GetObject("picInternshipIcon.Image"), Image)
+        picInternshipIcon.Location = New Point(36, 243)
+        picInternshipIcon.Name = "picInternshipIcon"
+        picInternshipIcon.Size = New Size(71, 62)
+        picInternshipIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picInternshipIcon.TabIndex = 225
+        picInternshipIcon.TabStop = False
+        ' 
+        ' picEvaluationIcon
+        ' 
+        picEvaluationIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picEvaluationIcon.Image = CType(resources.GetObject("picEvaluationIcon.Image"), Image)
+        picEvaluationIcon.Location = New Point(38, 358)
+        picEvaluationIcon.Name = "picEvaluationIcon"
+        picEvaluationIcon.Size = New Size(71, 62)
+        picEvaluationIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picEvaluationIcon.TabIndex = 226
+        picEvaluationIcon.TabStop = False
+        ' 
+        ' picCompanyIcon
+        ' 
+        picCompanyIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picCompanyIcon.Image = CType(resources.GetObject("picCompanyIcon.Image"), Image)
+        picCompanyIcon.Location = New Point(38, 463)
+        picCompanyIcon.Name = "picCompanyIcon"
+        picCompanyIcon.Size = New Size(71, 62)
+        picCompanyIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picCompanyIcon.TabIndex = 227
+        picCompanyIcon.TabStop = False
+        ' 
+        ' picFacultyIcon
+        ' 
+        picFacultyIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picFacultyIcon.Image = CType(resources.GetObject("picFacultyIcon.Image"), Image)
+        picFacultyIcon.Location = New Point(38, 569)
+        picFacultyIcon.Name = "picFacultyIcon"
+        picFacultyIcon.Size = New Size(71, 62)
+        picFacultyIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picFacultyIcon.TabIndex = 228
+        picFacultyIcon.TabStop = False
+        ' 
+        ' picVisitIcon
+        ' 
+        picVisitIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picVisitIcon.Image = CType(resources.GetObject("picVisitIcon.Image"), Image)
+        picVisitIcon.Location = New Point(38, 674)
+        picVisitIcon.Name = "picVisitIcon"
+        picVisitIcon.Size = New Size(71, 62)
+        picVisitIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picVisitIcon.TabIndex = 229
+        picVisitIcon.TabStop = False
+        ' 
+        ' picSummary
+        ' 
+        picSummary.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picSummary.Image = CType(resources.GetObject("picSummary.Image"), Image)
+        picSummary.Location = New Point(38, 784)
+        picSummary.Name = "picSummary"
+        picSummary.Size = New Size(71, 62)
+        picSummary.SizeMode = PictureBoxSizeMode.StretchImage
+        picSummary.TabIndex = 230
+        picSummary.TabStop = False
         ' 
         ' Form3
         ' 
@@ -5752,6 +5836,12 @@ Partial Class Form3
         Roundedpanel1.PerformLayout()
         Roundedpanel2.ResumeLayout(False)
         Roundedpanel2.PerformLayout()
+        CType(picInternshipIcon, ComponentModel.ISupportInitialize).EndInit()
+        CType(picEvaluationIcon, ComponentModel.ISupportInitialize).EndInit()
+        CType(picCompanyIcon, ComponentModel.ISupportInitialize).EndInit()
+        CType(picFacultyIcon, ComponentModel.ISupportInitialize).EndInit()
+        CType(picVisitIcon, ComponentModel.ISupportInitialize).EndInit()
+        CType(picSummary, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -6157,5 +6247,11 @@ Partial Class Form3
     Friend WithEvents Label139 As Label
     Friend WithEvents btnShow1 As RoundedButton
     Friend WithEvents picStudentIcon As PictureBox
+    Friend WithEvents picSummary As PictureBox
+    Friend WithEvents picVisitIcon As PictureBox
+    Friend WithEvents picFacultyIcon As PictureBox
+    Friend WithEvents picCompanyIcon As PictureBox
+    Friend WithEvents picEvaluationIcon As PictureBox
+    Friend WithEvents picInternshipIcon As PictureBox
 
 End Class
