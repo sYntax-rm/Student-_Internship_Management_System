@@ -186,6 +186,7 @@ Partial Class Form2
         btnSIgnUp.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold)
         btnSIgnUp.ForeColor = Color.White
         btnSIgnUp.Location = New Point(677, 556)
+        btnSIgnUp.MinimumSize = New Size(50, 25)
         btnSIgnUp.Name = "btnSIgnUp"
         btnSIgnUp.Size = New Size(164, 43)
         btnSIgnUp.TabIndex = 74
@@ -273,7 +274,7 @@ Partial Class Form2
         pnlTermsAndCondition.Controls.Add(btnBack)
         pnlTermsAndCondition.Controls.Add(Label10)
         pnlTermsAndCondition.Controls.Add(Label11)
-        pnlTermsAndCondition.Location = New Point(60, 97)
+        pnlTermsAndCondition.Location = New Point(30, 61)
         pnlTermsAndCondition.Name = "pnlTermsAndCondition"
         pnlTermsAndCondition.Size = New Size(948, 528)
         pnlTermsAndCondition.TabIndex = 82
@@ -286,6 +287,7 @@ Partial Class Form2
         btnBack.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnBack.ForeColor = Color.White
         btnBack.Location = New Point(791, 460)
+        btnBack.MinimumSize = New Size(50, 25)
         btnBack.Name = "btnBack"
         btnBack.Size = New Size(142, 45)
         btnBack.TabIndex = 69

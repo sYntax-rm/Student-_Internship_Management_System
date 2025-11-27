@@ -17,6 +17,15 @@ Public Class Form3
         btnStudents.Controls.Add(picStudentIcon)
         picStudentIcon.BringToFront()
 
+        'Button for Hover
+        ' Button style
+        btnStudents.FlatStyle = FlatStyle.Flat
+        btnStudents.UseVisualStyleBackColor = False
+        btnStudents.FlatAppearance.BorderSize = 0
+        btnStudents.FlatAppearance.MouseOverBackColor = Color.DarkSeaGreen
+        btnStudents.FlatAppearance.MouseDownBackColor = Color.Honeydew
+        btnStudents.BackColor = Color.FromArgb(188, 221, 203)
+
         hidePanel()
 
 
@@ -202,21 +211,119 @@ Public Class Form3
         loadStudentRecord()
 
     End Sub
+    'BUTTON HOVER
+
+    'STUDENT BUTTON HOVER
+    Private Sub btnStudents_MouseEnter(sender As Object, e As EventArgs) Handles btnStudents.MouseEnter
+        btnStudents.BackColor = Color.FromArgb(192, 255, 192)
+        picStudentIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+    Private Sub btnStudents_MouseLeave(sender As Object, e As EventArgs) Handles btnStudents.MouseLeave
+        btnStudents.BackColor = Color.FromArgb(188, 221, 203)
+        picStudentIcon.BackColor = Color.FromArgb(188, 221, 203)
+
+    End Sub
+
+    Private Sub btnStudents_MouseDown(sender As Object, e As MouseEventArgs) Handles btnStudents.MouseDown
+        btnStudents.BackColor = Color.Honeydew
+        picStudentIcon.BackColor = Color.Honeydew '
+    End Sub
+
+    Private Sub btnStudents_MouseUp(sender As Object, e As MouseEventArgs) Handles btnStudents.MouseUp
+        btnStudents.BackColor = Color.FromArgb(192, 255, 192)
+        picStudentIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
 
     Private Sub btnInternships_Click(sender As Object, e As EventArgs) Handles btnInternships.Click
         hidePanel()
         pnlInternshipInformation.Show()
     End Sub
 
+    'BUTTON HOVER
+
+    'INTERNSHIPS BUTTON HOVER 
+    Private Sub btnInternships_MouseEnter(sender As Object, e As EventArgs) Handles btnInternships.MouseEnter
+        btnInternships.BackColor = Color.FromArgb(192, 255, 192)
+        picInternshipIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+    Private Sub btnInternships_MouseLeave(sender As Object, e As EventArgs) Handles btnInternships.MouseLeave
+        btnInternships.BackColor = Color.FromArgb(188, 221, 203)
+        picInternshipIcon.BackColor = Color.FromArgb(188, 221, 203)
+
+    End Sub
+
+    Private Sub btnInternships_MouseDown(sender As Object, e As MouseEventArgs) Handles btnInternships.MouseDown
+        btnInternships.BackColor = Color.Honeydew
+        picInternshipIcon.BackColor = Color.Honeydew '
+    End Sub
+
+    Private Sub btnInternships_MouseUp(sender As Object, e As MouseEventArgs) Handles btnInternships.MouseUp
+        btnInternships.BackColor = Color.FromArgb(192, 255, 192)
+        picInternshipIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+
     Private Sub btnEvaluation_Click(sender As Object, e As EventArgs) Handles btnEvaluation.Click
         hidePanel()
         pnlEvaluationInformation.Show()
     End Sub
 
+    'BUTTON HOVER
+
+    'EVALUATION BUTTON HOVER 
+    Private Sub btnEvaluation_MouseEnter(sender As Object, e As EventArgs) Handles btnEvaluation.MouseEnter
+        btnEvaluation.BackColor = Color.FromArgb(192, 255, 192)
+        picEvaluationIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+    Private Sub btnEvaluation_MouseLeave(sender As Object, e As EventArgs) Handles btnEvaluation.MouseLeave
+        btnEvaluation.BackColor = Color.FromArgb(188, 221, 203)
+        picEvaluationIcon.BackColor = Color.FromArgb(188, 221, 203)
+
+    End Sub
+
+    Private Sub btnEvaluation_MouseDown(sender As Object, e As MouseEventArgs) Handles btnEvaluation.MouseDown
+        btnEvaluation.BackColor = Color.Honeydew
+        picEvaluationIcon.BackColor = Color.Honeydew '
+    End Sub
+
+    Private Sub btnEvaluation_MouseUp(sender As Object, e As MouseEventArgs) Handles btnEvaluation.MouseUp
+        btnEvaluation.BackColor = Color.FromArgb(192, 255, 192)
+        picEvaluationIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+
     Private Sub btnCompany_Click(sender As Object, e As EventArgs) Handles btnCompany.Click
         hidePanel()
         pnlCompanyInformation.Show()
 
+    End Sub
+
+    'BUTTON HOVER
+
+    'COMPANY BUTTON HOVER 
+    Private Sub btnCompany_MouseEnter(sender As Object, e As EventArgs) Handles btnCompany.MouseEnter
+        btnCompany.BackColor = Color.FromArgb(192, 255, 192)
+        picCompanyIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+    Private Sub btnCompany_MouseLeave(sender As Object, e As EventArgs) Handles btnCompany.MouseLeave
+        btnCompany.BackColor = Color.FromArgb(188, 221, 203)
+        picCompanyIcon.BackColor = Color.FromArgb(188, 221, 203)
+
+    End Sub
+
+    Private Sub btnCompany_MouseDown(sender As Object, e As MouseEventArgs) Handles btnCompany.MouseDown
+        btnCompany.BackColor = Color.Honeydew
+        picCompanyIcon.BackColor = Color.Honeydew '
+    End Sub
+
+    Private Sub btnCompany_MouseUp(sender As Object, e As MouseEventArgs) Handles btnCompany.MouseUp
+        btnCompany.BackColor = Color.FromArgb(192, 255, 192)
+        picCompanyIcon.BackColor = Color.FromArgb(192, 255, 192)
     End Sub
 
     Private Sub btnFaculty_Click(sender As Object, e As EventArgs) Handles btnFaculty.Click
@@ -225,16 +332,90 @@ Public Class Form3
 
     End Sub
 
+    'BUTTON HOVER
+
+    'FACULTY BUTTON HOVER 
+    Private Sub btnFaculty_MouseEnter(sender As Object, e As EventArgs) Handles btnFaculty.MouseEnter
+        btnFaculty.BackColor = Color.FromArgb(192, 255, 192)
+        picFacultyIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+    Private Sub btnFaculty_MouseLeave(sender As Object, e As EventArgs) Handles btnFaculty.MouseLeave
+        btnFaculty.BackColor = Color.FromArgb(188, 221, 203)
+        picFacultyIcon.BackColor = Color.FromArgb(188, 221, 203)
+
+    End Sub
+
+    Private Sub btnFaculty_MouseDown(sender As Object, e As MouseEventArgs) Handles btnFaculty.MouseDown
+        btnFaculty.BackColor = Color.Honeydew
+        picFacultyIcon.BackColor = Color.Honeydew '
+    End Sub
+
+    Private Sub btnFaculty_MouseUp(sender As Object, e As MouseEventArgs) Handles btnFaculty.MouseUp
+        btnFaculty.BackColor = Color.FromArgb(192, 255, 192)
+        picFacultyIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+
     Private Sub btnVisitLog_Click(sender As Object, e As EventArgs) Handles btnVisitLog.Click
         hidePanel()
         pnlVisitInformation.Show()
 
     End Sub
 
+    'BUTTON HOVER
+
+    'VISIT BUTTON HOVER 
+    Private Sub btnVisitLog_MouseEnter(sender As Object, e As EventArgs) Handles btnVisitLog.MouseEnter
+        btnVisitLog.BackColor = Color.FromArgb(192, 255, 192)
+        picVisitIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+    Private Sub btnVisitLog_MouseLeave(sender As Object, e As EventArgs) Handles btnVisitLog.MouseLeave
+        btnVisitLog.BackColor = Color.FromArgb(188, 221, 203)
+        picVisitIcon.BackColor = Color.FromArgb(188, 221, 203)
+
+    End Sub
+
+    Private Sub btnVisitLog_MouseDown(sender As Object, e As MouseEventArgs) Handles btnVisitLog.MouseDown
+        btnVisitLog.BackColor = Color.Honeydew
+        picVisitIcon.BackColor = Color.Honeydew '
+    End Sub
+
+    Private Sub btnVisitLog_MouseUp(sender As Object, e As MouseEventArgs) Handles btnVisitLog.MouseUp
+        btnVisitLog.BackColor = Color.FromArgb(192, 255, 192)
+        picVisitIcon.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
     Private Sub btnSummaryReport_Click(sender As Object, e As EventArgs) Handles btnSummaryReport.Click
         hidePanel()
         pnlSummaryReport.Show()
 
+    End Sub
+
+
+    'BUTTON HOVER
+
+    'SUMMARY BUTTON HOVER 
+    Private Sub btnSummaryReport_MouseEnter(sender As Object, e As EventArgs) Handles btnSummaryReport.MouseEnter
+        btnSummaryReport.BackColor = Color.FromArgb(192, 255, 192)
+        picSummary.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+    Private Sub btnSummaryReport_MouseLeave(sender As Object, e As EventArgs) Handles btnSummaryReport.MouseLeave
+        btnSummaryReport.BackColor = Color.FromArgb(188, 221, 203)
+        picSummary.BackColor = Color.FromArgb(188, 221, 203)
+
+    End Sub
+
+    Private Sub btnSummaryReport_MouseDown(sender As Object, e As MouseEventArgs) Handles btnSummaryReport.MouseDown
+        btnSummaryReport.BackColor = Color.Honeydew
+        picSummary.BackColor = Color.Honeydew '
+    End Sub
+
+    Private Sub btnSummaryReport_MouseUp(sender As Object, e As MouseEventArgs) Handles btnSummaryReport.MouseUp
+        btnSummaryReport.BackColor = Color.FromArgb(192, 255, 192)
+        picSummary.BackColor = Color.FromArgb(192, 255, 192)
     End Sub
 
     Private Sub pnlTtotalInterns_Paint(sender As Object, e As PaintEventArgs) Handles pnlTtotalInterns.Paint
@@ -1369,6 +1550,10 @@ Public Class Form3
     End Sub
 
     Private Sub pnlSummaryReport20_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub picStudentIcon_Click(sender As Object, e As EventArgs) Handles picStudentIcon.Click
 
     End Sub
 

@@ -35,6 +35,12 @@ Partial Class Form3
         btnVisitLog = New RoundedButton()
         btnSummaryReport = New RoundedButton()
         Panel1 = New Panel()
+        picSummary = New PictureBox()
+        picVisitIcon = New PictureBox()
+        picFacultyIcon = New PictureBox()
+        picCompanyIcon = New PictureBox()
+        picEvaluationIcon = New PictureBox()
+        picInternshipIcon = New PictureBox()
         picStudentIcon = New PictureBox()
         Label6 = New Label()
         pnlTtotalInterns = New Panel()
@@ -427,13 +433,13 @@ Partial Class Form3
         pnlDataModel2 = New Panel()
         pnlDataModel1 = New Panel()
         pnlCompleted = New Panel()
-        picInternshipIcon = New PictureBox()
-        picEvaluationIcon = New PictureBox()
-        picCompanyIcon = New PictureBox()
-        picFacultyIcon = New PictureBox()
-        picVisitIcon = New PictureBox()
-        picSummary = New PictureBox()
         Panel1.SuspendLayout()
+        CType(picSummary, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picVisitIcon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picFacultyIcon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picCompanyIcon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picEvaluationIcon, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picInternshipIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(picStudentIcon, ComponentModel.ISupportInitialize).BeginInit()
         pnlHeader.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
@@ -482,12 +488,6 @@ Partial Class Form3
         pnlOverallSummary20.SuspendLayout()
         Roundedpanel1.SuspendLayout()
         Roundedpanel2.SuspendLayout()
-        CType(picInternshipIcon, ComponentModel.ISupportInitialize).BeginInit()
-        CType(picEvaluationIcon, ComponentModel.ISupportInitialize).BeginInit()
-        CType(picCompanyIcon, ComponentModel.ISupportInitialize).BeginInit()
-        CType(picFacultyIcon, ComponentModel.ISupportInitialize).BeginInit()
-        CType(picVisitIcon, ComponentModel.ISupportInitialize).BeginInit()
-        CType(picSummary, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnHome
@@ -497,7 +497,7 @@ Partial Class Form3
         btnHome.FlatStyle = FlatStyle.Flat
         btnHome.Font = New Font("Segoe UI", 22F, FontStyle.Bold)
         btnHome.ForeColor = Color.Black
-        btnHome.Location = New Point(29, 27)
+        btnHome.Location = New Point(87, 30)
         btnHome.MinimumSize = New Size(50, 25)
         btnHome.Name = "btnHome"
         btnHome.Size = New Size(147, 54)
@@ -509,6 +509,8 @@ Partial Class Form3
         ' 
         btnStudents.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
         btnStudents.FlatAppearance.BorderSize = 0
+        btnStudents.FlatAppearance.MouseDownBackColor = Color.Transparent
+        btnStudents.FlatAppearance.MouseOverBackColor = Color.Transparent
         btnStudents.FlatStyle = FlatStyle.Flat
         btnStudents.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnStudents.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
@@ -526,6 +528,8 @@ Partial Class Form3
         ' 
         btnInternships.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
         btnInternships.FlatAppearance.BorderSize = 0
+        btnInternships.FlatAppearance.MouseDownBackColor = Color.DarkSeaGreen
+        btnInternships.FlatAppearance.MouseOverBackColor = Color.Honeydew
         btnInternships.FlatStyle = FlatStyle.Flat
         btnInternships.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnInternships.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
@@ -637,6 +641,72 @@ Partial Class Form3
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(373, 902)
         Panel1.TabIndex = 273
+        ' 
+        ' picSummary
+        ' 
+        picSummary.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picSummary.Image = CType(resources.GetObject("picSummary.Image"), Image)
+        picSummary.Location = New Point(38, 787)
+        picSummary.Name = "picSummary"
+        picSummary.Size = New Size(71, 62)
+        picSummary.SizeMode = PictureBoxSizeMode.StretchImage
+        picSummary.TabIndex = 230
+        picSummary.TabStop = False
+        ' 
+        ' picVisitIcon
+        ' 
+        picVisitIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picVisitIcon.Image = CType(resources.GetObject("picVisitIcon.Image"), Image)
+        picVisitIcon.Location = New Point(38, 680)
+        picVisitIcon.Name = "picVisitIcon"
+        picVisitIcon.Size = New Size(71, 62)
+        picVisitIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picVisitIcon.TabIndex = 229
+        picVisitIcon.TabStop = False
+        ' 
+        ' picFacultyIcon
+        ' 
+        picFacultyIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picFacultyIcon.Image = CType(resources.GetObject("picFacultyIcon.Image"), Image)
+        picFacultyIcon.Location = New Point(38, 569)
+        picFacultyIcon.Name = "picFacultyIcon"
+        picFacultyIcon.Size = New Size(71, 62)
+        picFacultyIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picFacultyIcon.TabIndex = 228
+        picFacultyIcon.TabStop = False
+        ' 
+        ' picCompanyIcon
+        ' 
+        picCompanyIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picCompanyIcon.Image = CType(resources.GetObject("picCompanyIcon.Image"), Image)
+        picCompanyIcon.Location = New Point(38, 463)
+        picCompanyIcon.Name = "picCompanyIcon"
+        picCompanyIcon.Size = New Size(71, 62)
+        picCompanyIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picCompanyIcon.TabIndex = 227
+        picCompanyIcon.TabStop = False
+        ' 
+        ' picEvaluationIcon
+        ' 
+        picEvaluationIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picEvaluationIcon.Image = CType(resources.GetObject("picEvaluationIcon.Image"), Image)
+        picEvaluationIcon.Location = New Point(29, 346)
+        picEvaluationIcon.Name = "picEvaluationIcon"
+        picEvaluationIcon.Size = New Size(83, 83)
+        picEvaluationIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picEvaluationIcon.TabIndex = 226
+        picEvaluationIcon.TabStop = False
+        ' 
+        ' picInternshipIcon
+        ' 
+        picInternshipIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picInternshipIcon.Image = CType(resources.GetObject("picInternshipIcon.Image"), Image)
+        picInternshipIcon.Location = New Point(36, 243)
+        picInternshipIcon.Name = "picInternshipIcon"
+        picInternshipIcon.Size = New Size(71, 62)
+        picInternshipIcon.SizeMode = PictureBoxSizeMode.StretchImage
+        picInternshipIcon.TabIndex = 225
+        picInternshipIcon.TabStop = False
         ' 
         ' picStudentIcon
         ' 
@@ -5668,72 +5738,6 @@ Partial Class Form3
         pnlCompleted.Size = New Size(340, 310)
         pnlCompleted.TabIndex = 269
         ' 
-        ' picInternshipIcon
-        ' 
-        picInternshipIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        picInternshipIcon.Image = CType(resources.GetObject("picInternshipIcon.Image"), Image)
-        picInternshipIcon.Location = New Point(36, 243)
-        picInternshipIcon.Name = "picInternshipIcon"
-        picInternshipIcon.Size = New Size(71, 62)
-        picInternshipIcon.SizeMode = PictureBoxSizeMode.StretchImage
-        picInternshipIcon.TabIndex = 225
-        picInternshipIcon.TabStop = False
-        ' 
-        ' picEvaluationIcon
-        ' 
-        picEvaluationIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        picEvaluationIcon.Image = CType(resources.GetObject("picEvaluationIcon.Image"), Image)
-        picEvaluationIcon.Location = New Point(38, 358)
-        picEvaluationIcon.Name = "picEvaluationIcon"
-        picEvaluationIcon.Size = New Size(71, 62)
-        picEvaluationIcon.SizeMode = PictureBoxSizeMode.StretchImage
-        picEvaluationIcon.TabIndex = 226
-        picEvaluationIcon.TabStop = False
-        ' 
-        ' picCompanyIcon
-        ' 
-        picCompanyIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        picCompanyIcon.Image = CType(resources.GetObject("picCompanyIcon.Image"), Image)
-        picCompanyIcon.Location = New Point(38, 463)
-        picCompanyIcon.Name = "picCompanyIcon"
-        picCompanyIcon.Size = New Size(71, 62)
-        picCompanyIcon.SizeMode = PictureBoxSizeMode.StretchImage
-        picCompanyIcon.TabIndex = 227
-        picCompanyIcon.TabStop = False
-        ' 
-        ' picFacultyIcon
-        ' 
-        picFacultyIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        picFacultyIcon.Image = CType(resources.GetObject("picFacultyIcon.Image"), Image)
-        picFacultyIcon.Location = New Point(38, 569)
-        picFacultyIcon.Name = "picFacultyIcon"
-        picFacultyIcon.Size = New Size(71, 62)
-        picFacultyIcon.SizeMode = PictureBoxSizeMode.StretchImage
-        picFacultyIcon.TabIndex = 228
-        picFacultyIcon.TabStop = False
-        ' 
-        ' picVisitIcon
-        ' 
-        picVisitIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        picVisitIcon.Image = CType(resources.GetObject("picVisitIcon.Image"), Image)
-        picVisitIcon.Location = New Point(38, 674)
-        picVisitIcon.Name = "picVisitIcon"
-        picVisitIcon.Size = New Size(71, 62)
-        picVisitIcon.SizeMode = PictureBoxSizeMode.StretchImage
-        picVisitIcon.TabIndex = 229
-        picVisitIcon.TabStop = False
-        ' 
-        ' picSummary
-        ' 
-        picSummary.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        picSummary.Image = CType(resources.GetObject("picSummary.Image"), Image)
-        picSummary.Location = New Point(38, 784)
-        picSummary.Name = "picSummary"
-        picSummary.Size = New Size(71, 62)
-        picSummary.SizeMode = PictureBoxSizeMode.StretchImage
-        picSummary.TabIndex = 230
-        picSummary.TabStop = False
-        ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -5762,6 +5766,12 @@ Partial Class Form3
         Text = "Form3"
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
+        CType(picSummary, ComponentModel.ISupportInitialize).EndInit()
+        CType(picVisitIcon, ComponentModel.ISupportInitialize).EndInit()
+        CType(picFacultyIcon, ComponentModel.ISupportInitialize).EndInit()
+        CType(picCompanyIcon, ComponentModel.ISupportInitialize).EndInit()
+        CType(picEvaluationIcon, ComponentModel.ISupportInitialize).EndInit()
+        CType(picInternshipIcon, ComponentModel.ISupportInitialize).EndInit()
         CType(picStudentIcon, ComponentModel.ISupportInitialize).EndInit()
         pnlHeader.ResumeLayout(False)
         pnlHeader.PerformLayout()
@@ -5836,12 +5846,6 @@ Partial Class Form3
         Roundedpanel1.PerformLayout()
         Roundedpanel2.ResumeLayout(False)
         Roundedpanel2.PerformLayout()
-        CType(picInternshipIcon, ComponentModel.ISupportInitialize).EndInit()
-        CType(picEvaluationIcon, ComponentModel.ISupportInitialize).EndInit()
-        CType(picCompanyIcon, ComponentModel.ISupportInitialize).EndInit()
-        CType(picFacultyIcon, ComponentModel.ISupportInitialize).EndInit()
-        CType(picVisitIcon, ComponentModel.ISupportInitialize).EndInit()
-        CType(picSummary, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
