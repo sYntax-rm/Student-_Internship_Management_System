@@ -3,6 +3,8 @@ Imports Mysqlx.Notice
 
 Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'Student Icon for Button
         Dim picStudentIcon As New PictureBox()
 
         picStudentIcon.Name = "picStudentIcon"
