@@ -13,12 +13,7 @@ Public Class Form3
         picStudentIcon.SizeMode = PictureBoxSizeMode.Zoom
         picStudentIcon.BackColor = Color.Transparent
 
-        ' Load image from resources or file
-        picStudentIcon.Image = Image.FromFile("C:\Users\acer\Downloads\buttons or icons\Button Icons (1).png")
-        ' OR kung naka-Resources:
-        ' picStudentIcon.Image = My.Resources.student
-
-        ' Add to button
+        'Nilagay ko
         btnStudents.Controls.Add(picStudentIcon)
         picStudentIcon.BringToFront()
 

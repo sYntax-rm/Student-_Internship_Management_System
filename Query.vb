@@ -6,6 +6,7 @@ Module Query
         Dim dataTable As New DataTable()
 
         Try
+
             Using con As MySqlConnection = GetConnection()
                 Using cmd As New MySqlCommand(query, con)
                     con.Open()
