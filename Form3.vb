@@ -36,11 +36,28 @@ Public Class Form3
 
         'Panel add Edit Location - Evaluation
         'Add
-        pnlEditInternshipEvaluationRecord.Location = New Point(90, 78)
-        pnlEditInternshipEvaluationRecord.Size = New Size(1100, 750)
+        pnlAddNewInternshipEvaluationRecord.Location = New Point(90, 78)
+        pnlAddNewInternshipEvaluationRecord.Size = New Size(1100, 750)
         'Edit
         pnlEditInternshipEvaluationRecord.Location = New Point(90, 78)
         pnlEditInternshipEvaluationRecord.Size = New Size(1100, 750)
+
+        'Panel add Edit Location - Company
+        'Add
+        pnlAddNewCompanyRecord.Location = New Point(90, 78)
+        pnlAddNewCompanyRecord.Size = New Size(1100, 750)
+        'Edit
+        pnlEditCompanyRecord.Location = New Point(90, 78)
+        pnlEditCompanyRecord.Size = New Size(1100, 750)
+
+
+        'Panel add Edit Location - Sub Buttons
+        'Add
+        pnlAddNewCompanyandCompanyContact.Location = New Point(317, 256)
+        pnlAddNewCompanyandCompanyContact.Size = New Size(565, 340)
+        'Edit
+        pnlEditCompanyCompanyContact.Location = New Point(317, 256)
+        pnlEditCompanyCompanyContact.Size = New Size(565, 340)
 
         'For buttons
         hidePanel()
@@ -941,8 +958,8 @@ Public Class Form3
     End Sub
 
     Private Sub btnAddCompanyContact8_Click(sender As Object, e As EventArgs) Handles btnAddCompanyContact8.Click
-        pnlAddNewCompanyContactRecord.Show()
         pnlAddNewCompanyandCompanyContact.Hide()
+        pnlAddNewCompanyContactRecord.Show()
     End Sub
 
     'Edit company contact or sompany
@@ -952,10 +969,13 @@ Public Class Form3
 
     Private Sub btnEditCompany8_Click(sender As Object, e As EventArgs) Handles btnEditCompany8.Click
         pnlEditCompanyRecord.Show()
+        pnlEditCompanyContactRecord.Hide()
     End Sub
 
     Private Sub btnEditCompanyContact8_Click(sender As Object, e As EventArgs) Handles btnEditCompanyContact8.Click
-        pnlEditCompanyContactRecord.Show()
+        pnlEditCompanyContactRecord.Hide()
+        pnlEditCompanyRecord.Show()
+
     End Sub
 
     'Add company record
@@ -1573,6 +1593,8 @@ Public Class Form3
     Private Sub picStudentIcon_Click(sender As Object, e As EventArgs) Handles picStudentIcon.Click
 
     End Sub
+
+
 
 
 

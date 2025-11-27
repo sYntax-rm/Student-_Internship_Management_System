@@ -57,6 +57,8 @@ Partial Class Form3
         pctBoxHide1 = New PictureBox()
         pctBoxExit1 = New PictureBox()
         pnlEditInternshipEvaluationRecord = New roundedpanel()
+        Panel3 = New Panel()
+        Label140 = New Label()
         btnSearch7 = New RoundedButton()
         btnCancel7 = New RoundedButton()
         txtSearchID7 = New TextBox()
@@ -176,7 +178,26 @@ Partial Class Form3
         Label74 = New Label()
         lblEvaluationID = New Label()
         pnlCompanyInformation = New Panel()
+        pnlAddNewCompanyRecord = New roundedpanel()
+        Panel4 = New Panel()
+        Label57 = New Label()
+        txtEmail9 = New TextBox()
+        Label54 = New Label()
+        txtContactNumber9 = New TextBox()
+        Label53 = New Label()
+        txtAddress9 = New TextBox()
+        btnCancel9 = New RoundedButton()
+        Label61 = New Label()
+        btnAdd9 = New RoundedButton()
+        txtIndustryType9 = New TextBox()
+        Label63 = New Label()
+        Label71 = New Label()
+        Label75 = New Label()
+        txtCompanyName9 = New TextBox()
+        txtCompanyID9 = New TextBox()
         pnlEditCompanyRecord = New roundedpanel()
+        Panel5 = New Panel()
+        Label143 = New Label()
         btnSearch10 = New RoundedButton()
         txtSearchID10 = New TextBox()
         Label58 = New Label()
@@ -194,22 +215,6 @@ Partial Class Form3
         Label81 = New Label()
         txtCompanyName10 = New TextBox()
         txtCompanyID10 = New TextBox()
-        pnlAddNewCompanyRecord = New roundedpanel()
-        Label57 = New Label()
-        txtEmail9 = New TextBox()
-        Label54 = New Label()
-        txtContactNumber9 = New TextBox()
-        Label53 = New Label()
-        txtAddress9 = New TextBox()
-        btnCancel9 = New RoundedButton()
-        Label61 = New Label()
-        btnAdd9 = New RoundedButton()
-        txtIndustryType9 = New TextBox()
-        Label63 = New Label()
-        Label71 = New Label()
-        Label75 = New Label()
-        txtCompanyName9 = New TextBox()
-        txtCompanyID9 = New TextBox()
         pnlEditCompanyCompanyContact = New roundedpanel()
         btnEditCompanyContact8 = New RoundedButton()
         btnEditCompany8 = New RoundedButton()
@@ -234,6 +239,7 @@ Partial Class Form3
         txtSearchID8 = New TextBox()
         Label80 = New Label()
         btnViewContacts8 = New RoundedButton()
+        Label141 = New Label()
         pnlCompanyContactInformation = New Panel()
         pnlAddNewCompanyContactRecord = New roundedpanel()
         pnlEditCompanyContactRecord = New roundedpanel()
@@ -439,8 +445,6 @@ Partial Class Form3
         pnlDataModel2 = New Panel()
         pnlDataModel1 = New Panel()
         pnlCompleted = New Panel()
-        Label140 = New Label()
-        Panel3 = New Panel()
         Panel1.SuspendLayout()
         CType(picSummary, ComponentModel.ISupportInitialize).BeginInit()
         CType(picVisitIcon, ComponentModel.ISupportInitialize).BeginInit()
@@ -469,8 +473,8 @@ Partial Class Form3
         CType(dgvEvaluationFiles5, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvEvaluationLogs5, ComponentModel.ISupportInitialize).BeginInit()
         pnlCompanyInformation.SuspendLayout()
-        pnlEditCompanyRecord.SuspendLayout()
         pnlAddNewCompanyRecord.SuspendLayout()
+        pnlEditCompanyRecord.SuspendLayout()
         pnlEditCompanyCompanyContact.SuspendLayout()
         pnlAddNewCompanyandCompanyContact.SuspendLayout()
         CType(dgvCompanyFiles8, ComponentModel.ISupportInitialize).BeginInit()
@@ -924,6 +928,26 @@ Partial Class Form3
         pnlEditInternshipEvaluationRecord.Name = "pnlEditInternshipEvaluationRecord"
         pnlEditInternshipEvaluationRecord.Size = New Size(322, 750)
         pnlEditInternshipEvaluationRecord.TabIndex = 221
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.DarkSeaGreen
+        Panel3.Location = New Point(36, 42)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(10, 63)
+        Panel3.TabIndex = 232
+        ' 
+        ' Label140
+        ' 
+        Label140.AutoSize = True
+        Label140.BackColor = Color.Transparent
+        Label140.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label140.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label140.Location = New Point(539, 39)
+        Label140.Name = "Label140"
+        Label140.Size = New Size(207, 30)
+        Label140.TabIndex = 225
+        Label140.Text = "Enter Evaluation ID:"
         ' 
         ' btnSearch7
         ' 
@@ -1588,9 +1612,9 @@ Partial Class Form3
         pnlEditStudentRecord.Controls.Add(cmbGender3)
         pnlEditStudentRecord.Controls.Add(cmbSection3)
         pnlEditStudentRecord.CornerRadius = 10
-        pnlEditStudentRecord.Location = New Point(1117, 40)
+        pnlEditStudentRecord.Location = New Point(1120, 40)
         pnlEditStudentRecord.Name = "pnlEditStudentRecord"
-        pnlEditStudentRecord.Size = New Size(335, 750)
+        pnlEditStudentRecord.Size = New Size(332, 750)
         pnlEditStudentRecord.TabIndex = 221
         ' 
         ' pnlDesign2
@@ -2444,8 +2468,8 @@ Partial Class Form3
         ' pnlCompanyInformation
         ' 
         pnlCompanyInformation.BackColor = Color.White
-        pnlCompanyInformation.Controls.Add(pnlEditCompanyRecord)
         pnlCompanyInformation.Controls.Add(pnlAddNewCompanyRecord)
+        pnlCompanyInformation.Controls.Add(pnlEditCompanyRecord)
         pnlCompanyInformation.Controls.Add(pnlEditCompanyCompanyContact)
         pnlCompanyInformation.Controls.Add(pnlAddNewCompanyandCompanyContact)
         pnlCompanyInformation.Controls.Add(btnAdd8)
@@ -2460,15 +2484,233 @@ Partial Class Form3
         pnlCompanyInformation.Controls.Add(txtSearchID8)
         pnlCompanyInformation.Controls.Add(Label80)
         pnlCompanyInformation.Controls.Add(btnViewContacts8)
+        pnlCompanyInformation.Controls.Add(Label141)
         pnlCompanyInformation.Dock = DockStyle.Fill
+        pnlCompanyInformation.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         pnlCompanyInformation.Location = New Point(373, 131)
         pnlCompanyInformation.Name = "pnlCompanyInformation"
         pnlCompanyInformation.Size = New Size(1529, 902)
         pnlCompanyInformation.TabIndex = 224
         ' 
+        ' pnlAddNewCompanyRecord
+        ' 
+        pnlAddNewCompanyRecord.BackColor = Color.Honeydew
+        pnlAddNewCompanyRecord.Controls.Add(Panel4)
+        pnlAddNewCompanyRecord.Controls.Add(Label57)
+        pnlAddNewCompanyRecord.Controls.Add(txtEmail9)
+        pnlAddNewCompanyRecord.Controls.Add(Label54)
+        pnlAddNewCompanyRecord.Controls.Add(txtContactNumber9)
+        pnlAddNewCompanyRecord.Controls.Add(Label53)
+        pnlAddNewCompanyRecord.Controls.Add(txtAddress9)
+        pnlAddNewCompanyRecord.Controls.Add(btnCancel9)
+        pnlAddNewCompanyRecord.Controls.Add(Label61)
+        pnlAddNewCompanyRecord.Controls.Add(btnAdd9)
+        pnlAddNewCompanyRecord.Controls.Add(txtIndustryType9)
+        pnlAddNewCompanyRecord.Controls.Add(Label63)
+        pnlAddNewCompanyRecord.Controls.Add(Label71)
+        pnlAddNewCompanyRecord.Controls.Add(Label75)
+        pnlAddNewCompanyRecord.Controls.Add(txtCompanyName9)
+        pnlAddNewCompanyRecord.Controls.Add(txtCompanyID9)
+        pnlAddNewCompanyRecord.CornerRadius = 10
+        pnlAddNewCompanyRecord.Location = New Point(890, 43)
+        pnlAddNewCompanyRecord.Name = "pnlAddNewCompanyRecord"
+        pnlAddNewCompanyRecord.Size = New Size(302, 750)
+        pnlAddNewCompanyRecord.TabIndex = 221
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Panel4.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Panel4.Location = New Point(36, 42)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(10, 63)
+        Panel4.TabIndex = 231
+        ' 
+        ' Label57
+        ' 
+        Label57.AutoSize = True
+        Label57.BackColor = Color.Transparent
+        Label57.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label57.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label57.Location = New Point(71, 519)
+        Label57.Name = "Label57"
+        Label57.Size = New Size(76, 30)
+        Label57.TabIndex = 226
+        Label57.Text = "Email*"
+        ' 
+        ' txtEmail9
+        ' 
+        txtEmail9.Cursor = Cursors.IBeam
+        txtEmail9.Font = New Font("Segoe UI", 14F)
+        txtEmail9.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtEmail9.Location = New Point(68, 552)
+        txtEmail9.Multiline = True
+        txtEmail9.Name = "txtEmail9"
+        txtEmail9.Size = New Size(971, 38)
+        txtEmail9.TabIndex = 225
+        ' 
+        ' Label54
+        ' 
+        Label54.AutoSize = True
+        Label54.BackColor = Color.Transparent
+        Label54.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label54.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label54.Location = New Point(71, 326)
+        Label54.Name = "Label54"
+        Label54.Size = New Size(188, 30)
+        Label54.TabIndex = 224
+        Label54.Text = "Contact Number*"
+        ' 
+        ' txtContactNumber9
+        ' 
+        txtContactNumber9.Cursor = Cursors.IBeam
+        txtContactNumber9.Font = New Font("Segoe UI", 14F)
+        txtContactNumber9.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtContactNumber9.Location = New Point(68, 359)
+        txtContactNumber9.Multiline = True
+        txtContactNumber9.Name = "txtContactNumber9"
+        txtContactNumber9.Size = New Size(471, 38)
+        txtContactNumber9.TabIndex = 223
+        ' 
+        ' Label53
+        ' 
+        Label53.AutoSize = True
+        Label53.BackColor = Color.Transparent
+        Label53.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label53.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label53.Location = New Point(71, 429)
+        Label53.Name = "Label53"
+        Label53.Size = New Size(202, 30)
+        Label53.TabIndex = 222
+        Label53.Text = "Company Address*"
+        ' 
+        ' txtAddress9
+        ' 
+        txtAddress9.Cursor = Cursors.IBeam
+        txtAddress9.Font = New Font("Segoe UI", 14F)
+        txtAddress9.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtAddress9.Location = New Point(71, 465)
+        txtAddress9.Multiline = True
+        txtAddress9.Name = "txtAddress9"
+        txtAddress9.Size = New Size(964, 38)
+        txtAddress9.TabIndex = 221
+        ' 
+        ' btnCancel9
+        ' 
+        btnCancel9.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnCancel9.FlatAppearance.BorderSize = 0
+        btnCancel9.FlatStyle = FlatStyle.Flat
+        btnCancel9.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        btnCancel9.ForeColor = Color.White
+        btnCancel9.Location = New Point(766, 653)
+        btnCancel9.MinimumSize = New Size(50, 25)
+        btnCancel9.Name = "btnCancel9"
+        btnCancel9.Size = New Size(132, 51)
+        btnCancel9.TabIndex = 220
+        btnCancel9.Text = "CANCEL"
+        btnCancel9.UseVisualStyleBackColor = False
+        ' 
+        ' Label61
+        ' 
+        Label61.AutoSize = True
+        Label61.BackColor = Color.Transparent
+        Label61.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label61.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label61.Location = New Point(566, 222)
+        Label61.Name = "Label61"
+        Label61.Size = New Size(158, 30)
+        Label61.TabIndex = 203
+        Label61.Text = "Industry Type*"
+        ' 
+        ' btnAdd9
+        ' 
+        btnAdd9.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnAdd9.FlatAppearance.BorderSize = 0
+        btnAdd9.FlatStyle = FlatStyle.Flat
+        btnAdd9.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
+        btnAdd9.ForeColor = Color.White
+        btnAdd9.Location = New Point(907, 653)
+        btnAdd9.MinimumSize = New Size(50, 25)
+        btnAdd9.Name = "btnAdd9"
+        btnAdd9.Size = New Size(132, 51)
+        btnAdd9.TabIndex = 219
+        btnAdd9.Text = "ADD"
+        btnAdd9.UseVisualStyleBackColor = False
+        ' 
+        ' txtIndustryType9
+        ' 
+        txtIndustryType9.Cursor = Cursors.IBeam
+        txtIndustryType9.Font = New Font("Segoe UI", 14F)
+        txtIndustryType9.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtIndustryType9.Location = New Point(563, 255)
+        txtIndustryType9.Multiline = True
+        txtIndustryType9.Name = "txtIndustryType9"
+        txtIndustryType9.Size = New Size(476, 38)
+        txtIndustryType9.TabIndex = 202
+        ' 
+        ' Label63
+        ' 
+        Label63.AutoSize = True
+        Label63.BackColor = Color.Transparent
+        Label63.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        Label63.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label63.Location = New Point(62, 46)
+        Label63.Name = "Label63"
+        Label63.Size = New Size(447, 46)
+        Label63.TabIndex = 201
+        Label63.Text = "Add New Company Record"
+        ' 
+        ' Label71
+        ' 
+        Label71.AutoSize = True
+        Label71.BackColor = Color.Transparent
+        Label71.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label71.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label71.Location = New Point(72, 221)
+        Label71.Name = "Label71"
+        Label71.Size = New Size(182, 30)
+        Label71.TabIndex = 198
+        Label71.Text = "Company Name*"
+        ' 
+        ' Label75
+        ' 
+        Label75.AutoSize = True
+        Label75.BackColor = Color.Transparent
+        Label75.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label75.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label75.Location = New Point(71, 120)
+        Label75.Name = "Label75"
+        Label75.Size = New Size(145, 30)
+        Label75.TabIndex = 197
+        Label75.Text = "Company ID*"
+        ' 
+        ' txtCompanyName9
+        ' 
+        txtCompanyName9.Cursor = Cursors.IBeam
+        txtCompanyName9.Font = New Font("Segoe UI", 14F)
+        txtCompanyName9.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtCompanyName9.Location = New Point(69, 254)
+        txtCompanyName9.Multiline = True
+        txtCompanyName9.Name = "txtCompanyName9"
+        txtCompanyName9.Size = New Size(471, 38)
+        txtCompanyName9.TabIndex = 192
+        ' 
+        ' txtCompanyID9
+        ' 
+        txtCompanyID9.Cursor = Cursors.IBeam
+        txtCompanyID9.Font = New Font("Segoe UI", 14F)
+        txtCompanyID9.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtCompanyID9.Location = New Point(68, 153)
+        txtCompanyID9.Multiline = True
+        txtCompanyID9.Name = "txtCompanyID9"
+        txtCompanyID9.Size = New Size(471, 38)
+        txtCompanyID9.TabIndex = 191
+        ' 
         ' pnlEditCompanyRecord
         ' 
-        pnlEditCompanyRecord.BackColor = Color.WhiteSmoke
+        pnlEditCompanyRecord.BackColor = Color.MintCream
+        pnlEditCompanyRecord.Controls.Add(Panel5)
+        pnlEditCompanyRecord.Controls.Add(Label143)
         pnlEditCompanyRecord.Controls.Add(btnSearch10)
         pnlEditCompanyRecord.Controls.Add(txtSearchID10)
         pnlEditCompanyRecord.Controls.Add(Label58)
@@ -2487,10 +2729,31 @@ Partial Class Form3
         pnlEditCompanyRecord.Controls.Add(txtCompanyName10)
         pnlEditCompanyRecord.Controls.Add(txtCompanyID10)
         pnlEditCompanyRecord.CornerRadius = 10
-        pnlEditCompanyRecord.Location = New Point(96, 131)
+        pnlEditCompanyRecord.Location = New Point(1212, 40)
         pnlEditCompanyRecord.Name = "pnlEditCompanyRecord"
-        pnlEditCompanyRecord.Size = New Size(1383, 710)
+        pnlEditCompanyRecord.Size = New Size(274, 750)
         pnlEditCompanyRecord.TabIndex = 227
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = Color.DarkSeaGreen
+        Panel5.ForeColor = Color.DarkSeaGreen
+        Panel5.Location = New Point(36, 42)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(10, 63)
+        Panel5.TabIndex = 232
+        ' 
+        ' Label143
+        ' 
+        Label143.AutoSize = True
+        Label143.BackColor = Color.Transparent
+        Label143.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
+        Label143.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label143.Location = New Point(539, 39)
+        Label143.Name = "Label143"
+        Label143.Size = New Size(182, 30)
+        Label143.TabIndex = 231
+        Label143.Text = "Enter Student ID:"
         ' 
         ' btnSearch10
         ' 
@@ -2499,7 +2762,7 @@ Partial Class Form3
         btnSearch10.FlatStyle = FlatStyle.Flat
         btnSearch10.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch10.ForeColor = Color.White
-        btnSearch10.Location = New Point(1202, 53)
+        btnSearch10.Location = New Point(948, 35)
         btnSearch10.MinimumSize = New Size(50, 25)
         btnSearch10.Name = "btnSearch10"
         btnSearch10.Size = New Size(132, 38)
@@ -2511,21 +2774,20 @@ Partial Class Form3
         ' 
         txtSearchID10.Cursor = Cursors.IBeam
         txtSearchID10.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        txtSearchID10.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID10.Location = New Point(984, 53)
+        txtSearchID10.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtSearchID10.Location = New Point(730, 35)
         txtSearchID10.Multiline = True
         txtSearchID10.Name = "txtSearchID10"
         txtSearchID10.Size = New Size(212, 38)
         txtSearchID10.TabIndex = 227
-        txtSearchID10.Text = "Search Company ID"
         ' 
         ' Label58
         ' 
         Label58.AutoSize = True
         Label58.BackColor = Color.Transparent
         Label58.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label58.ForeColor = Color.Black
-        Label58.Location = New Point(746, 348)
+        Label58.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label58.Location = New Point(63, 521)
         Label58.Name = "Label58"
         Label58.Size = New Size(76, 30)
         Label58.TabIndex = 226
@@ -2535,8 +2797,8 @@ Partial Class Form3
         ' 
         txtEmail10.Cursor = Cursors.IBeam
         txtEmail10.Font = New Font("Segoe UI", 14F)
-        txtEmail10.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtEmail10.Location = New Point(743, 381)
+        txtEmail10.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtEmail10.Location = New Point(60, 552)
         txtEmail10.Multiline = True
         txtEmail10.Name = "txtEmail10"
         txtEmail10.Size = New Size(471, 38)
@@ -2547,8 +2809,8 @@ Partial Class Form3
         Label59.AutoSize = True
         Label59.BackColor = Color.Transparent
         Label59.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label59.ForeColor = Color.Black
-        Label59.Location = New Point(137, 349)
+        Label59.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label59.Location = New Point(66, 326)
         Label59.Name = "Label59"
         Label59.Size = New Size(188, 30)
         Label59.TabIndex = 224
@@ -2558,8 +2820,8 @@ Partial Class Form3
         ' 
         txtContactNumber10.Cursor = Cursors.IBeam
         txtContactNumber10.Font = New Font("Segoe UI", 14F)
-        txtContactNumber10.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtContactNumber10.Location = New Point(134, 382)
+        txtContactNumber10.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtContactNumber10.Location = New Point(63, 359)
         txtContactNumber10.Multiline = True
         txtContactNumber10.Name = "txtContactNumber10"
         txtContactNumber10.Size = New Size(471, 38)
@@ -2570,8 +2832,8 @@ Partial Class Form3
         Label60.AutoSize = True
         Label60.BackColor = Color.Transparent
         Label60.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label60.ForeColor = Color.Black
-        Label60.Location = New Point(146, 239)
+        Label60.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label60.Location = New Point(64, 429)
         Label60.Name = "Label60"
         Label60.Size = New Size(202, 30)
         Label60.TabIndex = 222
@@ -2581,8 +2843,8 @@ Partial Class Form3
         ' 
         txtAddress10.Cursor = Cursors.IBeam
         txtAddress10.Font = New Font("Segoe UI", 14F)
-        txtAddress10.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtAddress10.Location = New Point(143, 272)
+        txtAddress10.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtAddress10.Location = New Point(61, 465)
         txtAddress10.Multiline = True
         txtAddress10.Name = "txtAddress10"
         txtAddress10.Size = New Size(471, 38)
@@ -2595,7 +2857,7 @@ Partial Class Form3
         btnCancel10.FlatStyle = FlatStyle.Flat
         btnCancel10.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnCancel10.ForeColor = Color.White
-        btnCancel10.Location = New Point(1075, 648)
+        btnCancel10.Location = New Point(766, 653)
         btnCancel10.MinimumSize = New Size(50, 25)
         btnCancel10.Name = "btnCancel10"
         btnCancel10.Size = New Size(132, 51)
@@ -2608,8 +2870,8 @@ Partial Class Form3
         Label67.AutoSize = True
         Label67.BackColor = Color.Transparent
         Label67.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label67.ForeColor = Color.Black
-        Label67.Location = New Point(752, 238)
+        Label67.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label67.Location = New Point(571, 223)
         Label67.Name = "Label67"
         Label67.Size = New Size(158, 30)
         Label67.TabIndex = 203
@@ -2617,12 +2879,13 @@ Partial Class Form3
         ' 
         ' btnEdit10
         ' 
-        btnEdit10.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnEdit10.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnEdit10.Enabled = False
         btnEdit10.FlatAppearance.BorderSize = 0
         btnEdit10.FlatStyle = FlatStyle.Flat
         btnEdit10.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit10.ForeColor = Color.White
-        btnEdit10.Location = New Point(1213, 648)
+        btnEdit10.Location = New Point(907, 653)
         btnEdit10.MinimumSize = New Size(50, 25)
         btnEdit10.Name = "btnEdit10"
         btnEdit10.Size = New Size(132, 51)
@@ -2634,8 +2897,8 @@ Partial Class Form3
         ' 
         txtIndustryType10.Cursor = Cursors.IBeam
         txtIndustryType10.Font = New Font("Segoe UI", 14F)
-        txtIndustryType10.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtIndustryType10.Location = New Point(749, 271)
+        txtIndustryType10.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtIndustryType10.Location = New Point(568, 256)
         txtIndustryType10.Multiline = True
         txtIndustryType10.Name = "txtIndustryType10"
         txtIndustryType10.Size = New Size(471, 38)
@@ -2646,20 +2909,20 @@ Partial Class Form3
         Label76.AutoSize = True
         Label76.BackColor = Color.Transparent
         Label76.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        Label76.ForeColor = Color.Black
-        Label76.Location = New Point(56, 28)
+        Label76.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label76.Location = New Point(62, 46)
         Label76.Name = "Label76"
-        Label76.Size = New Size(417, 46)
+        Label76.Size = New Size(362, 46)
         Label76.TabIndex = 201
-        Label76.Text = "EDIT COMPANY RECORD"
+        Label76.Text = "Edit Company Record"
         ' 
         ' Label77
         ' 
         Label77.AutoSize = True
         Label77.BackColor = Color.Transparent
         Label77.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label77.ForeColor = Color.Black
-        Label77.Location = New Point(752, 133)
+        Label77.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label77.Location = New Point(69, 221)
         Label77.Name = "Label77"
         Label77.Size = New Size(182, 30)
         Label77.TabIndex = 198
@@ -2670,8 +2933,8 @@ Partial Class Form3
         Label81.AutoSize = True
         Label81.BackColor = Color.Transparent
         Label81.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label81.ForeColor = Color.Black
-        Label81.Location = New Point(147, 130)
+        Label81.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label81.Location = New Point(71, 120)
         Label81.Name = "Label81"
         Label81.Size = New Size(145, 30)
         Label81.TabIndex = 197
@@ -2681,8 +2944,8 @@ Partial Class Form3
         ' 
         txtCompanyName10.Cursor = Cursors.IBeam
         txtCompanyName10.Font = New Font("Segoe UI", 14F)
-        txtCompanyName10.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtCompanyName10.Location = New Point(749, 166)
+        txtCompanyName10.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtCompanyName10.Location = New Point(66, 254)
         txtCompanyName10.Multiline = True
         txtCompanyName10.Name = "txtCompanyName10"
         txtCompanyName10.Size = New Size(471, 38)
@@ -2692,270 +2955,66 @@ Partial Class Form3
         ' 
         txtCompanyID10.Cursor = Cursors.IBeam
         txtCompanyID10.Font = New Font("Segoe UI", 14F)
-        txtCompanyID10.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtCompanyID10.Location = New Point(144, 163)
+        txtCompanyID10.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtCompanyID10.Location = New Point(68, 153)
         txtCompanyID10.Multiline = True
         txtCompanyID10.Name = "txtCompanyID10"
         txtCompanyID10.Size = New Size(471, 38)
         txtCompanyID10.TabIndex = 191
         ' 
-        ' pnlAddNewCompanyRecord
-        ' 
-        pnlAddNewCompanyRecord.BackColor = Color.WhiteSmoke
-        pnlAddNewCompanyRecord.Controls.Add(Label57)
-        pnlAddNewCompanyRecord.Controls.Add(txtEmail9)
-        pnlAddNewCompanyRecord.Controls.Add(Label54)
-        pnlAddNewCompanyRecord.Controls.Add(txtContactNumber9)
-        pnlAddNewCompanyRecord.Controls.Add(Label53)
-        pnlAddNewCompanyRecord.Controls.Add(txtAddress9)
-        pnlAddNewCompanyRecord.Controls.Add(btnCancel9)
-        pnlAddNewCompanyRecord.Controls.Add(Label61)
-        pnlAddNewCompanyRecord.Controls.Add(btnAdd9)
-        pnlAddNewCompanyRecord.Controls.Add(txtIndustryType9)
-        pnlAddNewCompanyRecord.Controls.Add(Label63)
-        pnlAddNewCompanyRecord.Controls.Add(Label71)
-        pnlAddNewCompanyRecord.Controls.Add(Label75)
-        pnlAddNewCompanyRecord.Controls.Add(txtCompanyName9)
-        pnlAddNewCompanyRecord.Controls.Add(txtCompanyID9)
-        pnlAddNewCompanyRecord.CornerRadius = 10
-        pnlAddNewCompanyRecord.Location = New Point(95, 130)
-        pnlAddNewCompanyRecord.Name = "pnlAddNewCompanyRecord"
-        pnlAddNewCompanyRecord.Size = New Size(1383, 711)
-        pnlAddNewCompanyRecord.TabIndex = 221
-        ' 
-        ' Label57
-        ' 
-        Label57.AutoSize = True
-        Label57.BackColor = Color.Transparent
-        Label57.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label57.ForeColor = Color.Black
-        Label57.Location = New Point(746, 348)
-        Label57.Name = "Label57"
-        Label57.Size = New Size(76, 30)
-        Label57.TabIndex = 226
-        Label57.Text = "Email*"
-        ' 
-        ' txtEmail9
-        ' 
-        txtEmail9.Cursor = Cursors.IBeam
-        txtEmail9.Font = New Font("Segoe UI", 14F)
-        txtEmail9.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtEmail9.Location = New Point(743, 381)
-        txtEmail9.Multiline = True
-        txtEmail9.Name = "txtEmail9"
-        txtEmail9.Size = New Size(471, 38)
-        txtEmail9.TabIndex = 225
-        ' 
-        ' Label54
-        ' 
-        Label54.AutoSize = True
-        Label54.BackColor = Color.Transparent
-        Label54.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label54.ForeColor = Color.Black
-        Label54.Location = New Point(137, 349)
-        Label54.Name = "Label54"
-        Label54.Size = New Size(188, 30)
-        Label54.TabIndex = 224
-        Label54.Text = "Contact Number*"
-        ' 
-        ' txtContactNumber9
-        ' 
-        txtContactNumber9.Cursor = Cursors.IBeam
-        txtContactNumber9.Font = New Font("Segoe UI", 14F)
-        txtContactNumber9.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtContactNumber9.Location = New Point(134, 382)
-        txtContactNumber9.Multiline = True
-        txtContactNumber9.Name = "txtContactNumber9"
-        txtContactNumber9.Size = New Size(471, 38)
-        txtContactNumber9.TabIndex = 223
-        ' 
-        ' Label53
-        ' 
-        Label53.AutoSize = True
-        Label53.BackColor = Color.Transparent
-        Label53.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label53.ForeColor = Color.Black
-        Label53.Location = New Point(146, 239)
-        Label53.Name = "Label53"
-        Label53.Size = New Size(202, 30)
-        Label53.TabIndex = 222
-        Label53.Text = "Company Address*"
-        ' 
-        ' txtAddress9
-        ' 
-        txtAddress9.Cursor = Cursors.IBeam
-        txtAddress9.Font = New Font("Segoe UI", 14F)
-        txtAddress9.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtAddress9.Location = New Point(143, 272)
-        txtAddress9.Multiline = True
-        txtAddress9.Name = "txtAddress9"
-        txtAddress9.Size = New Size(471, 38)
-        txtAddress9.TabIndex = 221
-        ' 
-        ' btnCancel9
-        ' 
-        btnCancel9.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnCancel9.FlatAppearance.BorderSize = 0
-        btnCancel9.FlatStyle = FlatStyle.Flat
-        btnCancel9.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnCancel9.ForeColor = Color.White
-        btnCancel9.Location = New Point(1075, 648)
-        btnCancel9.MinimumSize = New Size(50, 25)
-        btnCancel9.Name = "btnCancel9"
-        btnCancel9.Size = New Size(132, 51)
-        btnCancel9.TabIndex = 220
-        btnCancel9.Text = "CANCEL"
-        btnCancel9.UseVisualStyleBackColor = False
-        ' 
-        ' Label61
-        ' 
-        Label61.AutoSize = True
-        Label61.BackColor = Color.Transparent
-        Label61.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label61.ForeColor = Color.Black
-        Label61.Location = New Point(752, 238)
-        Label61.Name = "Label61"
-        Label61.Size = New Size(158, 30)
-        Label61.TabIndex = 203
-        Label61.Text = "Industry Type*"
-        ' 
-        ' btnAdd9
-        ' 
-        btnAdd9.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnAdd9.FlatAppearance.BorderSize = 0
-        btnAdd9.FlatStyle = FlatStyle.Flat
-        btnAdd9.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        btnAdd9.ForeColor = Color.White
-        btnAdd9.Location = New Point(1213, 648)
-        btnAdd9.MinimumSize = New Size(50, 25)
-        btnAdd9.Name = "btnAdd9"
-        btnAdd9.Size = New Size(132, 51)
-        btnAdd9.TabIndex = 219
-        btnAdd9.Text = "ADD"
-        btnAdd9.UseVisualStyleBackColor = False
-        ' 
-        ' txtIndustryType9
-        ' 
-        txtIndustryType9.Cursor = Cursors.IBeam
-        txtIndustryType9.Font = New Font("Segoe UI", 14F)
-        txtIndustryType9.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtIndustryType9.Location = New Point(749, 271)
-        txtIndustryType9.Multiline = True
-        txtIndustryType9.Name = "txtIndustryType9"
-        txtIndustryType9.Size = New Size(471, 38)
-        txtIndustryType9.TabIndex = 202
-        ' 
-        ' Label63
-        ' 
-        Label63.AutoSize = True
-        Label63.BackColor = Color.Transparent
-        Label63.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        Label63.ForeColor = Color.Black
-        Label63.Location = New Point(56, 28)
-        Label63.Name = "Label63"
-        Label63.Size = New Size(506, 46)
-        Label63.TabIndex = 201
-        Label63.Text = "ADD NEW COMPANY RECORD"
-        ' 
-        ' Label71
-        ' 
-        Label71.AutoSize = True
-        Label71.BackColor = Color.Transparent
-        Label71.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label71.ForeColor = Color.Black
-        Label71.Location = New Point(752, 133)
-        Label71.Name = "Label71"
-        Label71.Size = New Size(182, 30)
-        Label71.TabIndex = 198
-        Label71.Text = "Company Name*"
-        ' 
-        ' Label75
-        ' 
-        Label75.AutoSize = True
-        Label75.BackColor = Color.Transparent
-        Label75.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label75.ForeColor = Color.Black
-        Label75.Location = New Point(147, 130)
-        Label75.Name = "Label75"
-        Label75.Size = New Size(145, 30)
-        Label75.TabIndex = 197
-        Label75.Text = "Company ID*"
-        ' 
-        ' txtCompanyName9
-        ' 
-        txtCompanyName9.Cursor = Cursors.IBeam
-        txtCompanyName9.Font = New Font("Segoe UI", 14F)
-        txtCompanyName9.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtCompanyName9.Location = New Point(749, 166)
-        txtCompanyName9.Multiline = True
-        txtCompanyName9.Name = "txtCompanyName9"
-        txtCompanyName9.Size = New Size(471, 38)
-        txtCompanyName9.TabIndex = 192
-        ' 
-        ' txtCompanyID9
-        ' 
-        txtCompanyID9.Cursor = Cursors.IBeam
-        txtCompanyID9.Font = New Font("Segoe UI", 14F)
-        txtCompanyID9.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtCompanyID9.Location = New Point(144, 163)
-        txtCompanyID9.Multiline = True
-        txtCompanyID9.Name = "txtCompanyID9"
-        txtCompanyID9.Size = New Size(471, 38)
-        txtCompanyID9.TabIndex = 191
-        ' 
         ' pnlEditCompanyCompanyContact
         ' 
-        pnlEditCompanyCompanyContact.BackColor = Color.WhiteSmoke
+        pnlEditCompanyCompanyContact.BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(250))
         pnlEditCompanyCompanyContact.Controls.Add(btnEditCompanyContact8)
         pnlEditCompanyCompanyContact.Controls.Add(btnEditCompany8)
         pnlEditCompanyCompanyContact.Controls.Add(Label82)
         pnlEditCompanyCompanyContact.Controls.Add(Roundedpanel4)
         pnlEditCompanyCompanyContact.Controls.Add(Roundedpanel5)
         pnlEditCompanyCompanyContact.CornerRadius = 40
-        pnlEditCompanyCompanyContact.Location = New Point(442, 303)
+        pnlEditCompanyCompanyContact.Location = New Point(372, 172)
         pnlEditCompanyCompanyContact.Name = "pnlEditCompanyCompanyContact"
-        pnlEditCompanyCompanyContact.Size = New Size(565, 340)
+        pnlEditCompanyCompanyContact.Size = New Size(512, 340)
         pnlEditCompanyCompanyContact.TabIndex = 228
         ' 
         ' btnEditCompanyContact8
         ' 
-        btnEditCompanyContact8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnEditCompanyContact8.BackColor = Color.White
         btnEditCompanyContact8.FlatAppearance.BorderSize = 0
         btnEditCompanyContact8.FlatStyle = FlatStyle.Flat
-        btnEditCompanyContact8.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
-        btnEditCompanyContact8.ForeColor = Color.White
+        btnEditCompanyContact8.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnEditCompanyContact8.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnEditCompanyContact8.Location = New Point(90, 210)
         btnEditCompanyContact8.MinimumSize = New Size(50, 25)
         btnEditCompanyContact8.Name = "btnEditCompanyContact8"
         btnEditCompanyContact8.Size = New Size(378, 90)
         btnEditCompanyContact8.TabIndex = 220
-        btnEditCompanyContact8.Text = "COMPANY CONTACT"
+        btnEditCompanyContact8.Text = "Company Contact"
         btnEditCompanyContact8.UseVisualStyleBackColor = False
         ' 
         ' btnEditCompany8
         ' 
-        btnEditCompany8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnEditCompany8.BackColor = Color.White
         btnEditCompany8.FlatAppearance.BorderSize = 0
         btnEditCompany8.FlatStyle = FlatStyle.Flat
-        btnEditCompany8.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnEditCompany8.ForeColor = Color.White
+        btnEditCompany8.Font = New Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnEditCompany8.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnEditCompany8.Location = New Point(90, 87)
         btnEditCompany8.MinimumSize = New Size(50, 25)
         btnEditCompany8.Name = "btnEditCompany8"
         btnEditCompany8.Size = New Size(378, 90)
         btnEditCompany8.TabIndex = 219
-        btnEditCompany8.Text = "COMPANY"
+        btnEditCompany8.Text = "Company"
         btnEditCompany8.UseVisualStyleBackColor = False
         ' 
         ' Label82
         ' 
         Label82.AutoSize = True
         Label82.BackColor = Color.Transparent
-        Label82.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
-        Label82.ForeColor = Color.Black
-        Label82.Location = New Point(31, 25)
+        Label82.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label82.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label82.Location = New Point(155, 19)
         Label82.Name = "Label82"
-        Label82.Size = New Size(190, 37)
+        Label82.Size = New Size(259, 50)
         Label82.TabIndex = 218
         Label82.Text = "EDIT RECORD"
         ' 
@@ -2979,57 +3038,57 @@ Partial Class Form3
         ' 
         ' pnlAddNewCompanyandCompanyContact
         ' 
-        pnlAddNewCompanyandCompanyContact.BackColor = Color.WhiteSmoke
+        pnlAddNewCompanyandCompanyContact.BackColor = Color.FromArgb(CByte(247), CByte(248), CByte(250))
         pnlAddNewCompanyandCompanyContact.Controls.Add(btnAddCompanyContact8)
         pnlAddNewCompanyandCompanyContact.Controls.Add(btnAddCompany8)
         pnlAddNewCompanyandCompanyContact.Controls.Add(Label62)
         pnlAddNewCompanyandCompanyContact.Controls.Add(Roundedpanel6)
         pnlAddNewCompanyandCompanyContact.Controls.Add(Roundedpanel7)
         pnlAddNewCompanyandCompanyContact.CornerRadius = 40
-        pnlAddNewCompanyandCompanyContact.Location = New Point(441, 302)
+        pnlAddNewCompanyandCompanyContact.Location = New Point(170, 177)
         pnlAddNewCompanyandCompanyContact.Name = "pnlAddNewCompanyandCompanyContact"
-        pnlAddNewCompanyandCompanyContact.Size = New Size(565, 340)
+        pnlAddNewCompanyandCompanyContact.Size = New Size(322, 340)
         pnlAddNewCompanyandCompanyContact.TabIndex = 217
         ' 
         ' btnAddCompanyContact8
         ' 
-        btnAddCompanyContact8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnAddCompanyContact8.BackColor = Color.White
         btnAddCompanyContact8.FlatAppearance.BorderSize = 0
         btnAddCompanyContact8.FlatStyle = FlatStyle.Flat
-        btnAddCompanyContact8.Font = New Font("Segoe UI", 18F, FontStyle.Bold)
-        btnAddCompanyContact8.ForeColor = Color.White
+        btnAddCompanyContact8.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnAddCompanyContact8.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnAddCompanyContact8.Location = New Point(90, 210)
         btnAddCompanyContact8.MinimumSize = New Size(50, 25)
         btnAddCompanyContact8.Name = "btnAddCompanyContact8"
         btnAddCompanyContact8.Size = New Size(378, 90)
         btnAddCompanyContact8.TabIndex = 220
-        btnAddCompanyContact8.Text = "COMPANY CONTACT"
+        btnAddCompanyContact8.Text = "Company Contact"
         btnAddCompanyContact8.UseVisualStyleBackColor = False
         ' 
         ' btnAddCompany8
         ' 
-        btnAddCompany8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnAddCompany8.BackColor = Color.White
         btnAddCompany8.FlatAppearance.BorderSize = 0
         btnAddCompany8.FlatStyle = FlatStyle.Flat
-        btnAddCompany8.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        btnAddCompany8.ForeColor = Color.White
+        btnAddCompany8.Font = New Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnAddCompany8.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnAddCompany8.Location = New Point(90, 87)
         btnAddCompany8.MinimumSize = New Size(50, 25)
         btnAddCompany8.Name = "btnAddCompany8"
         btnAddCompany8.Size = New Size(378, 90)
         btnAddCompany8.TabIndex = 219
-        btnAddCompany8.Text = "COMPANY"
+        btnAddCompany8.Text = "Company"
         btnAddCompany8.UseVisualStyleBackColor = False
         ' 
         ' Label62
         ' 
         Label62.AutoSize = True
         Label62.BackColor = Color.Transparent
-        Label62.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
-        Label62.ForeColor = Color.Black
-        Label62.Location = New Point(31, 25)
+        Label62.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label62.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label62.Location = New Point(106, 18)
         Label62.Name = "Label62"
-        Label62.Size = New Size(260, 37)
+        Label62.Size = New Size(355, 50)
         Label62.TabIndex = 218
         Label62.Text = "ADD NEW RECORD"
         ' 
@@ -3053,12 +3112,12 @@ Partial Class Form3
         ' 
         ' btnAdd8
         ' 
-        btnAdd8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnAdd8.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnAdd8.FlatAppearance.BorderSize = 0
         btnAdd8.FlatStyle = FlatStyle.Flat
         btnAdd8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnAdd8.ForeColor = Color.White
-        btnAdd8.Location = New Point(1082, 819)
+        btnAdd8.Location = New Point(1088, 824)
         btnAdd8.MinimumSize = New Size(50, 25)
         btnAdd8.Name = "btnAdd8"
         btnAdd8.Size = New Size(132, 51)
@@ -3068,12 +3127,12 @@ Partial Class Form3
         ' 
         ' btnEdit8
         ' 
-        btnEdit8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnEdit8.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnEdit8.FlatAppearance.BorderSize = 0
         btnEdit8.FlatStyle = FlatStyle.Flat
         btnEdit8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnEdit8.ForeColor = Color.White
-        btnEdit8.Location = New Point(1220, 819)
+        btnEdit8.Location = New Point(1226, 824)
         btnEdit8.MinimumSize = New Size(50, 25)
         btnEdit8.Name = "btnEdit8"
         btnEdit8.Size = New Size(132, 51)
@@ -3083,12 +3142,12 @@ Partial Class Form3
         ' 
         ' btnDelete8
         ' 
-        btnDelete8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnDelete8.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnDelete8.FlatAppearance.BorderSize = 0
         btnDelete8.FlatStyle = FlatStyle.Flat
         btnDelete8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnDelete8.ForeColor = Color.White
-        btnDelete8.Location = New Point(1358, 818)
+        btnDelete8.Location = New Point(1364, 824)
         btnDelete8.MinimumSize = New Size(50, 25)
         btnDelete8.Name = "btnDelete8"
         btnDelete8.Size = New Size(132, 51)
@@ -3103,10 +3162,10 @@ Partial Class Form3
         btnSearch8.FlatStyle = FlatStyle.Flat
         btnSearch8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnSearch8.ForeColor = Color.White
-        btnSearch8.Location = New Point(491, 98)
+        btnSearch8.Location = New Point(661, 107)
         btnSearch8.MinimumSize = New Size(50, 25)
         btnSearch8.Name = "btnSearch8"
-        btnSearch8.Size = New Size(132, 38)
+        btnSearch8.Size = New Size(140, 46)
         btnSearch8.TabIndex = 213
         btnSearch8.Text = "SEARCH"
         btnSearch8.UseVisualStyleBackColor = False
@@ -3115,11 +3174,11 @@ Partial Class Form3
         ' 
         lblTotalRecords8.AutoSize = True
         lblTotalRecords8.BackColor = Color.Transparent
-        lblTotalRecords8.Font = New Font("Segoe UI", 11F)
-        lblTotalRecords8.ForeColor = Color.Black
-        lblTotalRecords8.Location = New Point(154, 818)
+        lblTotalRecords8.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblTotalRecords8.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblTotalRecords8.Location = New Point(237, 824)
         lblTotalRecords8.Name = "lblTotalRecords8"
-        lblTotalRecords8.Size = New Size(34, 25)
+        lblTotalRecords8.Size = New Size(48, 38)
         lblTotalRecords8.TabIndex = 129
         lblTotalRecords8.Text = "[0]"
         ' 
@@ -3128,69 +3187,68 @@ Partial Class Form3
         Label78.AutoSize = True
         Label78.BackColor = Color.Transparent
         Label78.FlatStyle = FlatStyle.System
-        Label78.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
-        Label78.ForeColor = Color.Black
-        Label78.Location = New Point(28, 819)
+        Label78.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label78.ForeColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        Label78.Location = New Point(49, 827)
         Label78.Name = "Label78"
-        Label78.Size = New Size(136, 25)
+        Label78.Size = New Size(199, 38)
         Label78.TabIndex = 124
         Label78.Text = "Total Records:"
         ' 
         ' dgvCompanyFiles8
         ' 
-        dgvCompanyFiles8.BackgroundColor = Color.White
+        dgvCompanyFiles8.BackgroundColor = Color.MintCream
         dgvCompanyFiles8.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvCompanyFiles8.Location = New Point(171, 458)
+        dgvCompanyFiles8.Location = New Point(87, 423)
         dgvCompanyFiles8.Name = "dgvCompanyFiles8"
         dgvCompanyFiles8.RowHeadersWidth = 51
-        dgvCompanyFiles8.Size = New Size(1052, 265)
+        dgvCompanyFiles8.Size = New Size(1356, 347)
         dgvCompanyFiles8.TabIndex = 128
         ' 
         ' Label79
         ' 
         Label79.AutoSize = True
         Label79.BackColor = Color.Transparent
-        Label79.Font = New Font("Segoe UI", 16F, FontStyle.Bold)
-        Label79.ForeColor = Color.Black
-        Label79.Location = New Point(76, 400)
+        Label79.Font = New Font("Century", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label79.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label79.Location = New Point(82, 355)
         Label79.Name = "Label79"
-        Label79.Size = New Size(224, 37)
+        Label79.Size = New Size(311, 47)
         Label79.TabIndex = 126
-        Label79.Text = "COMPANY FILES"
+        Label79.Text = "Company Files"
         ' 
         ' dgvCompanyLogs8
         ' 
-        dgvCompanyLogs8.BackgroundColor = Color.White
+        dgvCompanyLogs8.BackgroundColor = Color.MintCream
         dgvCompanyLogs8.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvCompanyLogs8.Location = New Point(171, 194)
+        dgvCompanyLogs8.Location = New Point(87, 194)
         dgvCompanyLogs8.Name = "dgvCompanyLogs8"
         dgvCompanyLogs8.RowHeadersWidth = 51
-        dgvCompanyLogs8.Size = New Size(1052, 80)
+        dgvCompanyLogs8.Size = New Size(1353, 142)
         dgvCompanyLogs8.TabIndex = 125
         ' 
         ' txtSearchID8
         ' 
         txtSearchID8.Cursor = Cursors.IBeam
         txtSearchID8.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        txtSearchID8.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID8.Location = New Point(53, 98)
+        txtSearchID8.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtSearchID8.Location = New Point(214, 111)
         txtSearchID8.Multiline = True
         txtSearchID8.Name = "txtSearchID8"
         txtSearchID8.Size = New Size(432, 38)
         txtSearchID8.TabIndex = 116
-        txtSearchID8.Text = "Search Company ID"
         ' 
         ' Label80
         ' 
         Label80.AutoSize = True
         Label80.BackColor = Color.Transparent
-        Label80.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
-        Label80.ForeColor = Color.Black
+        Label80.Font = New Font("Century", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label80.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         Label80.Location = New Point(20, 27)
         Label80.Name = "Label80"
-        Label80.Size = New Size(443, 46)
+        Label80.Size = New Size(661, 71)
         Label80.TabIndex = 114
-        Label80.Text = "COMPANY INFORMATION"
+        Label80.Text = "Company Information"
         ' 
         ' btnViewContacts8
         ' 
@@ -3199,13 +3257,24 @@ Partial Class Form3
         btnViewContacts8.FlatStyle = FlatStyle.Flat
         btnViewContacts8.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
         btnViewContacts8.ForeColor = Color.White
-        btnViewContacts8.Location = New Point(832, 818)
+        btnViewContacts8.Location = New Point(838, 823)
         btnViewContacts8.MinimumSize = New Size(50, 25)
         btnViewContacts8.Name = "btnViewContacts8"
         btnViewContacts8.Size = New Size(244, 51)
         btnViewContacts8.TabIndex = 229
         btnViewContacts8.Text = "VIEW CONTACTS"
         btnViewContacts8.UseVisualStyleBackColor = False
+        ' 
+        ' Label141
+        ' 
+        Label141.AutoSize = True
+        Label141.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label141.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label141.Location = New Point(28, 114)
+        Label141.Name = "Label141"
+        Label141.Size = New Size(182, 28)
+        Label141.TabIndex = 230
+        Label141.Text = "Enter Name or ID:"
         ' 
         ' pnlCompanyContactInformation
         ' 
@@ -5819,39 +5888,19 @@ Partial Class Form3
         pnlCompleted.Size = New Size(340, 310)
         pnlCompleted.TabIndex = 269
         ' 
-        ' Label140
-        ' 
-        Label140.AutoSize = True
-        Label140.BackColor = Color.Transparent
-        Label140.Font = New Font("Segoe UI Semibold", 13F, FontStyle.Bold)
-        Label140.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label140.Location = New Point(539, 39)
-        Label140.Name = "Label140"
-        Label140.Size = New Size(207, 30)
-        Label140.TabIndex = 225
-        Label140.Text = "Enter Evaluation ID:"
-        ' 
-        ' Panel3
-        ' 
-        Panel3.BackColor = Color.DarkSeaGreen
-        Panel3.Location = New Point(36, 42)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(10, 63)
-        Panel3.TabIndex = 232
-        ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1902, 1033)
-        Controls.Add(pnlEvaluationInformation)
+        Controls.Add(pnlCompanyInformation)
         Controls.Add(pnlStudentInformation)
+        Controls.Add(pnlEvaluationInformation)
         Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlVisitInformation)
         Controls.Add(pnlFacultyInformation)
         Controls.Add(pnlSummaryReport)
-        Controls.Add(pnlCompanyInformation)
         Controls.Add(pnlCompanyContactInformation)
         Controls.Add(Panel1)
         Controls.Add(pnlHeader)
@@ -5903,10 +5952,10 @@ Partial Class Form3
         CType(dgvEvaluationLogs5, ComponentModel.ISupportInitialize).EndInit()
         pnlCompanyInformation.ResumeLayout(False)
         pnlCompanyInformation.PerformLayout()
-        pnlEditCompanyRecord.ResumeLayout(False)
-        pnlEditCompanyRecord.PerformLayout()
         pnlAddNewCompanyRecord.ResumeLayout(False)
         pnlAddNewCompanyRecord.PerformLayout()
+        pnlEditCompanyRecord.ResumeLayout(False)
+        pnlEditCompanyRecord.PerformLayout()
         pnlEditCompanyCompanyContact.ResumeLayout(False)
         pnlEditCompanyCompanyContact.PerformLayout()
         pnlAddNewCompanyandCompanyContact.ResumeLayout(False)
@@ -6366,5 +6415,9 @@ Partial Class Form3
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label140 As Label
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label141 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label143 As Label
 
 End Class
