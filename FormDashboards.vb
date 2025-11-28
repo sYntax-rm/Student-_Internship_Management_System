@@ -171,7 +171,8 @@ Public Class FormDashboards
     End Sub
 
     Private Sub loadInternRecord()
-
+        Dim dt As DataTable = loadTable("SELECT * FROM vinternship_record")
+        dgvInternshipFiles4.DataSource = dt
     End Sub
 
     Private Function validStudentInputBx(email As TextBox, ParamArray txtBoxes() As TextBox) As Boolean
@@ -337,10 +338,9 @@ Public Class FormDashboards
 
     Private Sub btnInternships_Click(sender As Object, e As EventArgs) Handles btnInternships.Click
         hidePanel()
-        pnlInternshipInformation.Show()
         pnlHome.Hide()
-
-
+        pnlInternshipInformation.Show()
+        loadInternRecord()
     End Sub
 
     'BUTTON HOVER
