@@ -5601,7 +5601,7 @@ Partial Class Form3
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(753, 530)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(471, 39)
+        ComboBox1.Size = New Size(471, 40)
         ComboBox1.TabIndex = 206
         ' 
         ' Label30
@@ -5716,7 +5716,7 @@ Partial Class Form3
         ComboBox2.FormattingEnabled = True
         ComboBox2.Location = New Point(144, 530)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(471, 39)
+        ComboBox2.Size = New Size(471, 40)
         ComboBox2.TabIndex = 196
         ' 
         ' Label37
@@ -5748,7 +5748,7 @@ Partial Class Form3
         ComboBox3.FormattingEnabled = True
         ComboBox3.Location = New Point(144, 340)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(471, 39)
+        ComboBox3.Size = New Size(471, 40)
         ComboBox3.TabIndex = 193
         ' 
         ' TextBox6
@@ -5821,7 +5821,7 @@ Partial Class Form3
         ComboBox4.FormattingEnabled = True
         ComboBox4.Location = New Point(753, 530)
         ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(471, 39)
+        ComboBox4.Size = New Size(471, 40)
         ComboBox4.TabIndex = 206
         ' 
         ' Label39
@@ -5959,7 +5959,7 @@ Partial Class Form3
         ComboBox6.FormattingEnabled = True
         ComboBox6.Location = New Point(144, 340)
         ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(471, 39)
+        ComboBox6.Size = New Size(471, 40)
         ComboBox6.TabIndex = 193
         ' 
         ' TextBox11
@@ -6063,12 +6063,12 @@ Partial Class Form3
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1902, 1033)
+        Controls.Add(pnlCompanyInformation)
         Controls.Add(pnlVisitInformation)
         Controls.Add(pnlSummaryReport)
         Controls.Add(pnlStudentInformation)
         Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlCompanyContactInformation)
-        Controls.Add(pnlCompanyInformation)
         Controls.Add(pnlEvaluationInformation)
         Controls.Add(pnlFacultyInformation)
         Controls.Add(Panel1)

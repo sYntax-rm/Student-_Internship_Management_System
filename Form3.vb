@@ -1654,25 +1654,5 @@ Public Class Form3
 
     End Sub
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     '1529, 902
 End Class
