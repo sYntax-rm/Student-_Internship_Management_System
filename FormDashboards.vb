@@ -105,8 +105,6 @@ Public Class FormDashboards
     End Sub
 
     Private Sub hidePanel()
-
-
         pnlStudentInformation.Hide()
         pnlAddNewStudentRecord.Hide()
         pnlEditStudentRecord.Hide()
@@ -170,6 +168,10 @@ Public Class FormDashboards
         dv.RowFilter = "Hidden = False"
         dgvStudentFiles.DataSource = dv
         dgvStudentFiles.Columns("Hidden").Visible = False
+    End Sub
+
+    Private Sub loadInternRecord()
+
     End Sub
 
     Private Function validStudentInputBx(email As TextBox, ParamArray txtBoxes() As TextBox) As Boolean
@@ -337,6 +339,8 @@ Public Class FormDashboards
         hidePanel()
         pnlInternshipInformation.Show()
         pnlHome.Hide()
+
+
     End Sub
 
     'BUTTON HOVER
