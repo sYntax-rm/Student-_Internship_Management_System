@@ -1542,7 +1542,7 @@ Public Class Form3
 
     End Sub
     Private Sub btnCancel18_Click(sender As Object, e As EventArgs) Handles btnCancel18.Click
-        Dim result As DialogResult = MessageBox.Show("Are you sure you want to cancel?", "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        Dim result = MessageBox.Show("Are you sure you want to cancel?", "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
         If result = DialogResult.Yes Then
             pnlVisitInformation.Show()
@@ -1551,7 +1551,7 @@ Public Class Form3
 
     End Sub
     Private Sub btnAdd18_Click(sender As Object, e As EventArgs) Handles btnAdd18.Click
-        Dim result As DialogResult = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If result = DialogResult.Yes Then
             pnlVisitInformation.Show()
@@ -1653,6 +1653,17 @@ Public Class Form3
     Private Sub picStudentIcon_Click(sender As Object, e As EventArgs) Handles picStudentIcon.Click
 
     End Sub
+
+    'Update Internship Record
+    Private Sub txtboxSearchInternshipID_TextChanged(sender As Object, e As EventArgs) Handles txtboxSearchInternshipID.TextChanged
+
+    End Sub
+
+    Private Sub btnSearchUpdate_Click(sender As Object, e As EventArgs) Handles btnSearchUpdate.Click
+
+    End Sub
+
+
 
 
 
