@@ -213,6 +213,44 @@ Module Query
         Return result.ToString()
     End Function
 
+    Public Function searchInterTable(searchItem As String) As DataTable
+        Dim dataTable As New DataTable()
+
+        Dim query As String = " SELECT i.internship_id AS 'Internship ID',
+                                s.first_name AS 'First Name',
+                                s.last_name AS 'Last Name',
+                                c.company_name AS 'Company Name',
+                                Cc.contact_last_name AS 'Supervisor Last Name',
+                                Cc.contact_contact_no AS 'Supervisor Contact',
+                                i.start_date AS 'Start_Date',
+                                i.end_date AS 'End_Date',
+                                i.status AS 'Status'
+                                FROM internship i
+                                LEFT JOIN student s  ON i.student_id = s.student_id
+                                LEFT JOIN company c ON i.company_id = c.company_id
+                                LEFT JOIN company_contact Cc ON i.contact_id = Cc.contact_id
+                                WHERE s.first_name LIKE @search OR s.last_name LIKE @search OR
+                                i.internship_id LIKE @search;
+                                "
+
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand(query, con)
+                    con.Open()
+                    cmd.Parameters.AddWithValue("@search", "%" & searchItem & "%")
+                    Using dA As New MySqlDataAdapter(cmd)
+                        dA.Fill(dataTable)
+                    End Using
+                    con.Close()
+                End Using
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return dataTable
+    End Function
 
 
 End Module
