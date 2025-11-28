@@ -5,7 +5,7 @@
 
         'eto edit ko
         ' Set icon sa form at taskbar
-        Me.Icon = New System.Drawing.Icon("C:\Users\acer\source\repos\sYntax-rm\Student-_Internship_Management_System\Resources\internship_icon.ico")
+        Me.Icon = New System.Drawing.Icon("D:\vbnet_programs\Finals\Student Internship (OJT) Management System-20251121T034957Z-1-001\Student Internship (OJT) Management System\Resources\internship_icon.ico")
         Me.ShowIcon = True
 
     End Sub
