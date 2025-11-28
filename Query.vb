@@ -109,31 +109,48 @@ Module Query
         Return dataTable
     End Function
 
-
     Public Function addStudentRecord(stdID As String, fname As String, lname As String, gen As String, sec As String,
                                      contact As String, email As String, depID As String, crsID As String) As Boolean
         Try
             Using con As MySqlConnection = GetConnection()
-                Using cmd As New MySqlCommand("INSERT INTO student 
-                                               (student_id, first_name, last_name, gender, section_name, 
-                                                contact_no, email, department_id, course_id) 
-                                               VALUES 
-                                               (@studentID, @first_name, @last_name, @gender, @section, 
-                                                @contact, @email, @departmentID, @courseID)", con)
-                    con.Open()
+                con.Open()
+                Using trans As MySqlTransaction = con.BeginTransaction()
 
-                    cmd.Parameters.AddWithValue("@studentID", stdID)
-                    cmd.Parameters.AddWithValue("@first_name", fname)
-                    cmd.Parameters.AddWithValue("@last_name", lname)
-                    cmd.Parameters.AddWithValue("@gender", gen)
-                    cmd.Parameters.AddWithValue("@section", sec)
-                    cmd.Parameters.AddWithValue("@contact", contact)
-                    cmd.Parameters.AddWithValue("@email", email)
-                    cmd.Parameters.AddWithValue("@departmentID", depID)
-                    cmd.Parameters.AddWithValue("@courseID", crsID)
+                    ' Insert student
+                    Using studentCmd As New MySqlCommand("
+                    INSERT INTO student 
+                        (student_id, first_name, last_name, gender, section_name, contact_no, email, department_id, course_id) 
+                    VALUES 
+                        (@studentID, @first_name, @last_name, @gender, @section, @contact, @email, @departmentID, @courseID)", con, trans)
 
-                    cmd.ExecuteNonQuery()
-                    con.Close()
+                        studentCmd.Parameters.AddWithValue("@studentID", stdID)
+                        studentCmd.Parameters.AddWithValue("@first_name", fname)
+                        studentCmd.Parameters.AddWithValue("@last_name", lname)
+                        studentCmd.Parameters.AddWithValue("@gender", gen)
+                        studentCmd.Parameters.AddWithValue("@section", sec)
+                        studentCmd.Parameters.AddWithValue("@contact", contact)
+                        studentCmd.Parameters.AddWithValue("@email", email)
+                        studentCmd.Parameters.AddWithValue("@departmentID", depID)
+                        studentCmd.Parameters.AddWithValue("@courseID", crsID)
+
+                        studentCmd.ExecuteNonQuery()
+                    End Using
+
+                    ' Insert internship for the same student (default status = "Pending")
+                    Using internCmd As New MySqlCommand("
+                    INSERT INTO internship 
+                        (internship_id, student_id, status) 
+                    VALUES 
+                        (@internID, @studentID, 'Pending')", con, trans)
+
+                        internCmd.Parameters.AddWithValue("@internID", GenerateInternID())
+                        internCmd.Parameters.AddWithValue("@studentID", stdID)
+
+                        internCmd.ExecuteNonQuery()
+                    End Using
+
+                    ' Commit transaction
+                    trans.Commit()
                 End Using
             End Using
 
@@ -176,8 +193,6 @@ Module Query
             Return False
         End Try
 
-
-
         Return True
     End Function
     Public Function countStudentRecord() As String
@@ -198,6 +213,44 @@ Module Query
         Return result.ToString()
     End Function
 
+    Public Function searchInterTable(searchItem As String) As DataTable
+        Dim dataTable As New DataTable()
+
+        Dim query As String = " SELECT i.internship_id AS 'Internship ID',
+                                s.first_name AS 'First Name',
+                                s.last_name AS 'Last Name',
+                                c.company_name AS 'Company Name',
+                                Cc.contact_last_name AS 'Supervisor Last Name',
+                                Cc.contact_contact_no AS 'Supervisor Contact',
+                                i.start_date AS 'Start_Date',
+                                i.end_date AS 'End_Date',
+                                i.status AS 'Status'
+                                FROM internship i
+                                LEFT JOIN student s  ON i.student_id = s.student_id
+                                LEFT JOIN company c ON i.company_id = c.company_id
+                                LEFT JOIN company_contact Cc ON i.contact_id = Cc.contact_id
+                                WHERE s.first_name LIKE @search OR s.last_name LIKE @search OR
+                                i.internship_id LIKE @search;
+                                "
+
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand(query, con)
+                    con.Open()
+                    cmd.Parameters.AddWithValue("@search", "%" & searchItem & "%")
+                    Using dA As New MySqlDataAdapter(cmd)
+                        dA.Fill(dataTable)
+                    End Using
+                    con.Close()
+                End Using
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return dataTable
+    End Function
 
 
 End Module

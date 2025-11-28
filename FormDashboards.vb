@@ -108,8 +108,6 @@ Public Class FormDashboards
     End Sub
 
     Private Sub hidePanel()
-
-
         pnlStudentInformation.Hide()
         pnlAddNewStudentRecord.Hide()
         pnlEditStudentRecord.Hide()
@@ -173,6 +171,12 @@ Public Class FormDashboards
         dv.RowFilter = "Hidden = False"
         dgvStudentFiles.DataSource = dv
         dgvStudentFiles.Columns("Hidden").Visible = False
+    End Sub
+
+    Private Sub loadInternRecord()
+        'Dim dt As DataTable = loadTable("SELECT * FROM vinternship_record") use this to hide the pending
+        Dim dt As DataTable = loadTable("SELECT * FROM vall_internship")
+        dgvInternshipFiles4.DataSource = dt
     End Sub
 
     Private Function validStudentInputBx(email As TextBox, ParamArray txtBoxes() As TextBox) As Boolean
@@ -338,8 +342,9 @@ Public Class FormDashboards
 
     Private Sub btnInternships_Click(sender As Object, e As EventArgs) Handles btnInternships.Click
         hidePanel()
-        pnlInternshipInformation.Show()
         pnlHome.Hide()
+        pnlInternshipInformation.Show()
+        loadInternRecord()
     End Sub
 
     'BUTTON HOVER
@@ -558,18 +563,6 @@ Public Class FormDashboards
 
     End Sub
 
-    Private Sub dgvStudentLogs1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentSearch.CellContentClick
-
-    End Sub
-
-    Private Sub dgvStudentFiles1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentFiles.CellContentClick
-
-    End Sub
-
-    Private Sub lblTotalRecords1_Click(sender As Object, e As EventArgs) Handles lblTotalRecords1.Click
-
-    End Sub
-
     Private Sub btnImport1_Click(sender As Object, e As EventArgs) Handles btnImport1.Click
         Dim ofd As New OpenFileDialog
         Dim csvAdded As Boolean
@@ -638,40 +631,6 @@ Public Class FormDashboards
     ' Private Sub pnlAddNewStudentRecord_Paint(sender As Object, e As PaintEventArgs) Handles pnlAddNewStudentRecord.Paint
 
     ' End Sub
-    Private Sub txtStudentID2_TextChanged(sender As Object, e As EventArgs) Handles txtStudentID2.TextChanged
-
-    End Sub
-
-    Private Sub txtFName2_TextChanged(sender As Object, e As EventArgs) Handles txtFName2.TextChanged
-
-    End Sub
-
-    Private Sub txtLName2_TextChanged(sender As Object, e As EventArgs) Handles txtLName2.TextChanged
-
-    End Sub
-
-    Private Sub cmbGender2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbGender2.SelectedIndexChanged
-
-    End Sub
-    Private Sub cmbSection2_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtContactNumber2_TextChanged(sender As Object, e As EventArgs) Handles txtContactNumber2.TextChanged
-
-    End Sub
-
-    Private Sub txtEmail2_TextChanged(sender As Object, e As EventArgs) Handles txtEmail2.TextChanged
-
-    End Sub
-
-    Private Sub cmbDepartment2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbDepartment2.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub cmbProgram2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCourse2.SelectedIndexChanged
-
-    End Sub
 
     Private Sub btnCancel2_Click(sender As Object, e As EventArgs) Handles btnCancel2.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to cancel?", "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
@@ -818,6 +777,13 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnSearch4_Click(sender As Object, e As EventArgs) Handles btnSearch4.Click
+        If txtSearchID4.Text = "" Then
+            MessageBox.Show("Please Enter Student ID",
+                                     "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        dgvInternshipLogs4.DataSource = searchInterTable(txtSearchID4.Text.Trim())
 
     End Sub
 
