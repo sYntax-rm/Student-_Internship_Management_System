@@ -109,31 +109,50 @@ Module Query
         Return dataTable
     End Function
 
-
     Public Function addStudentRecord(stdID As String, fname As String, lname As String, gen As String, sec As String,
                                      contact As String, email As String, depID As String, crsID As String) As Boolean
         Try
             Using con As MySqlConnection = GetConnection()
-                Using cmd As New MySqlCommand("INSERT INTO student 
-                                               (student_id, first_name, last_name, gender, section_name, 
-                                                contact_no, email, department_id, course_id) 
-                                               VALUES 
-                                               (@studentID, @first_name, @last_name, @gender, @section, 
-                                                @contact, @email, @departmentID, @courseID)", con)
-                    con.Open()
+                con.Open()
 
-                    cmd.Parameters.AddWithValue("@studentID", stdID)
-                    cmd.Parameters.AddWithValue("@first_name", fname)
-                    cmd.Parameters.AddWithValue("@last_name", lname)
-                    cmd.Parameters.AddWithValue("@gender", gen)
-                    cmd.Parameters.AddWithValue("@section", sec)
-                    cmd.Parameters.AddWithValue("@contact", contact)
-                    cmd.Parameters.AddWithValue("@email", email)
-                    cmd.Parameters.AddWithValue("@departmentID", depID)
-                    cmd.Parameters.AddWithValue("@courseID", crsID)
+                ' Start transaction
+                Using trans As MySqlTransaction = con.BeginTransaction()
 
-                    cmd.ExecuteNonQuery()
-                    con.Close()
+                    ' 1️⃣ Insert student
+                    Using studentCmd As New MySqlCommand("
+                    INSERT INTO student 
+                        (student_id, first_name, last_name, gender, section_name, contact_no, email, department_id, course_id) 
+                    VALUES 
+                        (@studentID, @first_name, @last_name, @gender, @section, @contact, @email, @departmentID, @courseID)", con, trans)
+
+                        studentCmd.Parameters.AddWithValue("@studentID", stdID)
+                        studentCmd.Parameters.AddWithValue("@first_name", fname)
+                        studentCmd.Parameters.AddWithValue("@last_name", lname)
+                        studentCmd.Parameters.AddWithValue("@gender", gen)
+                        studentCmd.Parameters.AddWithValue("@section", sec)
+                        studentCmd.Parameters.AddWithValue("@contact", contact)
+                        studentCmd.Parameters.AddWithValue("@email", email)
+                        studentCmd.Parameters.AddWithValue("@departmentID", depID)
+                        studentCmd.Parameters.AddWithValue("@courseID", crsID)
+
+                        studentCmd.ExecuteNonQuery()
+                    End Using
+
+                    ' 2️⃣ Insert internship for the same student (default status = "Pending")
+                    Using internCmd As New MySqlCommand("
+                    INSERT INTO internship 
+                        (intern_id, student_id, status) 
+                    VALUES 
+                        (@internID, @studentID, 'Pending')", con, trans)
+
+                        internCmd.Parameters.AddWithValue("@internID", GenerateInternID())
+                        internCmd.Parameters.AddWithValue("@studentID", stdID)
+
+                        internCmd.ExecuteNonQuery()
+                    End Using
+
+                    ' Commit transaction
+                    trans.Commit()
                 End Using
             End Using
 
