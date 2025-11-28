@@ -1654,17 +1654,6 @@ Public Class Form3
 
     End Sub
 
-    'Update Internship Record
-    Private Sub txtboxSearchInternshipID_TextChanged(sender As Object, e As EventArgs) Handles txtboxSearchInternshipID.TextChanged
-
-    End Sub
-
-    Private Sub btnSearchUpdate_Click(sender As Object, e As EventArgs) Handles btnSearchUpdate.Click
-
-    End Sub
-
-
-
 
 
 
