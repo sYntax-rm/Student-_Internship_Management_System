@@ -297,7 +297,6 @@ Public Class FormDashboards
 
     End Sub
 
-
     Private Sub btnStudents_Click(sender As Object, e As EventArgs) Handles btnStudents.Click
         hidePanel()
         pnlStudentInformation.Show()
