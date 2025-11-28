@@ -209,14 +209,6 @@ Public Class Form3
     End Sub
 
 
-    Private Sub PictureBox3_Click_1(sender As Object, e As EventArgs)
-        OpenFileDialog1.Filter = "images files(*.bmp; *.jpg; *.png) | *.bmp; *.jpg; *.png"
-        If OpenFileDialog1.ShowDialog = DialogResult.OK Then
-            pctBoxIcon.Image = Image.FromFile(OpenFileDialog1.FileName)
-        End If
-    End Sub
-
-
     'Home
 
     Private Sub pctBoxExit1_Click(sender As Object, e As EventArgs) Handles pctBoxExit1.Click
@@ -1164,16 +1156,7 @@ Public Class Form3
         pnlAddNewCompanyandCompanyContact.Show()      ' show child
         pnlAddNewCompanyandCompanyContact.BringToFront()
 
-        pnlCompanyContactInformation.Show()
 
-        'Dim result As DialogResult = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-
-        'If result = DialogResult.Yes Then
-        'pnlCompanyInformation.Show()
-        'pnlCompanyContactInformation.Hide()
-        'pnlAddNewCompanyandCompanyContact.Hide()
-        'End If
     End Sub
 
     Private Sub btnEdit11_Click(sender As Object, e As EventArgs) Handles btnEdit11.Click
@@ -1183,13 +1166,6 @@ Public Class Form3
 
         pnlAddNewCompanyContactRecord.Hide()
 
-        'Dim result As DialogResult = MessageBox.Show("Record has been successfully edited.", "Edit Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-        'If result = DialogResult.OK Then
-        'pnlCompanyInformation.Show()
-        'pnlCompanyContactInformation.Hide()
-        'pnlAddNewCompanyandCompanyContact.Hide()
-        'End If
 
     End Sub
 

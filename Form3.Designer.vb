@@ -46,14 +46,9 @@ Partial Class Form3
         pnlTtotalInterns = New Panel()
         btnLogout = New RoundedButton()
         pnlHeader = New Panel()
-        Label146 = New Label()
-        PictureBox3 = New PictureBox()
         pctBox2 = New PictureBox()
         Label1 = New Label()
         Label3 = New Label()
-        pctBoxIcon = New PictureBox()
-        lblName = New Label()
-        lblSignInAs = New Label()
         pctBoxHide1 = New PictureBox()
         pctBoxExit1 = New PictureBox()
         pnlEditInternshipEvaluationRecord = New roundedpanel()
@@ -467,9 +462,7 @@ Partial Class Form3
         CType(picInternshipIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(picStudentIcon, ComponentModel.ISupportInitialize).BeginInit()
         pnlHeader.SuspendLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(pctBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(pctBoxIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(pctBoxHide1, ComponentModel.ISupportInitialize).BeginInit()
         CType(pctBoxExit1, ComponentModel.ISupportInitialize).BeginInit()
         pnlEditInternshipEvaluationRecord.SuspendLayout()
@@ -527,7 +520,6 @@ Partial Class Form3
         btnHome.Name = "btnHome"
         btnHome.Size = New Size(147, 54)
         btnHome.TabIndex = 110
-        btnHome.Text = "HOME"
         btnHome.UseVisualStyleBackColor = False
         ' 
         ' btnStudents
@@ -788,9 +780,6 @@ Partial Class Form3
         pnlHeader.Controls.Add(pctBox2)
         pnlHeader.Controls.Add(Label1)
         pnlHeader.Controls.Add(Label3)
-        pnlHeader.Controls.Add(pctBoxIcon)
-        pnlHeader.Controls.Add(lblName)
-        pnlHeader.Controls.Add(lblSignInAs)
         pnlHeader.Controls.Add(pctBoxHide1)
         pnlHeader.Controls.Add(pctBoxExit1)
         pnlHeader.Dock = DockStyle.Top
@@ -810,25 +799,6 @@ Partial Class Form3
         Label146.Size = New Size(678, 47)
         Label146.TabIndex = 213
         Label146.Text = "Pamantasan ng Lungsod ng Pasig"
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.Location = New Point(1610, 85)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(31, 32)
-        PictureBox3.TabIndex = 212
-        PictureBox3.TabStop = False
-        ' 
-        ' pctBox2
-        ' 
-        pctBox2.BackColor = Color.Transparent
-        pctBox2.BackgroundImage = CType(resources.GetObject("pctBox2.BackgroundImage"), Image)
-        pctBox2.BackgroundImageLayout = ImageLayout.Stretch
-        pctBox2.Location = New Point(30, 19)
-        pctBox2.Name = "pctBox2"
-        pctBox2.Size = New Size(100, 100)
-        pctBox2.TabIndex = 108
-        pctBox2.TabStop = False
         ' 
         ' Label1
         ' 
@@ -902,18 +872,6 @@ Partial Class Form3
         pctBoxHide1.Size = New Size(25, 25)
         pctBoxHide1.TabIndex = 106
         pctBoxHide1.TabStop = False
-        ' 
-        ' pctBoxExit1
-        ' 
-        pctBoxExit1.BackColor = Color.Transparent
-        pctBoxExit1.BackgroundImage = CType(resources.GetObject("pctBoxExit1.BackgroundImage"), Image)
-        pctBoxExit1.BackgroundImageLayout = ImageLayout.Stretch
-        pctBoxExit1.Cursor = Cursors.Hand
-        pctBoxExit1.Location = New Point(1860, 15)
-        pctBoxExit1.Name = "pctBoxExit1"
-        pctBoxExit1.Size = New Size(27, 25)
-        pctBoxExit1.TabIndex = 105
-        pctBoxExit1.TabStop = False
         ' 
         ' pnlEditInternshipEvaluationRecord
         ' 
@@ -6065,20 +6023,10 @@ Partial Class Form3
         ClientSize = New Size(1902, 1033)
         Controls.Add(pnlVisitInformation)
         Controls.Add(pnlSummaryReport)
-        Controls.Add(pnlStudentInformation)
-        Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlCompanyContactInformation)
         Controls.Add(pnlCompanyInformation)
-        Controls.Add(pnlEvaluationInformation)
         Controls.Add(pnlFacultyInformation)
-        Controls.Add(Panel1)
         Controls.Add(pnlHeader)
-        Controls.Add(Label6)
-        Controls.Add(pnlCompleted)
-        Controls.Add(pnlTtotalInterns)
-        Controls.Add(pnlDataModel1)
-        Controls.Add(pnlDataModel2)
-        Controls.Add(pnlOnGoing)
         FormBorderStyle = FormBorderStyle.None
         Name = "Form3"
         StartPosition = FormStartPosition.CenterScreen
@@ -6094,9 +6042,7 @@ Partial Class Form3
         CType(picStudentIcon, ComponentModel.ISupportInitialize).EndInit()
         pnlHeader.ResumeLayout(False)
         pnlHeader.PerformLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(pctBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(pctBoxIcon, ComponentModel.ISupportInitialize).EndInit()
         CType(pctBoxHide1, ComponentModel.ISupportInitialize).EndInit()
         CType(pctBoxExit1, ComponentModel.ISupportInitialize).EndInit()
         pnlEditInternshipEvaluationRecord.ResumeLayout(False)
@@ -6166,7 +6112,6 @@ Partial Class Form3
         Roundedpanel2.ResumeLayout(False)
         Roundedpanel2.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
     Friend WithEvents btnHome As RoundedButton
     Friend WithEvents btnStudents As RoundedButton
@@ -6181,11 +6126,9 @@ Partial Class Form3
     Friend WithEvents pnlTtotalInterns As Panel
     Friend WithEvents btnLogout As RoundedButton
     Friend WithEvents pnlHeader As Panel
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents pctBox2 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents pctBoxIcon As PictureBox
     Friend WithEvents lblName As Label
     Friend WithEvents lblSignInAs As Label
     Friend WithEvents pctBoxHide1 As PictureBox
