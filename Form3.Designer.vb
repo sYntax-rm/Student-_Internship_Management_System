@@ -1566,7 +1566,7 @@ Partial Class Form3
         cmbGender2.Font = New Font("Segoe UI", 14F)
         cmbGender2.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbGender2.FormattingEnabled = True
-        cmbGender2.Items.AddRange(New Object() {"Male", "Female"})
+        cmbGender2.Items.AddRange(New Object() {"Male", "Female", "Other"})
         cmbGender2.Location = New Point(66, 365)
         cmbGender2.Name = "cmbGender2"
         cmbGender2.Size = New Size(471, 39)
@@ -1917,7 +1917,7 @@ Partial Class Form3
         cmbGender3.Font = New Font("Segoe UI", 14F)
         cmbGender3.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbGender3.FormattingEnabled = True
-        cmbGender3.Items.AddRange(New Object() {"Male", "Female"})
+        cmbGender3.Items.AddRange(New Object() {"Male", "Female", "Other"})
         cmbGender3.Location = New Point(66, 362)
         cmbGender3.Name = "cmbGender3"
         cmbGender3.Size = New Size(471, 39)
@@ -6063,10 +6063,10 @@ Partial Class Form3
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1902, 1033)
+        Controls.Add(pnlStudentInformation)
         Controls.Add(pnlCompanyInformation)
         Controls.Add(pnlVisitInformation)
         Controls.Add(pnlSummaryReport)
-        Controls.Add(pnlStudentInformation)
         Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlCompanyContactInformation)
         Controls.Add(pnlEvaluationInformation)
