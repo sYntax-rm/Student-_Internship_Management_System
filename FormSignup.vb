@@ -1,8 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Form2
+Public Class FormSignup
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         roundCorners(Me)
         pnlTermsAndCondition.Hide()
+
+        'New Location and Size
+        pnlTermsAndCondition.Location = New Point(42, 60)
+        pnlTermsAndCondition.Size = New Size(948, 528)
+
     End Sub
     Private Sub roundCorners(obj As Form)
 
@@ -26,6 +31,7 @@ Public Class Form2
 
         obj.Region = New Region(DGP)
     End Sub
+
 
     Private Sub clearSignUp()
         txtFirstName.Clear()
@@ -131,5 +137,9 @@ Public Class Form2
             MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
+    End Sub
+
+    Private Sub pnlTermsAndCondition_Paint(sender As Object, e As PaintEventArgs) Handles pnlTermsAndCondition.Paint
+        roundCorners(Me)
     End Sub
 End Class

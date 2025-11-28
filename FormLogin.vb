@@ -1,7 +1,8 @@
-﻿Public Class Form1
+﻿Public Class FormLogin
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         roundCorners(Me)
         pnlForgotPass.Hide()
+
     End Sub
     Private Sub roundCorners(obj As Form)
 
@@ -167,4 +168,11 @@
 
     End Sub
 
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class

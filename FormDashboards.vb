@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports Mysqlx.Notice
 
-Public Class Form3
+Public Class FormDashboards
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Student Icon for Button
@@ -899,8 +899,8 @@ Public Class Form3
         Dim result = MessageBox.Show("Are you sure you want to cancel?", "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
         If result = DialogResult.Yes Then
-            pnlInternshipInformation.Show
-            pnlAddNewInternshipEvaluationRecord.Hide
+            pnlInternshipInformation.Show()
+            pnlAddNewInternshipEvaluationRecord.Hide()
         End If
     End Sub
 
@@ -908,8 +908,8 @@ Public Class Form3
         Dim result = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If result = DialogResult.Yes Then
-            pnlInternshipInformation.Show
-            pnlAddNewInternshipEvaluationRecord.Hide
+            pnlInternshipInformation.Show()
+            pnlAddNewInternshipEvaluationRecord.Hide()
         End If
     End Sub
 
