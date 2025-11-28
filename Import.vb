@@ -40,15 +40,38 @@ Module Import
                 con.Open()
                 Using trans As MySqlTransaction = con.BeginTransaction()
 
+                    Dim stuCurrentMax As Integer
+                    Dim intCurrentMax As Integer
+                    Using cmd As New MySqlCommand("SELECT MAX(CAST(SUBSTRING(student_id,2) AS UNSIGNED)) FROM student;", con)
+                        Dim result = cmd.ExecuteScalar()
+                        If IsDBNull(result) Then
+                            stuCurrentMax = 0
+                        Else
+                            stuCurrentMax = Convert.ToInt32(result)
+                        End If
+                    End Using
+
+                    Using cmd As New MySqlCommand("SELECT MAX(CAST(SUBSTRING(internship_id, 2) AS UNSIGNED)) FROM internship;", con)
+                        Dim result = cmd.ExecuteScalar()
+                        If IsDBNull(result) Then
+                            intCurrentMax = 0
+                        Else
+                            intCurrentMax = Convert.ToInt32(result)
+                        End If
+                    End Using
+
                     For Each row As DataRow In dt.Rows
+                        stuCurrentMax += 1
+                        Dim newStudentid As String = "S" & stuCurrentMax.ToString("D3")
+
                         Using studentCmd As New MySqlCommand("
                         INSERT INTO student 
                         (student_id, first_name, last_name, gender, section_name, contact_no, email, department_id, course_id)
                         VALUES
-                        (@id,        @fn,           @ln, @gender, @sec, @contact, @email, @dep, @course)
+                        (@id,  @fn,  @ln, @gender, @sec, @contact, @email, @dep, @course)
                     ", con, trans)
 
-                            studentCmd.Parameters.AddWithValue("@id", GenerateStudentID())
+                            studentCmd.Parameters.AddWithValue("@id", newStudentid)
                             studentCmd.Parameters.AddWithValue("@fn", row("first_name").ToString)
                             studentCmd.Parameters.AddWithValue("@ln", row("last_name").ToString)
                             studentCmd.Parameters.AddWithValue("@gender", row("gender").ToString)
@@ -61,6 +84,9 @@ Module Import
                             studentCmd.ExecuteNonQuery()
                         End Using
 
+                        intCurrentMax += 1
+                        Dim newInternid As String = "I" & intCurrentMax.ToString("D3")
+
                         Using internCmd As New MySqlCommand("
                             INSERT INTO internship 
                                 (internship_id, student_id, status)
@@ -68,11 +94,10 @@ Module Import
                                 (@internID, @studentID, 'Pending')
                             ", con, trans)
 
-                            internCmd.Parameters.AddWithValue("@internID", GenerateInternID())
-                            internCmd.Parameters.AddWithValue("@studentID", row("student_id").ToString) ' or the ID generated above
+                            internCmd.Parameters.AddWithValue("@internID", newInternid)
+                            internCmd.Parameters.AddWithValue("@studentID", newStudentid)
                             internCmd.ExecuteNonQuery()
                         End Using
-
                     Next
 
                     trans.Commit()

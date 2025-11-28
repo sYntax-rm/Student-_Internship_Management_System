@@ -193,8 +193,6 @@ Module Query
             Return False
         End Try
 
-
-
         Return True
     End Function
     Public Function countStudentRecord() As String
