@@ -20,15 +20,11 @@ Partial Class Form3
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    Private Function GetControls() As Control.ControlCollection
-        Return Controls
-    End Function
-
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
-    Private Sub InitializeComponent(controls As Control.ControlCollection)
+    Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         btnHome = New RoundedButton()
         btnStudents = New RoundedButton()
@@ -143,25 +139,6 @@ Partial Class Form3
         Label17 = New Label()
         btnShow1 = New RoundedButton()
         pnlInternshipInformation = New Panel()
-        pnlUpdateInternshipRecord = New roundedpanel()
-        ComboBox8 = New ComboBox()
-        DateTimePicker2 = New DateTimePicker()
-        ComboBox7 = New ComboBox()
-        cmbCompany = New ComboBox()
-        btnSearchUpdate = New RoundedButton()
-        Panel12 = New Panel()
-        DateTimePicker1 = New DateTimePicker()
-        Label154 = New Label()
-        Label155 = New Label()
-        Label156 = New Label()
-        btnCancelUpdate = New RoundedButton()
-        Label157 = New Label()
-        btnUpdateRecord = New RoundedButton()
-        Label158 = New Label()
-        Label159 = New Label()
-        Label160 = New Label()
-        txtboxSearchInternshipID = New TextBox()
-        btnUpdate1 = New RoundedButton()
         lblInternshipId = New Label()
         btnSearch4 = New RoundedButton()
         lblTotalRecords4 = New Label()
@@ -502,7 +479,6 @@ Partial Class Form3
         pnlEditStudentRecord.SuspendLayout()
         pnlStudentInformation.SuspendLayout()
         pnlInternshipInformation.SuspendLayout()
-        pnlUpdateInternshipRecord.SuspendLayout()
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).BeginInit()
         pnlEvaluationInformation.SuspendLayout()
@@ -1590,7 +1566,7 @@ Partial Class Form3
         cmbGender2.Font = New Font("Segoe UI", 14.0F)
         cmbGender2.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbGender2.FormattingEnabled = True
-        cmbGender2.Items.AddRange(New Object() {"Male", "Female", "Other"})
+        cmbGender2.Items.AddRange(New Object() {"Male", "Female"})
         cmbGender2.Location = New Point(66, 365)
         cmbGender2.Name = "cmbGender2"
         cmbGender2.Size = New Size(471, 39)
@@ -1941,7 +1917,7 @@ Partial Class Form3
         cmbGender3.Font = New Font("Segoe UI", 14.0F)
         cmbGender3.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbGender3.FormattingEnabled = True
-        cmbGender3.Items.AddRange(New Object() {"Male", "Female", "Other"})
+        cmbGender3.Items.AddRange(New Object() {"Male", "Female"})
         cmbGender3.Location = New Point(66, 362)
         cmbGender3.Name = "cmbGender3"
         cmbGender3.Size = New Size(471, 39)
@@ -2012,8 +1988,6 @@ Partial Class Form3
         ' pnlInternshipInformation
         ' 
         pnlInternshipInformation.BackColor = Color.White
-        pnlInternshipInformation.Controls.Add(pnlUpdateInternshipRecord)
-        pnlInternshipInformation.Controls.Add(btnUpdate1)
         pnlInternshipInformation.Controls.Add(lblInternshipId)
         pnlInternshipInformation.Controls.Add(btnSearch4)
         pnlInternshipInformation.Controls.Add(lblTotalRecords4)
@@ -2028,248 +2002,6 @@ Partial Class Form3
         pnlInternshipInformation.Name = "pnlInternshipInformation"
         pnlInternshipInformation.Size = New Size(1529, 902)
         pnlInternshipInformation.TabIndex = 135
-        ' 
-        ' pnlUpdateInternshipRecord
-        ' 
-        pnlUpdateInternshipRecord.BackColor = Color.Honeydew
-        pnlUpdateInternshipRecord.Controls.Add(ComboBox8)
-        pnlUpdateInternshipRecord.Controls.Add(DateTimePicker2)
-        pnlUpdateInternshipRecord.Controls.Add(ComboBox7)
-        pnlUpdateInternshipRecord.Controls.Add(cmbCompany)
-        pnlUpdateInternshipRecord.Controls.Add(btnSearchUpdate)
-        pnlUpdateInternshipRecord.Controls.Add(Panel12)
-        pnlUpdateInternshipRecord.Controls.Add(DateTimePicker1)
-        pnlUpdateInternshipRecord.Controls.Add(Label154)
-        pnlUpdateInternshipRecord.Controls.Add(Label155)
-        pnlUpdateInternshipRecord.Controls.Add(Label156)
-        pnlUpdateInternshipRecord.Controls.Add(btnCancelUpdate)
-        pnlUpdateInternshipRecord.Controls.Add(Label157)
-        pnlUpdateInternshipRecord.Controls.Add(btnUpdateRecord)
-        pnlUpdateInternshipRecord.Controls.Add(Label158)
-        pnlUpdateInternshipRecord.Controls.Add(Label159)
-        pnlUpdateInternshipRecord.Controls.Add(Label160)
-        pnlUpdateInternshipRecord.Controls.Add(txtboxSearchInternshipID)
-        pnlUpdateInternshipRecord.CornerRadius = 10
-        pnlUpdateInternshipRecord.Location = New Point(104, 101)
-        pnlUpdateInternshipRecord.Name = "pnlUpdateInternshipRecord"
-        pnlUpdateInternshipRecord.Size = New Size(1112, 593)
-        pnlUpdateInternshipRecord.TabIndex = 236
-        ' 
-        ' ComboBox8
-        ' 
-        ComboBox8.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox8.FormattingEnabled = True
-        ComboBox8.Items.AddRange(New Object() {"Pending", "Ongoing", "Completed"})
-        ComboBox8.Location = New Point(68, 432)
-        ComboBox8.Name = "ComboBox8"
-        ComboBox8.Size = New Size(472, 39)
-        ComboBox8.TabIndex = 244
-        ' 
-        ' DateTimePicker2
-        ' 
-        DateTimePicker2.CalendarForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        DateTimePicker2.CalendarMonthBackground = Color.MintCream
-        DateTimePicker2.CalendarTitleBackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        DateTimePicker2.CalendarTrailingForeColor = SystemColors.ControlLightLight
-        DateTimePicker2.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker2.Location = New Point(578, 335)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(470, 38)
-        DateTimePicker2.TabIndex = 243
-        ' 
-        ' ComboBox7
-        ' 
-        ComboBox7.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox7.FormattingEnabled = True
-        ComboBox7.Location = New Point(575, 247)
-        ComboBox7.Name = "ComboBox7"
-        ComboBox7.Size = New Size(472, 39)
-        ComboBox7.TabIndex = 242
-        ' 
-        ' cmbCompany
-        ' 
-        cmbCompany.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        cmbCompany.FormattingEnabled = True
-        cmbCompany.Location = New Point(68, 246)
-        cmbCompany.Name = "cmbCompany"
-        cmbCompany.Size = New Size(472, 39)
-        cmbCompany.TabIndex = 241
-        ' 
-        ' btnSearchUpdate
-        ' 
-        btnSearchUpdate.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        btnSearchUpdate.FlatAppearance.BorderSize = 0
-        btnSearchUpdate.FlatStyle = FlatStyle.Flat
-        btnSearchUpdate.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
-        btnSearchUpdate.ForeColor = Color.White
-        btnSearchUpdate.Location = New Point(561, 137)
-        btnSearchUpdate.MinimumSize = New Size(50, 25)
-        btnSearchUpdate.Name = "btnSearchUpdate"
-        btnSearchUpdate.Size = New Size(132, 51)
-        btnSearchUpdate.TabIndex = 240
-        btnSearchUpdate.Text = "SEARCH"
-        btnSearchUpdate.UseVisualStyleBackColor = False
-        ' 
-        ' Panel12
-        ' 
-        Panel12.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Panel12.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Panel12.Location = New Point(36, 42)
-        Panel12.Name = "Panel12"
-        Panel12.Size = New Size(10, 63)
-        Panel12.TabIndex = 239
-        ' 
-        ' DateTimePicker1
-        ' 
-        DateTimePicker1.CalendarForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        DateTimePicker1.CalendarMonthBackground = Color.MintCream
-        DateTimePicker1.CalendarTitleBackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        DateTimePicker1.CalendarTrailingForeColor = SystemColors.ControlLightLight
-        DateTimePicker1.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DateTimePicker1.Location = New Point(65, 336)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(470, 38)
-        DateTimePicker1.TabIndex = 233
-        ' 
-        ' Label154
-        ' 
-        Label154.AutoSize = True
-        Label154.BackColor = Color.Transparent
-        Label154.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
-        Label154.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label154.Location = New Point(68, 393)
-        Label154.Name = "Label154"
-        Label154.Size = New Size(73, 30)
-        Label154.TabIndex = 232
-        Label154.Text = "Status"
-        ' 
-        ' Label155
-        ' 
-        Label155.AutoSize = True
-        Label155.BackColor = Color.Transparent
-        Label155.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
-        Label155.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label155.Location = New Point(68, 300)
-        Label155.Name = "Label155"
-        Label155.Size = New Size(113, 30)
-        Label155.TabIndex = 224
-        Label155.Text = "Start Date"
-        ' 
-        ' Label156
-        ' 
-        Label156.AutoSize = True
-        Label156.BackColor = Color.Transparent
-        Label156.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
-        Label156.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label156.Location = New Point(71, 203)
-        Label156.Name = "Label156"
-        Label156.Size = New Size(172, 30)
-        Label156.TabIndex = 222
-        Label156.Text = "Company Name"
-        ' 
-        ' btnCancelUpdate
-        ' 
-        btnCancelUpdate.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        btnCancelUpdate.FlatAppearance.BorderSize = 0
-        btnCancelUpdate.FlatStyle = FlatStyle.Flat
-        btnCancelUpdate.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
-        btnCancelUpdate.ForeColor = Color.White
-        btnCancelUpdate.Location = New Point(728, 504)
-        btnCancelUpdate.MinimumSize = New Size(50, 25)
-        btnCancelUpdate.Name = "btnCancelUpdate"
-        btnCancelUpdate.Size = New Size(132, 51)
-        btnCancelUpdate.TabIndex = 220
-        btnCancelUpdate.Text = "CANCEL"
-        btnCancelUpdate.UseVisualStyleBackColor = False
-        ' 
-        ' Label157
-        ' 
-        Label157.AutoSize = True
-        Label157.BackColor = Color.Transparent
-        Label157.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
-        Label157.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label157.Location = New Point(573, 301)
-        Label157.Name = "Label157"
-        Label157.Size = New Size(103, 30)
-        Label157.TabIndex = 203
-        Label157.Text = "End Date"
-        ' 
-        ' btnUpdateRecord
-        ' 
-        btnUpdateRecord.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        btnUpdateRecord.FlatAppearance.BorderSize = 0
-        btnUpdateRecord.FlatStyle = FlatStyle.Flat
-        btnUpdateRecord.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
-        btnUpdateRecord.ForeColor = Color.White
-        btnUpdateRecord.Location = New Point(868, 504)
-        btnUpdateRecord.MinimumSize = New Size(50, 25)
-        btnUpdateRecord.Name = "btnUpdateRecord"
-        btnUpdateRecord.Size = New Size(180, 51)
-        btnUpdateRecord.TabIndex = 219
-        btnUpdateRecord.Text = "Update Record"
-        btnUpdateRecord.UseVisualStyleBackColor = False
-        ' 
-        ' Label158
-        ' 
-        Label158.AutoSize = True
-        Label158.BackColor = Color.Transparent
-        Label158.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold)
-        Label158.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label158.Location = New Point(62, 46)
-        Label158.Name = "Label158"
-        Label158.Size = New Size(429, 46)
-        Label158.TabIndex = 201
-        Label158.Text = "Update Internship Record"
-        ' 
-        ' Label159
-        ' 
-        Label159.AutoSize = True
-        Label159.BackColor = Color.Transparent
-        Label159.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
-        Label159.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label159.Location = New Point(573, 210)
-        Label159.Name = "Label159"
-        Label159.Size = New Size(190, 30)
-        Label159.TabIndex = 198
-        Label159.Text = "Company Contact"
-        ' 
-        ' Label160
-        ' 
-        Label160.AutoSize = True
-        Label160.BackColor = Color.Transparent
-        Label160.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
-        Label160.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label160.Location = New Point(72, 108)
-        Label160.Name = "Label160"
-        Label160.Size = New Size(142, 30)
-        Label160.TabIndex = 197
-        Label160.Text = "Internship ID"
-        ' 
-        ' txtboxSearchInternshipID
-        ' 
-        txtboxSearchInternshipID.Cursor = Cursors.IBeam
-        txtboxSearchInternshipID.Font = New Font("Segoe UI", 14.0F)
-        txtboxSearchInternshipID.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtboxSearchInternshipID.Location = New Point(69, 141)
-        txtboxSearchInternshipID.Multiline = True
-        txtboxSearchInternshipID.Name = "txtboxSearchInternshipID"
-        txtboxSearchInternshipID.Size = New Size(471, 38)
-        txtboxSearchInternshipID.TabIndex = 191
-        ' 
-        ' btnUpdate1
-        ' 
-        btnUpdate1.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        btnUpdate1.FlatAppearance.BorderSize = 0
-        btnUpdate1.FlatStyle = FlatStyle.Flat
-        btnUpdate1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
-        btnUpdate1.ForeColor = Color.White
-        btnUpdate1.Location = New Point(1308, 824)
-        btnUpdate1.MinimumSize = New Size(50, 25)
-        btnUpdate1.Name = "btnUpdate1"
-        btnUpdate1.Size = New Size(132, 51)
-        btnUpdate1.TabIndex = 217
-        btnUpdate1.Text = "ADD"
-        btnUpdate1.UseVisualStyleBackColor = False
         ' 
         ' lblInternshipId
         ' 
@@ -5869,7 +5601,7 @@ Partial Class Form3
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(753, 530)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(471, 40)
+        ComboBox1.Size = New Size(471, 39)
         ComboBox1.TabIndex = 206
         ' 
         ' Label30
@@ -5984,7 +5716,7 @@ Partial Class Form3
         ComboBox2.FormattingEnabled = True
         ComboBox2.Location = New Point(144, 530)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(471, 40)
+        ComboBox2.Size = New Size(471, 39)
         ComboBox2.TabIndex = 196
         ' 
         ' Label37
@@ -6016,7 +5748,7 @@ Partial Class Form3
         ComboBox3.FormattingEnabled = True
         ComboBox3.Location = New Point(144, 340)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(471, 40)
+        ComboBox3.Size = New Size(471, 39)
         ComboBox3.TabIndex = 193
         ' 
         ' TextBox6
@@ -6089,7 +5821,7 @@ Partial Class Form3
         ComboBox4.FormattingEnabled = True
         ComboBox4.Location = New Point(753, 530)
         ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(471, 40)
+        ComboBox4.Size = New Size(471, 39)
         ComboBox4.TabIndex = 206
         ' 
         ' Label39
@@ -6227,7 +5959,7 @@ Partial Class Form3
         ComboBox6.FormattingEnabled = True
         ComboBox6.Location = New Point(144, 340)
         ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(471, 40)
+        ComboBox6.Size = New Size(471, 39)
         ComboBox6.TabIndex = 193
         ' 
         ' TextBox11
@@ -6331,25 +6063,12 @@ Partial Class Form3
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1902, 1033)
-        controls.Add(pnlInternshipInformation)
-        controls.Add(pnlVisitInformation)
-        Controls.Add(pnlSummaryReport)
-        Controls.Add(pnlStudentInformation)
-=======
-        Controls.Add(pnlStudentInformation)
-        Controls.Add(pnlCompanyInformation)
         Controls.Add(pnlVisitInformation)
         Controls.Add(pnlSummaryReport)
-        Controls.Add(pnlInternshipInformation)
->>>>>>> ef400a685ac0fdbe1f9ac58c2b8bf26f9b39fc87
-=======
         Controls.Add(pnlStudentInformation)
-        Controls.Add(pnlCompanyInformation)
-        Controls.Add(pnlVisitInformation)
-        Controls.Add(pnlSummaryReport)
         Controls.Add(pnlInternshipInformation)
->>>>>>> ef400a685ac0fdbe1f9ac58c2b8bf26f9b39fc87
         Controls.Add(pnlCompanyContactInformation)
+        Controls.Add(pnlCompanyInformation)
         Controls.Add(pnlEvaluationInformation)
         Controls.Add(pnlFacultyInformation)
         Controls.Add(Panel1)
@@ -6392,8 +6111,6 @@ Partial Class Form3
         pnlStudentInformation.PerformLayout()
         pnlInternshipInformation.ResumeLayout(False)
         pnlInternshipInformation.PerformLayout()
-        pnlUpdateInternshipRecord.ResumeLayout(False)
-        pnlUpdateInternshipRecord.PerformLayout()
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).EndInit()
         pnlEvaluationInformation.ResumeLayout(False)
@@ -6884,24 +6601,5 @@ Partial Class Form3
     Friend WithEvents Label150 As Label
     Friend WithEvents Panel11 As Panel
     Friend WithEvents Label152 As Label
-    Friend WithEvents pnlUpdateInternshipRecord As roundedpanel
-    Friend WithEvents btnSearchUpdate As RoundedButton
-    Friend WithEvents Panel12 As Panel
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label154 As Label
-    Friend WithEvents Label155 As Label
-    Friend WithEvents Label156 As Label
-    Friend WithEvents btnCancelUpdate As RoundedButton
-    Friend WithEvents Label157 As Label
-    Friend WithEvents btnUpdateRecord As RoundedButton
-    Friend WithEvents Label158 As Label
-    Friend WithEvents Label159 As Label
-    Friend WithEvents Label160 As Label
-    Friend WithEvents txtboxSearchInternshipID As TextBox
-    Friend WithEvents btnUpdate1 As RoundedButton
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents ComboBox7 As ComboBox
-    Friend WithEvents cmbCompany As ComboBox
-    Friend WithEvents ComboBox8 As ComboBox
 
 End Class
