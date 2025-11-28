@@ -34,6 +34,12 @@ Public Class Form3
         pnlEditStudentRecord.Location = New Point(90, 78)
         pnlEditStudentRecord.Size = New Size(1100, 750)
 
+        'Panel add Edit Location - Internship
+        'Update
+        pnlUpdateInternshipRecord.Location = New Point(104, 101)
+        pnlUpdateInternshipRecord.Size = New Size(1100, 593)
+
+
         'Panel add Edit Location - Evaluation
         'Add
         pnlAddNewInternshipEvaluationRecord.Location = New Point(90, 78)
@@ -83,16 +89,29 @@ Public Class Form3
         pnlEditVisitRecord.Location = New Point(90, 78)
         pnlEditVisitRecord.Size = New Size(1100, 750)
 
+        'For Rounding Home Button
+        Dim path As New Drawing2D.GraphicsPath()
+        path.AddEllipse(0, 0, btnHome.Width, btnHome.Height)
+        btnHome.Region = New Region(path)
+
+        'Home Load
+        pnlHome.Show()
+
         'For buttons
         hidePanel()
 
 
+
     End Sub
+
     Private Sub hidePanel()
+
+
         pnlStudentInformation.Hide()
         pnlAddNewStudentRecord.Hide()
         pnlEditStudentRecord.Hide()
         pnlInternshipInformation.Hide()
+        pnlUpdateInternshipRecord.Hide()
         pnlEvaluationInformation.Hide()
         pnlAddNewInternshipEvaluationRecord.Hide()
         pnlEditInternshipEvaluationRecord.Hide()
@@ -246,20 +265,45 @@ Public Class Form3
 
     End Sub
 
-    Private Sub pctBoxIcon_Click(sender As Object, e As EventArgs) Handles pctBoxIcon.Click
+    Private Sub pctBoxIcon_Click(sender As Object, e As EventArgs)
+
+    End Sub
+    'BUTTON HOVER
+
+    'HOME BUTTON HOVER
+    Private Sub btnHome_MouseEnter(sender As Object, e As EventArgs) Handles btnHome.MouseEnter
+        btnHome.BackColor = Color.FromArgb(192, 255, 192)
+        picHome.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
+
+    Private Sub btnHome_MouseLeave(sender As Object, e As EventArgs) Handles btnHome.MouseLeave
+        btnHome.BackColor = Color.FromArgb(218, 239, 228)
+        picHome.BackColor = Color.FromArgb(218, 239, 228)
 
     End Sub
 
+    Private Sub btnHome_MouseDown(sender As Object, e As MouseEventArgs) Handles btnHome.MouseDown
+        btnHome.BackColor = Color.Honeydew
+        picHome.BackColor = Color.Honeydew '
+    End Sub
+
+    Private Sub btnHome_MouseUp(sender As Object, e As MouseEventArgs) Handles btnHome.MouseUp
+        btnHome.BackColor = Color.FromArgb(192, 255, 192)
+        picHome.BackColor = Color.FromArgb(192, 255, 192)
+    End Sub
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+        hidePanel()
+        pnlHome.Show()
 
     End Sub
+
 
     Private Sub btnStudents_Click(sender As Object, e As EventArgs) Handles btnStudents.Click
         hidePanel()
         pnlStudentInformation.Show()
         lblTotalRecords1.Text = countStudentRecord()
         loadStudentRecord()
-
+        pnlHome.Hide()
     End Sub
     'BUTTON HOVER
 
@@ -270,8 +314,8 @@ Public Class Form3
     End Sub
 
     Private Sub btnStudents_MouseLeave(sender As Object, e As EventArgs) Handles btnStudents.MouseLeave
-        btnStudents.BackColor = Color.FromArgb(188, 221, 203)
-        picStudentIcon.BackColor = Color.FromArgb(188, 221, 203)
+        btnStudents.BackColor = Color.FromArgb(218, 239, 228)
+        picStudentIcon.BackColor = Color.FromArgb(218, 239, 228)
 
     End Sub
 
@@ -289,6 +333,7 @@ Public Class Form3
     Private Sub btnInternships_Click(sender As Object, e As EventArgs) Handles btnInternships.Click
         hidePanel()
         pnlInternshipInformation.Show()
+        pnlHome.Hide()
     End Sub
 
     'BUTTON HOVER
@@ -300,8 +345,8 @@ Public Class Form3
     End Sub
 
     Private Sub btnInternships_MouseLeave(sender As Object, e As EventArgs) Handles btnInternships.MouseLeave
-        btnInternships.BackColor = Color.FromArgb(188, 221, 203)
-        picInternshipIcon.BackColor = Color.FromArgb(188, 221, 203)
+        btnInternships.BackColor = Color.FromArgb(218, 239, 228)
+        picInternshipIcon.BackColor = Color.FromArgb(218, 239, 228)
 
     End Sub
 
@@ -319,6 +364,8 @@ Public Class Form3
     Private Sub btnEvaluation_Click(sender As Object, e As EventArgs) Handles btnEvaluation.Click
         hidePanel()
         pnlEvaluationInformation.Show()
+        pnlHome.Hide()
+
     End Sub
 
     'BUTTON HOVER
@@ -330,8 +377,8 @@ Public Class Form3
     End Sub
 
     Private Sub btnEvaluation_MouseLeave(sender As Object, e As EventArgs) Handles btnEvaluation.MouseLeave
-        btnEvaluation.BackColor = Color.FromArgb(188, 221, 203)
-        picEvaluationIcon.BackColor = Color.FromArgb(188, 221, 203)
+        btnEvaluation.BackColor = Color.FromArgb(218, 239, 228)
+        picEvaluationIcon.BackColor = Color.FromArgb(218, 239, 228)
 
     End Sub
 
@@ -349,7 +396,7 @@ Public Class Form3
     Private Sub btnCompany_Click(sender As Object, e As EventArgs) Handles btnCompany.Click
         hidePanel()
         pnlCompanyInformation.Show()
-
+        pnlHome.Hide()
     End Sub
 
     'BUTTON HOVER
@@ -361,8 +408,8 @@ Public Class Form3
     End Sub
 
     Private Sub btnCompany_MouseLeave(sender As Object, e As EventArgs) Handles btnCompany.MouseLeave
-        btnCompany.BackColor = Color.FromArgb(188, 221, 203)
-        picCompanyIcon.BackColor = Color.FromArgb(188, 221, 203)
+        btnCompany.BackColor = Color.FromArgb(218, 239, 228)
+        picCompanyIcon.BackColor = Color.FromArgb(218, 239, 228)
 
     End Sub
 
@@ -379,7 +426,7 @@ Public Class Form3
     Private Sub btnFaculty_Click(sender As Object, e As EventArgs) Handles btnFaculty.Click
         hidePanel()
         pnlFacultyInformation.Show()
-
+        pnlHome.Hide()
     End Sub
 
     'BUTTON HOVER
@@ -391,8 +438,8 @@ Public Class Form3
     End Sub
 
     Private Sub btnFaculty_MouseLeave(sender As Object, e As EventArgs) Handles btnFaculty.MouseLeave
-        btnFaculty.BackColor = Color.FromArgb(188, 221, 203)
-        picFacultyIcon.BackColor = Color.FromArgb(188, 221, 203)
+        btnFaculty.BackColor = Color.FromArgb(218, 239, 228)
+        picFacultyIcon.BackColor = Color.FromArgb(218, 239, 228)
 
     End Sub
 
@@ -410,7 +457,7 @@ Public Class Form3
     Private Sub btnVisitLog_Click(sender As Object, e As EventArgs) Handles btnVisitLog.Click
         hidePanel()
         pnlVisitInformation.Show()
-
+        pnlHome.Hide()
     End Sub
 
     'BUTTON HOVER
@@ -422,8 +469,8 @@ Public Class Form3
     End Sub
 
     Private Sub btnVisitLog_MouseLeave(sender As Object, e As EventArgs) Handles btnVisitLog.MouseLeave
-        btnVisitLog.BackColor = Color.FromArgb(188, 221, 203)
-        picVisitIcon.BackColor = Color.FromArgb(188, 221, 203)
+        btnVisitLog.BackColor = Color.FromArgb(218, 239, 228)
+        picVisitIcon.BackColor = Color.FromArgb(218, 239, 228)
 
     End Sub
 
@@ -440,7 +487,7 @@ Public Class Form3
     Private Sub btnSummaryReport_Click(sender As Object, e As EventArgs) Handles btnSummaryReport.Click
         hidePanel()
         pnlSummaryReport.Show()
-
+        pnlHome.Hide()
     End Sub
 
 
@@ -453,8 +500,8 @@ Public Class Form3
     End Sub
 
     Private Sub btnSummaryReport_MouseLeave(sender As Object, e As EventArgs) Handles btnSummaryReport.MouseLeave
-        btnSummaryReport.BackColor = Color.FromArgb(188, 221, 203)
-        picSummary.BackColor = Color.FromArgb(188, 221, 203)
+        btnSummaryReport.BackColor = Color.FromArgb(218, 239, 228)
+        picSummary.BackColor = Color.FromArgb(218, 239, 228)
 
     End Sub
 
@@ -484,7 +531,7 @@ Public Class Form3
 
     End Sub
 
-    Private Sub pnlDataModel2_Paint(sender As Object, e As PaintEventArgs) Handles pnlDataModel2.Paint
+    Private Sub pnlDataModel2_Paint(sender As Object, e As PaintEventArgs)
 
     End Sub
 
@@ -849,20 +896,20 @@ Public Class Form3
     End Sub
 
     Private Sub btnCancel6_Click(sender As Object, e As EventArgs) Handles btnCancel6.Click
-        Dim result As DialogResult = MessageBox.Show("Are you sure you want to cancel?", "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        Dim result = MessageBox.Show("Are you sure you want to cancel?", "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
         If result = DialogResult.Yes Then
-            pnlInternshipInformation.Show()
-            pnlAddNewInternshipEvaluationRecord.Hide()
+            pnlInternshipInformation.Show
+            pnlAddNewInternshipEvaluationRecord.Hide
         End If
     End Sub
 
     Private Sub btnAdd6_Click(sender As Object, e As EventArgs) Handles btnAdd6.Click
-        Dim result As DialogResult = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If result = DialogResult.Yes Then
-            pnlInternshipInformation.Show()
-            pnlAddNewInternshipEvaluationRecord.Hide()
+            pnlInternshipInformation.Show
+            pnlAddNewInternshipEvaluationRecord.Hide
         End If
     End Sub
 
@@ -943,13 +990,16 @@ Public Class Form3
     Private Sub btnViewContacts8_Click(sender As Object, e As EventArgs) Handles btnViewContacts8.Click
         hidePanel()
         pnlCompanyContactInformation.Show()
+        pnlHome.Hide()
     End Sub
     Private Sub btnAdd8_Click(sender As Object, e As EventArgs) Handles btnAdd8.Click
         pnlAddNewCompanyandCompanyContact.Show()
+        pnlHome.Hide()
     End Sub
 
     Private Sub btnEdit8_Click(sender As Object, e As EventArgs) Handles btnEdit8.Click
         pnlEditCompanyCompanyContact.Show()
+        pnlHome.Hide()
     End Sub
 
     Private Sub btnDelete8_Click(sender As Object, e As EventArgs) Handles btnDelete8.Click
@@ -1152,19 +1202,28 @@ Public Class Form3
     End Sub
 
     Private Sub btnAdd11_Click(sender As Object, e As EventArgs) Handles btnAdd11.Click
-        pnlCompanyInformation.Show()                  ' show parent
-        pnlAddNewCompanyandCompanyContact.Show()      ' show child
+        pnlCompanyInformation.Show()
+
+        pnlCompanyContactInformation.Hide() ' ← hide the other parent panel
+
+        pnlAddNewCompanyandCompanyContact.Show()
         pnlAddNewCompanyandCompanyContact.BringToFront()
 
 
     End Sub
 
     Private Sub btnEdit11_Click(sender As Object, e As EventArgs) Handles btnEdit11.Click
-        pnlCompanyContactInformation.Show()          ' parent
-        pnlEditCompanyCompanyContact.Show()          ' child
+        ' Hide everything — safest reset
+        hidePanel()
+
+        ' Now show ONLY the Company Information (the master container)
+        pnlCompanyInformation.Show()
+
+        ' Then show ONLY the EDIT panel
+        pnlEditCompanyCompanyContact.Show()
         pnlEditCompanyCompanyContact.BringToFront()
 
-        pnlAddNewCompanyContactRecord.Hide()
+
 
 
     End Sub
@@ -1627,8 +1686,79 @@ Public Class Form3
     End Sub
 
     Private Sub picStudentIcon_Click(sender As Object, e As EventArgs) Handles picStudentIcon.Click
+        hidePanel()
+        pnlStudentInformation.Show()
+        lblTotalRecords1.Text = countStudentRecord()
+        loadStudentRecord()
+        pnlHome.Hide()
+    End Sub
+
+    'Update Internship Record
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        pnlUpdateInternshipRecord.Show()
 
     End Sub
+
+    Private Sub btnCancelUpdate_Click(sender As Object, e As EventArgs) Handles btnCancelUpdate.Click
+        Dim result = MessageBox.Show("Are you sure you want to cancel?", "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+
+        If result = DialogResult.Yes Then
+            pnlInternshipInformation.Show()
+            pnlUpdateInternshipRecord.Hide()
+        End If
+    End Sub
+
+    Private Sub btnUpdateRecord_Click(sender As Object, e As EventArgs) Handles btnUpdateRecord.Click
+        Dim result = MessageBox.Show("Record has been successfully update4d.", "Updated Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        If result = DialogResult.OK Then
+            pnlInternshipInformation.Show()
+            pnlUpdateInternshipRecord.Hide()
+        End If
+
+    End Sub
+
+    Private Sub picHome_Click(sender As Object, e As EventArgs) Handles picHome.Click
+        hidePanel()
+        pnlHome.Show()
+    End Sub
+
+    Private Sub picInternshipIcon_Click(sender As Object, e As EventArgs) Handles picInternshipIcon.Click
+        hidePanel()
+        pnlInternshipInformation.Show()
+        pnlHome.Hide()
+    End Sub
+
+    Private Sub picEvaluationIcon_Click(sender As Object, e As EventArgs) Handles picEvaluationIcon.Click
+        hidePanel()
+        pnlEvaluationInformation.Show()
+        pnlHome.Hide()
+    End Sub
+
+    Private Sub picCompanyIcon_Click(sender As Object, e As EventArgs) Handles picCompanyIcon.Click
+        hidePanel()
+        pnlCompanyInformation.Show()
+        pnlHome.Hide()
+    End Sub
+
+    Private Sub picFacultyIcon_Click(sender As Object, e As EventArgs) Handles picFacultyIcon.Click
+        hidePanel()
+        pnlFacultyInformation.Show()
+        pnlHome.Hide()
+    End Sub
+
+    Private Sub picVisitIcon_Click(sender As Object, e As EventArgs) Handles picVisitIcon.Click
+        hidePanel()
+        pnlVisitInformation.Show()
+        pnlHome.Hide()
+    End Sub
+
+    Private Sub picSummary_Click(sender As Object, e As EventArgs) Handles picSummary.Click
+        hidePanel()
+        pnlSummaryReport.Show()
+        pnlHome.Hide()
+    End Sub
+
 
 
 

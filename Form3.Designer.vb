@@ -35,6 +35,7 @@ Partial Class Form3
         btnVisitLog = New RoundedButton()
         btnSummaryReport = New RoundedButton()
         Panel1 = New Panel()
+        picHome = New PictureBox()
         picSummary = New PictureBox()
         picVisitIcon = New PictureBox()
         picFacultyIcon = New PictureBox()
@@ -44,13 +45,18 @@ Partial Class Form3
         picStudentIcon = New PictureBox()
         Label6 = New Label()
         pnlTtotalInterns = New Panel()
+        lblTotalInterns = New Label()
         btnLogout = New RoundedButton()
         pnlHeader = New Panel()
         pctBox2 = New PictureBox()
+        Label146 = New Label()
         Label1 = New Label()
         Label3 = New Label()
         pctBoxHide1 = New PictureBox()
         pctBoxExit1 = New PictureBox()
+        lblName = New Label()
+        lblSignInAs = New Label()
+        Panel18 = New Panel()
         pnlEditInternshipEvaluationRecord = New roundedpanel()
         Panel3 = New Panel()
         Label140 = New Label()
@@ -134,6 +140,26 @@ Partial Class Form3
         Label17 = New Label()
         btnShow1 = New RoundedButton()
         pnlInternshipInformation = New Panel()
+        btnUpdate = New RoundedButton()
+        pnlUpdateInternshipRecord = New roundedpanel()
+        btnSearchInternship = New RoundedButton()
+        Label160 = New Label()
+        cmbCompanyContactInternship = New ComboBox()
+        cmbCompanyInternship = New ComboBox()
+        dtpStartDate = New DateTimePicker()
+        dtpEndDate = New DateTimePicker()
+        Panel12 = New Panel()
+        Panel13 = New Panel()
+        btnCancelUpdate = New RoundedButton()
+        Label154 = New Label()
+        btnUpdateRecord = New RoundedButton()
+        Label155 = New Label()
+        Label156 = New Label()
+        Label157 = New Label()
+        Label158 = New Label()
+        cmbStatusUpdateInternship = New ComboBox()
+        Label159 = New Label()
+        txtboxInternshipID = New TextBox()
         lblInternshipId = New Label()
         btnSearch4 = New RoundedButton()
         lblTotalRecords4 = New Label()
@@ -450,10 +476,18 @@ Partial Class Form3
         Label56 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
         pnlOnGoing = New Panel()
-        pnlDataModel2 = New Panel()
+        lblOngoing = New Label()
+        lblCompleted = New Label()
         pnlDataModel1 = New Panel()
         pnlCompleted = New Panel()
+        pnlHome = New Panel()
+        pnlPending = New Panel()
+        lblPending = New Label()
+        Panel17 = New Panel()
+        lblFaculty = New Label()
+        Label172 = New Label()
         Panel1.SuspendLayout()
+        CType(picHome, ComponentModel.ISupportInitialize).BeginInit()
         CType(picSummary, ComponentModel.ISupportInitialize).BeginInit()
         CType(picVisitIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(picFacultyIcon, ComponentModel.ISupportInitialize).BeginInit()
@@ -461,6 +495,7 @@ Partial Class Form3
         CType(picEvaluationIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(picInternshipIcon, ComponentModel.ISupportInitialize).BeginInit()
         CType(picStudentIcon, ComponentModel.ISupportInitialize).BeginInit()
+        pnlTtotalInterns.SuspendLayout()
         pnlHeader.SuspendLayout()
         CType(pctBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(pctBoxHide1, ComponentModel.ISupportInitialize).BeginInit()
@@ -472,6 +507,7 @@ Partial Class Form3
         pnlEditStudentRecord.SuspendLayout()
         pnlStudentInformation.SuspendLayout()
         pnlInternshipInformation.SuspendLayout()
+        pnlUpdateInternshipRecord.SuspendLayout()
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).BeginInit()
         pnlEvaluationInformation.SuspendLayout()
@@ -506,25 +542,30 @@ Partial Class Form3
         pnlOverallSummary20.SuspendLayout()
         Roundedpanel1.SuspendLayout()
         Roundedpanel2.SuspendLayout()
+        pnlOnGoing.SuspendLayout()
+        pnlCompleted.SuspendLayout()
+        pnlHome.SuspendLayout()
+        pnlPending.SuspendLayout()
+        Panel17.SuspendLayout()
         SuspendLayout()
         ' 
         ' btnHome
         ' 
-        btnHome.BackColor = Color.White
+        btnHome.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         btnHome.FlatAppearance.BorderSize = 0
         btnHome.FlatStyle = FlatStyle.Flat
         btnHome.Font = New Font("Segoe UI", 22.0F, FontStyle.Bold)
         btnHome.ForeColor = Color.Black
-        btnHome.Location = New Point(87, 30)
+        btnHome.Location = New Point(18, 24)
         btnHome.MinimumSize = New Size(50, 25)
         btnHome.Name = "btnHome"
-        btnHome.Size = New Size(147, 54)
+        btnHome.Size = New Size(90, 90)
         btnHome.TabIndex = 110
         btnHome.UseVisualStyleBackColor = False
         ' 
         ' btnStudents
         ' 
-        btnStudents.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        btnStudents.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         btnStudents.FlatAppearance.BorderSize = 0
         btnStudents.FlatAppearance.MouseDownBackColor = Color.Transparent
         btnStudents.FlatAppearance.MouseOverBackColor = Color.Transparent
@@ -532,7 +573,7 @@ Partial Class Form3
         btnStudents.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnStudents.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnStudents.Image = CType(resources.GetObject("btnStudents.Image"), Image)
-        btnStudents.Location = New Point(19, 120)
+        btnStudents.Location = New Point(19, 137)
         btnStudents.MinimumSize = New Size(50, 25)
         btnStudents.Name = "btnStudents"
         btnStudents.Size = New Size(338, 88)
@@ -543,14 +584,14 @@ Partial Class Form3
         ' 
         ' btnInternships
         ' 
-        btnInternships.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        btnInternships.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         btnInternships.FlatAppearance.BorderSize = 0
         btnInternships.FlatAppearance.MouseDownBackColor = Color.DarkSeaGreen
         btnInternships.FlatAppearance.MouseOverBackColor = Color.Honeydew
         btnInternships.FlatStyle = FlatStyle.Flat
         btnInternships.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnInternships.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        btnInternships.Location = New Point(19, 229)
+        btnInternships.Location = New Point(19, 247)
         btnInternships.MinimumSize = New Size(50, 25)
         btnInternships.Name = "btnInternships"
         btnInternships.Size = New Size(338, 88)
@@ -560,12 +601,12 @@ Partial Class Form3
         ' 
         ' btnEvaluation
         ' 
-        btnEvaluation.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        btnEvaluation.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         btnEvaluation.FlatAppearance.BorderSize = 0
         btnEvaluation.FlatStyle = FlatStyle.Flat
         btnEvaluation.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnEvaluation.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        btnEvaluation.Location = New Point(20, 340)
+        btnEvaluation.Location = New Point(20, 354)
         btnEvaluation.MinimumSize = New Size(50, 25)
         btnEvaluation.Name = "btnEvaluation"
         btnEvaluation.Size = New Size(338, 88)
@@ -575,12 +616,12 @@ Partial Class Form3
         ' 
         ' btnCompany
         ' 
-        btnCompany.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        btnCompany.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         btnCompany.FlatAppearance.BorderSize = 0
         btnCompany.FlatStyle = FlatStyle.Flat
         btnCompany.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnCompany.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        btnCompany.Location = New Point(20, 450)
+        btnCompany.Location = New Point(20, 464)
         btnCompany.MinimumSize = New Size(50, 25)
         btnCompany.Name = "btnCompany"
         btnCompany.Size = New Size(338, 88)
@@ -590,12 +631,12 @@ Partial Class Form3
         ' 
         ' btnFaculty
         ' 
-        btnFaculty.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        btnFaculty.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         btnFaculty.FlatAppearance.BorderSize = 0
         btnFaculty.FlatStyle = FlatStyle.Flat
         btnFaculty.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnFaculty.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        btnFaculty.Location = New Point(19, 558)
+        btnFaculty.Location = New Point(19, 572)
         btnFaculty.MinimumSize = New Size(50, 25)
         btnFaculty.Name = "btnFaculty"
         btnFaculty.Size = New Size(338, 88)
@@ -605,12 +646,12 @@ Partial Class Form3
         ' 
         ' btnVisitLog
         ' 
-        btnVisitLog.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        btnVisitLog.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         btnVisitLog.FlatAppearance.BorderSize = 0
         btnVisitLog.FlatStyle = FlatStyle.Flat
         btnVisitLog.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnVisitLog.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        btnVisitLog.Location = New Point(18, 667)
+        btnVisitLog.Location = New Point(18, 680)
         btnVisitLog.MinimumSize = New Size(50, 25)
         btnVisitLog.Name = "btnVisitLog"
         btnVisitLog.Size = New Size(338, 88)
@@ -620,12 +661,12 @@ Partial Class Form3
         ' 
         ' btnSummaryReport
         ' 
-        btnSummaryReport.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        btnSummaryReport.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         btnSummaryReport.FlatAppearance.BorderSize = 0
         btnSummaryReport.FlatStyle = FlatStyle.Flat
         btnSummaryReport.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnSummaryReport.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        btnSummaryReport.Location = New Point(17, 776)
+        btnSummaryReport.Location = New Point(18, 787)
         btnSummaryReport.MinimumSize = New Size(50, 25)
         btnSummaryReport.Name = "btnSummaryReport"
         btnSummaryReport.Size = New Size(338, 88)
@@ -638,6 +679,7 @@ Partial Class Form3
         Panel1.BackColor = Color.Transparent
         Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), Image)
         Panel1.BackgroundImageLayout = ImageLayout.Stretch
+        Panel1.Controls.Add(picHome)
         Panel1.Controls.Add(picSummary)
         Panel1.Controls.Add(picVisitIcon)
         Panel1.Controls.Add(picFacultyIcon)
@@ -659,11 +701,22 @@ Partial Class Form3
         Panel1.Size = New Size(373, 902)
         Panel1.TabIndex = 273
         ' 
+        ' picHome
+        ' 
+        picHome.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
+        picHome.Image = CType(resources.GetObject("picHome.Image"), Image)
+        picHome.Location = New Point(26, 33)
+        picHome.Name = "picHome"
+        picHome.Size = New Size(71, 69)
+        picHome.SizeMode = PictureBoxSizeMode.StretchImage
+        picHome.TabIndex = 231
+        picHome.TabStop = False
+        ' 
         ' picSummary
         ' 
-        picSummary.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picSummary.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         picSummary.Image = CType(resources.GetObject("picSummary.Image"), Image)
-        picSummary.Location = New Point(38, 787)
+        picSummary.Location = New Point(38, 799)
         picSummary.Name = "picSummary"
         picSummary.Size = New Size(71, 62)
         picSummary.SizeMode = PictureBoxSizeMode.StretchImage
@@ -672,9 +725,9 @@ Partial Class Form3
         ' 
         ' picVisitIcon
         ' 
-        picVisitIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picVisitIcon.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         picVisitIcon.Image = CType(resources.GetObject("picVisitIcon.Image"), Image)
-        picVisitIcon.Location = New Point(38, 680)
+        picVisitIcon.Location = New Point(38, 693)
         picVisitIcon.Name = "picVisitIcon"
         picVisitIcon.Size = New Size(71, 62)
         picVisitIcon.SizeMode = PictureBoxSizeMode.StretchImage
@@ -683,9 +736,9 @@ Partial Class Form3
         ' 
         ' picFacultyIcon
         ' 
-        picFacultyIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picFacultyIcon.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         picFacultyIcon.Image = CType(resources.GetObject("picFacultyIcon.Image"), Image)
-        picFacultyIcon.Location = New Point(38, 569)
+        picFacultyIcon.Location = New Point(38, 583)
         picFacultyIcon.Name = "picFacultyIcon"
         picFacultyIcon.Size = New Size(71, 62)
         picFacultyIcon.SizeMode = PictureBoxSizeMode.StretchImage
@@ -694,9 +747,9 @@ Partial Class Form3
         ' 
         ' picCompanyIcon
         ' 
-        picCompanyIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picCompanyIcon.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         picCompanyIcon.Image = CType(resources.GetObject("picCompanyIcon.Image"), Image)
-        picCompanyIcon.Location = New Point(38, 463)
+        picCompanyIcon.Location = New Point(38, 475)
         picCompanyIcon.Name = "picCompanyIcon"
         picCompanyIcon.Size = New Size(71, 62)
         picCompanyIcon.SizeMode = PictureBoxSizeMode.StretchImage
@@ -705,9 +758,9 @@ Partial Class Form3
         ' 
         ' picEvaluationIcon
         ' 
-        picEvaluationIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picEvaluationIcon.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         picEvaluationIcon.Image = CType(resources.GetObject("picEvaluationIcon.Image"), Image)
-        picEvaluationIcon.Location = New Point(32, 346)
+        picEvaluationIcon.Location = New Point(32, 360)
         picEvaluationIcon.Name = "picEvaluationIcon"
         picEvaluationIcon.Size = New Size(84, 76)
         picEvaluationIcon.SizeMode = PictureBoxSizeMode.StretchImage
@@ -716,9 +769,9 @@ Partial Class Form3
         ' 
         ' picInternshipIcon
         ' 
-        picInternshipIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picInternshipIcon.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         picInternshipIcon.Image = CType(resources.GetObject("picInternshipIcon.Image"), Image)
-        picInternshipIcon.Location = New Point(36, 243)
+        picInternshipIcon.Location = New Point(36, 259)
         picInternshipIcon.Name = "picInternshipIcon"
         picInternshipIcon.Size = New Size(71, 62)
         picInternshipIcon.SizeMode = PictureBoxSizeMode.StretchImage
@@ -727,9 +780,9 @@ Partial Class Form3
         ' 
         ' picStudentIcon
         ' 
-        picStudentIcon.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
+        picStudentIcon.BackColor = Color.FromArgb(CByte(218), CByte(239), CByte(228))
         picStudentIcon.Image = CType(resources.GetObject("picStudentIcon.Image"), Image)
-        picStudentIcon.Location = New Point(38, 134)
+        picStudentIcon.Location = New Point(38, 151)
         picStudentIcon.Name = "picStudentIcon"
         picStudentIcon.Size = New Size(71, 62)
         picStudentIcon.SizeMode = PictureBoxSizeMode.StretchImage
@@ -741,32 +794,46 @@ Partial Class Form3
         Label6.AutoSize = True
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold)
-        Label6.ForeColor = Color.Black
-        Label6.Location = New Point(405, 157)
+        Label6.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label6.Location = New Point(75, 137)
         Label6.Name = "Label6"
-        Label6.Size = New Size(133, 50)
+        Label6.Size = New Size(344, 50)
         Label6.TabIndex = 220
-        Label6.Text = "HOME"
+        Label6.Text = "Faculty Dashboard"
         ' 
         ' pnlTtotalInterns
         ' 
-        pnlTtotalInterns.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        pnlTtotalInterns.Location = New Point(499, 273)
+        pnlTtotalInterns.BackColor = Color.White
+        pnlTtotalInterns.BackgroundImage = CType(resources.GetObject("pnlTtotalInterns.BackgroundImage"), Image)
+        pnlTtotalInterns.Controls.Add(lblTotalInterns)
+        pnlTtotalInterns.Location = New Point(100, 234)
         pnlTtotalInterns.Name = "pnlTtotalInterns"
-        pnlTtotalInterns.Size = New Size(340, 310)
+        pnlTtotalInterns.Size = New Size(319, 290)
         pnlTtotalInterns.TabIndex = 268
+        ' 
+        ' lblTotalInterns
+        ' 
+        lblTotalInterns.AutoSize = True
+        lblTotalInterns.BackColor = Color.Transparent
+        lblTotalInterns.Font = New Font("Segoe UI", 45.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblTotalInterns.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblTotalInterns.Location = New Point(124, 156)
+        lblTotalInterns.Name = "lblTotalInterns"
+        lblTotalInterns.Size = New Size(85, 100)
+        lblTotalInterns.TabIndex = 273
+        lblTotalInterns.Text = "0"
         ' 
         ' btnLogout
         ' 
-        btnLogout.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnLogout.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnLogout.FlatAppearance.BorderSize = 0
         btnLogout.FlatStyle = FlatStyle.Flat
-        btnLogout.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
+        btnLogout.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnLogout.ForeColor = Color.White
-        btnLogout.Location = New Point(1731, 62)
+        btnLogout.Location = New Point(232, 374)
         btnLogout.MinimumSize = New Size(50, 25)
         btnLogout.Name = "btnLogout"
-        btnLogout.Size = New Size(132, 51)
+        btnLogout.Size = New Size(174, 60)
         btnLogout.TabIndex = 118
         btnLogout.Text = "LOG OUT"
         btnLogout.UseVisualStyleBackColor = False
@@ -774,10 +841,9 @@ Partial Class Form3
         ' pnlHeader
         ' 
         pnlHeader.BackColor = Color.FromArgb(CByte(233), CByte(234), CByte(235))
-        pnlHeader.Controls.Add(Label146)
-        pnlHeader.Controls.Add(btnLogout)
-        pnlHeader.Controls.Add(PictureBox3)
+        pnlHeader.BackgroundImage = CType(resources.GetObject("pnlHeader.BackgroundImage"), Image)
         pnlHeader.Controls.Add(pctBox2)
+        pnlHeader.Controls.Add(Label146)
         pnlHeader.Controls.Add(Label1)
         pnlHeader.Controls.Add(Label3)
         pnlHeader.Controls.Add(pctBoxHide1)
@@ -788,15 +854,26 @@ Partial Class Form3
         pnlHeader.Size = New Size(1902, 131)
         pnlHeader.TabIndex = 266
         ' 
+        ' pctBox2
+        ' 
+        pctBox2.BackColor = Color.Transparent
+        pctBox2.BackgroundImage = CType(resources.GetObject("pctBox2.BackgroundImage"), Image)
+        pctBox2.BackgroundImageLayout = ImageLayout.Stretch
+        pctBox2.Location = New Point(38, 10)
+        pctBox2.Name = "pctBox2"
+        pctBox2.Size = New Size(118, 118)
+        pctBox2.TabIndex = 108
+        pctBox2.TabStop = False
+        ' 
         ' Label146
         ' 
         Label146.AutoSize = True
         Label146.BackColor = Color.Transparent
-        Label146.Font = New Font("Century", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label146.Font = New Font("Century", 34.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label146.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label146.Location = New Point(137, 30)
+        Label146.Location = New Point(176, 10)
         Label146.Name = "Label146"
-        Label146.Size = New Size(678, 47)
+        Label146.Size = New Size(963, 69)
         Label146.TabIndex = 213
         Label146.Text = "Pamantasan ng Lungsod ng Pasig"
         ' 
@@ -816,50 +893,13 @@ Partial Class Form3
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Segoe UI", 16.2F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.Black
-        Label3.Location = New Point(144, 74)
+        Label3.Font = New Font("Segoe UI Semibold", 22.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label3.Location = New Point(183, 69)
         Label3.Name = "Label3"
-        Label3.Size = New Size(574, 38)
+        Label3.Size = New Size(684, 50)
         Label3.TabIndex = 85
-        Label3.Text = "Student Internship (OJT) Management System"
-        ' 
-        ' pctBoxIcon
-        ' 
-        pctBoxIcon.BackColor = Color.Transparent
-        pctBoxIcon.BackgroundImage = CType(resources.GetObject("pctBoxIcon.BackgroundImage"), Image)
-        pctBoxIcon.BackgroundImageLayout = ImageLayout.Stretch
-        pctBoxIcon.Cursor = Cursors.Hand
-        pctBoxIcon.Location = New Point(1564, 37)
-        pctBoxIcon.Name = "pctBoxIcon"
-        pctBoxIcon.Size = New Size(68, 68)
-        pctBoxIcon.SizeMode = PictureBoxSizeMode.StretchImage
-        pctBoxIcon.TabIndex = 107
-        pctBoxIcon.TabStop = False
-        ' 
-        ' lblName
-        ' 
-        lblName.AutoSize = True
-        lblName.BackColor = Color.Transparent
-        lblName.Font = New Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblName.ForeColor = Color.Black
-        lblName.Location = New Point(1640, 52)
-        lblName.Name = "lblName"
-        lblName.Size = New Size(61, 25)
-        lblName.TabIndex = 80
-        lblName.Text = "Name"
-        ' 
-        ' lblSignInAs
-        ' 
-        lblSignInAs.AutoSize = True
-        lblSignInAs.BackColor = Color.Transparent
-        lblSignInAs.Font = New Font("Arial", 9.0F)
-        lblSignInAs.ForeColor = Color.Black
-        lblSignInAs.Location = New Point(1640, 85)
-        lblSignInAs.Name = "lblSignInAs"
-        lblSignInAs.Size = New Size(72, 17)
-        lblSignInAs.TabIndex = 84
-        lblSignInAs.Text = "Sign in as"
+        Label3.Text = "Student Internship Management System"
         ' 
         ' pctBoxHide1
         ' 
@@ -867,11 +907,55 @@ Partial Class Form3
         pctBoxHide1.BackgroundImage = CType(resources.GetObject("pctBoxHide1.BackgroundImage"), Image)
         pctBoxHide1.BackgroundImageLayout = ImageLayout.Stretch
         pctBoxHide1.Cursor = Cursors.Hand
-        pctBoxHide1.Location = New Point(1829, 15)
+        pctBoxHide1.Location = New Point(1802, 12)
         pctBoxHide1.Name = "pctBoxHide1"
-        pctBoxHide1.Size = New Size(25, 25)
+        pctBoxHide1.Size = New Size(40, 40)
         pctBoxHide1.TabIndex = 106
         pctBoxHide1.TabStop = False
+        ' 
+        ' pctBoxExit1
+        ' 
+        pctBoxExit1.BackColor = Color.Transparent
+        pctBoxExit1.BackgroundImage = CType(resources.GetObject("pctBoxExit1.BackgroundImage"), Image)
+        pctBoxExit1.BackgroundImageLayout = ImageLayout.Stretch
+        pctBoxExit1.Cursor = Cursors.Hand
+        pctBoxExit1.Location = New Point(1850, 12)
+        pctBoxExit1.Name = "pctBoxExit1"
+        pctBoxExit1.Size = New Size(40, 40)
+        pctBoxExit1.TabIndex = 105
+        pctBoxExit1.TabStop = False
+        ' 
+        ' lblName
+        ' 
+        lblName.AutoSize = True
+        lblName.BackColor = Color.Transparent
+        lblName.Font = New Font("Segoe UI", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblName.ForeColor = Color.Black
+        lblName.Location = New Point(246, 278)
+        lblName.Name = "lblName"
+        lblName.Size = New Size(136, 54)
+        lblName.TabIndex = 80
+        lblName.Text = "Name"
+        ' 
+        ' lblSignInAs
+        ' 
+        lblSignInAs.AutoSize = True
+        lblSignInAs.BackColor = Color.Transparent
+        lblSignInAs.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblSignInAs.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblSignInAs.Location = New Point(257, 194)
+        lblSignInAs.Name = "lblSignInAs"
+        lblSignInAs.Size = New Size(117, 31)
+        lblSignInAs.TabIndex = 84
+        lblSignInAs.Text = "Sign in as"
+        ' 
+        ' Panel18
+        ' 
+        Panel18.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Panel18.Location = New Point(39, 44)
+        Panel18.Name = "Panel18"
+        Panel18.Size = New Size(13, 100)
+        Panel18.TabIndex = 214
         ' 
         ' pnlEditInternshipEvaluationRecord
         ' 
@@ -1946,6 +2030,8 @@ Partial Class Form3
         ' pnlInternshipInformation
         ' 
         pnlInternshipInformation.BackColor = Color.White
+        pnlInternshipInformation.Controls.Add(btnUpdate)
+        pnlInternshipInformation.Controls.Add(pnlUpdateInternshipRecord)
         pnlInternshipInformation.Controls.Add(lblInternshipId)
         pnlInternshipInformation.Controls.Add(btnSearch4)
         pnlInternshipInformation.Controls.Add(lblTotalRecords4)
@@ -1960,6 +2046,259 @@ Partial Class Form3
         pnlInternshipInformation.Name = "pnlInternshipInformation"
         pnlInternshipInformation.Size = New Size(1529, 902)
         pnlInternshipInformation.TabIndex = 135
+        ' 
+        ' btnUpdate
+        ' 
+        btnUpdate.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnUpdate.FlatAppearance.BorderSize = 0
+        btnUpdate.FlatStyle = FlatStyle.Flat
+        btnUpdate.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
+        btnUpdate.ForeColor = Color.White
+        btnUpdate.Location = New Point(1327, 823)
+        btnUpdate.MinimumSize = New Size(50, 25)
+        btnUpdate.Name = "btnUpdate"
+        btnUpdate.Size = New Size(139, 51)
+        btnUpdate.TabIndex = 220
+        btnUpdate.Text = "UPDATE"
+        btnUpdate.UseVisualStyleBackColor = False
+        ' 
+        ' pnlUpdateInternshipRecord
+        ' 
+        pnlUpdateInternshipRecord.BackColor = Color.Honeydew
+        pnlUpdateInternshipRecord.Controls.Add(btnSearchInternship)
+        pnlUpdateInternshipRecord.Controls.Add(Label160)
+        pnlUpdateInternshipRecord.Controls.Add(cmbCompanyContactInternship)
+        pnlUpdateInternshipRecord.Controls.Add(cmbCompanyInternship)
+        pnlUpdateInternshipRecord.Controls.Add(dtpStartDate)
+        pnlUpdateInternshipRecord.Controls.Add(dtpEndDate)
+        pnlUpdateInternshipRecord.Controls.Add(Panel12)
+        pnlUpdateInternshipRecord.Controls.Add(Panel13)
+        pnlUpdateInternshipRecord.Controls.Add(btnCancelUpdate)
+        pnlUpdateInternshipRecord.Controls.Add(Label154)
+        pnlUpdateInternshipRecord.Controls.Add(btnUpdateRecord)
+        pnlUpdateInternshipRecord.Controls.Add(Label155)
+        pnlUpdateInternshipRecord.Controls.Add(Label156)
+        pnlUpdateInternshipRecord.Controls.Add(Label157)
+        pnlUpdateInternshipRecord.Controls.Add(Label158)
+        pnlUpdateInternshipRecord.Controls.Add(cmbStatusUpdateInternship)
+        pnlUpdateInternshipRecord.Controls.Add(Label159)
+        pnlUpdateInternshipRecord.Controls.Add(txtboxInternshipID)
+        pnlUpdateInternshipRecord.CornerRadius = 10
+        pnlUpdateInternshipRecord.Location = New Point(1097, 93)
+        pnlUpdateInternshipRecord.Name = "pnlUpdateInternshipRecord"
+        pnlUpdateInternshipRecord.Size = New Size(316, 593)
+        pnlUpdateInternshipRecord.TabIndex = 219
+        ' 
+        ' btnSearchInternship
+        ' 
+        btnSearchInternship.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnSearchInternship.FlatAppearance.BorderSize = 0
+        btnSearchInternship.FlatStyle = FlatStyle.Flat
+        btnSearchInternship.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
+        btnSearchInternship.ForeColor = Color.White
+        btnSearchInternship.Location = New Point(556, 155)
+        btnSearchInternship.MinimumSize = New Size(50, 25)
+        btnSearchInternship.Name = "btnSearchInternship"
+        btnSearchInternship.Size = New Size(132, 51)
+        btnSearchInternship.TabIndex = 239
+        btnSearchInternship.Text = "SEARCH"
+        btnSearchInternship.UseVisualStyleBackColor = False
+        ' 
+        ' Label160
+        ' 
+        Label160.AutoSize = True
+        Label160.BackColor = Color.Transparent
+        Label160.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
+        Label160.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label160.Location = New Point(570, 335)
+        Label160.Name = "Label160"
+        Label160.Size = New Size(103, 30)
+        Label160.TabIndex = 238
+        Label160.Text = "End Date"
+        ' 
+        ' cmbCompanyContactInternship
+        ' 
+        cmbCompanyContactInternship.Font = New Font("Segoe UI", 14.0F)
+        cmbCompanyContactInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        cmbCompanyContactInternship.FormattingEnabled = True
+        cmbCompanyContactInternship.Location = New Point(570, 270)
+        cmbCompanyContactInternship.Name = "cmbCompanyContactInternship"
+        cmbCompanyContactInternship.Size = New Size(471, 39)
+        cmbCompanyContactInternship.TabIndex = 237
+        ' 
+        ' cmbCompanyInternship
+        ' 
+        cmbCompanyInternship.Font = New Font("Segoe UI", 14.0F)
+        cmbCompanyInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        cmbCompanyInternship.FormattingEnabled = True
+        cmbCompanyInternship.Location = New Point(66, 270)
+        cmbCompanyInternship.Name = "cmbCompanyInternship"
+        cmbCompanyInternship.Size = New Size(471, 39)
+        cmbCompanyInternship.TabIndex = 236
+        ' 
+        ' dtpStartDate
+        ' 
+        dtpStartDate.CalendarForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        dtpStartDate.CalendarMonthBackground = Color.MintCream
+        dtpStartDate.CalendarTitleBackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        dtpStartDate.CalendarTrailingForeColor = SystemColors.ControlLightLight
+        dtpStartDate.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpStartDate.Location = New Point(69, 371)
+        dtpStartDate.Name = "dtpStartDate"
+        dtpStartDate.Size = New Size(470, 38)
+        dtpStartDate.TabIndex = 235
+        ' 
+        ' dtpEndDate
+        ' 
+        dtpEndDate.CalendarForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        dtpEndDate.CalendarMonthBackground = Color.MintCream
+        dtpEndDate.CalendarTitleBackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        dtpEndDate.CalendarTrailingForeColor = SystemColors.ControlLightLight
+        dtpEndDate.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpEndDate.Location = New Point(570, 371)
+        dtpEndDate.Name = "dtpEndDate"
+        dtpEndDate.Size = New Size(470, 38)
+        dtpEndDate.TabIndex = 234
+        ' 
+        ' Panel12
+        ' 
+        Panel12.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Panel12.Location = New Point(36, 42)
+        Panel12.Name = "Panel12"
+        Panel12.Size = New Size(10, 63)
+        Panel12.TabIndex = 231
+        ' 
+        ' Panel13
+        ' 
+        Panel13.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Panel13.Location = New Point(1104, 42)
+        Panel13.Name = "Panel13"
+        Panel13.Size = New Size(10, 63)
+        Panel13.TabIndex = 230
+        ' 
+        ' btnCancelUpdate
+        ' 
+        btnCancelUpdate.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        btnCancelUpdate.FlatAppearance.BorderSize = 0
+        btnCancelUpdate.FlatStyle = FlatStyle.Flat
+        btnCancelUpdate.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
+        btnCancelUpdate.ForeColor = Color.White
+        btnCancelUpdate.Location = New Point(730, 511)
+        btnCancelUpdate.MinimumSize = New Size(50, 25)
+        btnCancelUpdate.Name = "btnCancelUpdate"
+        btnCancelUpdate.Size = New Size(132, 51)
+        btnCancelUpdate.TabIndex = 220
+        btnCancelUpdate.Text = "CANCEL"
+        btnCancelUpdate.UseVisualStyleBackColor = False
+        ' 
+        ' Label154
+        ' 
+        Label154.AutoSize = True
+        Label154.BackColor = Color.Transparent
+        Label154.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
+        Label154.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label154.Location = New Point(571, 228)
+        Label154.Name = "Label154"
+        Label154.Size = New Size(190, 30)
+        Label154.TabIndex = 203
+        Label154.Text = "Company Contact"
+        ' 
+        ' btnUpdateRecord
+        ' 
+        btnUpdateRecord.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnUpdateRecord.FlatAppearance.BorderSize = 0
+        btnUpdateRecord.FlatStyle = FlatStyle.Flat
+        btnUpdateRecord.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
+        btnUpdateRecord.ForeColor = Color.White
+        btnUpdateRecord.Location = New Point(869, 510)
+        btnUpdateRecord.MinimumSize = New Size(50, 25)
+        btnUpdateRecord.Name = "btnUpdateRecord"
+        btnUpdateRecord.Size = New Size(168, 51)
+        btnUpdateRecord.TabIndex = 219
+        btnUpdateRecord.Text = "Update Record"
+        btnUpdateRecord.UseVisualStyleBackColor = False
+        ' 
+        ' Label155
+        ' 
+        Label155.AutoSize = True
+        Label155.BackColor = Color.Transparent
+        Label155.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold)
+        Label155.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label155.Location = New Point(62, 46)
+        Label155.Name = "Label155"
+        Label155.Size = New Size(429, 46)
+        Label155.TabIndex = 201
+        Label155.Text = "Update Internship Record"
+        ' 
+        ' Label156
+        ' 
+        Label156.AutoSize = True
+        Label156.BackColor = Color.Transparent
+        Label156.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
+        Label156.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label156.Location = New Point(69, 426)
+        Label156.Name = "Label156"
+        Label156.Size = New Size(73, 30)
+        Label156.TabIndex = 200
+        Label156.Text = "Status"
+        ' 
+        ' Label157
+        ' 
+        Label157.AutoSize = True
+        Label157.BackColor = Color.Transparent
+        Label157.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
+        Label157.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label157.Location = New Point(69, 227)
+        Label157.Name = "Label157"
+        Label157.Size = New Size(172, 30)
+        Label157.TabIndex = 198
+        Label157.Text = "Company Name"
+        ' 
+        ' Label158
+        ' 
+        Label158.AutoSize = True
+        Label158.BackColor = Color.Transparent
+        Label158.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
+        Label158.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label158.Location = New Point(69, 131)
+        Label158.Name = "Label158"
+        Label158.Size = New Size(142, 30)
+        Label158.TabIndex = 197
+        Label158.Text = "Internship ID"
+        ' 
+        ' cmbStatusUpdateInternship
+        ' 
+        cmbStatusUpdateInternship.Font = New Font("Segoe UI", 14.0F)
+        cmbStatusUpdateInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        cmbStatusUpdateInternship.FormattingEnabled = True
+        cmbStatusUpdateInternship.Items.AddRange(New Object() {"Pending", "Ongoing", "Completed"})
+        cmbStatusUpdateInternship.Location = New Point(66, 459)
+        cmbStatusUpdateInternship.Name = "cmbStatusUpdateInternship"
+        cmbStatusUpdateInternship.Size = New Size(471, 39)
+        cmbStatusUpdateInternship.TabIndex = 196
+        ' 
+        ' Label159
+        ' 
+        Label159.AutoSize = True
+        Label159.BackColor = Color.Transparent
+        Label159.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
+        Label159.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label159.Location = New Point(69, 333)
+        Label159.Name = "Label159"
+        Label159.Size = New Size(113, 30)
+        Label159.TabIndex = 195
+        Label159.Text = "Start Date"
+        ' 
+        ' txtboxInternshipID
+        ' 
+        txtboxInternshipID.Cursor = Cursors.IBeam
+        txtboxInternshipID.Font = New Font("Segoe UI", 14.0F)
+        txtboxInternshipID.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtboxInternshipID.Location = New Point(66, 164)
+        txtboxInternshipID.Multiline = True
+        txtboxInternshipID.Name = "txtboxInternshipID"
+        txtboxInternshipID.Size = New Size(471, 38)
+        txtboxInternshipID.TabIndex = 191
         ' 
         ' lblInternshipId
         ' 
@@ -5559,7 +5898,7 @@ Partial Class Form3
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(753, 530)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(471, 39)
+        ComboBox1.Size = New Size(471, 40)
         ComboBox1.TabIndex = 206
         ' 
         ' Label30
@@ -5674,7 +6013,7 @@ Partial Class Form3
         ComboBox2.FormattingEnabled = True
         ComboBox2.Location = New Point(144, 530)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(471, 39)
+        ComboBox2.Size = New Size(471, 40)
         ComboBox2.TabIndex = 196
         ' 
         ' Label37
@@ -5706,7 +6045,7 @@ Partial Class Form3
         ComboBox3.FormattingEnabled = True
         ComboBox3.Location = New Point(144, 340)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(471, 39)
+        ComboBox3.Size = New Size(471, 40)
         ComboBox3.TabIndex = 193
         ' 
         ' TextBox6
@@ -5779,7 +6118,7 @@ Partial Class Form3
         ComboBox4.FormattingEnabled = True
         ComboBox4.Location = New Point(753, 530)
         ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(471, 39)
+        ComboBox4.Size = New Size(471, 40)
         ComboBox4.TabIndex = 206
         ' 
         ' Label39
@@ -5917,7 +6256,7 @@ Partial Class Form3
         ComboBox6.FormattingEnabled = True
         ComboBox6.Location = New Point(144, 340)
         ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(471, 39)
+        ComboBox6.Size = New Size(471, 40)
         ComboBox6.TabIndex = 193
         ' 
         ' TextBox11
@@ -5985,35 +6324,132 @@ Partial Class Form3
         ' 
         ' pnlOnGoing
         ' 
-        pnlOnGoing.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        pnlOnGoing.Location = New Point(1445, 273)
+        pnlOnGoing.BackColor = Color.White
+        pnlOnGoing.BackgroundImage = CType(resources.GetObject("pnlOnGoing.BackgroundImage"), Image)
+        pnlOnGoing.Controls.Add(lblOngoing)
+        pnlOnGoing.Location = New Point(100, 574)
         pnlOnGoing.Name = "pnlOnGoing"
-        pnlOnGoing.Size = New Size(340, 310)
+        pnlOnGoing.Size = New Size(319, 290)
         pnlOnGoing.TabIndex = 270
         ' 
-        ' pnlDataModel2
+        ' lblOngoing
         ' 
-        pnlDataModel2.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        pnlDataModel2.Location = New Point(1181, 653)
-        pnlDataModel2.Name = "pnlDataModel2"
-        pnlDataModel2.Size = New Size(666, 310)
-        pnlDataModel2.TabIndex = 272
+        lblOngoing.AutoSize = True
+        lblOngoing.BackColor = Color.Transparent
+        lblOngoing.Font = New Font("Segoe UI", 45.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblOngoing.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblOngoing.Location = New Point(120, 159)
+        lblOngoing.Name = "lblOngoing"
+        lblOngoing.Size = New Size(85, 100)
+        lblOngoing.TabIndex = 275
+        lblOngoing.Text = "0"
+        ' 
+        ' lblCompleted
+        ' 
+        lblCompleted.AutoSize = True
+        lblCompleted.BackColor = Color.Transparent
+        lblCompleted.Font = New Font("Segoe UI", 45.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblCompleted.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblCompleted.Location = New Point(122, 158)
+        lblCompleted.Name = "lblCompleted"
+        lblCompleted.Size = New Size(85, 100)
+        lblCompleted.TabIndex = 274
+        lblCompleted.Text = "0"
         ' 
         ' pnlDataModel1
         ' 
         pnlDataModel1.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        pnlDataModel1.Location = New Point(443, 653)
+        pnlDataModel1.Location = New Point(854, 574)
         pnlDataModel1.Name = "pnlDataModel1"
-        pnlDataModel1.Size = New Size(666, 310)
+        pnlDataModel1.Size = New Size(634, 293)
         pnlDataModel1.TabIndex = 271
         ' 
         ' pnlCompleted
         ' 
-        pnlCompleted.BackColor = Color.FromArgb(CByte(188), CByte(221), CByte(203))
-        pnlCompleted.Location = New Point(975, 273)
+        pnlCompleted.BackColor = Color.White
+        pnlCompleted.BackgroundImage = CType(resources.GetObject("pnlCompleted.BackgroundImage"), Image)
+        pnlCompleted.Controls.Add(lblCompleted)
+        pnlCompleted.Location = New Point(473, 575)
         pnlCompleted.Name = "pnlCompleted"
-        pnlCompleted.Size = New Size(340, 310)
+        pnlCompleted.Size = New Size(319, 290)
         pnlCompleted.TabIndex = 269
+        ' 
+        ' pnlHome
+        ' 
+        pnlHome.BackColor = Color.White
+        pnlHome.Controls.Add(pnlPending)
+        pnlHome.Controls.Add(Panel17)
+        pnlHome.Controls.Add(pnlOnGoing)
+        pnlHome.Controls.Add(Panel18)
+        pnlHome.Controls.Add(pnlDataModel1)
+        pnlHome.Controls.Add(Label6)
+        pnlHome.Controls.Add(pnlTtotalInterns)
+        pnlHome.Controls.Add(pnlCompleted)
+        pnlHome.Controls.Add(Label172)
+        pnlHome.Dock = DockStyle.Fill
+        pnlHome.Location = New Point(373, 131)
+        pnlHome.Name = "pnlHome"
+        pnlHome.Size = New Size(1529, 902)
+        pnlHome.TabIndex = 221
+        ' 
+        ' pnlPending
+        ' 
+        pnlPending.BackColor = Color.White
+        pnlPending.BackgroundImage = CType(resources.GetObject("pnlPending.BackgroundImage"), Image)
+        pnlPending.Controls.Add(lblPending)
+        pnlPending.Location = New Point(473, 234)
+        pnlPending.Name = "pnlPending"
+        pnlPending.Size = New Size(319, 290)
+        pnlPending.TabIndex = 275
+        ' 
+        ' lblPending
+        ' 
+        lblPending.AutoSize = True
+        lblPending.BackColor = Color.Transparent
+        lblPending.Font = New Font("Segoe UI", 45.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblPending.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblPending.Location = New Point(122, 151)
+        lblPending.Name = "lblPending"
+        lblPending.Size = New Size(85, 100)
+        lblPending.TabIndex = 275
+        lblPending.Text = "0"
+        ' 
+        ' Panel17
+        ' 
+        Panel17.BackColor = Color.White
+        Panel17.BackgroundImage = CType(resources.GetObject("Panel17.BackgroundImage"), Image)
+        Panel17.Controls.Add(lblName)
+        Panel17.Controls.Add(lblSignInAs)
+        Panel17.Controls.Add(btnLogout)
+        Panel17.Controls.Add(lblFaculty)
+        Panel17.Location = New Point(854, 55)
+        Panel17.Name = "Panel17"
+        Panel17.Size = New Size(634, 472)
+        Panel17.TabIndex = 272
+        ' 
+        ' lblFaculty
+        ' 
+        lblFaculty.AutoSize = True
+        lblFaculty.BackColor = Color.Transparent
+        lblFaculty.Font = New Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblFaculty.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblFaculty.Location = New Point(231, 213)
+        lblFaculty.Name = "lblFaculty"
+        lblFaculty.Size = New Size(173, 60)
+        lblFaculty.TabIndex = 119
+        lblFaculty.Text = "Faculty"
+        ' 
+        ' Label172
+        ' 
+        Label172.AutoSize = True
+        Label172.BackColor = Color.Transparent
+        Label172.Font = New Font("Arial", 48.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label172.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label172.Location = New Point(60, 42)
+        Label172.Name = "Label172"
+        Label172.Size = New Size(625, 93)
+        Label172.TabIndex = 114
+        Label172.Text = "Welcome Back!"
         ' 
         ' Form3
         ' 
@@ -6021,11 +6457,16 @@ Partial Class Form3
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1902, 1033)
-        Controls.Add(pnlVisitInformation)
-        Controls.Add(pnlSummaryReport)
         Controls.Add(pnlCompanyContactInformation)
         Controls.Add(pnlCompanyInformation)
+        Controls.Add(pnlHome)
+        Controls.Add(pnlSummaryReport)
+        Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlFacultyInformation)
+        Controls.Add(pnlVisitInformation)
+        Controls.Add(pnlEvaluationInformation)
+        Controls.Add(pnlStudentInformation)
+        Controls.Add(Panel1)
         Controls.Add(pnlHeader)
         FormBorderStyle = FormBorderStyle.None
         Name = "Form3"
@@ -6033,6 +6474,7 @@ Partial Class Form3
         Text = "Form3"
         WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
+        CType(picHome, ComponentModel.ISupportInitialize).EndInit()
         CType(picSummary, ComponentModel.ISupportInitialize).EndInit()
         CType(picVisitIcon, ComponentModel.ISupportInitialize).EndInit()
         CType(picFacultyIcon, ComponentModel.ISupportInitialize).EndInit()
@@ -6040,6 +6482,8 @@ Partial Class Form3
         CType(picEvaluationIcon, ComponentModel.ISupportInitialize).EndInit()
         CType(picInternshipIcon, ComponentModel.ISupportInitialize).EndInit()
         CType(picStudentIcon, ComponentModel.ISupportInitialize).EndInit()
+        pnlTtotalInterns.ResumeLayout(False)
+        pnlTtotalInterns.PerformLayout()
         pnlHeader.ResumeLayout(False)
         pnlHeader.PerformLayout()
         CType(pctBox2, ComponentModel.ISupportInitialize).EndInit()
@@ -6057,6 +6501,8 @@ Partial Class Form3
         pnlStudentInformation.PerformLayout()
         pnlInternshipInformation.ResumeLayout(False)
         pnlInternshipInformation.PerformLayout()
+        pnlUpdateInternshipRecord.ResumeLayout(False)
+        pnlUpdateInternshipRecord.PerformLayout()
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).EndInit()
         pnlEvaluationInformation.ResumeLayout(False)
@@ -6111,6 +6557,16 @@ Partial Class Form3
         Roundedpanel1.PerformLayout()
         Roundedpanel2.ResumeLayout(False)
         Roundedpanel2.PerformLayout()
+        pnlOnGoing.ResumeLayout(False)
+        pnlOnGoing.PerformLayout()
+        pnlCompleted.ResumeLayout(False)
+        pnlCompleted.PerformLayout()
+        pnlHome.ResumeLayout(False)
+        pnlHome.PerformLayout()
+        pnlPending.ResumeLayout(False)
+        pnlPending.PerformLayout()
+        Panel17.ResumeLayout(False)
+        Panel17.PerformLayout()
         ResumeLayout(False)
     End Sub
     Friend WithEvents btnHome As RoundedButton
@@ -6544,5 +7000,36 @@ Partial Class Form3
     Friend WithEvents Label150 As Label
     Friend WithEvents Panel11 As Panel
     Friend WithEvents Label152 As Label
+    Friend WithEvents pnlUpdateInternshipRecord As roundedpanel
+    Friend WithEvents cmbCompanyContactInternship As ComboBox
+    Friend WithEvents cmbCompanyInternship As ComboBox
+    Friend WithEvents dtpStartDate As DateTimePicker
+    Friend WithEvents dtpEndDate As DateTimePicker
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents btnCancelUpdate As RoundedButton
+    Friend WithEvents Label154 As Label
+    Friend WithEvents btnUpdateRecord As RoundedButton
+    Friend WithEvents Label155 As Label
+    Friend WithEvents Label156 As Label
+    Friend WithEvents Label157 As Label
+    Friend WithEvents Label158 As Label
+    Friend WithEvents cmbStatusUpdateInternship As ComboBox
+    Friend WithEvents Label159 As Label
+    Friend WithEvents txtboxInternshipID As TextBox
+    Friend WithEvents Label160 As Label
+    Friend WithEvents btnUpdate As RoundedButton
+    Friend WithEvents btnSearchInternship As RoundedButton
+    Friend WithEvents picHome As PictureBox
+    Friend WithEvents pnlHome As Panel
+    Friend WithEvents Label172 As Label
+    Friend WithEvents lblCompleted As Label
+    Friend WithEvents lblOngoing As Label
+    Friend WithEvents Panel18 As Panel
+    Friend WithEvents lblTotalInterns As Label
+    Friend WithEvents Panel17 As Panel
+    Friend WithEvents pnlPending As Panel
+    Friend WithEvents lblPending As Label
+    Friend WithEvents lblFaculty As Label
 
 End Class

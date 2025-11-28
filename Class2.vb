@@ -49,4 +49,11 @@ Public Class RoundedButton
         ' Draw text
         TextRenderer.DrawText(graphics, Me.Text, Me.Font, rect, Me.ForeColor, TextFormatFlags.HorizontalCenter Or TextFormatFlags.VerticalCenter)
     End Sub
+
+    Public Shared Sub MakeCircle(btn As Button)
+        Dim path As New GraphicsPath()
+        path.AddEllipse(0, 0, btn.Width, btn.Height)
+        btn.Region = New Region(path)
+    End Sub
+
 End Class
