@@ -171,9 +171,8 @@ Public Class FormDashboards
     End Sub
 
     Private Sub loadInternRecord()
+        'Dim dt As DataTable = loadTable("SELECT * FROM vinternship_record") use this to hide the pending
         Dim dt As DataTable = loadTable("SELECT * FROM vall_internship")
-
-
         dgvInternshipFiles4.DataSource = dt
     End Sub
 

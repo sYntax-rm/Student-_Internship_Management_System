@@ -38,27 +38,45 @@ Module Import
         Try
             Using con As MySqlConnection = GetConnection()
                 con.Open()
-                For Each row As DataRow In dt.Rows
-                    Using cmd As New MySqlCommand("
+                Using trans As MySqlTransaction = con.BeginTransaction()
+
+                    For Each row As DataRow In dt.Rows
+                        Using studentCmd As New MySqlCommand("
                         INSERT INTO student 
                         (student_id, first_name, last_name, gender, section_name, contact_no, email, department_id, course_id)
                         VALUES
                         (@id,        @fn,           @ln, @gender, @sec, @contact, @email, @dep, @course)
-                    ", con)
+                    ", con, trans)
 
-                        cmd.Parameters.AddWithValue("@id", GenerateStudentID())
-                        cmd.Parameters.AddWithValue("@fn", row("first_name").ToString)
-                        cmd.Parameters.AddWithValue("@ln", row("last_name").ToString)
-                        cmd.Parameters.AddWithValue("@gender", row("gender").ToString)
-                        cmd.Parameters.AddWithValue("@sec", row("section_name").ToString)
-                        cmd.Parameters.AddWithValue("@contact", row("contact_no").ToString)
-                        cmd.Parameters.AddWithValue("@email", row("email").ToString)
-                        cmd.Parameters.AddWithValue("@dep", row("department_id").ToString)
-                        cmd.Parameters.AddWithValue("@course", row("course_id").ToString)
+                            studentCmd.Parameters.AddWithValue("@id", GenerateStudentID())
+                            studentCmd.Parameters.AddWithValue("@fn", row("first_name").ToString)
+                            studentCmd.Parameters.AddWithValue("@ln", row("last_name").ToString)
+                            studentCmd.Parameters.AddWithValue("@gender", row("gender").ToString)
+                            studentCmd.Parameters.AddWithValue("@sec", row("section_name").ToString)
+                            studentCmd.Parameters.AddWithValue("@contact", row("contact_no").ToString)
+                            studentCmd.Parameters.AddWithValue("@email", row("email").ToString)
+                            studentCmd.Parameters.AddWithValue("@dep", row("department_id").ToString)
+                            studentCmd.Parameters.AddWithValue("@course", row("course_id").ToString)
 
-                        cmd.ExecuteNonQuery()
-                    End Using
-                Next
+                            studentCmd.ExecuteNonQuery()
+                        End Using
+
+                        Using internCmd As New MySqlCommand("
+                            INSERT INTO internship 
+                                (internship_id, student_id, status)
+                            VALUES
+                                (@internID, @studentID, 'Pending')
+                            ", con, trans)
+
+                            internCmd.Parameters.AddWithValue("@internID", GenerateInternID())
+                            internCmd.Parameters.AddWithValue("@studentID", row("student_id").ToString) ' or the ID generated above
+                            internCmd.ExecuteNonQuery()
+                        End Using
+
+                    Next
+
+                    trans.Commit()
+                End Using
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
