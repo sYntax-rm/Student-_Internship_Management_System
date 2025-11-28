@@ -55,7 +55,7 @@ Partial Class FormDashboards
         Label3 = New Label()
         pctBoxHide1 = New PictureBox()
         pctBoxExit1 = New PictureBox()
-        lblName = New Label()
+        lblHomeFName = New Label()
         lblSignInAs = New Label()
         Panel18 = New Panel()
         pnlEditInternshipEvaluationRecord = New roundedpanel()
@@ -485,7 +485,7 @@ Partial Class FormDashboards
         pnlPending = New Panel()
         lblPending = New Label()
         Panel17 = New Panel()
-        lblFaculty = New Label()
+        lblHomeTitleAs = New Label()
         Label172 = New Label()
         Panel1.SuspendLayout()
         CType(picHome, ComponentModel.ISupportInitialize).BeginInit()
@@ -938,17 +938,17 @@ Partial Class FormDashboards
         pctBoxExit1.TabIndex = 105
         pctBoxExit1.TabStop = False
         ' 
-        ' lblName
+        ' lblHomeFName
         ' 
-        lblName.AutoSize = True
-        lblName.BackColor = Color.Transparent
-        lblName.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblName.ForeColor = Color.Black
-        lblName.Location = New Point(246, 278)
-        lblName.Name = "lblName"
-        lblName.Size = New Size(136, 54)
-        lblName.TabIndex = 80
-        lblName.Text = "Name"
+        lblHomeFName.AutoSize = True
+        lblHomeFName.BackColor = Color.Transparent
+        lblHomeFName.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblHomeFName.ForeColor = Color.Black
+        lblHomeFName.Location = New Point(246, 278)
+        lblHomeFName.Name = "lblHomeFName"
+        lblHomeFName.Size = New Size(136, 54)
+        lblHomeFName.TabIndex = 80
+        lblHomeFName.Text = "Name"
         ' 
         ' lblSignInAs
         ' 
@@ -6431,26 +6431,26 @@ Partial Class FormDashboards
         ' 
         Panel17.BackColor = Color.White
         Panel17.BackgroundImage = CType(resources.GetObject("Panel17.BackgroundImage"), Image)
-        Panel17.Controls.Add(lblName)
+        Panel17.Controls.Add(lblHomeFName)
         Panel17.Controls.Add(lblSignInAs)
         Panel17.Controls.Add(btnLogout)
-        Panel17.Controls.Add(lblFaculty)
+        Panel17.Controls.Add(lblHomeTitleAs)
         Panel17.Location = New Point(854, 55)
         Panel17.Name = "Panel17"
         Panel17.Size = New Size(634, 472)
         Panel17.TabIndex = 272
         ' 
-        ' lblFaculty
+        ' lblHomeTitleAs
         ' 
-        lblFaculty.AutoSize = True
-        lblFaculty.BackColor = Color.Transparent
-        lblFaculty.Font = New Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblFaculty.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        lblFaculty.Location = New Point(231, 213)
-        lblFaculty.Name = "lblFaculty"
-        lblFaculty.Size = New Size(173, 60)
-        lblFaculty.TabIndex = 119
-        lblFaculty.Text = "Faculty"
+        lblHomeTitleAs.AutoSize = True
+        lblHomeTitleAs.BackColor = Color.Transparent
+        lblHomeTitleAs.Font = New Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblHomeTitleAs.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblHomeTitleAs.Location = New Point(231, 213)
+        lblHomeTitleAs.Name = "lblHomeTitleAs"
+        lblHomeTitleAs.Size = New Size(173, 60)
+        lblHomeTitleAs.TabIndex = 119
+        lblHomeTitleAs.Text = "Faculty"
         ' 
         ' Label172
         ' 
@@ -6470,11 +6470,11 @@ Partial Class FormDashboards
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1902, 1033)
+        Controls.Add(pnlHome)
         Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlStudentInformation)
         Controls.Add(pnlCompanyContactInformation)
         Controls.Add(pnlCompanyInformation)
-        Controls.Add(pnlHome)
         Controls.Add(pnlSummaryReport)
         Controls.Add(pnlFacultyInformation)
         Controls.Add(pnlVisitInformation)
@@ -6599,7 +6599,7 @@ Partial Class FormDashboards
     Friend WithEvents pctBox2 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents lblName As Label
+    Friend WithEvents lblHomeFName As Label
     Friend WithEvents lblSignInAs As Label
     Friend WithEvents pctBoxHide1 As PictureBox
     Friend WithEvents pctBoxExit1 As PictureBox
@@ -7044,7 +7044,7 @@ Partial Class FormDashboards
     Friend WithEvents Panel17 As Panel
     Friend WithEvents pnlPending As Panel
     Friend WithEvents lblPending As Label
-    Friend WithEvents lblFaculty As Label
+    Friend WithEvents lblHomeTitleAs As Label
     Friend WithEvents lblHomeDashboard As Label
 
 End Class

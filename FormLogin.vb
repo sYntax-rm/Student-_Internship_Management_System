@@ -60,6 +60,7 @@
 
     Private Function validLogInInput() As Boolean
         If txtEmailLogIn.Text = "admin" And txtPasswordLogIn.Text = "admin" Then
+            FormDashboards.lblHomeTitleAs.Text = "ADMIN"
             Return True
         End If
 

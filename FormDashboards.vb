@@ -261,7 +261,7 @@ Public Class FormDashboards
         End If
     End Sub
 
-    Private Sub lblName_Click(sender As Object, e As EventArgs) Handles lblName.Click
+    Private Sub lblName_Click(sender As Object, e As EventArgs) Handles lblHomeFName.Click
 
     End Sub
 
