@@ -46,7 +46,7 @@ Partial Class FormDashboards
         picStudentIcon = New PictureBox()
         Label6 = New Label()
         pnlTtotalInterns = New Panel()
-        lblTotalInterns = New Label()
+        lblHomeTotalInterns = New Label()
         btnLogout = New RoundedButton()
         pnlHeader = New Panel()
         pctBox2 = New PictureBox()
@@ -476,13 +476,13 @@ Partial Class FormDashboards
         Label56 = New Label()
         OpenFileDialog1 = New OpenFileDialog()
         pnlOnGoing = New Panel()
-        lblOngoing = New Label()
-        lblCompleted = New Label()
+        lblHomeOngoing = New Label()
+        lblHomeCompleted = New Label()
         pnlDataModel1 = New Panel()
         pnlCompleted = New Panel()
         pnlHome = New Panel()
         pnlPending = New Panel()
-        lblPending = New Label()
+        lblHomePending = New Label()
         Panel17 = New Panel()
         lblHomeTitleAs = New Label()
         Label172 = New Label()
@@ -817,23 +817,23 @@ Partial Class FormDashboards
         ' 
         pnlTtotalInterns.BackColor = Color.White
         pnlTtotalInterns.BackgroundImage = CType(resources.GetObject("pnlTtotalInterns.BackgroundImage"), Image)
-        pnlTtotalInterns.Controls.Add(lblTotalInterns)
+        pnlTtotalInterns.Controls.Add(lblHomeTotalInterns)
         pnlTtotalInterns.Location = New Point(100, 234)
         pnlTtotalInterns.Name = "pnlTtotalInterns"
         pnlTtotalInterns.Size = New Size(319, 290)
         pnlTtotalInterns.TabIndex = 268
         ' 
-        ' lblTotalInterns
+        ' lblHomeTotalInterns
         ' 
-        lblTotalInterns.AutoSize = True
-        lblTotalInterns.BackColor = Color.Transparent
-        lblTotalInterns.Font = New Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTotalInterns.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        lblTotalInterns.Location = New Point(124, 156)
-        lblTotalInterns.Name = "lblTotalInterns"
-        lblTotalInterns.Size = New Size(85, 100)
-        lblTotalInterns.TabIndex = 273
-        lblTotalInterns.Text = "0"
+        lblHomeTotalInterns.AutoSize = True
+        lblHomeTotalInterns.BackColor = Color.Transparent
+        lblHomeTotalInterns.Font = New Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblHomeTotalInterns.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblHomeTotalInterns.Location = New Point(107, 156)
+        lblHomeTotalInterns.Name = "lblHomeTotalInterns"
+        lblHomeTotalInterns.Size = New Size(85, 100)
+        lblHomeTotalInterns.TabIndex = 273
+        lblHomeTotalInterns.Text = "0"
         ' 
         ' btnLogout
         ' 
@@ -943,7 +943,7 @@ Partial Class FormDashboards
         lblHomeFName.BackColor = Color.Transparent
         lblHomeFName.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblHomeFName.ForeColor = Color.Black
-        lblHomeFName.Location = New Point(246, 278)
+        lblHomeFName.Location = New Point(246, 285)
         lblHomeFName.Name = "lblHomeFName"
         lblHomeFName.Size = New Size(136, 54)
         lblHomeFName.TabIndex = 80
@@ -6330,35 +6330,35 @@ Partial Class FormDashboards
         ' 
         pnlOnGoing.BackColor = Color.White
         pnlOnGoing.BackgroundImage = CType(resources.GetObject("pnlOnGoing.BackgroundImage"), Image)
-        pnlOnGoing.Controls.Add(lblOngoing)
+        pnlOnGoing.Controls.Add(lblHomeOngoing)
         pnlOnGoing.Location = New Point(100, 574)
         pnlOnGoing.Name = "pnlOnGoing"
         pnlOnGoing.Size = New Size(319, 290)
         pnlOnGoing.TabIndex = 270
         ' 
-        ' lblOngoing
+        ' lblHomeOngoing
         ' 
-        lblOngoing.AutoSize = True
-        lblOngoing.BackColor = Color.Transparent
-        lblOngoing.Font = New Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblOngoing.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        lblOngoing.Location = New Point(120, 159)
-        lblOngoing.Name = "lblOngoing"
-        lblOngoing.Size = New Size(85, 100)
-        lblOngoing.TabIndex = 275
-        lblOngoing.Text = "0"
+        lblHomeOngoing.AutoSize = True
+        lblHomeOngoing.BackColor = Color.Transparent
+        lblHomeOngoing.Font = New Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblHomeOngoing.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblHomeOngoing.Location = New Point(120, 159)
+        lblHomeOngoing.Name = "lblHomeOngoing"
+        lblHomeOngoing.Size = New Size(85, 100)
+        lblHomeOngoing.TabIndex = 275
+        lblHomeOngoing.Text = "0"
         ' 
-        ' lblCompleted
+        ' lblHomeCompleted
         ' 
-        lblCompleted.AutoSize = True
-        lblCompleted.BackColor = Color.Transparent
-        lblCompleted.Font = New Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblCompleted.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        lblCompleted.Location = New Point(122, 158)
-        lblCompleted.Name = "lblCompleted"
-        lblCompleted.Size = New Size(85, 100)
-        lblCompleted.TabIndex = 274
-        lblCompleted.Text = "0"
+        lblHomeCompleted.AutoSize = True
+        lblHomeCompleted.BackColor = Color.Transparent
+        lblHomeCompleted.Font = New Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblHomeCompleted.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblHomeCompleted.Location = New Point(122, 158)
+        lblHomeCompleted.Name = "lblHomeCompleted"
+        lblHomeCompleted.Size = New Size(85, 100)
+        lblHomeCompleted.TabIndex = 274
+        lblHomeCompleted.Text = "0"
         ' 
         ' pnlDataModel1
         ' 
@@ -6372,7 +6372,7 @@ Partial Class FormDashboards
         ' 
         pnlCompleted.BackColor = Color.White
         pnlCompleted.BackgroundImage = CType(resources.GetObject("pnlCompleted.BackgroundImage"), Image)
-        pnlCompleted.Controls.Add(lblCompleted)
+        pnlCompleted.Controls.Add(lblHomeCompleted)
         pnlCompleted.Location = New Point(473, 575)
         pnlCompleted.Name = "pnlCompleted"
         pnlCompleted.Size = New Size(319, 290)
@@ -6400,23 +6400,23 @@ Partial Class FormDashboards
         ' 
         pnlPending.BackColor = Color.White
         pnlPending.BackgroundImage = CType(resources.GetObject("pnlPending.BackgroundImage"), Image)
-        pnlPending.Controls.Add(lblPending)
+        pnlPending.Controls.Add(lblHomePending)
         pnlPending.Location = New Point(473, 234)
         pnlPending.Name = "pnlPending"
         pnlPending.Size = New Size(319, 290)
         pnlPending.TabIndex = 275
         ' 
-        ' lblPending
+        ' lblHomePending
         ' 
-        lblPending.AutoSize = True
-        lblPending.BackColor = Color.Transparent
-        lblPending.Font = New Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblPending.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        lblPending.Location = New Point(122, 151)
-        lblPending.Name = "lblPending"
-        lblPending.Size = New Size(85, 100)
-        lblPending.TabIndex = 275
-        lblPending.Text = "0"
+        lblHomePending.AutoSize = True
+        lblHomePending.BackColor = Color.Transparent
+        lblHomePending.Font = New Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblHomePending.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        lblHomePending.Location = New Point(122, 151)
+        lblHomePending.Name = "lblHomePending"
+        lblHomePending.Size = New Size(85, 100)
+        lblHomePending.TabIndex = 275
+        lblHomePending.Text = "0"
         ' 
         ' Panel17
         ' 
@@ -6437,7 +6437,7 @@ Partial Class FormDashboards
         lblHomeTitleAs.BackColor = Color.Transparent
         lblHomeTitleAs.Font = New Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblHomeTitleAs.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        lblHomeTitleAs.Location = New Point(231, 213)
+        lblHomeTitleAs.Location = New Point(231, 215)
         lblHomeTitleAs.Name = "lblHomeTitleAs"
         lblHomeTitleAs.Size = New Size(173, 60)
         lblHomeTitleAs.TabIndex = 119
@@ -7028,13 +7028,13 @@ Partial Class FormDashboards
     Friend WithEvents picHome As PictureBox
     Friend WithEvents pnlHome As Panel
     Friend WithEvents Label172 As Label
-    Friend WithEvents lblCompleted As Label
-    Friend WithEvents lblOngoing As Label
+    Friend WithEvents lblHomeCompleted As Label
+    Friend WithEvents lblHomeOngoing As Label
     Friend WithEvents Panel18 As Panel
-    Friend WithEvents lblTotalInterns As Label
+    Friend WithEvents lblHomeTotalInterns As Label
     Friend WithEvents Panel17 As Panel
     Friend WithEvents pnlPending As Panel
-    Friend WithEvents lblPending As Label
+    Friend WithEvents lblHomePending As Label
     Friend WithEvents lblHomeTitleAs As Label
     Friend WithEvents lblHomeDashboard As Label
 

@@ -96,6 +96,7 @@ Public Class FormDashboards
 
         'Home Load
         pnlHome.Show()
+        displayCount()
 
         'For buttons
         hidePanel()
@@ -131,6 +132,13 @@ Public Class FormDashboards
         pnlAddNewVisitRecord.Hide()
         pnlEditVisitRecord.Hide()
         pnlSummaryReport.Hide()
+    End Sub
+
+    Private Sub displayCount()
+        lblHomePending.Text = countPendingIntern()
+        lblHomeOngoing.Text = countOngoingIntern()
+        lblHomeCompleted.Text = countCompletedIntern()
+        lblHomeTotalInterns.Text = countIntern()
     End Sub
 
     Private Sub clearBox(ParamArray boxes() As TextBox)
@@ -301,11 +309,12 @@ Public Class FormDashboards
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
         hidePanel()
         pnlHome.Show()
-
+        displayCount()
     End Sub
     Private Sub lblHomeDashboard_Click(sender As Object, e As EventArgs) Handles lblHomeDashboard.Click
         hidePanel()
         pnlHome.Show()
+        displayCount()
     End Sub
 
     Private Sub btnStudents_Click(sender As Object, e As EventArgs) Handles btnStudents.Click
@@ -1730,6 +1739,7 @@ Public Class FormDashboards
         pnlSummaryReport.Show()
         pnlHome.Hide()
     End Sub
+
 
 
 

@@ -204,7 +204,6 @@ Module Query
                     con.Open()
 
                     result = CInt(cmd.ExecuteScalar())
-                    con.Close()
                 End Using
             End Using
         Catch ex As Exception
@@ -212,6 +211,76 @@ Module Query
         End Try
         Return result.ToString()
     End Function
+
+    Public Function countPendingIntern() As String
+        Dim result As Integer
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("SELECT COUNT(status) 
+                                               FROM internship WHERE status = 'Pending' GROUP BY Status;", con)
+                    con.Open()
+
+                    result = CInt(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return result.ToString()
+    End Function
+
+    Public Function countOngoingIntern() As String
+        Dim result As Integer
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("SELECT COUNT(status) 
+                                               FROM internship WHERE status = 'Ongoing' GROUP BY Status;", con)
+                    con.Open()
+
+                    result = CInt(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return result.ToString()
+    End Function
+
+    Public Function countCompletedIntern() As String
+        Dim result As Integer
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("SELECT COUNT(status) 
+                                               FROM internship WHERE status = 'Completed' GROUP BY Status;", con)
+                    con.Open()
+
+                    result = CInt(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return result.ToString()
+    End Function
+
+    Public Function countIntern() As String
+        Dim result As Integer
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("SELECT COUNT(*) 
+                                               FROM internship;", con)
+                    con.Open()
+
+                    result = CInt(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return result.ToString()
+    End Function
+
+
 
     Public Function searchInterTable(searchItem As String) As DataTable
         Dim dataTable As New DataTable()
