@@ -252,7 +252,7 @@ Public Class FormDashboards
 
         If result = DialogResult.Yes Then
             ' Show login form
-            Form1.Show()
+            FormLogin.Show()
             Me.Hide()
         End If
     End Sub
@@ -295,6 +295,10 @@ Public Class FormDashboards
         hidePanel()
         pnlHome.Show()
 
+    End Sub
+    Private Sub lblHomeDashboard_Click(sender As Object, e As EventArgs) Handles lblHomeDashboard.Click
+        hidePanel()
+        pnlHome.Show()
     End Sub
 
     Private Sub btnStudents_Click(sender As Object, e As EventArgs) Handles btnStudents.Click

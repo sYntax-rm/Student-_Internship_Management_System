@@ -132,7 +132,7 @@
 
     Private Sub lnklblSignUp_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnklblSignUp.LinkClicked
         Me.Hide()
-        Form2.Show()
+        FormSignup.Show()
     End Sub
 
     Private Sub pctBox7_Click(sender As Object, e As EventArgs) Handles pctBoxExit.Click
@@ -163,7 +163,7 @@
         MessageBox.Show("Successfully Log in, Welcome!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
         txtEmailLogIn.Clear()
         txtPasswordLogIn.Clear()
-        Form3.Show()
+        FormDashboards.Show()
         Me.Hide()
 
     End Sub

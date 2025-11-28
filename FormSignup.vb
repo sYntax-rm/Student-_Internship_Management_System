@@ -71,7 +71,7 @@ Public Class FormSignup
     End Function
     Private Sub lnklblLogIn_LinkClicked_1(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnklblLogIn.LinkClicked
         Me.Hide()
-        Form1.Show()
+        FormLogin.Show()
     End Sub
 
     Private Sub pctBoxExit_Click(sender As Object, e As EventArgs) Handles pctBoxExit.Click
