@@ -424,7 +424,6 @@ Partial Class FormDashboards
         lblOverallSummary20 = New Label()
         Label142 = New Label()
         Label145 = New Label()
-        vsbSummaryReport20 = New VScrollBar()
         btnSearch20 = New RoundedButton()
         txtSearchID20 = New TextBox()
         Label153 = New Label()
@@ -5594,7 +5593,6 @@ Partial Class FormDashboards
         pnlSummaryReport.Controls.Add(pnlOverallSummary20)
         pnlSummaryReport.Controls.Add(Label142)
         pnlSummaryReport.Controls.Add(Label145)
-        pnlSummaryReport.Controls.Add(vsbSummaryReport20)
         pnlSummaryReport.Controls.Add(btnSearch20)
         pnlSummaryReport.Controls.Add(txtSearchID20)
         pnlSummaryReport.Controls.Add(Label153)
@@ -5684,13 +5682,6 @@ Partial Class FormDashboards
         Label145.TabIndex = 234
         Label145.Text = "OVERALL SUMMARY"
         Label145.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' vsbSummaryReport20
-        ' 
-        vsbSummaryReport20.Location = New Point(1504, -1)
-        vsbSummaryReport20.Name = "vsbSummaryReport20"
-        vsbSummaryReport20.Size = New Size(23, 902)
-        vsbSummaryReport20.TabIndex = 214
         ' 
         ' btnSearch20
         ' 
@@ -6482,6 +6473,7 @@ Partial Class FormDashboards
         Controls.Add(Panel1)
         Controls.Add(pnlHeader)
         FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "FormDashboards"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Student Internship Management System Dashboard - PLP "
@@ -6960,7 +6952,6 @@ Partial Class FormDashboards
     Friend WithEvents txtFacultyID19 As TextBox
     Friend WithEvents txtVisitID19 As TextBox
     Friend WithEvents pnlSummaryReport As Panel
-    Friend WithEvents vsbSummaryReport20 As VScrollBar
     Friend WithEvents btnSearch20 As RoundedButton
     Friend WithEvents txtSearchID20 As TextBox
     Friend WithEvents Label153 As Label

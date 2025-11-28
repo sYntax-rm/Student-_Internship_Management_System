@@ -100,6 +100,9 @@ Public Class FormDashboards
         'For buttons
         hidePanel()
 
+        ' Set icon sa form at taskbar
+        Me.Icon = New System.Drawing.Icon("C:\Users\acer\source\repos\sYntax-rm\Student-_Internship_Management_System\Resources\internship_icon.ico")
+        Me.ShowIcon = True
 
 
     End Sub
