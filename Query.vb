@@ -114,11 +114,9 @@ Module Query
         Try
             Using con As MySqlConnection = GetConnection()
                 con.Open()
-
-                ' Start transaction
                 Using trans As MySqlTransaction = con.BeginTransaction()
 
-                    ' 1️⃣ Insert student
+                    ' Insert student
                     Using studentCmd As New MySqlCommand("
                     INSERT INTO student 
                         (student_id, first_name, last_name, gender, section_name, contact_no, email, department_id, course_id) 
@@ -138,10 +136,10 @@ Module Query
                         studentCmd.ExecuteNonQuery()
                     End Using
 
-                    ' 2️⃣ Insert internship for the same student (default status = "Pending")
+                    ' Insert internship for the same student (default status = "Pending")
                     Using internCmd As New MySqlCommand("
                     INSERT INTO internship 
-                        (intern_id, student_id, status) 
+                        (internship_id, student_id, status) 
                     VALUES 
                         (@internID, @studentID, 'Pending')", con, trans)
 
