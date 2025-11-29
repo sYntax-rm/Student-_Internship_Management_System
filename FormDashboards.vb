@@ -928,9 +928,7 @@ Public Class FormDashboards
 
     ' End Sub
 
-    Private Sub txtSearchID3_TextChanged(sender As Object, e As EventArgs) Handles txtSearchID3.TextChanged
 
-    End Sub
 
     Private Sub btnSearch3_Click(sender As Object, e As EventArgs) Handles btnSearch3.Click
         Dim dT As DataTable = GetStudentInfo(txtSearchID3.Text)
@@ -992,6 +990,7 @@ Public Class FormDashboards
 
     End Sub
 
+    
     Private Sub txtContactNumber3_TextChanged(sender As Object, e As EventArgs) Handles txtContactNumber3.TextChanged
 
     End Sub
