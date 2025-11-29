@@ -1788,6 +1788,50 @@ Public Class FormDashboards
         pnlHome.Hide()
     End Sub
 
+    Private Sub picImport1_Click(sender As Object, e As EventArgs) Handles picImport1.Click
+        Dim ofd As New OpenFileDialog
+        Dim csvAdded As Boolean
+        ofd.Filter = "CSV Files (*.csv)|*.csv"
+
+        If ofd.ShowDialog = DialogResult.OK Then
+            Dim dt = LoadCSV(ofd.FileName)
+            csvAdded = addStudentsFromCsv(dt)
+        End If
+
+        If Not csvAdded Then
+            MessageBox.Show("Importing Failed, Check The Format Properly", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
+        MessageBox.Show("Import Success", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        loadStudentRecord()
+        lblTotalRecords1.Text = countStudentRecord()
+
+    End Sub
+
+    Private Sub picShow1_Click(sender As Object, e As EventArgs) Handles picShow1.Click
+        Dim dv = CType(dgvStudentFiles.DataSource, DataView)
+        dv.RowFilter = ""
+    End Sub
+
+    Private Sub picHide1_Click(sender As Object, e As EventArgs) Handles picHide1.Click
+        If dgvStudentFiles.SelectedRows.Count = 0 Then
+            MessageBox.Show(
+            "Please Select Row to Hide", "DGV", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+            Exit Sub
+        End If
+
+        Dim dv As DataView = CType(dgvStudentFiles.DataSource, DataView)
+        Dim dt As DataTable = dv.Table
+
+        For Each row As DataGridViewRow In dgvStudentFiles.SelectedRows
+            Dim dr As DataRow = CType(row.DataBoundItem, DataRowView).Row
+            dr("Hidden") = True
+        Next
+
+        dv.RowFilter = "Hidden = False"
+    End Sub
+
 
 
 

@@ -31,6 +31,8 @@ Partial Class FormDashboards
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
         btnHome = New RoundedButton()
         btnStudents = New RoundedButton()
         btnInternships = New RoundedButton()
@@ -143,6 +145,9 @@ Partial Class FormDashboards
         cmbGender3 = New ComboBox()
         cmbSection3 = New ComboBox()
         pnlStudentInformation = New Panel()
+        picHide1 = New PictureBox()
+        picShow1 = New PictureBox()
+        picImport1 = New PictureBox()
         Label17 = New Label()
         btnShow1 = New RoundedButton()
         pnlInternshipInformation = New Panel()
@@ -511,6 +516,9 @@ Partial Class FormDashboards
         pnlAddNewStudentRecord.SuspendLayout()
         pnlEditStudentRecord.SuspendLayout()
         pnlStudentInformation.SuspendLayout()
+        CType(picHide1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picShow1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picImport1, ComponentModel.ISupportInitialize).BeginInit()
         pnlInternshipInformation.SuspendLayout()
         pnlUpdateInternshipRecord.SuspendLayout()
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).BeginInit()
@@ -1262,7 +1270,7 @@ Partial Class FormDashboards
         dgvStudentSearch.ReadOnly = True
         dgvStudentSearch.RowHeadersVisible = False
         dgvStudentSearch.RowHeadersWidth = 50
-        dgvStudentSearch.Size = New Size(1353, 142)
+        dgvStudentSearch.Size = New Size(1385, 142)
         dgvStudentSearch.TabIndex = 125
         ' 
         ' Label8
@@ -1305,9 +1313,22 @@ Partial Class FormDashboards
         dgvStudentFiles.Location = New Point(87, 423)
         dgvStudentFiles.Name = "dgvStudentFiles"
         dgvStudentFiles.ReadOnly = True
-        dgvStudentFiles.RowHeadersVisible = False
-        dgvStudentFiles.RowHeadersWidth = 50
-        dgvStudentFiles.Size = New Size(1356, 378)
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = Color.MintCream
+        DataGridViewCellStyle6.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle6.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle6.SelectionBackColor = Color.LightYellow
+        DataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
+        dgvStudentFiles.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        dgvStudentFiles.RowHeadersWidth = 20
+        DataGridViewCellStyle7.BackColor = Color.MintCream
+        DataGridViewCellStyle7.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle7.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle7.SelectionBackColor = Color.LightYellow
+        DataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        dgvStudentFiles.RowsDefaultCellStyle = DataGridViewCellStyle7
+        dgvStudentFiles.Size = New Size(1390, 378)
         dgvStudentFiles.TabIndex = 128
         ' 
         ' Label10
@@ -1317,7 +1338,7 @@ Partial Class FormDashboards
         Label10.FlatStyle = FlatStyle.System
         Label10.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        Label10.Location = New Point(49, 857)
+        Label10.Location = New Point(49, 860)
         Label10.Name = "Label10"
         Label10.Size = New Size(199, 38)
         Label10.TabIndex = 124
@@ -1329,7 +1350,7 @@ Partial Class FormDashboards
         lblTotalRecords1.BackColor = Color.Transparent
         lblTotalRecords1.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblTotalRecords1.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        lblTotalRecords1.Location = New Point(237, 854)
+        lblTotalRecords1.Location = New Point(237, 857)
         lblTotalRecords1.Name = "lblTotalRecords1"
         lblTotalRecords1.Size = New Size(48, 38)
         lblTotalRecords1.TabIndex = 129
@@ -1353,17 +1374,16 @@ Partial Class FormDashboards
         ' 
         ' btnHide1
         ' 
-        btnHide1.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnHide1.BackColor = Color.White
         btnHide1.FlatAppearance.BorderSize = 0
         btnHide1.FlatStyle = FlatStyle.Flat
         btnHide1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnHide1.ForeColor = Color.White
-        btnHide1.Location = New Point(1364, 854)
+        btnHide1.Location = New Point(1400, 349)
         btnHide1.MinimumSize = New Size(50, 25)
         btnHide1.Name = "btnHide1"
-        btnHide1.Size = New Size(132, 51)
+        btnHide1.Size = New Size(80, 65)
         btnHide1.TabIndex = 214
-        btnHide1.Text = "HIDE"
         btnHide1.UseVisualStyleBackColor = False
         ' 
         ' btnEdit1
@@ -1371,14 +1391,14 @@ Partial Class FormDashboards
         btnEdit1.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnEdit1.FlatAppearance.BorderSize = 0
         btnEdit1.FlatStyle = FlatStyle.Flat
-        btnEdit1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
+        btnEdit1.Font = New Font("Segoe UI", 15.0F, FontStyle.Bold)
         btnEdit1.ForeColor = Color.White
-        btnEdit1.Location = New Point(1088, 853)
+        btnEdit1.Location = New Point(1347, 852)
         btnEdit1.MinimumSize = New Size(50, 25)
         btnEdit1.Name = "btnEdit1"
         btnEdit1.Size = New Size(132, 51)
         btnEdit1.TabIndex = 215
-        btnEdit1.Text = "EDIT"
+        btnEdit1.Text = "Edit"
         btnEdit1.UseVisualStyleBackColor = False
         ' 
         ' btnAdd1
@@ -1386,29 +1406,29 @@ Partial Class FormDashboards
         btnAdd1.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         btnAdd1.FlatAppearance.BorderSize = 0
         btnAdd1.FlatStyle = FlatStyle.Flat
-        btnAdd1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
+        btnAdd1.Font = New Font("Segoe UI", 15.0F, FontStyle.Bold)
         btnAdd1.ForeColor = Color.White
-        btnAdd1.Location = New Point(950, 853)
+        btnAdd1.Location = New Point(1209, 852)
         btnAdd1.MinimumSize = New Size(50, 25)
         btnAdd1.Name = "btnAdd1"
         btnAdd1.Size = New Size(132, 51)
         btnAdd1.TabIndex = 216
-        btnAdd1.Text = "ADD"
+        btnAdd1.Text = "Add"
         btnAdd1.UseVisualStyleBackColor = False
         ' 
         ' btnImport1
         ' 
-        btnImport1.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnImport1.BackColor = Color.White
         btnImport1.FlatAppearance.BorderSize = 0
         btnImport1.FlatStyle = FlatStyle.Flat
         btnImport1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnImport1.ForeColor = Color.White
-        btnImport1.Location = New Point(811, 854)
+        btnImport1.Image = CType(resources.GetObject("btnImport1.Image"), Image)
+        btnImport1.Location = New Point(1112, 829)
         btnImport1.MinimumSize = New Size(50, 25)
         btnImport1.Name = "btnImport1"
-        btnImport1.Size = New Size(132, 49)
+        btnImport1.Size = New Size(92, 92)
         btnImport1.TabIndex = 217
-        btnImport1.Text = "IMPORT"
         btnImport1.UseVisualStyleBackColor = False
         ' 
         ' pnlAddNewStudentRecord
@@ -1437,7 +1457,7 @@ Partial Class FormDashboards
         pnlAddNewStudentRecord.Controls.Add(txtFName2)
         pnlAddNewStudentRecord.Controls.Add(txtStudentID2)
         pnlAddNewStudentRecord.CornerRadius = 10
-        pnlAddNewStudentRecord.Location = New Point(761, 40)
+        pnlAddNewStudentRecord.Location = New Point(200, 89)
         pnlAddNewStudentRecord.Name = "pnlAddNewStudentRecord"
         pnlAddNewStudentRecord.Size = New Size(323, 750)
         pnlAddNewStudentRecord.TabIndex = 218
@@ -1732,7 +1752,7 @@ Partial Class FormDashboards
         pnlEditStudentRecord.Controls.Add(cmbGender3)
         pnlEditStudentRecord.Controls.Add(cmbSection3)
         pnlEditStudentRecord.CornerRadius = 10
-        pnlEditStudentRecord.Location = New Point(1120, 40)
+        pnlEditStudentRecord.Location = New Point(564, 93)
         pnlEditStudentRecord.Name = "pnlEditStudentRecord"
         pnlEditStudentRecord.Size = New Size(332, 750)
         pnlEditStudentRecord.TabIndex = 221
@@ -2044,6 +2064,9 @@ Partial Class FormDashboards
         ' pnlStudentInformation
         ' 
         pnlStudentInformation.BackColor = Color.White
+        pnlStudentInformation.Controls.Add(picHide1)
+        pnlStudentInformation.Controls.Add(picShow1)
+        pnlStudentInformation.Controls.Add(picImport1)
         pnlStudentInformation.Controls.Add(pnlEditStudentRecord)
         pnlStudentInformation.Controls.Add(pnlAddNewStudentRecord)
         pnlStudentInformation.Controls.Add(Label17)
@@ -2066,6 +2089,39 @@ Partial Class FormDashboards
         pnlStudentInformation.Size = New Size(1529, 902)
         pnlStudentInformation.TabIndex = 222
         ' 
+        ' picHide1
+        ' 
+        picHide1.BackColor = Color.White
+        picHide1.Image = CType(resources.GetObject("picHide1.Image"), Image)
+        picHide1.Location = New Point(1405, 357)
+        picHide1.Name = "picHide1"
+        picHide1.Size = New Size(70, 55)
+        picHide1.SizeMode = PictureBoxSizeMode.StretchImage
+        picHide1.TabIndex = 231
+        picHide1.TabStop = False
+        ' 
+        ' picShow1
+        ' 
+        picShow1.BackColor = Color.White
+        picShow1.Image = CType(resources.GetObject("picShow1.Image"), Image)
+        picShow1.Location = New Point(1323, 355)
+        picShow1.Name = "picShow1"
+        picShow1.Size = New Size(70, 55)
+        picShow1.SizeMode = PictureBoxSizeMode.StretchImage
+        picShow1.TabIndex = 230
+        picShow1.TabStop = False
+        ' 
+        ' picImport1
+        ' 
+        picImport1.BackColor = Color.White
+        picImport1.Image = CType(resources.GetObject("picImport1.Image"), Image)
+        picImport1.Location = New Point(1123, 841)
+        picImport1.Name = "picImport1"
+        picImport1.Size = New Size(70, 60)
+        picImport1.SizeMode = PictureBoxSizeMode.StretchImage
+        picImport1.TabIndex = 229
+        picImport1.TabStop = False
+        ' 
         ' Label17
         ' 
         Label17.AutoSize = True
@@ -2079,17 +2135,16 @@ Partial Class FormDashboards
         ' 
         ' btnShow1
         ' 
-        btnShow1.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnShow1.BackColor = Color.White
         btnShow1.FlatAppearance.BorderSize = 0
         btnShow1.FlatStyle = FlatStyle.Flat
         btnShow1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnShow1.ForeColor = Color.White
-        btnShow1.Location = New Point(1226, 854)
+        btnShow1.Location = New Point(1317, 349)
         btnShow1.MinimumSize = New Size(50, 25)
         btnShow1.Name = "btnShow1"
-        btnShow1.Size = New Size(132, 51)
+        btnShow1.Size = New Size(83, 66)
         btnShow1.TabIndex = 223
-        btnShow1.Text = "SHOW ALL"
         btnShow1.UseVisualStyleBackColor = False
         ' 
         ' pnlInternshipInformation
@@ -5955,7 +6010,7 @@ Partial Class FormDashboards
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(753, 530)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(471, 40)
+        ComboBox1.Size = New Size(471, 39)
         ComboBox1.TabIndex = 206
         ' 
         ' Label30
@@ -6070,7 +6125,7 @@ Partial Class FormDashboards
         ComboBox2.FormattingEnabled = True
         ComboBox2.Location = New Point(144, 530)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(471, 40)
+        ComboBox2.Size = New Size(471, 39)
         ComboBox2.TabIndex = 196
         ' 
         ' Label37
@@ -6102,7 +6157,7 @@ Partial Class FormDashboards
         ComboBox3.FormattingEnabled = True
         ComboBox3.Location = New Point(144, 340)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(471, 40)
+        ComboBox3.Size = New Size(471, 39)
         ComboBox3.TabIndex = 193
         ' 
         ' TextBox6
@@ -6175,7 +6230,7 @@ Partial Class FormDashboards
         ComboBox4.FormattingEnabled = True
         ComboBox4.Location = New Point(753, 530)
         ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(471, 40)
+        ComboBox4.Size = New Size(471, 39)
         ComboBox4.TabIndex = 206
         ' 
         ' Label39
@@ -6313,7 +6368,7 @@ Partial Class FormDashboards
         ComboBox6.FormattingEnabled = True
         ComboBox6.Location = New Point(144, 340)
         ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(471, 40)
+        ComboBox6.Size = New Size(471, 39)
         ComboBox6.TabIndex = 193
         ' 
         ' TextBox11
@@ -6558,6 +6613,9 @@ Partial Class FormDashboards
         pnlEditStudentRecord.PerformLayout()
         pnlStudentInformation.ResumeLayout(False)
         pnlStudentInformation.PerformLayout()
+        CType(picHide1, ComponentModel.ISupportInitialize).EndInit()
+        CType(picShow1, ComponentModel.ISupportInitialize).EndInit()
+        CType(picImport1, ComponentModel.ISupportInitialize).EndInit()
         pnlInternshipInformation.ResumeLayout(False)
         pnlInternshipInformation.PerformLayout()
         pnlUpdateInternshipRecord.ResumeLayout(False)
@@ -7090,5 +7148,8 @@ Partial Class FormDashboards
     Friend WithEvents lblHomePending As Label
     Friend WithEvents lblHomeTitleAs As Label
     Friend WithEvents lblHomeDashboard As Label
+    Friend WithEvents picImport1 As PictureBox
+    Friend WithEvents picShow1 As PictureBox
+    Friend WithEvents picHide1 As PictureBox
 
 End Class
