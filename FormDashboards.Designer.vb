@@ -1457,9 +1457,9 @@ Partial Class FormDashboards
         pnlAddNewStudentRecord.Controls.Add(txtFName2)
         pnlAddNewStudentRecord.Controls.Add(txtStudentID2)
         pnlAddNewStudentRecord.CornerRadius = 10
-        pnlAddNewStudentRecord.Location = New Point(200, 89)
+        pnlAddNewStudentRecord.Location = New Point(595, 93)
         pnlAddNewStudentRecord.Name = "pnlAddNewStudentRecord"
-        pnlAddNewStudentRecord.Size = New Size(323, 750)
+        pnlAddNewStudentRecord.Size = New Size(356, 750)
         pnlAddNewStudentRecord.TabIndex = 218
         ' 
         ' pnlDesign1
@@ -1752,9 +1752,9 @@ Partial Class FormDashboards
         pnlEditStudentRecord.Controls.Add(cmbGender3)
         pnlEditStudentRecord.Controls.Add(cmbSection3)
         pnlEditStudentRecord.CornerRadius = 10
-        pnlEditStudentRecord.Location = New Point(564, 93)
+        pnlEditStudentRecord.Location = New Point(981, 100)
         pnlEditStudentRecord.Name = "pnlEditStudentRecord"
-        pnlEditStudentRecord.Size = New Size(332, 750)
+        pnlEditStudentRecord.Size = New Size(321, 750)
         pnlEditStudentRecord.TabIndex = 221
         ' 
         ' pnlDesign2
@@ -6569,8 +6569,8 @@ Partial Class FormDashboards
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1902, 1033)
-        Controls.Add(pnlStudentInformation)
         Controls.Add(pnlHome)
+        Controls.Add(pnlStudentInformation)
         Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlCompanyContactInformation)
         Controls.Add(pnlCompanyInformation)

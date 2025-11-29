@@ -98,6 +98,25 @@ Public Class FormSignup
         pnlTermsAndCondition.Hide()
     End Sub
 
+    'BUTTON HOVER
+    'BUTTON BACK  HOVER STUDENTS
+    Private Sub btnBack_MouseEnter(sender As Object, e As EventArgs) Handles btnBack.MouseEnter
+        btnBack.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnBack_MouseLeave(sender As Object, e As EventArgs) Handles btnBack.MouseLeave
+        btnBack.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnBack_MouseDown(sender As Object, e As MouseEventArgs) Handles btnBack.MouseDown
+        btnBack.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnBack_MouseUp(sender As Object, e As MouseEventArgs) Handles btnBack.MouseUp
+        btnBack.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
     Private Sub btnSIgnUp_Click(sender As Object, e As EventArgs) Handles btnSIgnUp.Click
         If Not validatedSignInInput() Then
             Exit Sub
@@ -143,6 +162,24 @@ Public Class FormSignup
 
     End Sub
 
+    'BUTTON HOVER
+    'BUTTON SIGN UP HOVER STUDENTS
+    Private Sub btnSIgnUp_MouseEnter(sender As Object, e As EventArgs) Handles btnSIgnUp.MouseEnter
+        btnSIgnUp.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnSIgnUp_MouseLeave(sender As Object, e As EventArgs) Handles btnSIgnUp.MouseLeave
+        btnSIgnUp.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnSIgnUp_MouseDown(sender As Object, e As MouseEventArgs) Handles btnSIgnUp.MouseDown
+        btnSIgnUp.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnSIgnUp_MouseUp(sender As Object, e As MouseEventArgs) Handles btnSIgnUp.MouseUp
+        btnSIgnUp.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
     Private Sub pnlTermsAndCondition_Paint(sender As Object, e As PaintEventArgs) Handles pnlTermsAndCondition.Paint
         roundCorners(Me)
     End Sub

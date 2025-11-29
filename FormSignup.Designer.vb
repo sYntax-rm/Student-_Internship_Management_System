@@ -60,6 +60,7 @@ Partial Class FormSignup
         ' 
         ' lnklblLogIn
         ' 
+        lnklblLogIn.ActiveLinkColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
         lnklblLogIn.AutoSize = True
         lnklblLogIn.BackColor = Color.Transparent
         lnklblLogIn.CausesValidation = False
@@ -221,6 +222,7 @@ Partial Class FormSignup
         ' 
         ' lblTermsAndCondition
         ' 
+        lblTermsAndCondition.ActiveLinkColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
         lblTermsAndCondition.AutoSize = True
         lblTermsAndCondition.BackColor = Color.Transparent
         lblTermsAndCondition.CausesValidation = False

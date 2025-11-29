@@ -315,6 +315,26 @@ Public Class FormDashboards
         End If
     End Sub
 
+    'BUTTON HOVER
+    'BUTTON LOGOUT  HOVER STUDENTS
+    Private Sub btnLogout_MouseEnter(sender As Object, e As EventArgs) Handles btnLogout.MouseEnter
+        btnLogout.BackColor = Color.FromArgb(97, 144, 118)
+
+    End Sub
+
+    Private Sub btnLogout_MouseLeave(sender As Object, e As EventArgs) Handles btnLogout.MouseLeave
+        btnLogout.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
+    Private Sub btnLogout_MouseDown(sender As Object, e As MouseEventArgs) Handles btnLogout.MouseDown
+        btnLogout.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnLogout_MouseUp(sender As Object, e As MouseEventArgs) Handles btnLogout.MouseUp
+        btnLogout.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+
     Private Sub lblName_Click(sender As Object, e As EventArgs) Handles lblHomeFName.Click
 
     End Sub
@@ -617,6 +637,24 @@ Public Class FormDashboards
         dgvStudentSearchsStyles(dgvStudentSearch)
 
     End Sub
+    'BUTTON HOVER
+    'BUTTON SEARCH 1 HOVER STUDENTS
+    Private Sub btnSearch1_MouseEnter(sender As Object, e As EventArgs) Handles btnSearch1.MouseEnter
+        btnSearch1.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnSearch1_MouseLeave(sender As Object, e As EventArgs) Handles btnSearch1.MouseLeave
+        btnSearch1.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnSearch1_MouseDown(sender As Object, e As MouseEventArgs) Handles btnSearch1.MouseDown
+        btnSearch1.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnSearch1_MouseUp(sender As Object, e As MouseEventArgs) Handles btnSearch1.MouseUp
+        btnSearch1.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
 
     Private Sub btnImport1_Click(sender As Object, e As EventArgs) Handles btnImport1.Click
         Dim ofd As New OpenFileDialog
@@ -649,12 +687,50 @@ Public Class FormDashboards
 
     End Sub
 
+    'BUTTON HOVER
+    'BUTTON ADD 1 HOVER STUDENTS
+    Private Sub btnAdd1_MouseEnter(sender As Object, e As EventArgs) Handles btnAdd1.MouseEnter
+        btnAdd1.BackColor = Color.FromArgb(97, 144, 118)
+
+    End Sub
+
+    Private Sub btnAdd1_MouseLeave(sender As Object, e As EventArgs) Handles btnAdd1.MouseLeave
+        btnAdd1.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
+    Private Sub btnAdd1_MouseDown(sender As Object, e As MouseEventArgs) Handles btnAdd1.MouseDown
+        btnAdd1.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnAdd1_MouseUp(sender As Object, e As MouseEventArgs) Handles btnAdd1.MouseUp
+        btnAdd1.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
     Private Sub btnEdit1_Click(sender As Object, e As EventArgs) Handles btnEdit1.Click
         pnlEditStudentRecord.Show()
         loadCourseComboBx(cmbCourse3)
         loadDepartmentComboBx(cmbDepartment3)
         loadSectionComboBx(cmbSection3)
         loadGenderComboBx(cmbGender3)
+    End Sub
+
+    'BUTTON HOVER
+    'BUTTON EDIT 1 HOVER STUDENTS
+    Private Sub btnEdit1_MouseEnter(sender As Object, e As EventArgs) Handles btnEdit1.MouseEnter
+        btnEdit1.BackColor = Color.FromArgb(97, 144, 118)
+
+    End Sub
+
+    Private Sub btnEdit1_MouseLeave(sender As Object, e As EventArgs) Handles btnEdit1.MouseLeave
+        btnEdit1.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
+    Private Sub btnEdit1_MouseDown(sender As Object, e As MouseEventArgs) Handles btnEdit1.MouseDown
+        btnEdit1.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnEdit1_MouseUp(sender As Object, e As MouseEventArgs) Handles btnEdit1.MouseUp
+        btnEdit1.BackColor = Color.FromArgb(97, 144, 118)
     End Sub
 
     Private Sub btnHide1_Click(sender As Object, e As EventArgs) Handles btnHide1.Click
@@ -696,6 +772,25 @@ Public Class FormDashboards
         End If
     End Sub
 
+    'BUTTON HOVER
+    'BUTTON CANCEL 2 HOVER STUDENTS
+    Private Sub btnCancel2_MouseEnter(sender As Object, e As EventArgs) Handles btnCancel2.MouseEnter
+        btnCancel2.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnCancel2_MouseLeave(sender As Object, e As EventArgs) Handles btnCancel2.MouseLeave
+        btnCancel2.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnCancel2_MouseDown(sender As Object, e As MouseEventArgs) Handles btnCancel2.MouseDown
+        btnCancel2.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnCancel2_MouseUp(sender As Object, e As MouseEventArgs) Handles btnCancel2.MouseUp
+        btnCancel2.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
     Private Sub btnAdd2_Click(sender As Object, e As EventArgs) Handles btnAdd2.Click
         If Not validStudentInputBx(txtEmail2, txtFName2, txtLName2, txtContactNumber2) Then Exit Sub
 
@@ -721,6 +816,26 @@ Public Class FormDashboards
         loadStudentRecord()
 
     End Sub
+
+    'BUTTON HOVER
+    'BUTTON ADD 2 HOVER STUDENTS
+    Private Sub btnAdd2_MouseEnter(sender As Object, e As EventArgs) Handles btnAdd2.MouseEnter
+        btnAdd2.BackColor = Color.FromArgb(97, 144, 118)
+
+    End Sub
+
+    Private Sub btnAdd2_MouseLeave(sender As Object, e As EventArgs) Handles btnAdd2.MouseLeave
+        btnAdd2.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
+    Private Sub btnAdd2_MouseDown(sender As Object, e As MouseEventArgs) Handles btnAdd2.MouseDown
+        btnAdd2.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnAdd2_MouseUp(sender As Object, e As MouseEventArgs) Handles btnAdd2.MouseUp
+        btnAdd2.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
 
     'Edit STudent Record
 
@@ -754,6 +869,26 @@ Public Class FormDashboards
 
 
 
+    End Sub
+
+
+    'BUTTON HOVER
+    'BUTTON SEARCH 3 HOVER STUDENTS
+    Private Sub btnSearch3_MouseEnter(sender As Object, e As EventArgs) Handles btnSearch3.MouseEnter
+        btnSearch3.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnSearch3_MouseLeave(sender As Object, e As EventArgs) Handles btnSearch3.MouseLeave
+        btnSearch3.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnSearch3_MouseDown(sender As Object, e As MouseEventArgs) Handles btnSearch3.MouseDown
+        btnSearch3.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnSearch3_MouseUp(sender As Object, e As MouseEventArgs) Handles btnSearch3.MouseUp
+        btnSearch3.BackColor = Color.FromArgb(8, 48, 25)
     End Sub
 
     Private Sub txtStudentID3_TextChanged(sender As Object, e As EventArgs)
@@ -797,6 +932,24 @@ Public Class FormDashboards
         End If
     End Sub
 
+    'BUTTON HOVER
+    'BUTTON CANCEL 3 HOVER STUDENTS
+    Private Sub btnCancel3_MouseEnter(sender As Object, e As EventArgs) Handles btnCancel3.MouseEnter
+        btnCancel3.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnCancel3_MouseLeave(sender As Object, e As EventArgs) Handles btnCancel3.MouseLeave
+        btnCancel3.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnCancel3_MouseDown(sender As Object, e As MouseEventArgs) Handles btnCancel3.MouseDown
+        btnCancel3.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnCancel3_MouseUp(sender As Object, e As MouseEventArgs) Handles btnCancel3.MouseUp
+        btnCancel3.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
     Private Sub btnEdit3_Click(sender As Object, e As EventArgs) Handles btnEdit3.Click
         If Not validStudentInputBx(txtEmail3, txtFName3, txtLName3, txtContactNumber3) Then Exit Sub
 
@@ -822,6 +975,26 @@ Public Class FormDashboards
         loadStudentRecord()
 
     End Sub
+
+    'BUTTON HOVER
+    'BUTTON EDIT 3 HOVER STUDENTS
+    Private Sub btnEdit3_MouseEnter(sender As Object, e As EventArgs) Handles btnEdit3.MouseEnter
+        btnEdit3.BackColor = Color.FromArgb(97, 144, 118)
+
+    End Sub
+
+    Private Sub btnEdit3_MouseLeave(sender As Object, e As EventArgs) Handles btnEdit3.MouseLeave
+        btnEdit3.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
+    Private Sub btnEdit3_MouseDown(sender As Object, e As MouseEventArgs) Handles btnEdit3.MouseDown
+        btnEdit3.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnEdit3_MouseUp(sender As Object, e As MouseEventArgs) Handles btnEdit3.MouseUp
+        btnEdit3.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
 
     'Internship Logs
 

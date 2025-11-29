@@ -132,6 +132,25 @@
 
     End Sub
 
+    'BUTTON HOVER
+    'BUTTON CONFIRM 1 HOVER STUDENTS
+    Private Sub btnConfirm_MouseEnter(sender As Object, e As EventArgs) Handles btnConfirm.MouseEnter
+        btnConfirm.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnConfirm_MouseLeave(sender As Object, e As EventArgs) Handles btnConfirm.MouseLeave
+        btnConfirm.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnConfirm_MouseDown(sender As Object, e As MouseEventArgs) Handles btnConfirm.MouseDown
+        btnConfirm.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnConfirm_MouseUp(sender As Object, e As MouseEventArgs) Handles btnConfirm.MouseUp
+        btnConfirm.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
     Private Sub keyEnterbtnConfirm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Enter Then
             btnConfirm.PerformClick()
@@ -179,6 +198,25 @@
         FormDashboards.Show()
         Me.Hide()
 
+    End Sub
+
+    'BUTTON HOVER
+    'BUTTON LOGIN HOVER STUDENTS
+    Private Sub btnLogin_MouseEnter(sender As Object, e As EventArgs) Handles btnLogin.MouseEnter
+        btnLogin.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnLogin_MouseLeave(sender As Object, e As EventArgs) Handles btnLogin.MouseLeave
+        btnLogin.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnLogin_MouseDown(sender As Object, e As MouseEventArgs) Handles btnLogin.MouseDown
+        btnLogin.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnLogin_MouseUp(sender As Object, e As MouseEventArgs) Handles btnLogin.MouseUp
+        btnLogin.BackColor = Color.FromArgb(8, 48, 25)
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click

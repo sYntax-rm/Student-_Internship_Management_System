@@ -74,7 +74,7 @@ Partial Class FormLogin
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label1.Location = New Point(649, 287)
+        Label1.Location = New Point(649, 284)
         Label1.Name = "Label1"
         Label1.Size = New Size(203, 38)
         Label1.TabIndex = 35
@@ -85,7 +85,7 @@ Partial Class FormLogin
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.DimGray
-        Label5.Location = New Point(576, 255)
+        Label5.Location = New Point(576, 252)
         Label5.Name = "Label5"
         Label5.Size = New Size(360, 23)
         Label5.TabIndex = 34
@@ -94,9 +94,9 @@ Partial Class FormLogin
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Century", 16F, FontStyle.Bold)
+        Label6.Font = New Font("Century", 16.0F, FontStyle.Bold)
         Label6.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label6.Location = New Point(511, 222)
+        Label6.Location = New Point(511, 219)
         Label6.Name = "Label6"
         Label6.Size = New Size(481, 33)
         Label6.TabIndex = 33
@@ -128,11 +128,12 @@ Partial Class FormLogin
         ' 
         ' lnklblChangePass
         ' 
+        lnklblChangePass.ActiveLinkColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
         lnklblChangePass.AutoSize = True
         lnklblChangePass.Cursor = Cursors.Help
-        lnklblChangePass.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lnklblChangePass.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lnklblChangePass.LinkColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        lnklblChangePass.Location = New Point(539, 473)
+        lnklblChangePass.Location = New Point(539, 470)
         lnklblChangePass.Name = "lnklblChangePass"
         lnklblChangePass.Size = New Size(139, 20)
         lnklblChangePass.TabIndex = 30
@@ -141,12 +142,13 @@ Partial Class FormLogin
         ' 
         ' lnklblSignUp
         ' 
+        lnklblSignUp.ActiveLinkColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
         lnklblSignUp.AutoSize = True
         lnklblSignUp.BackColor = Color.Transparent
         lnklblSignUp.CausesValidation = False
         lnklblSignUp.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lnklblSignUp.LinkColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        lnklblSignUp.Location = New Point(808, 578)
+        lnklblSignUp.Location = New Point(808, 575)
         lnklblSignUp.Name = "lnklblSignUp"
         lnklblSignUp.Size = New Size(72, 23)
         lnklblSignUp.TabIndex = 44
@@ -157,9 +159,9 @@ Partial Class FormLogin
         ' 
         Label4.AutoSize = True
         Label4.CausesValidation = False
-        Label4.Font = New Font("Segoe UI", 10F)
+        Label4.Font = New Font("Segoe UI", 10.0F)
         Label4.ForeColor = Color.Black
-        Label4.Location = New Point(623, 579)
+        Label4.Location = New Point(623, 576)
         Label4.Name = "Label4"
         Label4.Size = New Size(191, 23)
         Label4.TabIndex = 43
@@ -180,7 +182,7 @@ Partial Class FormLogin
         Label9.AutoSize = True
         Label9.BackColor = Color.Transparent
         Label9.CausesValidation = False
-        Label9.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.White
         Label9.Location = New Point(77, 318)
         Label9.Name = "Label9"
@@ -208,7 +210,7 @@ Partial Class FormLogin
         btnLogin.FlatStyle = FlatStyle.Flat
         btnLogin.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnLogin.ForeColor = Color.White
-        btnLogin.Location = New Point(668, 516)
+        btnLogin.Location = New Point(668, 513)
         btnLogin.MinimumSize = New Size(50, 25)
         btnLogin.Name = "btnLogin"
         btnLogin.Size = New Size(169, 55)
@@ -221,7 +223,7 @@ Partial Class FormLogin
         PictureBox1.BackColor = Color.Transparent
         PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(671, 69)
+        PictureBox1.Location = New Point(671, 66)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(154, 147)
         PictureBox1.TabIndex = 82
@@ -232,7 +234,7 @@ Partial Class FormLogin
         lblPasswordLogIn.AutoSize = True
         lblPasswordLogIn.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         lblPasswordLogIn.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        lblPasswordLogIn.Location = New Point(542, 406)
+        lblPasswordLogIn.Location = New Point(542, 400)
         lblPasswordLogIn.Name = "lblPasswordLogIn"
         lblPasswordLogIn.Size = New Size(97, 25)
         lblPasswordLogIn.TabIndex = 88
@@ -243,7 +245,7 @@ Partial Class FormLogin
         Label12.AutoSize = True
         Label12.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label12.Location = New Point(542, 320)
+        Label12.Location = New Point(542, 317)
         Label12.Name = "Label12"
         Label12.Size = New Size(66, 25)
         Label12.TabIndex = 87
@@ -254,7 +256,7 @@ Partial Class FormLogin
         txtPasswordLogIn.Cursor = Cursors.IBeam
         txtPasswordLogIn.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         txtPasswordLogIn.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtPasswordLogIn.Location = New Point(539, 432)
+        txtPasswordLogIn.Location = New Point(539, 429)
         txtPasswordLogIn.MaxLength = 30
         txtPasswordLogIn.Name = "txtPasswordLogIn"
         txtPasswordLogIn.PasswordChar = "*"c
@@ -267,7 +269,7 @@ Partial Class FormLogin
         txtEmailLogIn.Cursor = Cursors.IBeam
         txtEmailLogIn.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         txtEmailLogIn.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtEmailLogIn.Location = New Point(542, 346)
+        txtEmailLogIn.Location = New Point(542, 343)
         txtEmailLogIn.MaxLength = 60
         txtEmailLogIn.Multiline = True
         txtEmailLogIn.Name = "txtEmailLogIn"
@@ -279,7 +281,7 @@ Partial Class FormLogin
         Label10.AutoSize = True
         Label10.BackColor = Color.Transparent
         Label10.CausesValidation = False
-        Label10.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.White
         Label10.Location = New Point(38, 325)
         Label10.Name = "Label10"
@@ -315,7 +317,7 @@ Partial Class FormLogin
         pctBox2.BackColor = Color.Transparent
         pctBox2.BackgroundImage = CType(resources.GetObject("pctBox2.BackgroundImage"), Image)
         pctBox2.BackgroundImageLayout = ImageLayout.Stretch
-        pctBox2.Location = New Point(673, 62)
+        pctBox2.Location = New Point(677, 62)
         pctBox2.Name = "pctBox2"
         pctBox2.Size = New Size(154, 147)
         pctBox2.TabIndex = 57
@@ -326,7 +328,7 @@ Partial Class FormLogin
         txtOldPassword.Cursor = Cursors.IBeam
         txtOldPassword.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtOldPassword.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtOldPassword.Location = New Point(536, 390)
+        txtOldPassword.Location = New Point(538, 390)
         txtOldPassword.MaxLength = 30
         txtOldPassword.Name = "txtOldPassword"
         txtOldPassword.PasswordChar = "*"c
@@ -339,7 +341,7 @@ Partial Class FormLogin
         txtNewPassword.Cursor = Cursors.IBeam
         txtNewPassword.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold)
         txtNewPassword.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtNewPassword.Location = New Point(536, 461)
+        txtNewPassword.Location = New Point(538, 461)
         txtNewPassword.MaxLength = 30
         txtNewPassword.Name = "txtNewPassword"
         txtNewPassword.PasswordChar = "*"c
@@ -352,7 +354,7 @@ Partial Class FormLogin
         txtResetEmail.Cursor = Cursors.IBeam
         txtResetEmail.Font = New Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtResetEmail.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtResetEmail.Location = New Point(536, 316)
+        txtResetEmail.Location = New Point(538, 316)
         txtResetEmail.MaxLength = 60
         txtResetEmail.Multiline = True
         txtResetEmail.Name = "txtResetEmail"
@@ -362,9 +364,9 @@ Partial Class FormLogin
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Century", 16F, FontStyle.Bold)
+        Label2.Font = New Font("Century", 16.0F, FontStyle.Bold)
         Label2.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label2.Location = New Point(619, 214)
+        Label2.Location = New Point(621, 214)
         Label2.Name = "Label2"
         Label2.Size = New Size(271, 33)
         Label2.TabIndex = 65
@@ -377,7 +379,7 @@ Partial Class FormLogin
         Label7.CausesValidation = False
         Label7.Font = New Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.DimGray
-        Label7.Location = New Point(564, 247)
+        Label7.Location = New Point(566, 247)
         Label7.Name = "Label7"
         Label7.Size = New Size(380, 23)
         Label7.TabIndex = 66
@@ -414,7 +416,7 @@ Partial Class FormLogin
         btnConfirm.FlatStyle = FlatStyle.Flat
         btnConfirm.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnConfirm.ForeColor = Color.White
-        btnConfirm.Location = New Point(671, 521)
+        btnConfirm.Location = New Point(673, 521)
         btnConfirm.MinimumSize = New Size(50, 25)
         btnConfirm.Name = "btnConfirm"
         btnConfirm.Size = New Size(169, 55)
@@ -429,7 +431,7 @@ Partial Class FormLogin
         Label8.CausesValidation = False
         Label8.Font = New Font("Segoe UI", 10.2F)
         Label8.ForeColor = Color.Black
-        Label8.Location = New Point(693, 588)
+        Label8.Location = New Point(695, 588)
         Label8.Name = "Label8"
         Label8.Size = New Size(66, 23)
         Label8.TabIndex = 73
@@ -437,12 +439,13 @@ Partial Class FormLogin
         ' 
         ' lnklblLogIn
         ' 
+        lnklblLogIn.ActiveLinkColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
         lnklblLogIn.AutoSize = True
         lnklblLogIn.BackColor = Color.Transparent
         lnklblLogIn.CausesValidation = False
         lnklblLogIn.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
         lnklblLogIn.LinkColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        lnklblLogIn.Location = New Point(756, 587)
+        lnklblLogIn.Location = New Point(758, 587)
         lnklblLogIn.Name = "lnklblLogIn"
         lnklblLogIn.Size = New Size(57, 23)
         lnklblLogIn.TabIndex = 74
@@ -465,7 +468,7 @@ Partial Class FormLogin
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label13.Location = New Point(539, 362)
+        Label13.Location = New Point(541, 362)
         Label13.Name = "Label13"
         Label13.Size = New Size(133, 25)
         Label13.TabIndex = 82
@@ -476,7 +479,7 @@ Partial Class FormLogin
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label14.Location = New Point(538, 435)
+        Label14.Location = New Point(540, 435)
         Label14.Name = "Label14"
         Label14.Size = New Size(140, 25)
         Label14.TabIndex = 83
@@ -501,7 +504,7 @@ Partial Class FormLogin
         pnlForgotPass.Controls.Add(pctBox2)
         pnlForgotPass.Location = New Point(-2, 0)
         pnlForgotPass.Name = "pnlForgotPass"
-        pnlForgotPass.Size = New Size(1021, 634)
+        pnlForgotPass.Size = New Size(1025, 634)
         pnlForgotPass.TabIndex = 45
         ' 
         ' FormLogin
