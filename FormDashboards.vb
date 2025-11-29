@@ -101,9 +101,13 @@ Public Class FormDashboards
         'For buttons
         hidePanel()
 
+
         ' Set icon sa form at taskbar
         'Me.Icon = New System.Drawing.Icon("D:\vbnet_programs\Finals\Student Internship (OJT) Management System-20251121T034957Z-1-001\Student Internship (OJT) Management System\Resources\internship_icon.ico")
         'Me.ShowIcon = True
+
+
+
 
         'FOR COLUMNS STYLES INTERNSHIPS
         ' 1. LOAD DATA FROM DATABASE
@@ -114,6 +118,24 @@ Public Class FormDashboards
 
         ' 3. APPLY STYLE (COLUMNS EXIST NA)
         dgvInternshipFiles4Styles(dgvInternshipFiles4)
+
+        'FOR CMB HOVER
+
+        For Each cmb As ComboBox In {cmbGender2, cmbGender3,
+                                 cmbSection2, cmbSection3,
+                                 cmbDepartment2, cmbDepartment3,
+                                 cmbCourse2, cmbCourse3}
+
+            cmb.DrawMode = DrawMode.OwnerDrawFixed
+            AddHandler cmb.DrawItem, AddressOf DrawComboItem
+
+        Next
+
+        cmbCourse3.DrawMode = DrawMode.OwnerDrawFixed
+        cmbCourse3.DropDownStyle = ComboBoxStyle.DropDownList
+
+
+
 
     End Sub
 
@@ -2089,7 +2111,40 @@ Public Class FormDashboards
         dv.RowFilter = "Hidden = False"
     End Sub
 
+    Private Sub cmbSection3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSection3.SelectedIndexChanged
 
+    End Sub
+
+    Public Sub DrawComboItem(sender As Object, e As DrawItemEventArgs)
+        If e.Index < 0 Then Exit Sub
+
+        Dim combo As ComboBox = DirectCast(sender, ComboBox)
+        e.DrawBackground()
+
+        Dim bgColor As Color
+        Dim textColor As Color
+
+        If (e.State And DrawItemState.Selected) = DrawItemState.Selected Then
+            bgColor = Color.FromArgb(218, 239, 228)  ' highlight
+            textColor = Color.FromArgb(8, 48, 25)
+        Else
+            bgColor = Color.White                    ' normal
+            textColor = Color.FromArgb(8, 48, 25)
+        End If
+
+        Using b As New SolidBrush(bgColor)
+            e.Graphics.FillRectangle(b, e.Bounds)
+        End Using
+
+        ' CORRECT way to get item text
+        Dim text As String = combo.GetItemText(combo.Items(e.Index))
+
+        Using b As New SolidBrush(textColor)
+            e.Graphics.DrawString(text, e.Font, b, e.Bounds)
+        End Using
+
+        e.DrawFocusRectangle()
+    End Sub
 
 
 
