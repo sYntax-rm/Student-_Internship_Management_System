@@ -94,7 +94,7 @@ Partial Class FormLogin
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Century", 16.0F, FontStyle.Bold)
+        Label6.Font = New Font("Century", 16F, FontStyle.Bold)
         Label6.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         Label6.Location = New Point(511, 222)
         Label6.Name = "Label6"
@@ -130,7 +130,7 @@ Partial Class FormLogin
         ' 
         lnklblChangePass.AutoSize = True
         lnklblChangePass.Cursor = Cursors.Help
-        lnklblChangePass.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lnklblChangePass.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lnklblChangePass.LinkColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
         lnklblChangePass.Location = New Point(539, 473)
         lnklblChangePass.Name = "lnklblChangePass"
@@ -157,7 +157,7 @@ Partial Class FormLogin
         ' 
         Label4.AutoSize = True
         Label4.CausesValidation = False
-        Label4.Font = New Font("Segoe UI", 10.0F)
+        Label4.Font = New Font("Segoe UI", 10F)
         Label4.ForeColor = Color.Black
         Label4.Location = New Point(623, 579)
         Label4.Name = "Label4"
@@ -180,7 +180,7 @@ Partial Class FormLogin
         Label9.AutoSize = True
         Label9.BackColor = Color.Transparent
         Label9.CausesValidation = False
-        Label9.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.White
         Label9.Location = New Point(77, 318)
         Label9.Name = "Label9"
@@ -279,7 +279,7 @@ Partial Class FormLogin
         Label10.AutoSize = True
         Label10.BackColor = Color.Transparent
         Label10.CausesValidation = False
-        Label10.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.White
         Label10.Location = New Point(38, 325)
         Label10.Name = "Label10"
@@ -362,7 +362,7 @@ Partial Class FormLogin
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Century", 16.0F, FontStyle.Bold)
+        Label2.Font = New Font("Century", 16F, FontStyle.Bold)
         Label2.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         Label2.Location = New Point(619, 214)
         Label2.Name = "Label2"
@@ -506,7 +506,8 @@ Partial Class FormLogin
         ' 
         ' FormLogin
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AcceptButton = btnLogin
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1019, 633)

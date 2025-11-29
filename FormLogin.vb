@@ -5,8 +5,8 @@
 
         'eto edit ko
         ' Set icon sa form at taskbar
-        Me.Icon = New System.Drawing.Icon("D:\vbnet_programs\Finals\Student Internship (OJT) Management System-20251121T034957Z-1-001\Student Internship (OJT) Management System\Resources\internship_icon.ico")
-        Me.ShowIcon = True
+        'Me.Icon = New System.Drawing.Icon("D:\vbnet_programs\Finals\Student Internship (OJT) Management System-20251121T034957Z-1-001\Student Internship (OJT) Management System\Resources\internship_icon.ico")
+        'Me.ShowIcon = True
 
     End Sub
     Private Sub roundCorners(obj As Form)
@@ -130,6 +130,13 @@
         txtOldPassword.Clear()
         txtNewPassword.Clear()
 
+    End Sub
+
+    Private Sub keyEnterbtnConfirm_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            btnConfirm.PerformClick()
+            e.SuppressKeyPress = True
+        End If
     End Sub
 
     Private Sub lnklblLogIn_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnklblLogIn.LinkClicked

@@ -102,8 +102,8 @@ Public Class FormDashboards
         hidePanel()
 
         ' Set icon sa form at taskbar
-        Me.Icon = New System.Drawing.Icon("D:\vbnet_programs\Finals\Student Internship (OJT) Management System-20251121T034957Z-1-001\Student Internship (OJT) Management System\Resources\internship_icon.ico")
-        Me.ShowIcon = True
+        'Me.Icon = New System.Drawing.Icon("D:\vbnet_programs\Finals\Student Internship (OJT) Management System-20251121T034957Z-1-001\Student Internship (OJT) Management System\Resources\internship_icon.ico")
+        'Me.ShowIcon = True
 
 
     End Sub
@@ -174,11 +174,54 @@ Public Class FormDashboards
             row("Hidden") = False
         Next
 
-        ' Bind the DataTable to the DataGridView using a DataView
+        'Styles for dgv
+        dgvStudentFilesStyles(dgvStudentFiles, dt)
+
+    End Sub
+
+    Private Sub dgvStudentFilesStyles(dgv As DataGridView, dt As DataTable)
+
+        'Filter rows
         Dim dv As New DataView(dt)
         dv.RowFilter = "Hidden = False"
-        dgvStudentFiles.DataSource = dv
-        dgvStudentFiles.Columns("Hidden").Visible = False
+        dgv.DataSource = dv
+
+        If dgv.Columns.Contains("Hidden") Then
+            dgv.Columns("Hidden").Visible = False
+        End If
+
+
+        dgvStudentFiles.Columns("Student ID").Width = 120
+        dgvStudentFiles.Columns("First Name").Width = 200
+        dgvStudentFiles.Columns("Last Name").Width = 200
+        dgvStudentFiles.Columns("Gender").Width = 150
+        dgvStudentFiles.Columns("Section").Width = 200
+        dgvStudentFiles.Columns("Contact Number").Width = 150
+        dgvStudentFiles.Columns("Email").Width = 350
+        dgvStudentFiles.Columns("Department").Width = 350
+        dgvStudentFiles.Columns("Course").Width = 350
+
+        dgvStudentFiles.EnableHeadersVisualStyles = False
+        dgvStudentFiles.AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
+
+
+    End Sub
+
+    'Search Student Style DGV
+    Private Sub dgvStudentSearchsStyles(dgv As DataGridView)
+
+        dgvStudentSearch.Columns("Student ID").Width = 120
+        dgvStudentSearch.Columns("First Name").Width = 200
+        dgvStudentSearch.Columns("Last Name").Width = 200
+        dgvStudentSearch.Columns("Gender").Width = 150
+        dgvStudentSearch.Columns("Section").Width = 200
+        dgvStudentSearch.Columns("Contact Number").Width = 150
+        dgvStudentSearch.Columns("Email").Width = 350
+        dgvStudentSearch.Columns("Department").Width = 350
+        dgvStudentSearch.Columns("Course").Width = 350
+
+        dgvStudentSearch.EnableHeadersVisualStyles = False
+        dgvStudentSearch.AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
     End Sub
 
     Private Sub loadInternRecord()
@@ -570,6 +613,9 @@ Public Class FormDashboards
 
         dgvStudentSearch.DataSource = searchStudentTable(txtSearchStudentID1.Text.Trim())
 
+        'Styles for dgv
+        dgvStudentSearchsStyles(dgvStudentSearch)
+
     End Sub
 
     Private Sub btnImport1_Click(sender As Object, e As EventArgs) Handles btnImport1.Click
@@ -705,6 +751,8 @@ Public Class FormDashboards
         txtEmail3.Text = row("email").ToString
         cmbDepartment3.SelectedValue = row("department_id").ToString
         cmbCourse3.SelectedValue = row("course_id").ToString
+
+
 
     End Sub
 
@@ -1739,6 +1787,7 @@ Public Class FormDashboards
         pnlSummaryReport.Show()
         pnlHome.Hide()
     End Sub
+
 
 
 
