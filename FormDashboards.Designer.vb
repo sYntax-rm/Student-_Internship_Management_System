@@ -1317,7 +1317,7 @@ Partial Class FormDashboards
         Label10.FlatStyle = FlatStyle.System
         Label10.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        Label10.Location = New Point(49, 827)
+        Label10.Location = New Point(49, 857)
         Label10.Name = "Label10"
         Label10.Size = New Size(199, 38)
         Label10.TabIndex = 124
@@ -1329,7 +1329,7 @@ Partial Class FormDashboards
         lblTotalRecords1.BackColor = Color.Transparent
         lblTotalRecords1.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblTotalRecords1.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        lblTotalRecords1.Location = New Point(237, 824)
+        lblTotalRecords1.Location = New Point(237, 854)
         lblTotalRecords1.Name = "lblTotalRecords1"
         lblTotalRecords1.Size = New Size(48, 38)
         lblTotalRecords1.TabIndex = 129
@@ -1358,7 +1358,7 @@ Partial Class FormDashboards
         btnHide1.FlatStyle = FlatStyle.Flat
         btnHide1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnHide1.ForeColor = Color.White
-        btnHide1.Location = New Point(1364, 824)
+        btnHide1.Location = New Point(1364, 854)
         btnHide1.MinimumSize = New Size(50, 25)
         btnHide1.Name = "btnHide1"
         btnHide1.Size = New Size(132, 51)
@@ -1373,7 +1373,7 @@ Partial Class FormDashboards
         btnEdit1.FlatStyle = FlatStyle.Flat
         btnEdit1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnEdit1.ForeColor = Color.White
-        btnEdit1.Location = New Point(1088, 823)
+        btnEdit1.Location = New Point(1088, 853)
         btnEdit1.MinimumSize = New Size(50, 25)
         btnEdit1.Name = "btnEdit1"
         btnEdit1.Size = New Size(132, 51)
@@ -1388,7 +1388,7 @@ Partial Class FormDashboards
         btnAdd1.FlatStyle = FlatStyle.Flat
         btnAdd1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnAdd1.ForeColor = Color.White
-        btnAdd1.Location = New Point(950, 823)
+        btnAdd1.Location = New Point(950, 853)
         btnAdd1.MinimumSize = New Size(50, 25)
         btnAdd1.Name = "btnAdd1"
         btnAdd1.Size = New Size(132, 51)
@@ -1403,7 +1403,7 @@ Partial Class FormDashboards
         btnImport1.FlatStyle = FlatStyle.Flat
         btnImport1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnImport1.ForeColor = Color.White
-        btnImport1.Location = New Point(811, 824)
+        btnImport1.Location = New Point(811, 854)
         btnImport1.MinimumSize = New Size(50, 25)
         btnImport1.Name = "btnImport1"
         btnImport1.Size = New Size(132, 49)
@@ -2084,7 +2084,7 @@ Partial Class FormDashboards
         btnShow1.FlatStyle = FlatStyle.Flat
         btnShow1.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnShow1.ForeColor = Color.White
-        btnShow1.Location = New Point(1226, 824)
+        btnShow1.Location = New Point(1226, 854)
         btnShow1.MinimumSize = New Size(50, 25)
         btnShow1.Name = "btnShow1"
         btnShow1.Size = New Size(132, 51)
