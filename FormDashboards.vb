@@ -135,8 +135,6 @@ Public Class FormDashboards
         cmbCourse3.DropDownStyle = ComboBoxStyle.DropDownList
 
 
-
-
     End Sub
 
     Private Sub hidePanel()
