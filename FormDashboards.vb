@@ -105,6 +105,15 @@ Public Class FormDashboards
         'Me.Icon = New System.Drawing.Icon("D:\vbnet_programs\Finals\Student Internship (OJT) Management System-20251121T034957Z-1-001\Student Internship (OJT) Management System\Resources\internship_icon.ico")
         'Me.ShowIcon = True
 
+        'FOR COLUMNS STYLES INTERNSHIPS
+        ' 1. LOAD DATA FROM DATABASE
+        Dim dt As DataTable = searchInterTable("")   ' or full load query mo
+
+        ' 2. SET DATASOURCE OF DGV
+        dgvInternshipFiles4.DataSource = dt
+
+        ' 3. APPLY STYLE (COLUMNS EXIST NA)
+        dgvInternshipFiles4Styles(dgvInternshipFiles4)
 
     End Sub
 
@@ -222,6 +231,62 @@ Public Class FormDashboards
 
         dgvStudentSearch.EnableHeadersVisualStyles = False
         dgvStudentSearch.AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
+    End Sub
+
+
+    'FOR HOVER EFFECTS
+    Dim first As Integer = -1
+
+    Private Sub dgvStudentSearch_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentSearch.CellMouseEnter
+        If e.RowIndex >= 0 Then
+
+            ' Ibabalik yung last row sa original color
+            If first >= 0 Then
+                dgvStudentSearch.Rows(first).DefaultCellStyle.BackColor = Color.White
+            End If
+
+            ' Highlight current hovered row
+            dgvStudentSearch.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Honeydew
+
+            lastRow = e.RowIndex
+        End If
+    End Sub
+
+    Private Sub dgvStudentSearch_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentSearch.CellMouseLeave
+        If first >= 0 Then
+            dgvStudentSearch.Rows(lastRow).DefaultCellStyle.BackColor = Color.White
+        End If
+    End Sub
+    Private Sub dgvStudentSearch_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvStudentSearch.DataBindingComplete
+        dgvStudentSearch.ClearSelection()
+    End Sub
+
+
+    'FOR HOVER EFFECTS
+    Dim lastRow As Integer = -1
+
+    Private Sub dgvStudentFiles_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentFiles.CellMouseEnter
+        If e.RowIndex >= 0 Then
+
+            ' Ibabalik yung last row sa original color
+            If lastRow >= 0 Then
+                dgvStudentFiles.Rows(lastRow).DefaultCellStyle.BackColor = Color.White
+            End If
+
+            ' Highlight current hovered row
+            dgvStudentFiles.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Honeydew
+
+            lastRow = e.RowIndex
+        End If
+    End Sub
+
+    Private Sub dgvStudentFiles_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentFiles.CellMouseLeave
+        If lastRow >= 0 Then
+            dgvStudentFiles.Rows(lastRow).DefaultCellStyle.BackColor = Color.White
+        End If
+    End Sub
+    Private Sub dgvStudentFiles_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvStudentFiles.DataBindingComplete
+        dgvStudentFiles.ClearSelection()
     End Sub
 
     Private Sub loadInternRecord()
@@ -417,6 +482,26 @@ Public Class FormDashboards
         pnlHome.Hide()
         pnlInternshipInformation.Show()
         loadInternRecord()
+    End Sub
+
+    'FOR COLUMNS STYLES INTERNSHIPS
+    Private Sub dgvInternshipFiles4Styles(dgv As DataGridView)
+
+        If dgv.Columns.Count = 0 Then Exit Sub  ' ← Prevent crash
+
+        dgv.Columns("Internship ID").Width = 200
+        dgv.Columns("First Name").Width = 300
+        dgv.Columns("Last Name").Width = 300
+        dgv.Columns("Company Name").Width = 350
+        dgv.Columns("Supervisor Last Name").Width = 350
+        dgv.Columns("Supervisor Contact").Width = 200
+        dgv.Columns("Start_Date").Width = 200
+        dgv.Columns("End_Date").Width = 200
+        dgv.Columns("Status").Width = 200
+
+        dgv.EnableHeadersVisualStyles = False
+        dgv.AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
+
     End Sub
 
     'BUTTON HOVER
@@ -2004,6 +2089,8 @@ Public Class FormDashboards
 
         dv.RowFilter = "Hidden = False"
     End Sub
+
+
 
 
 
