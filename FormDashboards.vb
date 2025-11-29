@@ -2,6 +2,8 @@
 Imports Mysqlx.Notice
 
 Public Class FormDashboards
+    Private lastRowStudent As Integer = -1
+    Private lastRowInternship As Integer = -1
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Student Icon for Button
@@ -124,7 +126,8 @@ Public Class FormDashboards
         For Each cmb As ComboBox In {cmbGender2, cmbGender3,
                                  cmbSection2, cmbSection3,
                                  cmbDepartment2, cmbDepartment3,
-                                 cmbCourse2, cmbCourse3}
+                                 cmbCourse2, cmbCourse3, cmbCompanyInternship, cmbCompanyContactInternship,
+                                 cmbStatusUpdateInternship}
 
             cmb.DrawMode = DrawMode.OwnerDrawFixed
             AddHandler cmb.DrawItem, AddressOf DrawComboItem
@@ -268,13 +271,13 @@ Public Class FormDashboards
             ' Highlight current hovered row
             dgvStudentSearch.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Honeydew
 
-            lastRow = e.RowIndex
+            lastRowStudent = e.RowIndex
         End If
     End Sub
 
     Private Sub dgvStudentSearch_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentSearch.CellMouseLeave
         If first >= 0 Then
-            dgvStudentSearch.Rows(lastRow).DefaultCellStyle.BackColor = Color.White
+            dgvStudentSearch.Rows(lastRowStudent).DefaultCellStyle.BackColor = Color.White
         End If
     End Sub
     Private Sub dgvStudentSearch_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvStudentSearch.DataBindingComplete
@@ -282,27 +285,27 @@ Public Class FormDashboards
     End Sub
 
 
-    'FOR HOVER EFFECTS
-    Dim lastRow As Integer = -1
+    'FOR HOVER EFFECTS dgvStudent Files
+
 
     Private Sub dgvStudentFiles_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentFiles.CellMouseEnter
         If e.RowIndex >= 0 Then
 
             ' Ibabalik yung last row sa original color
-            If lastRow >= 0 Then
-                dgvStudentFiles.Rows(lastRow).DefaultCellStyle.BackColor = Color.White
+            If lastRowStudent >= 0 Then
+                dgvStudentFiles.Rows(lastRowStudent).DefaultCellStyle.BackColor = Color.White
             End If
 
             ' Highlight current hovered row
             dgvStudentFiles.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Honeydew
 
-            lastRow = e.RowIndex
+            lastRowStudent = e.RowIndex
         End If
     End Sub
 
     Private Sub dgvStudentFiles_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentFiles.CellMouseLeave
-        If lastRow >= 0 Then
-            dgvStudentFiles.Rows(lastRow).DefaultCellStyle.BackColor = Color.White
+        If lastRowStudent >= 0 Then
+            dgvStudentFiles.Rows(lastRowStudent).DefaultCellStyle.BackColor = Color.White
         End If
     End Sub
     Private Sub dgvStudentFiles_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvStudentFiles.DataBindingComplete
@@ -509,20 +512,64 @@ Public Class FormDashboards
 
         If dgv.Columns.Count = 0 Then Exit Sub  ' ← Prevent crash
 
-        dgv.Columns("Internship ID").Width = 200
-        dgv.Columns("First Name").Width = 300
-        dgv.Columns("Last Name").Width = 300
-        dgv.Columns("Company Name").Width = 350
-        dgv.Columns("Supervisor Last Name").Width = 350
-        dgv.Columns("Supervisor Contact").Width = 200
-        dgv.Columns("Start_Date").Width = 200
-        dgv.Columns("End_Date").Width = 200
-        dgv.Columns("Status").Width = 200
+        dgv.Columns("Internship ID").Width = 170
+        dgv.Columns("First Name").Width = 200
+        dgv.Columns("Last Name").Width = 200
+        dgv.Columns("Company Name").Width = 300
+        dgv.Columns("Supervisor Last Name").Width = 200
+        dgv.Columns("Supervisor Contact").Width = 150
+        dgv.Columns("Start_Date").Width = 170
+        dgv.Columns("End_Date").Width = 170
+        dgv.Columns("Status").Width = 150
 
         dgv.EnableHeadersVisualStyles = False
         dgv.AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
 
+        With dgvInternshipFiles4
+            .EnableHeadersVisualStyles = False
+            .RowHeadersDefaultCellStyle.BackColor = Color.MintCream   ' Palitan ng gusto mong kulay
+            .RowHeadersDefaultCellStyle.SelectionBackColor = Color.LightYellow
+            .RowHeadersWidth = 20
+        End With
+
+
     End Sub
+
+    'FOR HOVER EFFECT DGVINTERNSHIP 
+
+
+    Private Sub dgvInternshipFiles4_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInternshipFiles4.CellMouseEnter
+        If e.RowIndex >= 0 Then
+
+            ' Ibabalik yung last row sa original color
+            If lastRowInternship >= 0 Then
+                dgvInternshipFiles4.Rows(lastRowInternship).DefaultCellStyle.BackColor = Color.White
+
+            End If
+
+            ' Highlight current hovered row
+            dgvInternshipFiles4.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Honeydew
+
+            lastRowInternship = e.RowIndex
+        End If
+    End Sub
+
+    Private Sub dgvInternshipFiles_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInternshipFiles4.CellMouseLeave
+        If lastRowInternship >= 0 Then
+            dgvInternshipFiles4.Rows(lastRowInternship).DefaultCellStyle.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub dgvInternshipFiles4_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvStudentFiles.DataBindingComplete
+
+        dgvInternshipFiles4.ClearSelection()
+        dgvInternshipFiles4.CurrentCell = Nothing
+        Me.ActiveControl = Nothing
+
+
+    End Sub
+
+
 
     'BUTTON HOVER
 
@@ -1010,7 +1057,7 @@ Public Class FormDashboards
 
     End Sub
 
-    
+
     Private Sub txtContactNumber3_TextChanged(sender As Object, e As EventArgs) Handles txtContactNumber3.TextChanged
 
     End Sub
@@ -1119,6 +1166,25 @@ Public Class FormDashboards
 
         dgvInternshipLogs4.DataSource = searchInterTable(txtSearchID4.Text.Trim())
 
+    End Sub
+
+    'BUTTON HOVER
+    'BUTTON SEARCH 4 HOVER INTERNSHIPS
+    Private Sub btnSearch4_MouseEnter(sender As Object, e As EventArgs) Handles btnSearch4.MouseEnter
+        btnSearch4.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnSearch4_MouseLeave(sender As Object, e As EventArgs) Handles btnSearch4.MouseLeave
+        btnSearch4.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnSearch4_MouseDown(sender As Object, e As MouseEventArgs) Handles btnSearch4.MouseDown
+        btnSearch4.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnSearch4_MouseUp(sender As Object, e As MouseEventArgs) Handles btnSearch4.MouseUp
+        btnSearch4.BackColor = Color.FromArgb(8, 48, 25)
     End Sub
 
     Private Sub dgvInternshipLogs4_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInternshipLogs4.CellContentClick
@@ -2005,6 +2071,25 @@ Public Class FormDashboards
 
     End Sub
 
+    'BUTTON HOVER
+    'BUTTON UPDATE HOVER INTERNSHIPS
+    Private Sub btnUpdate_MouseEnter(sender As Object, e As EventArgs) Handles btnUpdate.MouseEnter
+        btnUpdate.BackColor = Color.FromArgb(97, 144, 118)
+
+    End Sub
+
+    Private Sub btnUpdate_MouseLeave(sender As Object, e As EventArgs) Handles btnUpdate.MouseLeave
+        btnUpdate.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
+    Private Sub btnUpdate_MouseDown(sender As Object, e As MouseEventArgs) Handles btnUpdate.MouseDown
+        btnUpdate.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnUpdate_MouseUp(sender As Object, e As MouseEventArgs) Handles btnUpdate.MouseUp
+        btnUpdate.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
     Private Sub btnCancelUpdate_Click(sender As Object, e As EventArgs) Handles btnCancelUpdate.Click
         Dim result = MessageBox.Show("Are you sure you want to cancel?", "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
@@ -2143,6 +2228,70 @@ Public Class FormDashboards
 
         e.DrawFocusRectangle()
     End Sub
+
+    Private Sub btnSearchInternship_Click(sender As Object, e As EventArgs) Handles btnSearchInternship.Click
+
+    End Sub
+
+    'BUTTON HOVER
+    'BUTTON SEARCH INTERNSHIPS HOVER UPDATE
+    Private Sub btnSearchInternship_MouseEnter(sender As Object, e As EventArgs) Handles btnSearchInternship.MouseEnter
+        btnSearchInternship.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnSearchInternship_MouseLeave(sender As Object, e As EventArgs) Handles btnSearchInternship.MouseLeave
+        btnSearch1.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnSearchInternship_MouseDown(sender As Object, e As MouseEventArgs) Handles btnSearchInternship.MouseDown
+        btnSearch1.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnSearchInternship_MouseUp(sender As Object, e As MouseEventArgs) Handles btnSearch1.MouseUp
+        btnSearch1.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
+    'BUTTON HOVER
+    'BUTTON  CANCEL UPDATE HOVER INTERNSHIPS
+    Private Sub btnCancelUpdate_MouseEnter(sender As Object, e As EventArgs) Handles btnCancelUpdate.MouseEnter
+        btnCancelUpdate.BackColor = Color.FromArgb(8, 48, 25)
+
+    End Sub
+
+    Private Sub btnCancelUpdate_MouseLeave(sender As Object, e As EventArgs) Handles btnCancelUpdate.MouseLeave
+        btnCancelUpdate.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+    Private Sub btnCancelUpdate_MouseDown(sender As Object, e As MouseEventArgs) Handles btnCancelUpdate.MouseDown
+        btnCancelUpdate.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnCancelUpdate_MouseUp(sender As Object, e As MouseEventArgs) Handles btnCancelUpdate.MouseUp
+        btnCancelUpdate.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
+    'BUTTON HOVER
+    'BUTTON UPDATE RECORD HOVER INTERNSHIPS
+    Private Sub btnUpdateRecord_MouseEnter(sender As Object, e As EventArgs) Handles btnUpdateRecord.MouseEnter
+        btnUpdateRecord.BackColor = Color.FromArgb(97, 144, 118)
+
+    End Sub
+
+    Private Sub btnUpdateRecord_MouseLeave(sender As Object, e As EventArgs) Handles btnUpdateRecord.MouseLeave
+        btnUpdateRecord.BackColor = Color.FromArgb(8, 48, 25)
+    End Sub
+
+    Private Sub btnUpdateRecord_MouseDown(sender As Object, e As MouseEventArgs) Handles btnUpdateRecord.MouseDown
+        btnUpdateRecord.BackColor = Color.DarkSeaGreen
+    End Sub
+
+    Private Sub btnUpdateRecord_MouseUp(sender As Object, e As MouseEventArgs) Handles btnUpdateRecord.MouseUp
+        btnUpdateRecord.BackColor = Color.FromArgb(97, 144, 118)
+    End Sub
+
+
+
 
 
 

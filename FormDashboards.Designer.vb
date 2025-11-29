@@ -156,8 +156,9 @@ Partial Class FormDashboards
         Label17 = New Label()
         btnShow1 = New RoundedButton()
         pnlInternshipInformation = New Panel()
-        btnUpdate = New RoundedButton()
         pnlUpdateInternshipRecord = New roundedpanel()
+        Panel19 = New Panel()
+        txtboxInternshipID = New TextBox()
         btnSearchInternship = New RoundedButton()
         Label160 = New Label()
         cmbCompanyContactInternship = New ComboBox()
@@ -175,7 +176,9 @@ Partial Class FormDashboards
         Label158 = New Label()
         cmbStatusUpdateInternship = New ComboBox()
         Label159 = New Label()
-        txtboxInternshipID = New TextBox()
+        Panel16 = New Panel()
+        txtSearchID4 = New TextBox()
+        btnUpdate = New RoundedButton()
         lblInternshipId = New Label()
         btnSearch4 = New RoundedButton()
         lblTotalRecords4 = New Label()
@@ -183,7 +186,6 @@ Partial Class FormDashboards
         dgvInternshipFiles4 = New DataGridView()
         Label46 = New Label()
         dgvInternshipLogs4 = New DataGridView()
-        txtSearchID4 = New TextBox()
         Label47 = New Label()
         pnlEvaluationInformation = New Panel()
         pnlAddNewInternshipEvaluationRecord = New roundedpanel()
@@ -528,6 +530,8 @@ Partial Class FormDashboards
         CType(picImport1, ComponentModel.ISupportInitialize).BeginInit()
         pnlInternshipInformation.SuspendLayout()
         pnlUpdateInternshipRecord.SuspendLayout()
+        Panel19.SuspendLayout()
+        Panel16.SuspendLayout()
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).BeginInit()
         pnlEvaluationInformation.SuspendLayout()
@@ -2195,8 +2199,9 @@ Partial Class FormDashboards
         ' pnlInternshipInformation
         ' 
         pnlInternshipInformation.BackColor = Color.White
-        pnlInternshipInformation.Controls.Add(btnUpdate)
         pnlInternshipInformation.Controls.Add(pnlUpdateInternshipRecord)
+        pnlInternshipInformation.Controls.Add(Panel16)
+        pnlInternshipInformation.Controls.Add(btnUpdate)
         pnlInternshipInformation.Controls.Add(lblInternshipId)
         pnlInternshipInformation.Controls.Add(btnSearch4)
         pnlInternshipInformation.Controls.Add(lblTotalRecords4)
@@ -2204,7 +2209,6 @@ Partial Class FormDashboards
         pnlInternshipInformation.Controls.Add(dgvInternshipFiles4)
         pnlInternshipInformation.Controls.Add(Label46)
         pnlInternshipInformation.Controls.Add(dgvInternshipLogs4)
-        pnlInternshipInformation.Controls.Add(txtSearchID4)
         pnlInternshipInformation.Controls.Add(Label47)
         pnlInternshipInformation.Dock = DockStyle.Fill
         pnlInternshipInformation.Location = New Point(373, 131)
@@ -2212,24 +2216,10 @@ Partial Class FormDashboards
         pnlInternshipInformation.Size = New Size(1529, 902)
         pnlInternshipInformation.TabIndex = 135
         ' 
-        ' btnUpdate
-        ' 
-        btnUpdate.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        btnUpdate.FlatAppearance.BorderSize = 0
-        btnUpdate.FlatStyle = FlatStyle.Flat
-        btnUpdate.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
-        btnUpdate.ForeColor = Color.White
-        btnUpdate.Location = New Point(1327, 823)
-        btnUpdate.MinimumSize = New Size(50, 25)
-        btnUpdate.Name = "btnUpdate"
-        btnUpdate.Size = New Size(139, 51)
-        btnUpdate.TabIndex = 220
-        btnUpdate.Text = "UPDATE"
-        btnUpdate.UseVisualStyleBackColor = False
-        ' 
         ' pnlUpdateInternshipRecord
         ' 
         pnlUpdateInternshipRecord.BackColor = Color.Honeydew
+        pnlUpdateInternshipRecord.Controls.Add(Panel19)
         pnlUpdateInternshipRecord.Controls.Add(btnSearchInternship)
         pnlUpdateInternshipRecord.Controls.Add(Label160)
         pnlUpdateInternshipRecord.Controls.Add(cmbCompanyContactInternship)
@@ -2247,12 +2237,32 @@ Partial Class FormDashboards
         pnlUpdateInternshipRecord.Controls.Add(Label158)
         pnlUpdateInternshipRecord.Controls.Add(cmbStatusUpdateInternship)
         pnlUpdateInternshipRecord.Controls.Add(Label159)
-        pnlUpdateInternshipRecord.Controls.Add(txtboxInternshipID)
         pnlUpdateInternshipRecord.CornerRadius = 10
-        pnlUpdateInternshipRecord.Location = New Point(1097, 93)
+        pnlUpdateInternshipRecord.Location = New Point(1184, 93)
         pnlUpdateInternshipRecord.Name = "pnlUpdateInternshipRecord"
-        pnlUpdateInternshipRecord.Size = New Size(316, 593)
+        pnlUpdateInternshipRecord.Size = New Size(229, 593)
         pnlUpdateInternshipRecord.TabIndex = 219
+        ' 
+        ' Panel19
+        ' 
+        Panel19.BackgroundImage = CType(resources.GetObject("Panel19.BackgroundImage"), Image)
+        Panel19.Controls.Add(txtboxInternshipID)
+        Panel19.Location = New Point(77, 164)
+        Panel19.Name = "Panel19"
+        Panel19.Size = New Size(430, 50)
+        Panel19.TabIndex = 240
+        ' 
+        ' txtboxInternshipID
+        ' 
+        txtboxInternshipID.BorderStyle = BorderStyle.None
+        txtboxInternshipID.Cursor = Cursors.IBeam
+        txtboxInternshipID.Font = New Font("Segoe UI", 14.0F)
+        txtboxInternshipID.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtboxInternshipID.Location = New Point(54, 5)
+        txtboxInternshipID.Multiline = True
+        txtboxInternshipID.Name = "txtboxInternshipID"
+        txtboxInternshipID.Size = New Size(366, 38)
+        txtboxInternshipID.TabIndex = 191
         ' 
         ' btnSearchInternship
         ' 
@@ -2261,7 +2271,7 @@ Partial Class FormDashboards
         btnSearchInternship.FlatStyle = FlatStyle.Flat
         btnSearchInternship.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnSearchInternship.ForeColor = Color.White
-        btnSearchInternship.Location = New Point(556, 155)
+        btnSearchInternship.Location = New Point(525, 163)
         btnSearchInternship.MinimumSize = New Size(50, 25)
         btnSearchInternship.Name = "btnSearchInternship"
         btnSearchInternship.Size = New Size(132, 51)
@@ -2283,6 +2293,7 @@ Partial Class FormDashboards
         ' 
         ' cmbCompanyContactInternship
         ' 
+        cmbCompanyContactInternship.FlatStyle = FlatStyle.Flat
         cmbCompanyContactInternship.Font = New Font("Segoe UI", 14.0F)
         cmbCompanyContactInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbCompanyContactInternship.FormattingEnabled = True
@@ -2293,6 +2304,7 @@ Partial Class FormDashboards
         ' 
         ' cmbCompanyInternship
         ' 
+        cmbCompanyInternship.FlatStyle = FlatStyle.Flat
         cmbCompanyInternship.Font = New Font("Segoe UI", 14.0F)
         cmbCompanyInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbCompanyInternship.FormattingEnabled = True
@@ -2433,6 +2445,7 @@ Partial Class FormDashboards
         ' 
         ' cmbStatusUpdateInternship
         ' 
+        cmbStatusUpdateInternship.FlatStyle = FlatStyle.Flat
         cmbStatusUpdateInternship.Font = New Font("Segoe UI", 14.0F)
         cmbStatusUpdateInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbStatusUpdateInternship.FormattingEnabled = True
@@ -2454,16 +2467,41 @@ Partial Class FormDashboards
         Label159.TabIndex = 195
         Label159.Text = "Start Date"
         ' 
-        ' txtboxInternshipID
+        ' Panel16
         ' 
-        txtboxInternshipID.Cursor = Cursors.IBeam
-        txtboxInternshipID.Font = New Font("Segoe UI", 14.0F)
-        txtboxInternshipID.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtboxInternshipID.Location = New Point(66, 164)
-        txtboxInternshipID.Multiline = True
-        txtboxInternshipID.Name = "txtboxInternshipID"
-        txtboxInternshipID.Size = New Size(471, 38)
-        txtboxInternshipID.TabIndex = 191
+        Panel16.BackgroundImage = CType(resources.GetObject("Panel16.BackgroundImage"), Image)
+        Panel16.Controls.Add(txtSearchID4)
+        Panel16.Location = New Point(237, 108)
+        Panel16.Name = "Panel16"
+        Panel16.Size = New Size(430, 50)
+        Panel16.TabIndex = 233
+        ' 
+        ' txtSearchID4
+        ' 
+        txtSearchID4.BorderStyle = BorderStyle.None
+        txtSearchID4.Cursor = Cursors.IBeam
+        txtSearchID4.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        txtSearchID4.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
+        txtSearchID4.Location = New Point(52, 5)
+        txtSearchID4.Multiline = True
+        txtSearchID4.Name = "txtSearchID4"
+        txtSearchID4.Size = New Size(366, 38)
+        txtSearchID4.TabIndex = 116
+        ' 
+        ' btnUpdate
+        ' 
+        btnUpdate.BackColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        btnUpdate.FlatAppearance.BorderSize = 0
+        btnUpdate.FlatStyle = FlatStyle.Flat
+        btnUpdate.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
+        btnUpdate.ForeColor = Color.White
+        btnUpdate.Location = New Point(1347, 852)
+        btnUpdate.MinimumSize = New Size(50, 25)
+        btnUpdate.Name = "btnUpdate"
+        btnUpdate.Size = New Size(139, 51)
+        btnUpdate.TabIndex = 220
+        btnUpdate.Text = "UPDATE"
+        btnUpdate.UseVisualStyleBackColor = False
         ' 
         ' lblInternshipId
         ' 
@@ -2482,7 +2520,7 @@ Partial Class FormDashboards
         btnSearch4.FlatStyle = FlatStyle.Flat
         btnSearch4.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnSearch4.ForeColor = Color.White
-        btnSearch4.Location = New Point(661, 107)
+        btnSearch4.Location = New Point(678, 111)
         btnSearch4.MinimumSize = New Size(50, 25)
         btnSearch4.Name = "btnSearch4"
         btnSearch4.Size = New Size(140, 46)
@@ -2496,7 +2534,7 @@ Partial Class FormDashboards
         lblTotalRecords4.BackColor = Color.Transparent
         lblTotalRecords4.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblTotalRecords4.ForeColor = Color.Black
-        lblTotalRecords4.Location = New Point(237, 824)
+        lblTotalRecords4.Location = New Point(237, 857)
         lblTotalRecords4.Name = "lblTotalRecords4"
         lblTotalRecords4.Size = New Size(48, 38)
         lblTotalRecords4.TabIndex = 129
@@ -2509,7 +2547,7 @@ Partial Class FormDashboards
         Label45.FlatStyle = FlatStyle.System
         Label45.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label45.ForeColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        Label45.Location = New Point(49, 827)
+        Label45.Location = New Point(49, 860)
         Label45.Name = "Label45"
         Label45.Size = New Size(199, 38)
         Label45.TabIndex = 124
@@ -2520,6 +2558,7 @@ Partial Class FormDashboards
         dgvInternshipFiles4.AllowUserToAddRows = False
         dgvInternshipFiles4.AllowUserToDeleteRows = False
         dgvInternshipFiles4.BackgroundColor = Color.MintCream
+        dgvInternshipFiles4.BorderStyle = BorderStyle.None
         DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
         DataGridViewCellStyle8.Font = New Font("Microsoft New Tai Lue", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
@@ -2545,10 +2584,10 @@ Partial Class FormDashboards
         DataGridViewCellStyle10.BackColor = Color.MintCream
         DataGridViewCellStyle10.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         DataGridViewCellStyle10.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        DataGridViewCellStyle10.SelectionBackColor = Color.LightYellow
+        DataGridViewCellStyle10.SelectionBackColor = Color.MintCream
         DataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
         dgvInternshipFiles4.RowsDefaultCellStyle = DataGridViewCellStyle10
-        dgvInternshipFiles4.Size = New Size(1356, 347)
+        dgvInternshipFiles4.Size = New Size(1390, 378)
         dgvInternshipFiles4.TabIndex = 128
         ' 
         ' Label46
@@ -2570,19 +2609,8 @@ Partial Class FormDashboards
         dgvInternshipLogs4.Location = New Point(87, 194)
         dgvInternshipLogs4.Name = "dgvInternshipLogs4"
         dgvInternshipLogs4.RowHeadersWidth = 51
-        dgvInternshipLogs4.Size = New Size(1353, 142)
+        dgvInternshipLogs4.Size = New Size(1388, 142)
         dgvInternshipLogs4.TabIndex = 125
-        ' 
-        ' txtSearchID4
-        ' 
-        txtSearchID4.Cursor = Cursors.IBeam
-        txtSearchID4.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
-        txtSearchID4.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
-        txtSearchID4.Location = New Point(237, 111)
-        txtSearchID4.Multiline = True
-        txtSearchID4.Name = "txtSearchID4"
-        txtSearchID4.Size = New Size(409, 38)
-        txtSearchID4.TabIndex = 116
         ' 
         ' Label47
         ' 
@@ -6081,7 +6109,7 @@ Partial Class FormDashboards
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(753, 530)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(471, 40)
+        ComboBox1.Size = New Size(471, 39)
         ComboBox1.TabIndex = 206
         ' 
         ' Label30
@@ -6196,7 +6224,7 @@ Partial Class FormDashboards
         ComboBox2.FormattingEnabled = True
         ComboBox2.Location = New Point(144, 530)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(471, 40)
+        ComboBox2.Size = New Size(471, 39)
         ComboBox2.TabIndex = 196
         ' 
         ' Label37
@@ -6228,7 +6256,7 @@ Partial Class FormDashboards
         ComboBox3.FormattingEnabled = True
         ComboBox3.Location = New Point(144, 340)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(471, 40)
+        ComboBox3.Size = New Size(471, 39)
         ComboBox3.TabIndex = 193
         ' 
         ' TextBox6
@@ -6301,7 +6329,7 @@ Partial Class FormDashboards
         ComboBox4.FormattingEnabled = True
         ComboBox4.Location = New Point(753, 530)
         ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(471, 40)
+        ComboBox4.Size = New Size(471, 39)
         ComboBox4.TabIndex = 206
         ' 
         ' Label39
@@ -6439,7 +6467,7 @@ Partial Class FormDashboards
         ComboBox6.FormattingEnabled = True
         ComboBox6.Location = New Point(144, 340)
         ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(471, 40)
+        ComboBox6.Size = New Size(471, 39)
         ComboBox6.TabIndex = 193
         ' 
         ' TextBox11
@@ -6640,8 +6668,8 @@ Partial Class FormDashboards
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(1902, 1033)
-        Controls.Add(pnlStudentInformation)
         Controls.Add(pnlInternshipInformation)
+        Controls.Add(pnlStudentInformation)
         Controls.Add(pnlHome)
         Controls.Add(pnlCompanyContactInformation)
         Controls.Add(pnlCompanyInformation)
@@ -6695,6 +6723,10 @@ Partial Class FormDashboards
         pnlInternshipInformation.PerformLayout()
         pnlUpdateInternshipRecord.ResumeLayout(False)
         pnlUpdateInternshipRecord.PerformLayout()
+        Panel19.ResumeLayout(False)
+        Panel19.PerformLayout()
+        Panel16.ResumeLayout(False)
+        Panel16.PerformLayout()
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).EndInit()
         pnlEvaluationInformation.ResumeLayout(False)
@@ -7228,5 +7260,7 @@ Partial Class FormDashboards
     Friend WithEvents picHide1 As PictureBox
     Friend WithEvents Panel14 As Panel
     Friend WithEvents Panel15 As Panel
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents Panel19 As Panel
 
 End Class
