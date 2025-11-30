@@ -131,14 +131,9 @@ Public Class FormDashboards
 
             cmb.DrawMode = DrawMode.OwnerDrawFixed
             AddHandler cmb.DrawItem, AddressOf DrawComboItem
-
         Next
 
-        cmbCourse3.DrawMode = DrawMode.OwnerDrawFixed
-        cmbCourse3.DropDownStyle = ComboBoxStyle.DropDownList
 
-
-    End Sub
 
     Private Sub hidePanel()
         pnlStudentInformation.Hide()
@@ -2095,19 +2090,9 @@ Public Class FormDashboards
 
         If result = DialogResult.Yes Then
             pnlInternshipInformation.Show()
-            pnlUpdateInternshipRecord.Hide()
         End If
     End Sub
 
-    Private Sub btnUpdateRecord_Click(sender As Object, e As EventArgs) Handles btnUpdateRecord.Click
-        Dim result = MessageBox.Show("Record has been successfully update4d.", "Updated Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-        If result = DialogResult.OK Then
-            pnlInternshipInformation.Show()
-            pnlUpdateInternshipRecord.Hide()
-        End If
-
-    End Sub
 
     Private Sub picHome_Click(sender As Object, e As EventArgs) Handles picHome.Click
         hidePanel()
@@ -2229,9 +2214,7 @@ Public Class FormDashboards
         e.DrawFocusRectangle()
     End Sub
 
-    Private Sub btnSearchInternship_Click(sender As Object, e As EventArgs) Handles btnSearchInternship.Click
 
-    End Sub
 
     'BUTTON HOVER
     'BUTTON SEARCH INTERNSHIPS HOVER UPDATE
