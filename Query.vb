@@ -375,6 +375,31 @@ Module Query
 
     End Function
 
+    Public Function GenerateEvaluationID() As String
+        Dim newID As String = "E001" ' fallback
+
+        Try
+            Using con As MySqlConnection = GetConnection()
+                con.Open()
+
+                ' Kunin ang latest evaluation_id
+                Dim cmd As New MySqlCommand("SELECT evaluation_id FROM internship_evaluation ORDER BY evaluation_id DESC LIMIT 1", con)
+                Dim lastID As Object = cmd.ExecuteScalar()
+
+                If lastID IsNot Nothing Then
+                    ' Extract numeric part at increment
+                    Dim numericPart As Integer = Integer.Parse(lastID.ToString().Substring(1))
+                    numericPart += 1
+                    newID = "E" & numericPart.ToString("D3") ' E001, E002, etc.
+                End If
+
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return newID
+    End Function
     Public Function LoadEvaluationTable() As DataTable
         Dim dt As New DataTable()
         Dim query As String = "
@@ -447,5 +472,62 @@ Module Query
         End Try
 
         Return dataTable
+    End Function
+
+    Public Function GetEvaluationInfo(evaluationID As String) As DataTable
+        Dim dataTable As New DataTable()
+
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("
+                SELECT *
+                FROM internship_evaluation
+                WHERE evaluation_id = @id", con)
+
+                    cmd.Parameters.AddWithValue("@id", evaluationID)
+                    con.Open()
+
+                    Using dA As New MySqlDataAdapter(cmd)
+                        dA.Fill(dataTable)
+                    End Using
+
+                    con.Close()
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return dataTable
+    End Function
+
+
+    Public Function AddEvaluationRecord(internshipID As String, report As String, status As String, Optional grade As Decimal? = Nothing) As Boolean
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("INSERT INTO internship_evaluation (internship_id, evaluation_report, evaluation_status, grade) 
+                                           VALUES (@internship_id, @report, @status, @grade)", con)
+                    con.Open()
+                    cmd.Parameters.AddWithValue("@internship_id", internshipID)
+                    cmd.Parameters.AddWithValue("@report", report)
+                    cmd.Parameters.AddWithValue("@status", status)
+
+                    ' Handle optional grade
+                    If grade.HasValue Then
+                        cmd.Parameters.AddWithValue("@grade", grade.Value)
+                    Else
+                        cmd.Parameters.AddWithValue("@grade", DBNull.Value)
+                    End If
+
+                    cmd.ExecuteNonQuery()
+                    con.Close()
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+
+        Return True
     End Function
 End Module

@@ -1312,9 +1312,49 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnAdd6_Click(sender As Object, e As EventArgs) Handles btnAdd6.Click
-        Dim result = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        ' Validate required fields
+        If String.IsNullOrWhiteSpace(txtInternshipID6.Text) OrElse
+       String.IsNullOrWhiteSpace(txtEvaluationReport6.Text) OrElse
+       cmbStatus6.Text = "" Then
 
-        If result = DialogResult.Yes Then
+            MessageBox.Show("Please complete all required fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        ' Confirm add
+        Dim result = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = DialogResult.No Then
+            Exit Sub
+        End If
+
+        ' Get grade (optional)
+        Dim gradeValue As Decimal? = Nothing
+        If nudEvaluationGrade.Value > 0 Then
+            gradeValue = nudEvaluationGrade.Value
+        End If
+
+        ' Call function to save to database
+        Dim success As Boolean = AddEvaluationRecord(
+                                                        txtInternshipID6.Text.Trim(),
+                                                        txtEvaluationReport6.Text.Trim(),
+                                                         cmbStatus6.Text,
+             If(nudEvaluationGrade.Value > 0, nudEvaluationGrade.Value, CType(Nothing, Decimal?))
+)
+
+        If success Then
+            MessageBox.Show("Evaluation added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ' Refresh DataGridView
+            LoadEvaluationDGV()
+
+            ' Clear form for next entry
+            txtEvaluationID6.Text = ""    ' auto-generated
+            txtInternshipID6.Clear()
+            txtEvaluationReport6.Clear()
+            cmbStatus6.SelectedIndex = -1
+            nudEvaluationGrade.Value = 0
+
+            ' Hide add panel, show main panel
             pnlInternshipInformation.Show()
             pnlAddNewInternshipEvaluationRecord.Hide()
         End If
@@ -2518,8 +2558,33 @@ Public Class FormDashboards
         dgvEvaluationFiles5.ReadOnly = True
     End Sub
 
+    'EVALUATION ADD
+    Private Sub LoadEvaluationInfo(evaluationID As String)
+        Dim dt As DataTable = GetEvaluationInfo(evaluationID)
+        If dt.Rows.Count > 0 Then
+            txtEvaluationID6.Text = dt.Rows(0)("evaluation_id").ToString()
+            txtInternshipID6.Text = dt.Rows(0)("internship_id").ToString()
+            txtEvaluationReport6.Text = dt.Rows(0)("evaluation_report").ToString()
+            cmbStatus6.Text = dt.Rows(0)("evaluation_status").ToString()
 
+            If Not IsDBNull(dt.Rows(0)("grade")) Then
+                nudEvaluationGrade.Value = Convert.ToDecimal(dt.Rows(0)("grade"))
+            Else
+                nudEvaluationGrade.Value = 0
+            End If
+        End If
+    End Sub
 
+    Private Sub pnlAddNewInternshipEvaluationRecord_VisibleChanged(sender As Object, e As EventArgs) Handles pnlAddNewInternshipEvaluationRecord.VisibleChanged
+        If pnlAddNewInternshipEvaluationRecord.Visible Then
+            txtEvaluationID6.Text = GenerateEvaluationID()
+            txtEvaluationID6.ReadOnly = True
+            txtInternshipID6.Clear()
+            txtEvaluationReport6.Clear()
+            cmbStatus6.SelectedIndex = -1
+            nudEvaluationGrade.Value = 0
+        End If
+    End Sub
 
 
 
