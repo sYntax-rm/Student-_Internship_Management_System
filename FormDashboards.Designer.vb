@@ -157,6 +157,10 @@ Partial Class FormDashboards
         btnShow1 = New RoundedButton()
         pnlInternshipInformation = New Panel()
         pnlUpdateInternshipRecord = New roundedpanel()
+        Label161 = New Label()
+        Label162 = New Label()
+        txtLNameUpdateInternship = New TextBox()
+        txtFNameUpdateInternship = New TextBox()
         Panel19 = New Panel()
         txtboxInternshipID = New TextBox()
         btnSearchInternship = New RoundedButton()
@@ -723,7 +727,7 @@ Partial Class FormDashboards
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 131)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(373, 902)
+        Panel1.Size = New Size(373, 935)
         Panel1.TabIndex = 273
         ' 
         ' lblHomeDashboard
@@ -1015,9 +1019,9 @@ Partial Class FormDashboards
         pnlEditInternshipEvaluationRecord.Controls.Add(txtEvaluationID7)
         pnlEditInternshipEvaluationRecord.CornerRadius = 10
         pnlEditInternshipEvaluationRecord.Enabled = False
-        pnlEditInternshipEvaluationRecord.Location = New Point(1102, 58)
+        pnlEditInternshipEvaluationRecord.Location = New Point(1290, 58)
         pnlEditInternshipEvaluationRecord.Name = "pnlEditInternshipEvaluationRecord"
-        pnlEditInternshipEvaluationRecord.Size = New Size(322, 750)
+        pnlEditInternshipEvaluationRecord.Size = New Size(134, 750)
         pnlEditInternshipEvaluationRecord.TabIndex = 221
         ' 
         ' Panel3
@@ -2126,7 +2130,7 @@ Partial Class FormDashboards
         pnlStudentInformation.Dock = DockStyle.Fill
         pnlStudentInformation.Location = New Point(373, 131)
         pnlStudentInformation.Name = "pnlStudentInformation"
-        pnlStudentInformation.Size = New Size(1529, 902)
+        pnlStudentInformation.Size = New Size(1529, 935)
         pnlStudentInformation.TabIndex = 222
         ' 
         ' Panel14
@@ -2213,12 +2217,16 @@ Partial Class FormDashboards
         pnlInternshipInformation.Dock = DockStyle.Fill
         pnlInternshipInformation.Location = New Point(373, 131)
         pnlInternshipInformation.Name = "pnlInternshipInformation"
-        pnlInternshipInformation.Size = New Size(1529, 902)
+        pnlInternshipInformation.Size = New Size(1529, 935)
         pnlInternshipInformation.TabIndex = 135
         ' 
         ' pnlUpdateInternshipRecord
         ' 
         pnlUpdateInternshipRecord.BackColor = Color.Honeydew
+        pnlUpdateInternshipRecord.Controls.Add(Label161)
+        pnlUpdateInternshipRecord.Controls.Add(Label162)
+        pnlUpdateInternshipRecord.Controls.Add(txtLNameUpdateInternship)
+        pnlUpdateInternshipRecord.Controls.Add(txtFNameUpdateInternship)
         pnlUpdateInternshipRecord.Controls.Add(Panel19)
         pnlUpdateInternshipRecord.Controls.Add(btnSearchInternship)
         pnlUpdateInternshipRecord.Controls.Add(Label160)
@@ -2238,10 +2246,58 @@ Partial Class FormDashboards
         pnlUpdateInternshipRecord.Controls.Add(cmbStatusUpdateInternship)
         pnlUpdateInternshipRecord.Controls.Add(Label159)
         pnlUpdateInternshipRecord.CornerRadius = 10
-        pnlUpdateInternshipRecord.Location = New Point(1184, 93)
+        pnlUpdateInternshipRecord.Location = New Point(330, 93)
         pnlUpdateInternshipRecord.Name = "pnlUpdateInternshipRecord"
-        pnlUpdateInternshipRecord.Size = New Size(229, 593)
+        pnlUpdateInternshipRecord.Size = New Size(1083, 700)
         pnlUpdateInternshipRecord.TabIndex = 219
+        ' 
+        ' Label161
+        ' 
+        Label161.AutoSize = True
+        Label161.BackColor = Color.Transparent
+        Label161.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
+        Label161.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label161.Location = New Point(565, 232)
+        Label161.Name = "Label161"
+        Label161.Size = New Size(117, 30)
+        Label161.TabIndex = 243
+        Label161.Text = "Last Name"
+        ' 
+        ' Label162
+        ' 
+        Label162.AutoSize = True
+        Label162.BackColor = Color.Transparent
+        Label162.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
+        Label162.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label162.Location = New Point(63, 231)
+        Label162.Name = "Label162"
+        Label162.Size = New Size(120, 30)
+        Label162.TabIndex = 242
+        Label162.Text = "First Name"
+        ' 
+        ' txtLNameUpdateInternship
+        ' 
+        txtLNameUpdateInternship.BorderStyle = BorderStyle.None
+        txtLNameUpdateInternship.Cursor = Cursors.IBeam
+        txtLNameUpdateInternship.Font = New Font("Segoe UI", 14.0F)
+        txtLNameUpdateInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtLNameUpdateInternship.Location = New Point(567, 275)
+        txtLNameUpdateInternship.Multiline = True
+        txtLNameUpdateInternship.Name = "txtLNameUpdateInternship"
+        txtLNameUpdateInternship.Size = New Size(471, 38)
+        txtLNameUpdateInternship.TabIndex = 241
+        ' 
+        ' txtFNameUpdateInternship
+        ' 
+        txtFNameUpdateInternship.BorderStyle = BorderStyle.None
+        txtFNameUpdateInternship.Cursor = Cursors.IBeam
+        txtFNameUpdateInternship.Font = New Font("Segoe UI", 14.0F)
+        txtFNameUpdateInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        txtFNameUpdateInternship.Location = New Point(63, 275)
+        txtFNameUpdateInternship.Multiline = True
+        txtFNameUpdateInternship.Name = "txtFNameUpdateInternship"
+        txtFNameUpdateInternship.Size = New Size(471, 38)
+        txtFNameUpdateInternship.TabIndex = 192
         ' 
         ' Panel19
         ' 
@@ -2285,7 +2341,7 @@ Partial Class FormDashboards
         Label160.BackColor = Color.Transparent
         Label160.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
         Label160.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label160.Location = New Point(570, 335)
+        Label160.Location = New Point(567, 436)
         Label160.Name = "Label160"
         Label160.Size = New Size(103, 30)
         Label160.TabIndex = 238
@@ -2297,7 +2353,7 @@ Partial Class FormDashboards
         cmbCompanyContactInternship.Font = New Font("Segoe UI", 14.0F)
         cmbCompanyContactInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbCompanyContactInternship.FormattingEnabled = True
-        cmbCompanyContactInternship.Location = New Point(570, 270)
+        cmbCompanyContactInternship.Location = New Point(567, 371)
         cmbCompanyContactInternship.Name = "cmbCompanyContactInternship"
         cmbCompanyContactInternship.Size = New Size(471, 39)
         cmbCompanyContactInternship.TabIndex = 237
@@ -2308,7 +2364,7 @@ Partial Class FormDashboards
         cmbCompanyInternship.Font = New Font("Segoe UI", 14.0F)
         cmbCompanyInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbCompanyInternship.FormattingEnabled = True
-        cmbCompanyInternship.Location = New Point(66, 270)
+        cmbCompanyInternship.Location = New Point(63, 371)
         cmbCompanyInternship.Name = "cmbCompanyInternship"
         cmbCompanyInternship.Size = New Size(471, 39)
         cmbCompanyInternship.TabIndex = 236
@@ -2320,7 +2376,7 @@ Partial Class FormDashboards
         dtpStartDate.CalendarTitleBackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
         dtpStartDate.CalendarTrailingForeColor = SystemColors.ControlLightLight
         dtpStartDate.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dtpStartDate.Location = New Point(69, 371)
+        dtpStartDate.Location = New Point(66, 472)
         dtpStartDate.Name = "dtpStartDate"
         dtpStartDate.Size = New Size(470, 38)
         dtpStartDate.TabIndex = 235
@@ -2332,7 +2388,7 @@ Partial Class FormDashboards
         dtpEndDate.CalendarTitleBackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
         dtpEndDate.CalendarTrailingForeColor = SystemColors.ControlLightLight
         dtpEndDate.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        dtpEndDate.Location = New Point(570, 371)
+        dtpEndDate.Location = New Point(567, 472)
         dtpEndDate.Name = "dtpEndDate"
         dtpEndDate.Size = New Size(470, 38)
         dtpEndDate.TabIndex = 234
@@ -2360,7 +2416,7 @@ Partial Class FormDashboards
         btnCancelUpdate.FlatStyle = FlatStyle.Flat
         btnCancelUpdate.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnCancelUpdate.ForeColor = Color.White
-        btnCancelUpdate.Location = New Point(730, 511)
+        btnCancelUpdate.Location = New Point(729, 611)
         btnCancelUpdate.MinimumSize = New Size(50, 25)
         btnCancelUpdate.Name = "btnCancelUpdate"
         btnCancelUpdate.Size = New Size(132, 51)
@@ -2374,7 +2430,7 @@ Partial Class FormDashboards
         Label154.BackColor = Color.Transparent
         Label154.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
         Label154.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label154.Location = New Point(571, 228)
+        Label154.Location = New Point(568, 329)
         Label154.Name = "Label154"
         Label154.Size = New Size(190, 30)
         Label154.TabIndex = 203
@@ -2387,7 +2443,7 @@ Partial Class FormDashboards
         btnUpdateRecord.FlatStyle = FlatStyle.Flat
         btnUpdateRecord.Font = New Font("Segoe UI", 13.0F, FontStyle.Bold)
         btnUpdateRecord.ForeColor = Color.White
-        btnUpdateRecord.Location = New Point(869, 510)
+        btnUpdateRecord.Location = New Point(868, 610)
         btnUpdateRecord.MinimumSize = New Size(50, 25)
         btnUpdateRecord.Name = "btnUpdateRecord"
         btnUpdateRecord.Size = New Size(168, 51)
@@ -2413,7 +2469,7 @@ Partial Class FormDashboards
         Label156.BackColor = Color.Transparent
         Label156.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
         Label156.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label156.Location = New Point(69, 426)
+        Label156.Location = New Point(66, 527)
         Label156.Name = "Label156"
         Label156.Size = New Size(73, 30)
         Label156.TabIndex = 200
@@ -2425,7 +2481,7 @@ Partial Class FormDashboards
         Label157.BackColor = Color.Transparent
         Label157.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
         Label157.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label157.Location = New Point(69, 227)
+        Label157.Location = New Point(66, 328)
         Label157.Name = "Label157"
         Label157.Size = New Size(172, 30)
         Label157.TabIndex = 198
@@ -2450,7 +2506,7 @@ Partial Class FormDashboards
         cmbStatusUpdateInternship.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         cmbStatusUpdateInternship.FormattingEnabled = True
         cmbStatusUpdateInternship.Items.AddRange(New Object() {"Pending", "Ongoing", "Completed"})
-        cmbStatusUpdateInternship.Location = New Point(66, 459)
+        cmbStatusUpdateInternship.Location = New Point(63, 560)
         cmbStatusUpdateInternship.Name = "cmbStatusUpdateInternship"
         cmbStatusUpdateInternship.Size = New Size(471, 39)
         cmbStatusUpdateInternship.TabIndex = 196
@@ -2461,7 +2517,7 @@ Partial Class FormDashboards
         Label159.BackColor = Color.Transparent
         Label159.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
         Label159.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label159.Location = New Point(69, 333)
+        Label159.Location = New Point(66, 434)
         Label159.Name = "Label159"
         Label159.Size = New Size(113, 30)
         Label159.TabIndex = 195
@@ -2481,7 +2537,7 @@ Partial Class FormDashboards
         txtSearchID4.BorderStyle = BorderStyle.None
         txtSearchID4.Cursor = Cursors.IBeam
         txtSearchID4.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
-        txtSearchID4.ForeColor = Color.FromArgb(CByte(153), CByte(151), CByte(151))
+        txtSearchID4.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         txtSearchID4.Location = New Point(52, 5)
         txtSearchID4.Multiline = True
         txtSearchID4.Name = "txtSearchID4"
@@ -2644,7 +2700,7 @@ Partial Class FormDashboards
         pnlEvaluationInformation.Dock = DockStyle.Fill
         pnlEvaluationInformation.Location = New Point(373, 131)
         pnlEvaluationInformation.Name = "pnlEvaluationInformation"
-        pnlEvaluationInformation.Size = New Size(1529, 902)
+        pnlEvaluationInformation.Size = New Size(1529, 935)
         pnlEvaluationInformation.TabIndex = 223
         ' 
         ' pnlAddNewInternshipEvaluationRecord
@@ -2666,9 +2722,9 @@ Partial Class FormDashboards
         pnlAddNewInternshipEvaluationRecord.Controls.Add(txtInternshipID6)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(txtEvaluationID6)
         pnlAddNewInternshipEvaluationRecord.CornerRadius = 10
-        pnlAddNewInternshipEvaluationRecord.Location = New Point(746, 58)
+        pnlAddNewInternshipEvaluationRecord.Location = New Point(1042, 55)
         pnlAddNewInternshipEvaluationRecord.Name = "pnlAddNewInternshipEvaluationRecord"
-        pnlAddNewInternshipEvaluationRecord.Size = New Size(345, 750)
+        pnlAddNewInternshipEvaluationRecord.Size = New Size(217, 750)
         pnlAddNewInternshipEvaluationRecord.TabIndex = 218
         ' 
         ' Panel2
@@ -3018,7 +3074,7 @@ Partial Class FormDashboards
         pnlCompanyInformation.Font = New Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         pnlCompanyInformation.Location = New Point(373, 131)
         pnlCompanyInformation.Name = "pnlCompanyInformation"
-        pnlCompanyInformation.Size = New Size(1529, 902)
+        pnlCompanyInformation.Size = New Size(1529, 935)
         pnlCompanyInformation.TabIndex = 224
         ' 
         ' pnlAddNewCompanyRecord
@@ -3826,7 +3882,7 @@ Partial Class FormDashboards
         pnlCompanyContactInformation.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
         pnlCompanyContactInformation.Location = New Point(373, 131)
         pnlCompanyContactInformation.Name = "pnlCompanyContactInformation"
-        pnlCompanyContactInformation.Size = New Size(1529, 902)
+        pnlCompanyContactInformation.Size = New Size(1529, 935)
         pnlCompanyContactInformation.TabIndex = 229
         ' 
         ' pnlEditCompanyContactRecord
@@ -4519,7 +4575,7 @@ Partial Class FormDashboards
         pnlFacultyInformation.Dock = DockStyle.Fill
         pnlFacultyInformation.Location = New Point(373, 131)
         pnlFacultyInformation.Name = "pnlFacultyInformation"
-        pnlFacultyInformation.Size = New Size(1529, 902)
+        pnlFacultyInformation.Size = New Size(1529, 935)
         pnlFacultyInformation.TabIndex = 231
         ' 
         ' pnlEditFacultyRecord
@@ -5164,7 +5220,7 @@ Partial Class FormDashboards
         pnlVisitInformation.Dock = DockStyle.Fill
         pnlVisitInformation.Location = New Point(373, 131)
         pnlVisitInformation.Name = "pnlVisitInformation"
-        pnlVisitInformation.Size = New Size(1529, 902)
+        pnlVisitInformation.Size = New Size(1529, 935)
         pnlVisitInformation.TabIndex = 235
         ' 
         ' pnlAddNewVisitRecord
@@ -5806,7 +5862,7 @@ Partial Class FormDashboards
         pnlSummaryReport.Dock = DockStyle.Fill
         pnlSummaryReport.Location = New Point(373, 131)
         pnlSummaryReport.Name = "pnlSummaryReport"
-        pnlSummaryReport.Size = New Size(1529, 902)
+        pnlSummaryReport.Size = New Size(1529, 935)
         pnlSummaryReport.TabIndex = 236
         ' 
         ' Label152
@@ -6600,7 +6656,7 @@ Partial Class FormDashboards
         pnlHome.Dock = DockStyle.Fill
         pnlHome.Location = New Point(373, 131)
         pnlHome.Name = "pnlHome"
-        pnlHome.Size = New Size(1529, 902)
+        pnlHome.Size = New Size(1529, 935)
         pnlHome.TabIndex = 221
         ' 
         ' pnlPending
@@ -6667,7 +6723,8 @@ Partial Class FormDashboards
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(1902, 1033)
+        ClientSize = New Size(1902, 1066)
+        Controls.Add(pnlEvaluationInformation)
         Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlStudentInformation)
         Controls.Add(pnlHome)
@@ -6676,7 +6733,6 @@ Partial Class FormDashboards
         Controls.Add(pnlSummaryReport)
         Controls.Add(pnlFacultyInformation)
         Controls.Add(pnlVisitInformation)
-        Controls.Add(pnlEvaluationInformation)
         Controls.Add(Panel1)
         Controls.Add(pnlHeader)
         FormBorderStyle = FormBorderStyle.None
@@ -7262,5 +7318,9 @@ Partial Class FormDashboards
     Friend WithEvents Panel15 As Panel
     Friend WithEvents Panel16 As Panel
     Friend WithEvents Panel19 As Panel
+    Friend WithEvents Label161 As Label
+    Friend WithEvents Label162 As Label
+    Friend WithEvents txtLNameUpdateInternship As TextBox
+    Friend WithEvents txtFNameUpdateInternship As TextBox
 
 End Class

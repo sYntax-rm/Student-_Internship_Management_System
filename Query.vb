@@ -298,15 +298,17 @@ Module Query
                                 LEFT JOIN student s  ON i.student_id = s.student_id
                                 LEFT JOIN company c ON i.company_id = c.company_id
                                 LEFT JOIN company_contact Cc ON i.contact_id = Cc.contact_id
-                                WHERE s.first_name LIKE @search OR s.last_name LIKE @search OR
-                                i.internship_id LIKE @search;
+                                WHERE LOWER(s.first_name) LIKE LOWER(@search) 
+                                OR LOWER(s.last_name) LIKE LOWER(@search)
+                                OR LOWER(i.internship_id) LIKE LOWER(@search)
                                 "
 
         Try
             Using con As MySqlConnection = GetConnection()
                 Using cmd As New MySqlCommand(query, con)
                     con.Open()
-                    cmd.Parameters.AddWithValue("@search", "%" & searchItem & "%")
+                    cmd.Parameters.AddWithValue("@search", "%" & searchItem.ToLower() & "%")
+
                     Using dA As New MySqlDataAdapter(cmd)
                         dA.Fill(dataTable)
                     End Using
@@ -323,4 +325,127 @@ Module Query
 
 
 
+
+
+    'CODE FOR UPDATING INTERNSHIP RECORD - IRIS HUHU TT TT
+
+
+
+    Public Function updateInternshipRecord(internshipID As String,
+                                       companyName As String,
+                                       contactName As String,
+                                       startDate As Date,
+                                       endDate As Date,
+                                       status As String) As Boolean
+
+        Dim query As String =
+        "UPDATE internship i
+         JOIN company c ON i.company_id = c.company_id
+         JOIN company_contact cc ON i.contact_id = cc.contact_id
+         SET 
+            i.start_date = @startDate,
+            i.end_date = @endDate,
+            i.status = @status,
+            c.company_name = @compName,
+            cc.contact_last_name = @contactName
+         WHERE i.internship_id = @internshipID"
+
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand(query, con)
+                    con.Open()
+
+                    cmd.Parameters.AddWithValue("@internshipID", internshipID)
+                    cmd.Parameters.AddWithValue("@compName", companyName)
+                    cmd.Parameters.AddWithValue("@contactName", contactName)
+                    cmd.Parameters.AddWithValue("@startDate", startDate)
+                    cmd.Parameters.AddWithValue("@endDate", endDate)
+                    cmd.Parameters.AddWithValue("@status", status)
+
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            Return True
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+
+    End Function
+
+    Public Function LoadEvaluationTable() As DataTable
+        Dim dt As New DataTable()
+        Dim query As String = "
+        SELECT 
+            ie.evaluation_id AS 'Evaluation ID',
+            i.internship_id AS 'Internship ID',
+            s.first_name AS 'First Name',
+            s.last_name AS 'Last Name',
+            c.company_name AS 'Company Name',
+            ie.grade AS 'Grade',
+            ie.evaluation_report AS 'Evaluation Report',
+            ie.faculty_id AS 'Faculty ID'
+        FROM internship_evaluation ie
+        LEFT JOIN internship i ON ie.internship_id = i.internship_id
+        LEFT JOIN student s ON i.student_id = s.student_id
+        LEFT JOIN company c ON i.company_id = c.company_id
+    "
+
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand(query, con)
+                    Using adapter As New MySqlDataAdapter(cmd)
+                        adapter.Fill(dt)
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return dt
+    End Function
+
+    Public Function searchEvaluationTable(searchItem As String) As DataTable
+        Dim dataTable As New DataTable()
+
+        Dim query As String = "
+        SELECT 
+            ie.evaluation_id AS 'Evaluation ID',
+            i.internship_id AS 'Internship ID',
+            s.first_name AS 'First Name',
+            s.last_name AS 'Last Name',
+            c.company_name AS 'Company Name',
+            ie.grade AS 'Grade',
+            ie.evaluation_report AS 'Evaluation Report',
+            ie.faculty_id AS 'Faculty ID'
+        FROM internship_evaluation ie
+        LEFT JOIN internship i ON ie.internship_id = i.internship_id
+        LEFT JOIN student s ON i.student_id = s.student_id
+        LEFT JOIN company c ON i.company_id = c.company_id
+        WHERE LOWER(ie.evaluation_id) LIKE LOWER(@search)
+           OR LOWER(i.internship_id) LIKE LOWER(@search)
+           OR LOWER(ie.faculty_id) LIKE LOWER(@search)
+           OR LOWER(s.first_name) LIKE LOWER(@search)
+           OR LOWER(s.last_name) LIKE LOWER(@search)
+    "
+
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand(query, con)
+                    cmd.Parameters.AddWithValue("@search", "%" & searchItem.ToLower() & "%")
+
+                    Using dA As New MySqlDataAdapter(cmd)
+                        dA.Fill(dataTable)
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return dataTable
+    End Function
 End Module

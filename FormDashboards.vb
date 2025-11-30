@@ -39,7 +39,7 @@ Public Class FormDashboards
         'Panel add Edit Location - Internship
         'Update
         pnlUpdateInternshipRecord.Location = New Point(104, 101)
-        pnlUpdateInternshipRecord.Size = New Size(1100, 593)
+        pnlUpdateInternshipRecord.Size = New Size(1083, 700)
 
 
         'Panel add Edit Location - Evaluation
@@ -124,15 +124,23 @@ Public Class FormDashboards
         'FOR CMB HOVER
 
         For Each cmb As ComboBox In {cmbGender2, cmbGender3,
-                                 cmbSection2, cmbSection3,
-                                 cmbDepartment2, cmbDepartment3,
-                                 cmbCourse2, cmbCourse3, cmbCompanyInternship, cmbCompanyContactInternship,
-                                 cmbStatusUpdateInternship}
-
+                                     cmbSection2, cmbSection3,
+                                     cmbDepartment2, cmbDepartment3,
+                                     cmbCourse2, cmbCourse3,
+                                     cmbCompanyInternship, cmbCompanyContactInternship,
+                                     cmbStatusUpdateInternship}
             cmb.DrawMode = DrawMode.OwnerDrawFixed
             AddHandler cmb.DrawItem, AddressOf DrawComboItem
-        Next
 
+
+            cmb.DrawMode = DrawMode.OwnerDrawFixed
+            cmb.DropDownStyle = ComboBoxStyle.DropDownList
+            AddHandler cmb.DrawItem, AddressOf DrawComboItem
+        Next
+        cmbCompanyInternship.DropDownStyle = ComboBoxStyle.DropDown
+        cmbCompanyContactInternship.DropDownStyle = ComboBoxStyle.DropDown
+
+    End Sub
 
 
     Private Sub hidePanel()
@@ -595,7 +603,7 @@ Public Class FormDashboards
         hidePanel()
         pnlEvaluationInformation.Show()
         pnlHome.Hide()
-
+        LoadEvaluationDGV()
     End Sub
 
     'BUTTON HOVER
@@ -1153,13 +1161,24 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnSearch4_Click(sender As Object, e As EventArgs) Handles btnSearch4.Click
-        If txtSearchID4.Text = "" Then
-            MessageBox.Show("Please Enter Student ID",
-                                     "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        If txtSearchID4.Text.Trim() = "" Then
+            MessageBox.Show("Please Enter Student ID or Name",
+                        "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        dgvInternshipLogs4.DataSource = searchInterTable(txtSearchID4.Text.Trim())
+        Dim dt As DataTable = searchInterTable(txtSearchID4.Text.Trim())
+
+        If dt.Rows.Count > 0 Then
+            ' --- show only the FIRST ROW ---
+            Dim oneRow As DataTable = dt.Clone()          ' same structure
+            oneRow.ImportRow(dt.Rows(0))                  ' add first row only
+            dgvInternshipLogs4.DataSource = oneRow
+        Else
+            dgvInternshipLogs4.DataSource = Nothing
+            MessageBox.Show("No record found!",
+                        "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
 
     End Sub
 
@@ -1205,7 +1224,28 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnSearch5_Click(sender As Object, e As EventArgs) Handles btnSearch5.Click
+        Dim searchText As String = txtSearchID5.Text.Trim()
 
+        If searchText = "" Then
+            MessageBox.Show("Please enter a value to search.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        Dim dt As DataTable = searchEvaluationTable(searchText)
+
+        If dt.Rows.Count = 0 Then
+            MessageBox.Show("No matching records found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            dgvEvaluationLogs5.DataSource = Nothing
+            Exit Sub
+        End If
+
+        dgvEvaluationLogs5.DataSource = dt
+
+        ' Optional: DataGridView settings
+        dgvEvaluationLogs5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvEvaluationLogs5.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvEvaluationLogs5.MultiSelect = False
+        dgvEvaluationLogs5.ReadOnly = True
     End Sub
 
     Private Sub dgvEvaluationLogs5_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEvaluationLogs5.CellContentClick
@@ -2089,6 +2129,8 @@ Public Class FormDashboards
         Dim result = MessageBox.Show("Are you sure you want to cancel?", "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
         If result = DialogResult.Yes Then
+            ClearUpdateForm()
+            pnlUpdateInternshipRecord.Hide()
             pnlInternshipInformation.Show()
         End If
     End Sub
@@ -2277,19 +2319,204 @@ Public Class FormDashboards
 
 
 
+    'CODE FOR UPDATE INTERNSHIP RECORD - IRIS
+
+    ' ----- Module-level variable -----
+    Private loadedInternshipID As String = ""
+    ' ----- Search Internship -----
+    Private Sub btnSearchInternship_Click(sender As Object, e As EventArgs) Handles btnSearchInternship.Click
+        If txtboxInternshipID.Text.Trim() = "" Then
+            MessageBox.Show("Please enter Internship ID!", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        Dim dt As DataTable = searchInterTable(txtboxInternshipID.Text.Trim())
+        If dt.Rows.Count = 0 Then
+            MessageBox.Show("No internship record found!", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        Dim row As DataRow = dt.Rows(0)
+
+        ' Fill textboxes
+        txtFNameUpdateInternship.Text = row("First Name").ToString()
+        txtLNameUpdateInternship.Text = row("Last Name").ToString()
+        txtboxInternshipID.Text = row("Internship ID").ToString()
+
+        ' Track loaded ID
+        loadedInternshipID = txtboxInternshipID.Text.Trim()
+
+        ' Load ComboBoxes and auto-select
+        LoadCompanies(row("Company Name").ToString())
+        LoadSupervisors(row("Supervisor Last Name").ToString())
+
+        ' Set dates
+        SetDatePicker(dtpStartDate, If(IsDBNull(row("Start_Date")), Nothing, CDate(row("Start_Date"))))
+        SetDatePicker(dtpEndDate, If(IsDBNull(row("End_Date")), Nothing, CDate(row("End_Date"))))
+
+        ' Set status
+        cmbStatusUpdateInternship.Text = row("Status").ToString()
+        cmbStatusUpdateInternship_SelectedIndexChanged(Nothing, Nothing)
+    End Sub
+
+    ' ----- Load Companies ComboBox -----
+    Private Sub LoadCompanies(selectedCompany As String)
+        cmbCompanyInternship.Items.Clear()
+        cmbCompanyInternship.DropDownStyle = ComboBoxStyle.DropDownList ' <-- non-editable
+
+        Dim companies As New HashSet(Of String)
+
+        Using con As MySqlConnection = GetConnection()
+            con.Open()
+            Dim cmd As New MySqlCommand("SELECT company_name FROM company", con)
+            Dim reader = cmd.ExecuteReader()
+            While reader.Read()
+                Dim compName As String = reader("company_name").ToString()
+                If Not companies.Contains(compName) Then
+                    companies.Add(compName)
+                    cmbCompanyInternship.Items.Add(compName)
+                End If
+            End While
+        End Using
+
+        ' Auto-select
+        If selectedCompany <> "" AndAlso cmbCompanyInternship.Items.Contains(selectedCompany) Then
+            cmbCompanyInternship.Text = selectedCompany
+        End If
+    End Sub
+
+    ' ----- Load Supervisors ComboBox -----
+    Private Sub LoadSupervisors(selectedSupervisor As String)
+        cmbCompanyContactInternship.Items.Clear()
+        cmbCompanyContactInternship.DropDownStyle = ComboBoxStyle.DropDownList ' <-- non-editable
+
+        Dim dict As New Dictionary(Of String, List(Of String)) ' key = last name, value = list of first names
+
+        Using con As MySqlConnection = GetConnection()
+            con.Open()
+            Dim cmd As New MySqlCommand("SELECT contact_last_name, contact_first_name FROM company_contact", con)
+            Dim reader = cmd.ExecuteReader()
+            While reader.Read()
+                Dim lastName As String = reader("contact_last_name").ToString()
+                Dim firstName As String = reader("contact_first_name").ToString()
+
+                If dict.ContainsKey(lastName) Then
+                    dict(lastName).Add(firstName)
+                Else
+                    dict.Add(lastName, New List(Of String) From {firstName})
+                End If
+            End While
+        End Using
+
+        ' Populate ComboBox
+        For Each kvp In dict
+            If kvp.Value.Count = 1 Then
+                cmbCompanyContactInternship.Items.Add(kvp.Key)
+            Else
+                For Each fName In kvp.Value
+                    cmbCompanyContactInternship.Items.Add($"{kvp.Key}, {fName}")
+                Next
+            End If
+        Next
+
+        ' Auto-select
+        If selectedSupervisor <> "" AndAlso cmbCompanyContactInternship.Items.Contains(selectedSupervisor) Then
+            cmbCompanyContactInternship.Text = selectedSupervisor
+        End If
+    End Sub
 
 
+    ' ----- Status Logic -----
+    Private Sub cmbStatusUpdateInternship_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbStatusUpdateInternship.SelectedIndexChanged
+        Select Case cmbStatusUpdateInternship.Text
+            Case "Pending"
+                ' Start date: only if empty
+                If dtpStartDate.CustomFormat = " " Then
+                    dtpStartDate.Value = Date.Today
+                    dtpStartDate.Enabled = False
+                End If
+                dtpEndDate.Enabled = False
+                If dtpEndDate.CustomFormat = " " Then
+                    dtpEndDate.Value = Date.Today
+                    dtpEndDate.Enabled = False
+                End If
 
+            Case "Ongoing"
+                dtpStartDate.Enabled = True
+                ClearDatePicker(dtpEndDate)
+                dtpEndDate.Enabled = False
 
+            Case "Completed"
+                dtpStartDate.Enabled = False
+                dtpEndDate.Enabled = True
+                If dtpEndDate.CustomFormat = " " Then SetDatePicker(dtpEndDate, Date.Today)
+        End Select
+    End Sub
 
+    ' ----- Clear / Set DateTimePickers -----
+    Private Sub ClearDatePicker(dtp As DateTimePicker)
+        dtp.CustomFormat = " "
+        dtp.Format = DateTimePickerFormat.Custom
+    End Sub
 
+    Private Sub SetDatePicker(dtp As DateTimePicker, dtValue As Date)
+        dtp.CustomFormat = "yyyy-MM-dd"
+        dtp.Format = DateTimePickerFormat.Custom
+        dtp.Value = dtValue
+    End Sub
 
+    ' ----- Update Record Button -----
+    Private Sub btnUpdateRecord_Click(sender As Object, e As EventArgs) Handles btnUpdateRecord.Click
+        ' Case-insensitive, trimmed comparison
+        If txtboxInternshipID.Text.Trim().ToUpper() <> loadedInternshipID.Trim().ToUpper() Then
+            MessageBox.Show("Error: You can only update the originally loaded Internship ID.",
+                        "Invalid Operation", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
 
+        ' Call update function
+        Dim success As Boolean = updateInternshipRecord(
+                                txtboxInternshipID.Text,
+                                cmbCompanyInternship.Text,
+                                cmbCompanyContactInternship.Text,
+                                dtpStartDate.Value,
+                                dtpEndDate.Value,
+                                cmbStatusUpdateInternship.Text
+                             )
 
+        If success Then
+            MessageBox.Show("Internship record updated successfully!", "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+            ' Refresh DataGridView
+            dgvInternshipFiles4.DataSource = searchInterTable("")
 
+            ' Clear form
+            ClearUpdateForm()
+        End If
+    End Sub
 
+    ' ----- Cancel / Clear Form -----
+    Private Sub ClearUpdateForm()
+        txtboxInternshipID.Clear()
+        txtFNameUpdateInternship.Clear()
+        txtLNameUpdateInternship.Clear()
+        cmbCompanyInternship.SelectedIndex = -1
+        cmbCompanyContactInternship.SelectedIndex = -1
+        dtpStartDate.CustomFormat = " "
+        dtpEndDate.CustomFormat = " "
+        cmbStatusUpdateInternship.SelectedIndex = -1
+        loadedInternshipID = ""
+    End Sub
 
+    'EVALUATION DGV
+    Private Sub LoadEvaluationDGV(Optional searchItem As String = "")
+        dgvEvaluationFiles5.DataSource = LoadEvaluationTable()
+
+        dgvEvaluationFiles5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvEvaluationFiles5.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvEvaluationFiles5.MultiSelect = False
+        dgvEvaluationFiles5.ReadOnly = True
+    End Sub
 
 
 
