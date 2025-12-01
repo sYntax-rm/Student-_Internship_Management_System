@@ -214,106 +214,10 @@ Public Class FormDashboards
 
     End Sub
 
-    Private Sub dgvStudentFilesStyles(dgv As DataGridView, dt As DataTable)
-
-        'Filter rows
-        Dim dv As New DataView(dt)
-        dv.RowFilter = "Hidden = False"
-        dgv.DataSource = dv
-
-        If dgv.Columns.Contains("Hidden") Then
-            dgv.Columns("Hidden").Visible = False
-        End If
-
-
-        dgvStudentFiles.Columns("Student ID").Width = 120
-        dgvStudentFiles.Columns("First Name").Width = 200
-        dgvStudentFiles.Columns("Last Name").Width = 200
-        dgvStudentFiles.Columns("Gender").Width = 150
-        dgvStudentFiles.Columns("Section").Width = 200
-        dgvStudentFiles.Columns("Contact Number").Width = 150
-        dgvStudentFiles.Columns("Email").Width = 350
-        dgvStudentFiles.Columns("Department").Width = 350
-        dgvStudentFiles.Columns("Course").Width = 350
-
-        dgvStudentFiles.EnableHeadersVisualStyles = False
-        dgvStudentFiles.AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
-
-
     End Sub
 
     'Search Student Style DGV
     Private Sub dgvStudentSearchsStyles(dgv As DataGridView)
-
-        dgvStudentSearch.Columns("Student ID").Width = 120
-        dgvStudentSearch.Columns("First Name").Width = 200
-        dgvStudentSearch.Columns("Last Name").Width = 200
-        dgvStudentSearch.Columns("Gender").Width = 150
-        dgvStudentSearch.Columns("Section").Width = 200
-        dgvStudentSearch.Columns("Contact Number").Width = 150
-        dgvStudentSearch.Columns("Email").Width = 350
-        dgvStudentSearch.Columns("Department").Width = 350
-        dgvStudentSearch.Columns("Course").Width = 350
-
-        dgvStudentSearch.EnableHeadersVisualStyles = False
-        dgvStudentSearch.AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
-    End Sub
-
-
-    'FOR HOVER EFFECTS
-    Dim first As Integer = -1
-
-    Private Sub dgvStudentSearch_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentSearch.CellMouseEnter
-        If e.RowIndex >= 0 Then
-
-            ' Ibabalik yung last row sa original color
-            If first >= 0 Then
-                dgvStudentSearch.Rows(first).DefaultCellStyle.BackColor = Color.White
-            End If
-
-            ' Highlight current hovered row
-            dgvStudentSearch.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Honeydew
-
-            lastRowStudent = e.RowIndex
-        End If
-    End Sub
-
-    Private Sub dgvStudentSearch_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentSearch.CellMouseLeave
-        If first >= 0 Then
-            dgvStudentSearch.Rows(lastRowStudent).DefaultCellStyle.BackColor = Color.White
-        End If
-    End Sub
-    Private Sub dgvStudentSearch_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvStudentSearch.DataBindingComplete
-        dgvStudentSearch.ClearSelection()
-    End Sub
-
-
-    'FOR HOVER EFFECTS dgvStudent Files
-
-
-    Private Sub dgvStudentFiles_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentFiles.CellMouseEnter
-        If e.RowIndex >= 0 Then
-
-            ' Ibabalik yung last row sa original color
-            If lastRowStudent >= 0 Then
-                dgvStudentFiles.Rows(lastRowStudent).DefaultCellStyle.BackColor = Color.White
-            End If
-
-            ' Highlight current hovered row
-            dgvStudentFiles.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Honeydew
-
-            lastRowStudent = e.RowIndex
-        End If
-    End Sub
-
-    Private Sub dgvStudentFiles_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentFiles.CellMouseLeave
-        If lastRowStudent >= 0 Then
-            dgvStudentFiles.Rows(lastRowStudent).DefaultCellStyle.BackColor = Color.White
-        End If
-    End Sub
-    Private Sub dgvStudentFiles_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvStudentFiles.DataBindingComplete
-        dgvStudentFiles.ClearSelection()
-    End Sub
 
     Private Sub loadInternRecord()
         'Dim dt As DataTable = loadTable("SELECT * FROM vinternship_record") use this to hide the pending
@@ -509,70 +413,6 @@ Public Class FormDashboards
         pnlInternshipInformation.Show()
         loadInternRecord()
     End Sub
-
-    'FOR COLUMNS STYLES INTERNSHIPS
-    Private Sub dgvInternshipFiles4Styles(dgv As DataGridView)
-
-        If dgv.Columns.Count = 0 Then Exit Sub  ' ← Prevent crash
-
-        dgv.Columns("Internship ID").Width = 170
-        dgv.Columns("First Name").Width = 200
-        dgv.Columns("Last Name").Width = 200
-        dgv.Columns("Company Name").Width = 300
-        dgv.Columns("Supervisor Last Name").Width = 200
-        dgv.Columns("Supervisor Contact").Width = 150
-        dgv.Columns("Start_Date").Width = 170
-        dgv.Columns("End_Date").Width = 170
-        dgv.Columns("Status").Width = 150
-
-        dgv.EnableHeadersVisualStyles = False
-        dgv.AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
-
-        With dgvInternshipFiles4
-            .EnableHeadersVisualStyles = False
-            .RowHeadersDefaultCellStyle.BackColor = Color.MintCream   ' Palitan ng gusto mong kulay
-            .RowHeadersDefaultCellStyle.SelectionBackColor = Color.LightYellow
-            .RowHeadersWidth = 20
-        End With
-
-
-    End Sub
-
-    'FOR HOVER EFFECT DGVINTERNSHIP 
-
-
-    Private Sub dgvInternshipFiles4_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInternshipFiles4.CellMouseEnter
-        If e.RowIndex >= 0 Then
-
-            ' Ibabalik yung last row sa original color
-            If lastRowInternship >= 0 Then
-                dgvInternshipFiles4.Rows(lastRowInternship).DefaultCellStyle.BackColor = Color.White
-
-            End If
-
-            ' Highlight current hovered row
-            dgvInternshipFiles4.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Honeydew
-
-            lastRowInternship = e.RowIndex
-        End If
-    End Sub
-
-    Private Sub dgvInternshipFiles_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInternshipFiles4.CellMouseLeave
-        If lastRowInternship >= 0 Then
-            dgvInternshipFiles4.Rows(lastRowInternship).DefaultCellStyle.BackColor = Color.White
-        End If
-    End Sub
-
-    Private Sub dgvInternshipFiles4_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvStudentFiles.DataBindingComplete
-
-        dgvInternshipFiles4.ClearSelection()
-        dgvInternshipFiles4.CurrentCell = Nothing
-        Me.ActiveControl = Nothing
-
-
-    End Sub
-
-
 
     'BUTTON HOVER
 
@@ -1219,9 +1059,7 @@ Public Class FormDashboards
     ' Private Sub pnlEvaluationLogs_Paint(sender As Object, e As PaintEventArgs) Handles pnlEvaluationLogs.Paint
 
     ' End Sub
-    Private Sub txtSearchID5_TextChanged(sender As Object, e As EventArgs) Handles txtSearchID5.TextChanged
 
-    End Sub
 
     Private Sub btnSearch5_Click(sender As Object, e As EventArgs) Handles btnSearch5.Click
         Dim searchText As String = txtSearchID5.Text.Trim()
@@ -1344,7 +1182,6 @@ Public Class FormDashboards
         If success Then
             MessageBox.Show("Evaluation added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            ' Refresh DataGridView
             LoadEvaluationDGV()
 
             ' Clear form for next entry
@@ -1354,7 +1191,6 @@ Public Class FormDashboards
             cmbStatus6.SelectedIndex = -1
             nudEvaluationGrade.Value = 0
 
-            ' Hide add panel, show main panel
             pnlInternshipInformation.Show()
             pnlAddNewInternshipEvaluationRecord.Hide()
         End If
@@ -2551,7 +2387,6 @@ Public Class FormDashboards
     'EVALUATION DGV
     Private Sub LoadEvaluationDGV(Optional searchItem As String = "")
         dgvEvaluationFiles5.DataSource = LoadEvaluationTable()
-
         dgvEvaluationFiles5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvEvaluationFiles5.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvEvaluationFiles5.MultiSelect = False
@@ -2581,7 +2416,6 @@ Public Class FormDashboards
             txtEvaluationID6.ReadOnly = True
             txtInternshipID6.Clear()
             txtEvaluationReport6.Clear()
-            cmbStatus6.SelectedIndex = -1
             nudEvaluationGrade.Value = 0
         End If
     End Sub

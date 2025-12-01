@@ -381,23 +381,17 @@ Module Query
         Try
             Using con As MySqlConnection = GetConnection()
                 con.Open()
-
-                ' Kunin ang latest evaluation_id
                 Dim cmd As New MySqlCommand("SELECT evaluation_id FROM internship_evaluation ORDER BY evaluation_id DESC LIMIT 1", con)
                 Dim lastID As Object = cmd.ExecuteScalar()
-
                 If lastID IsNot Nothing Then
-                    ' Extract numeric part at increment
                     Dim numericPart As Integer = Integer.Parse(lastID.ToString().Substring(1))
                     numericPart += 1
                     newID = "E" & numericPart.ToString("D3") ' E001, E002, etc.
                 End If
-
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-
         Return newID
     End Function
     Public Function LoadEvaluationTable() As DataTable
@@ -418,7 +412,6 @@ Module Query
         LEFT JOIN company c ON i.company_id = c.company_id
     "
 
-        Try
             Using con As MySqlConnection = GetConnection()
                 Using cmd As New MySqlCommand(query, con)
                     Using adapter As New MySqlDataAdapter(cmd)
@@ -426,9 +419,6 @@ Module Query
                     End Using
                 End Using
             End Using
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
 
         Return dt
     End Function
@@ -512,15 +502,12 @@ Module Query
                     cmd.Parameters.AddWithValue("@report", report)
                     cmd.Parameters.AddWithValue("@status", status)
 
-                    ' Handle optional grade
                     If grade.HasValue Then
                         cmd.Parameters.AddWithValue("@grade", grade.Value)
                     Else
                         cmd.Parameters.AddWithValue("@grade", DBNull.Value)
                     End If
-
                     cmd.ExecuteNonQuery()
-                    con.Close()
                 End Using
             End Using
         Catch ex As Exception
