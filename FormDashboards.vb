@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Reflection
+Imports MySql.Data.MySqlClient
 Imports Mysqlx.Notice
 
 Public Class FormDashboards
@@ -140,6 +141,9 @@ Public Class FormDashboards
         Next
         cmbCompanyInternship.DropDownStyle = ComboBoxStyle.DropDown
         cmbCompanyContactInternship.DropDownStyle = ComboBoxStyle.DropDown
+
+
+
 
     End Sub
 
@@ -1200,7 +1204,24 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnEdit5_Click(sender As Object, e As EventArgs) Handles btnEdit5.Click
-        pnlEditInternshipEvaluationRecord.Show()
+        pnlEditInternshipEvaluationRecord.Visible = True
+        pnlEditInternshipEvaluationRecord.Enabled = True
+
+        ' Enable lang ang editable fields
+        nudEvaluationGrade7.Enabled = True
+        txtEvaluationReport7.ReadOnly = False
+        cmbStatus7.Enabled = True
+
+        ' Lock ang mga non-editable fields
+        txtEvaluationID7.ReadOnly = True
+        txtEvaluationID7.Enabled = False
+
+        txtInternshipID7.ReadOnly = True
+        txtInternshipID7.Enabled = False
+
+        cmbFaculty7.Enabled = False   ' para hindi mapindot
+
+        ClearAllControls(Me)
     End Sub
 
     Private Sub btnDelete5_Click(sender As Object, e As EventArgs) Handles btnDelete5.Click
@@ -1340,6 +1361,64 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnSearch7_Click(sender As Object, e As EventArgs) Handles btnSearch7.Click
+        Dim searchID As String = txtSearchID7.Text.Trim()
+
+        If searchID = "" Then
+            MessageBox.Show("Please enter an Evaluation ID.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        ' --- Setup status combo (Dropdown only) ---
+        cmbStatus7.Items.Clear()
+        cmbStatus7.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbStatus7.Items.Add("Passed")
+        cmbStatus7.Items.Add("Failed")
+        cmbStatus7.Items.Add("Incomplete")
+        cmbStatus7.SelectedIndex = -1  ' Default walang selection
+        LoadFacultyCombo()
+
+        Dim dt As New DataTable()
+        Try
+            Using con As MySqlConnection = Connectivity.GetConnection()
+                Using cmd As New MySqlCommand("SELECT * FROM internship_evaluation WHERE LOWER(evaluation_id) = LOWER(@evalID)", con)
+                    cmd.Parameters.AddWithValue("@evalID", searchID.Trim())
+
+                    Using adapter As New MySqlDataAdapter(cmd)
+                        adapter.Fill(dt)
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error retrieving evaluation: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End Try
+
+        ' Load data into controls if found
+        If dt.Rows.Count > 0 Then
+            Dim row As DataRow = dt.Rows(0)
+            txtEvaluationID7.Text = row("evaluation_id").ToString()
+            txtInternshipID7.Text = row("internship_id").ToString()
+            cmbFaculty7.SelectedValue = row("faculty_id").ToString()
+            nudEvaluationGrade7.Value = If(IsDBNull(row("grade")), 0, Convert.ToDecimal(row("grade")))
+            txtEvaluationReport7.Text = row("evaluation_report").ToString()
+
+            ' Set status combo selection based on DB value
+            Dim statusVal As String = row("evaluation_status").ToString()
+            If cmbStatus7.Items.Contains(statusVal) Then
+                cmbStatus7.SelectedItem = statusVal
+            Else
+                cmbStatus7.SelectedIndex = -1
+            End If
+        Else
+            MessageBox.Show("Evaluation not found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ' Clear controls
+            txtEvaluationID7.Clear()
+            txtInternshipID7.Clear()
+            cmbFaculty7.SelectedIndex = -1
+            nudEvaluationGrade7.Value = 0
+            txtEvaluationReport7.Clear()
+            cmbStatus7.SelectedIndex = -1
+        End If
 
     End Sub
     Private Sub txtEvaluationID7_TextChanged(sender As Object, e As EventArgs) Handles txtEvaluationID7.TextChanged
@@ -1350,7 +1429,7 @@ Public Class FormDashboards
 
     End Sub
 
-    Private Sub txtFacultyID7_TextChanged(sender As Object, e As EventArgs) Handles txtFacultyID7.TextChanged
+    Private Sub txtFacultyID7_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -1374,9 +1453,31 @@ Public Class FormDashboards
 
     Private Sub btnEdit7_Click(sender As Object, e As EventArgs) Handles btnEdit7.Click
 
-        If result = DialogResult.OK Then
+        ' Collect values from controls
+        Dim evalID As String = txtEvaluationID7.Text.Trim()
+        Dim grade As Decimal = nudEvaluationGrade7.Value
+        Dim report As String = txtEvaluationReport7.Text.Trim()
+        Dim status As String = cmbStatus7.Text.Trim()
+
+        ' Validation – optional pero recommended
+        If evalID = "" Then
+            MessageBox.Show("Missing Evaluation ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
+        ' Call the update function in ModuleQuery
+        Dim success As Boolean = EditEvaluationRecord(evalID, grade, report, status)
+
+        If success Then
+            MessageBox.Show("Record has been successfully edited.", "Edit Successful",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ClearAllControls(Me)
+            ' After update, go back to view panel
             pnlEvaluationInformation.Show()
             pnlEditInternshipEvaluationRecord.Hide()
+        Else
+            MessageBox.Show("Failed to update record.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
     End Sub
@@ -2220,11 +2321,11 @@ Public Class FormDashboards
             Exit Sub
         End If
 
-        Dim dv As DataView = CType(dgvStudentFiles.DataSource, DataView)
-        Dim dt As DataTable = dv.Table
+        Dim dv = CType(dgvStudentFiles.DataSource, DataView)
+        Dim dt = dv.Table
 
         For Each row As DataGridViewRow In dgvStudentFiles.SelectedRows
-            Dim dr As DataRow = CType(row.DataBoundItem, DataRowView).Row
+            Dim dr = CType(row.DataBoundItem, DataRowView).Row
             dr("Hidden") = True
         Next
 
@@ -2596,25 +2697,110 @@ Public Class FormDashboards
 
     End Sub
     Private Sub LoadFacultyCombo()
-        cmbFaculty6.Items.Clear()
+        cmbFaculty7.DropDownStyle = ComboBoxStyle.DropDownList
 
+        ' Example: Load from database (faculty_id, faculty_name)
+        Dim dt As New DataTable()
         Try
-            Using con As MySqlConnection = GetConnection()
-                con.Open()
-                Using cmd As New MySqlCommand("SELECT faculty_id FROM faculty ORDER BY faculty_id", con)
-                    Using reader = cmd.ExecuteReader()
-                        While reader.Read()
-                            cmbFaculty6.Items.Add(reader("faculty_id").ToString())
-                        End While
+            Using con As MySqlConnection = Connectivity.GetConnection()
+                Using cmd As New MySqlCommand("SELECT faculty_id FROM faculty", con)
+                    Using adapter As New MySqlDataAdapter(cmd)
+                        adapter.Fill(dt)
                     End Using
                 End Using
             End Using
+
+            cmbFaculty7.DataSource = dt
+            cmbFaculty7.ValueMember = "faculty_id"
+            cmbFaculty7.SelectedIndex = -1  ' Default walang selection
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error loading faculty list: " & ex.Message)
         End Try
     End Sub
 
+    'CLEAR HELPER
 
+    Private Sub ClearAllControls(container As Control)
+        For Each ctrl As Control In container.Controls
+
+            If TypeOf ctrl Is TextBox Then
+                CType(ctrl, TextBox).Clear()
+
+            ElseIf TypeOf ctrl Is ComboBox Then
+                CType(ctrl, ComboBox).SelectedIndex = -1
+
+            ElseIf TypeOf ctrl Is DateTimePicker Then
+                CType(ctrl, DateTimePicker).Value = DateTime.Now
+            ElseIf TypeOf ctrl Is NumericUpDown Then
+                CType(ctrl, NumericUpDown).Value = 0
+            ElseIf ctrl.HasChildren Then
+                ClearAllControls(ctrl)
+
+            End If
+        Next
+    End Sub
+
+
+
+    'FOR COLUMNS STYLES INTERNSHIPS
+    Private Sub dgvEvaluationFiles5tyles(dgv As DataGridView)
+
+        If dgv.Columns.Count = 0 Then Exit Sub  ' ← Prevent crash
+
+        dgv.Columns("Evaluation ID").Width = 170
+        dgv.Columns("Internship ID").Width = 170
+        dgv.Columns("Grade").Width = 200
+        dgv.Columns("Evaluation Report").Width = 300
+        dgv.Columns("Evaluation Status").Width = 200
+        dgv.Columns("Faculty ID").Width = 170
+
+
+        dgv.EnableHeadersVisualStyles = False
+        dgv.AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
+
+        With dgvEvaluationFiles5
+            .EnableHeadersVisualStyles = False
+            .RowHeadersDefaultCellStyle.BackColor = Color.MintCream   ' Palitan ng gusto mong kulay
+            .RowHeadersDefaultCellStyle.SelectionBackColor = Color.LightYellow
+            .RowHeadersWidth = 20
+        End With
+
+
+    End Sub
+
+    'FOR HOVER EFFECT DGVINTERNSHIP 
+
+
+    Private Sub dgvEvaluationFiles5_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEvaluationFiles5.CellMouseEnter
+        If e.RowIndex >= 0 Then
+
+            ' Ibabalik yung last row sa original color
+            If lastRowInternship >= 0 Then
+                dgvEvaluationFiles5.Rows(lastRowInternship).DefaultCellStyle.BackColor = Color.White
+
+            End If
+
+            ' Highlight current hovered row
+            dgvEvaluationFiles5.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Honeydew
+
+            lastRowInternship = e.RowIndex
+        End If
+    End Sub
+
+    Private Sub dgvEvaluationFiles5_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEvaluationFiles5.CellMouseLeave
+        If lastRowInternship >= 0 Then
+            dgvEvaluationFiles5.Rows(lastRowInternship).DefaultCellStyle.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub dgvEvaluationFiles5_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvEvaluationFiles5.DataBindingComplete
+
+        dgvEvaluationFiles5.ClearSelection()
+        dgvEvaluationFiles5.CurrentCell = Nothing
+        Me.ActiveControl = Nothing
+
+
+    End Sub
 
 
     '1529, 902

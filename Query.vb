@@ -553,4 +553,45 @@ Module Query
 
         Return exists
     End Function
+
+    Public Function EditEvaluationRecord(evaluationID As String,
+                                       grade As Decimal,
+                                       report As String,
+                                       status As String) As Boolean
+
+        If String.IsNullOrWhiteSpace(evaluationID) Then Return False
+
+        Try
+            Using con As MySqlConnection = Connectivity.GetConnection()
+                Using cmd As New MySqlCommand("
+                UPDATE internship_evaluation 
+                SET 
+                    grade = @grade,
+                    evaluation_report = @report,
+                    evaluation_status = @status
+                WHERE evaluation_id = @evaluationID", con)
+
+                    cmd.Parameters.AddWithValue("@evaluationID", evaluationID.Trim())
+                    cmd.Parameters.AddWithValue("@grade", grade)
+                    cmd.Parameters.AddWithValue("@report", report.Trim())
+                    cmd.Parameters.AddWithValue("@status", status.Trim())
+
+                    con.Open()
+                    Dim rows As Integer = cmd.ExecuteNonQuery()
+                    con.Close()
+
+                    Return rows > 0
+                End Using
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show("Error editing evaluation: " & ex.Message,
+                            "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
+
+    End Function
+
+
+
 End Module

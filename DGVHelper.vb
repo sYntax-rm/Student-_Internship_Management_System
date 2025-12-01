@@ -37,6 +37,13 @@
         ' Clear selection & remove highlight from first cell
         dgv.ClearSelection()
         dgv.CurrentCell = Nothing
+
+        ' Initialize hover tracking
+        If Not hoverRows.ContainsKey(dgv) Then
+            hoverRows.Add(dgv, -1)
+            AddHandler dgv.CellMouseEnter, AddressOf CellMouseEnter
+            AddHandler dgv.CellMouseLeave, AddressOf CellMouseLeave
+        End If
     End Sub
 
     ' Hover events
@@ -60,4 +67,7 @@
             hoverRows(dgv) = -1
         End If
     End Sub
+
+
+
 End Class

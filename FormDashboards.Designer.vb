@@ -36,6 +36,9 @@ Partial Class FormDashboards
         Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As DataGridViewCellStyle = New DataGridViewCellStyle()
         btnHome = New RoundedButton()
         btnStudents = New RoundedButton()
         btnInternships = New RoundedButton()
@@ -69,6 +72,9 @@ Partial Class FormDashboards
         lblSignInAs = New Label()
         Panel18 = New Panel()
         pnlEditInternshipEvaluationRecord = New roundedpanel()
+        Label164 = New Label()
+        nudEvaluationGrade7 = New NumericUpDown()
+        cmbFaculty7 = New ComboBox()
         Panel3 = New Panel()
         Label140 = New Label()
         btnSearch7 = New RoundedButton()
@@ -76,7 +82,6 @@ Partial Class FormDashboards
         txtSearchID7 = New TextBox()
         Label19 = New Label()
         btnEdit7 = New RoundedButton()
-        txtFacultyID7 = New TextBox()
         Label20 = New Label()
         Label22 = New Label()
         Label23 = New Label()
@@ -192,6 +197,8 @@ Partial Class FormDashboards
         dgvInternshipLogs4 = New DataGridView()
         Label47 = New Label()
         pnlEvaluationInformation = New Panel()
+        picShow3 = New PictureBox()
+        picHide3 = New PictureBox()
         pnlAddNewInternshipEvaluationRecord = New roundedpanel()
         cmbFaculty6 = New ComboBox()
         Label163 = New Label()
@@ -524,6 +531,7 @@ Partial Class FormDashboards
         CType(pctBoxHide1, ComponentModel.ISupportInitialize).BeginInit()
         CType(pctBoxExit1, ComponentModel.ISupportInitialize).BeginInit()
         pnlEditInternshipEvaluationRecord.SuspendLayout()
+        CType(nudEvaluationGrade7, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvStudentSearch, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvStudentFiles, ComponentModel.ISupportInitialize).BeginInit()
         pnlAddNewStudentRecord.SuspendLayout()
@@ -541,6 +549,8 @@ Partial Class FormDashboards
         CType(dgvInternshipFiles4, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).BeginInit()
         pnlEvaluationInformation.SuspendLayout()
+        CType(picShow3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(picHide3, ComponentModel.ISupportInitialize).BeginInit()
         pnlAddNewInternshipEvaluationRecord.SuspendLayout()
         CType(nudEvaluationGrade, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvEvaluationFiles5, ComponentModel.ISupportInitialize).BeginInit()
@@ -1003,6 +1013,9 @@ Partial Class FormDashboards
         ' pnlEditInternshipEvaluationRecord
         ' 
         pnlEditInternshipEvaluationRecord.BackColor = Color.FromArgb(CByte(205), CByte(226), CByte(215))
+        pnlEditInternshipEvaluationRecord.Controls.Add(Label164)
+        pnlEditInternshipEvaluationRecord.Controls.Add(nudEvaluationGrade7)
+        pnlEditInternshipEvaluationRecord.Controls.Add(cmbFaculty7)
         pnlEditInternshipEvaluationRecord.Controls.Add(Panel3)
         pnlEditInternshipEvaluationRecord.Controls.Add(Label140)
         pnlEditInternshipEvaluationRecord.Controls.Add(btnSearch7)
@@ -1010,7 +1023,6 @@ Partial Class FormDashboards
         pnlEditInternshipEvaluationRecord.Controls.Add(txtSearchID7)
         pnlEditInternshipEvaluationRecord.Controls.Add(Label19)
         pnlEditInternshipEvaluationRecord.Controls.Add(btnEdit7)
-        pnlEditInternshipEvaluationRecord.Controls.Add(txtFacultyID7)
         pnlEditInternshipEvaluationRecord.Controls.Add(Label20)
         pnlEditInternshipEvaluationRecord.Controls.Add(Label22)
         pnlEditInternshipEvaluationRecord.Controls.Add(Label23)
@@ -1022,10 +1034,41 @@ Partial Class FormDashboards
         pnlEditInternshipEvaluationRecord.Controls.Add(txtEvaluationID7)
         pnlEditInternshipEvaluationRecord.CornerRadius = 10
         pnlEditInternshipEvaluationRecord.Enabled = False
-        pnlEditInternshipEvaluationRecord.Location = New Point(1290, 58)
+        pnlEditInternshipEvaluationRecord.Location = New Point(1049, 61)
         pnlEditInternshipEvaluationRecord.Name = "pnlEditInternshipEvaluationRecord"
-        pnlEditInternshipEvaluationRecord.Size = New Size(134, 750)
+        pnlEditInternshipEvaluationRecord.Size = New Size(176, 750)
         pnlEditInternshipEvaluationRecord.TabIndex = 221
+        ' 
+        ' Label164
+        ' 
+        Label164.AutoSize = True
+        Label164.BackColor = Color.Transparent
+        Label164.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
+        Label164.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label164.Location = New Point(571, 529)
+        Label164.Name = "Label164"
+        Label164.Size = New Size(181, 30)
+        Label164.TabIndex = 237
+        Label164.Text = "Evaluation Grade"
+        ' 
+        ' nudEvaluationGrade7
+        ' 
+        nudEvaluationGrade7.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        nudEvaluationGrade7.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        nudEvaluationGrade7.Location = New Point(573, 561)
+        nudEvaluationGrade7.Name = "nudEvaluationGrade7"
+        nudEvaluationGrade7.Size = New Size(120, 38)
+        nudEvaluationGrade7.TabIndex = 236
+        ' 
+        ' cmbFaculty7
+        ' 
+        cmbFaculty7.Font = New Font("Segoe UI", 14.0F)
+        cmbFaculty7.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        cmbFaculty7.FormattingEnabled = True
+        cmbFaculty7.Location = New Point(571, 258)
+        cmbFaculty7.Name = "cmbFaculty7"
+        cmbFaculty7.Size = New Size(471, 39)
+        cmbFaculty7.TabIndex = 235
         ' 
         ' Panel3
         ' 
@@ -1094,7 +1137,7 @@ Partial Class FormDashboards
         Label19.BackColor = Color.Transparent
         Label19.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
         Label19.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label19.Location = New Point(567, 231)
+        Label19.Location = New Point(567, 227)
         Label19.Name = "Label19"
         Label19.Size = New Size(120, 30)
         Label19.TabIndex = 203
@@ -1114,17 +1157,6 @@ Partial Class FormDashboards
         btnEdit7.TabIndex = 219
         btnEdit7.Text = "EDIT"
         btnEdit7.UseVisualStyleBackColor = False
-        ' 
-        ' txtFacultyID7
-        ' 
-        txtFacultyID7.Cursor = Cursors.IBeam
-        txtFacultyID7.Font = New Font("Segoe UI", 14.0F)
-        txtFacultyID7.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtFacultyID7.Location = New Point(568, 256)
-        txtFacultyID7.Multiline = True
-        txtFacultyID7.Name = "txtFacultyID7"
-        txtFacultyID7.Size = New Size(471, 38)
-        txtFacultyID7.TabIndex = 202
         ' 
         ' Label20
         ' 
@@ -2686,6 +2718,8 @@ Partial Class FormDashboards
         ' pnlEvaluationInformation
         ' 
         pnlEvaluationInformation.BackColor = Color.White
+        pnlEvaluationInformation.Controls.Add(picShow3)
+        pnlEvaluationInformation.Controls.Add(picHide3)
         pnlEvaluationInformation.Controls.Add(pnlEditInternshipEvaluationRecord)
         pnlEvaluationInformation.Controls.Add(pnlAddNewInternshipEvaluationRecord)
         pnlEvaluationInformation.Controls.Add(btnAdd5)
@@ -2705,6 +2739,28 @@ Partial Class FormDashboards
         pnlEvaluationInformation.Name = "pnlEvaluationInformation"
         pnlEvaluationInformation.Size = New Size(1529, 935)
         pnlEvaluationInformation.TabIndex = 223
+        ' 
+        ' picShow3
+        ' 
+        picShow3.BackColor = Color.White
+        picShow3.Image = CType(resources.GetObject("picShow3.Image"), Image)
+        picShow3.Location = New Point(1292, 351)
+        picShow3.Name = "picShow3"
+        picShow3.Size = New Size(70, 55)
+        picShow3.SizeMode = PictureBoxSizeMode.StretchImage
+        picShow3.TabIndex = 233
+        picShow3.TabStop = False
+        ' 
+        ' picHide3
+        ' 
+        picHide3.BackColor = Color.White
+        picHide3.Image = CType(resources.GetObject("picHide3.Image"), Image)
+        picHide3.Location = New Point(1368, 352)
+        picHide3.Name = "picHide3"
+        picHide3.Size = New Size(70, 55)
+        picHide3.SizeMode = PictureBoxSizeMode.StretchImage
+        picHide3.TabIndex = 232
+        picHide3.TabStop = False
         ' 
         ' pnlAddNewInternshipEvaluationRecord
         ' 
@@ -2727,9 +2783,9 @@ Partial Class FormDashboards
         pnlAddNewInternshipEvaluationRecord.Controls.Add(txtInternshipID6)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(txtEvaluationID6)
         pnlAddNewInternshipEvaluationRecord.CornerRadius = 10
-        pnlAddNewInternshipEvaluationRecord.Location = New Point(881, 55)
+        pnlAddNewInternshipEvaluationRecord.Location = New Point(943, 58)
         pnlAddNewInternshipEvaluationRecord.Name = "pnlAddNewInternshipEvaluationRecord"
-        pnlAddNewInternshipEvaluationRecord.Size = New Size(378, 750)
+        pnlAddNewInternshipEvaluationRecord.Size = New Size(81, 750)
         pnlAddNewInternshipEvaluationRecord.TabIndex = 218
         ' 
         ' cmbFaculty6
@@ -3011,12 +3067,39 @@ Partial Class FormDashboards
         ' 
         ' dgvEvaluationFiles5
         ' 
+        dgvEvaluationFiles5.AllowUserToAddRows = False
+        dgvEvaluationFiles5.AllowUserToDeleteRows = False
         dgvEvaluationFiles5.BackgroundColor = Color.MintCream
-        dgvEvaluationFiles5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvEvaluationFiles5.BorderStyle = BorderStyle.None
+        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        DataGridViewCellStyle11.Font = New Font("Microsoft New Tai Lue", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle11.ForeColor = Color.White
+        DataGridViewCellStyle11.SelectionBackColor = Color.Honeydew
+        DataGridViewCellStyle11.SelectionForeColor = SystemColors.Info
+        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.True
+        dgvEvaluationFiles5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        dgvEvaluationFiles5.ColumnHeadersHeight = 80
+        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = Color.MintCream
+        DataGridViewCellStyle12.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle12.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle12.SelectionBackColor = Color.LightYellow
+        DataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.False
+        dgvEvaluationFiles5.DefaultCellStyle = DataGridViewCellStyle12
+        dgvEvaluationFiles5.EnableHeadersVisualStyles = False
+        dgvEvaluationFiles5.GridColor = Color.MintCream
         dgvEvaluationFiles5.Location = New Point(87, 423)
         dgvEvaluationFiles5.Name = "dgvEvaluationFiles5"
-        dgvEvaluationFiles5.RowHeadersWidth = 51
-        dgvEvaluationFiles5.Size = New Size(1356, 347)
+        dgvEvaluationFiles5.RowHeadersWidth = 20
+        DataGridViewCellStyle13.BackColor = Color.MintCream
+        DataGridViewCellStyle13.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle13.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle13.SelectionBackColor = Color.LightYellow
+        DataGridViewCellStyle13.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        dgvEvaluationFiles5.RowsDefaultCellStyle = DataGridViewCellStyle13
+        dgvEvaluationFiles5.Size = New Size(1390, 378)
         dgvEvaluationFiles5.TabIndex = 128
         ' 
         ' Label73
@@ -6785,6 +6868,7 @@ Partial Class FormDashboards
         CType(pctBoxExit1, ComponentModel.ISupportInitialize).EndInit()
         pnlEditInternshipEvaluationRecord.ResumeLayout(False)
         pnlEditInternshipEvaluationRecord.PerformLayout()
+        CType(nudEvaluationGrade7, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvStudentSearch, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvStudentFiles, ComponentModel.ISupportInitialize).EndInit()
         pnlAddNewStudentRecord.ResumeLayout(False)
@@ -6812,6 +6896,8 @@ Partial Class FormDashboards
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).EndInit()
         pnlEvaluationInformation.ResumeLayout(False)
         pnlEvaluationInformation.PerformLayout()
+        CType(picShow3, ComponentModel.ISupportInitialize).EndInit()
+        CType(picHide3, ComponentModel.ISupportInitialize).EndInit()
         pnlAddNewInternshipEvaluationRecord.ResumeLayout(False)
         pnlAddNewInternshipEvaluationRecord.PerformLayout()
         CType(nudEvaluationGrade, ComponentModel.ISupportInitialize).EndInit()
@@ -7038,7 +7124,6 @@ Partial Class FormDashboards
     Friend WithEvents btnCancel7 As RoundedButton
     Friend WithEvents Label19 As Label
     Friend WithEvents btnEdit7 As RoundedButton
-    Friend WithEvents txtFacultyID7 As TextBox
     Friend WithEvents Label20 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label23 As Label
@@ -7350,5 +7435,10 @@ Partial Class FormDashboards
     Friend WithEvents Label163 As Label
     Friend WithEvents nudEvaluationGrade As NumericUpDown
     Friend WithEvents cmbFaculty6 As ComboBox
+    Friend WithEvents cmbFaculty7 As ComboBox
+    Friend WithEvents Label164 As Label
+    Friend WithEvents nudEvaluationGrade7 As NumericUpDown
+    Friend WithEvents picHide3 As PictureBox
+    Friend WithEvents picShow3 As PictureBox
 
 End Class
