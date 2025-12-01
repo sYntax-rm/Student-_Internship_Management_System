@@ -1373,7 +1373,6 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnEdit7_Click(sender As Object, e As EventArgs) Handles btnEdit7.Click
-        Dim result As DialogResult = MessageBox.Show("Record has been successfully edited.", "Edit Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         If result = DialogResult.OK Then
             pnlEvaluationInformation.Show()
@@ -2613,9 +2612,7 @@ Public Class FormDashboards
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-
     End Sub
-
 
 
 
