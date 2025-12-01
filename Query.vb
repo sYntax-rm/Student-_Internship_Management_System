@@ -327,7 +327,7 @@ Module Query
 
 
 
-    'CODE FOR UPDATING INTERNSHIP RECORD - IRIS HUHU TT TT
+    'CODE FOR UPDATING INTERNSHIP RECORD - IRIS 
 
 
 
@@ -376,8 +376,7 @@ Module Query
     End Function
 
     Public Function GenerateEvaluationID() As String
-        Dim newID As String = "E001" ' fallback
-
+        Dim newID As String = "E001" ' default fallback
         Try
             Using con As MySqlConnection = GetConnection()
                 con.Open()
@@ -386,7 +385,7 @@ Module Query
                 If lastID IsNot Nothing Then
                     Dim numericPart As Integer = Integer.Parse(lastID.ToString().Substring(1))
                     numericPart += 1
-                    newID = "E" & numericPart.ToString("D3") ' E001, E002, etc.
+                    newID = "E" & numericPart.ToString("D3")  ' E001, E002...
                 End If
             End Using
         Catch ex As Exception
@@ -394,6 +393,7 @@ Module Query
         End Try
         Return newID
     End Function
+
     Public Function LoadEvaluationTable() As DataTable
         Dim dt As New DataTable()
         Dim query As String = "
@@ -410,17 +410,19 @@ Module Query
         LEFT JOIN internship i ON ie.internship_id = i.internship_id
         LEFT JOIN student s ON i.student_id = s.student_id
         LEFT JOIN company c ON i.company_id = c.company_id
+        ORDER BY ie.evaluation_id ASC
     "
 
-            Using con As MySqlConnection = GetConnection()
-                Using cmd As New MySqlCommand(query, con)
-                    Using adapter As New MySqlDataAdapter(cmd)
-                        adapter.Fill(dt)
-                    End Using
+        Using con As MySqlConnection = GetConnection()
+            Using cmd As New MySqlCommand(query, con)
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
                 End Using
             End Using
+        End Using
 
         Return dt
+
     End Function
 
     Public Function searchEvaluationTable(searchItem As String) As DataTable
@@ -492,16 +494,24 @@ Module Query
     End Function
 
 
-    Public Function AddEvaluationRecord(internshipID As String, report As String, status As String, Optional grade As Decimal? = Nothing) As Boolean
+    Public Function AddEvaluationRecord(internshipID As String, report As String, status As String,
+                                    Optional grade As Decimal? = Nothing,
+                                    Optional facultyID As String = "",
+                                    Optional evaluationID As String = "") As Boolean
         Try
             Using con As MySqlConnection = GetConnection()
-                Using cmd As New MySqlCommand("INSERT INTO internship_evaluation (internship_id, evaluation_report, evaluation_status, grade) 
-                                           VALUES (@internship_id, @report, @status, @grade)", con)
+                Using cmd As New MySqlCommand("
+                INSERT INTO internship_evaluation 
+                    (evaluation_id, internship_id, evaluation_report, evaluation_status, grade, faculty_id)
+                VALUES 
+                    (@evaluationID, @internshipID, @report, @status, @grade, @facultyID)
+            ", con)
                     con.Open()
-                    cmd.Parameters.AddWithValue("@internship_id", internshipID)
+                    cmd.Parameters.AddWithValue("@evaluationID", evaluationID)
+                    cmd.Parameters.AddWithValue("@internshipID", internshipID)
                     cmd.Parameters.AddWithValue("@report", report)
                     cmd.Parameters.AddWithValue("@status", status)
-
+                    cmd.Parameters.AddWithValue("@facultyID", facultyID)
                     If grade.HasValue Then
                         cmd.Parameters.AddWithValue("@grade", grade.Value)
                     Else
@@ -514,7 +524,33 @@ Module Query
             MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
         End Try
-
         Return True
+    End Function
+
+
+    'IF FACULTY ID IS EXISITING
+    Public Function FacultyExists(facultyID As String) As Boolean
+        Dim exists As Boolean = False
+
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("
+                SELECT COUNT(*) 
+                FROM faculty 
+                WHERE faculty_id = @id", con)
+
+                    cmd.Parameters.AddWithValue("@id", facultyID)
+                    con.Open()
+
+                    Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+                    exists = (count > 0)
+                End Using
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return exists
     End Function
 End Module

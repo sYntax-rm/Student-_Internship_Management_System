@@ -26,16 +26,16 @@ Partial Class FormDashboards
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDashboards))
-        Dim DataGridViewCellStyle21 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
         btnHome = New RoundedButton()
         btnStudents = New RoundedButton()
         btnInternships = New RoundedButton()
@@ -193,12 +193,14 @@ Partial Class FormDashboards
         Label47 = New Label()
         pnlEvaluationInformation = New Panel()
         pnlAddNewInternshipEvaluationRecord = New roundedpanel()
+        cmbFaculty6 = New ComboBox()
+        Label163 = New Label()
+        nudEvaluationGrade = New NumericUpDown()
         Panel2 = New Panel()
         pnlDesign3 = New Panel()
         btnCancel6 = New RoundedButton()
         Label64 = New Label()
         btnAdd6 = New RoundedButton()
-        txtFacultyID6 = New TextBox()
         Label65 = New Label()
         Label66 = New Label()
         Label68 = New Label()
@@ -507,8 +509,6 @@ Partial Class FormDashboards
         Panel17 = New Panel()
         lblHomeTitleAs = New Label()
         Label172 = New Label()
-        nudEvaluationGrade = New NumericUpDown()
-        Label163 = New Label()
         Panel1.SuspendLayout()
         CType(picHome, ComponentModel.ISupportInitialize).BeginInit()
         CType(picSummary, ComponentModel.ISupportInitialize).BeginInit()
@@ -542,6 +542,7 @@ Partial Class FormDashboards
         CType(dgvInternshipLogs4, ComponentModel.ISupportInitialize).BeginInit()
         pnlEvaluationInformation.SuspendLayout()
         pnlAddNewInternshipEvaluationRecord.SuspendLayout()
+        CType(nudEvaluationGrade, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvEvaluationFiles5, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvEvaluationLogs5, ComponentModel.ISupportInitialize).BeginInit()
         pnlCompanyInformation.SuspendLayout()
@@ -577,7 +578,6 @@ Partial Class FormDashboards
         pnlHome.SuspendLayout()
         pnlPending.SuspendLayout()
         Panel17.SuspendLayout()
-        CType(nudEvaluationGrade, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' btnHome
@@ -1258,30 +1258,30 @@ Partial Class FormDashboards
         ' 
         dgvStudentSearch.AllowUserToAddRows = False
         dgvStudentSearch.AllowUserToDeleteRows = False
-        DataGridViewCellStyle21.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        DataGridViewCellStyle21.Font = New Font("Microsoft New Tai Lue", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle21.ForeColor = Color.White
-        DataGridViewCellStyle21.SelectionBackColor = Color.Honeydew
-        DataGridViewCellStyle21.SelectionForeColor = SystemColors.Info
-        dgvStudentSearch.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        DataGridViewCellStyle1.Font = New Font("Microsoft New Tai Lue", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle1.ForeColor = Color.White
+        DataGridViewCellStyle1.SelectionBackColor = Color.Honeydew
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.Info
+        dgvStudentSearch.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         dgvStudentSearch.BackgroundColor = Color.MintCream
-        DataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle22.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        DataGridViewCellStyle22.Font = New Font("Microsoft New Tai Lue", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle22.ForeColor = Color.White
-        DataGridViewCellStyle22.SelectionBackColor = Color.Honeydew
-        DataGridViewCellStyle22.SelectionForeColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        DataGridViewCellStyle22.WrapMode = DataGridViewTriState.True
-        dgvStudentSearch.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        DataGridViewCellStyle2.Font = New Font("Microsoft New Tai Lue", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = Color.Honeydew
+        DataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvStudentSearch.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         dgvStudentSearch.ColumnHeadersHeight = 80
-        DataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle23.BackColor = Color.MintCream
-        DataGridViewCellStyle23.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle23.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        DataGridViewCellStyle23.SelectionBackColor = Color.LightYellow
-        DataGridViewCellStyle23.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        DataGridViewCellStyle23.WrapMode = DataGridViewTriState.False
-        dgvStudentSearch.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = Color.MintCream
+        DataGridViewCellStyle3.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle3.SelectionBackColor = Color.LightYellow
+        DataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        dgvStudentSearch.DefaultCellStyle = DataGridViewCellStyle3
         dgvStudentSearch.EnableHeadersVisualStyles = False
         dgvStudentSearch.GridColor = Color.MintCream
         dgvStudentSearch.Location = New Point(87, 194)
@@ -1310,43 +1310,43 @@ Partial Class FormDashboards
         dgvStudentFiles.AllowUserToDeleteRows = False
         dgvStudentFiles.BackgroundColor = Color.MintCream
         dgvStudentFiles.BorderStyle = BorderStyle.None
-        DataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        DataGridViewCellStyle24.Font = New Font("Microsoft New Tai Lue", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle24.ForeColor = Color.White
-        DataGridViewCellStyle24.SelectionBackColor = Color.Honeydew
-        DataGridViewCellStyle24.SelectionForeColor = SystemColors.Info
-        DataGridViewCellStyle24.WrapMode = DataGridViewTriState.True
-        dgvStudentFiles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        DataGridViewCellStyle4.Font = New Font("Microsoft New Tai Lue", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle4.ForeColor = Color.White
+        DataGridViewCellStyle4.SelectionBackColor = Color.Honeydew
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.Info
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        dgvStudentFiles.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         dgvStudentFiles.ColumnHeadersHeight = 80
-        DataGridViewCellStyle25.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle25.BackColor = Color.MintCream
-        DataGridViewCellStyle25.Font = New Font("Microsoft JhengHei UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle25.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        DataGridViewCellStyle25.SelectionBackColor = Color.LightYellow
-        DataGridViewCellStyle25.SelectionForeColor = Color.DarkGreen
-        DataGridViewCellStyle25.WrapMode = DataGridViewTriState.False
-        dgvStudentFiles.DefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = Color.MintCream
+        DataGridViewCellStyle5.Font = New Font("Microsoft JhengHei UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle5.SelectionBackColor = Color.LightYellow
+        DataGridViewCellStyle5.SelectionForeColor = Color.DarkGreen
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
+        dgvStudentFiles.DefaultCellStyle = DataGridViewCellStyle5
         dgvStudentFiles.EnableHeadersVisualStyles = False
         dgvStudentFiles.GridColor = Color.MintCream
         dgvStudentFiles.Location = New Point(87, 423)
         dgvStudentFiles.Name = "dgvStudentFiles"
         dgvStudentFiles.ReadOnly = True
-        DataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle26.BackColor = Color.MintCream
-        DataGridViewCellStyle26.Font = New Font("Segoe UI", 9.0F)
-        DataGridViewCellStyle26.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        DataGridViewCellStyle26.SelectionBackColor = Color.LightYellow
-        DataGridViewCellStyle26.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        DataGridViewCellStyle26.WrapMode = DataGridViewTriState.True
-        dgvStudentFiles.RowHeadersDefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = Color.MintCream
+        DataGridViewCellStyle6.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle6.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle6.SelectionBackColor = Color.LightYellow
+        DataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
+        dgvStudentFiles.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         dgvStudentFiles.RowHeadersWidth = 20
-        DataGridViewCellStyle27.BackColor = Color.MintCream
-        DataGridViewCellStyle27.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle27.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        DataGridViewCellStyle27.SelectionBackColor = Color.LightYellow
-        DataGridViewCellStyle27.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        dgvStudentFiles.RowsDefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle7.BackColor = Color.MintCream
+        DataGridViewCellStyle7.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle7.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle7.SelectionBackColor = Color.LightYellow
+        DataGridViewCellStyle7.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        dgvStudentFiles.RowsDefaultCellStyle = DataGridViewCellStyle7
         dgvStudentFiles.Size = New Size(1390, 378)
         dgvStudentFiles.TabIndex = 128
         ' 
@@ -2618,34 +2618,34 @@ Partial Class FormDashboards
         dgvInternshipFiles4.AllowUserToDeleteRows = False
         dgvInternshipFiles4.BackgroundColor = Color.MintCream
         dgvInternshipFiles4.BorderStyle = BorderStyle.None
-        DataGridViewCellStyle28.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle28.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        DataGridViewCellStyle28.Font = New Font("Microsoft New Tai Lue", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle28.ForeColor = Color.White
-        DataGridViewCellStyle28.SelectionBackColor = Color.Honeydew
-        DataGridViewCellStyle28.SelectionForeColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
-        DataGridViewCellStyle28.WrapMode = DataGridViewTriState.True
-        dgvInternshipFiles4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        DataGridViewCellStyle8.Font = New Font("Microsoft New Tai Lue", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle8.ForeColor = Color.White
+        DataGridViewCellStyle8.SelectionBackColor = Color.Honeydew
+        DataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(CByte(97), CByte(144), CByte(118))
+        DataGridViewCellStyle8.WrapMode = DataGridViewTriState.True
+        dgvInternshipFiles4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         dgvInternshipFiles4.ColumnHeadersHeight = 80
-        DataGridViewCellStyle29.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle29.BackColor = Color.MintCream
-        DataGridViewCellStyle29.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle29.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        DataGridViewCellStyle29.SelectionBackColor = Color.LightYellow
-        DataGridViewCellStyle29.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        DataGridViewCellStyle29.WrapMode = DataGridViewTriState.False
-        dgvInternshipFiles4.DefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = Color.MintCream
+        DataGridViewCellStyle9.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle9.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle9.SelectionBackColor = Color.LightYellow
+        DataGridViewCellStyle9.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.False
+        dgvInternshipFiles4.DefaultCellStyle = DataGridViewCellStyle9
         dgvInternshipFiles4.EnableHeadersVisualStyles = False
         dgvInternshipFiles4.GridColor = Color.MintCream
         dgvInternshipFiles4.Location = New Point(87, 423)
         dgvInternshipFiles4.Name = "dgvInternshipFiles4"
         dgvInternshipFiles4.RowHeadersWidth = 50
-        DataGridViewCellStyle30.BackColor = Color.MintCream
-        DataGridViewCellStyle30.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle30.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        DataGridViewCellStyle30.SelectionBackColor = Color.MintCream
-        DataGridViewCellStyle30.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        dgvInternshipFiles4.RowsDefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle10.BackColor = Color.MintCream
+        DataGridViewCellStyle10.Font = New Font("Microsoft New Tai Lue", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle10.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        DataGridViewCellStyle10.SelectionBackColor = Color.MintCream
+        DataGridViewCellStyle10.SelectionForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
+        dgvInternshipFiles4.RowsDefaultCellStyle = DataGridViewCellStyle10
         dgvInternshipFiles4.Size = New Size(1390, 378)
         dgvInternshipFiles4.TabIndex = 128
         ' 
@@ -2709,6 +2709,7 @@ Partial Class FormDashboards
         ' pnlAddNewInternshipEvaluationRecord
         ' 
         pnlAddNewInternshipEvaluationRecord.BackColor = Color.Honeydew
+        pnlAddNewInternshipEvaluationRecord.Controls.Add(cmbFaculty6)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(Label163)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(nudEvaluationGrade)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(Panel2)
@@ -2716,7 +2717,6 @@ Partial Class FormDashboards
         pnlAddNewInternshipEvaluationRecord.Controls.Add(btnCancel6)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(Label64)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(btnAdd6)
-        pnlAddNewInternshipEvaluationRecord.Controls.Add(txtFacultyID6)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(Label65)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(Label66)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(Label68)
@@ -2727,10 +2727,41 @@ Partial Class FormDashboards
         pnlAddNewInternshipEvaluationRecord.Controls.Add(txtInternshipID6)
         pnlAddNewInternshipEvaluationRecord.Controls.Add(txtEvaluationID6)
         pnlAddNewInternshipEvaluationRecord.CornerRadius = 10
-        pnlAddNewInternshipEvaluationRecord.Location = New Point(151, 55)
+        pnlAddNewInternshipEvaluationRecord.Location = New Point(881, 55)
         pnlAddNewInternshipEvaluationRecord.Name = "pnlAddNewInternshipEvaluationRecord"
-        pnlAddNewInternshipEvaluationRecord.Size = New Size(1108, 750)
+        pnlAddNewInternshipEvaluationRecord.Size = New Size(378, 750)
         pnlAddNewInternshipEvaluationRecord.TabIndex = 218
+        ' 
+        ' cmbFaculty6
+        ' 
+        cmbFaculty6.Font = New Font("Segoe UI", 14.0F)
+        cmbFaculty6.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        cmbFaculty6.FormattingEnabled = True
+        cmbFaculty6.Location = New Point(573, 261)
+        cmbFaculty6.Name = "cmbFaculty6"
+        cmbFaculty6.Size = New Size(471, 39)
+        cmbFaculty6.TabIndex = 234
+        ' 
+        ' Label163
+        ' 
+        Label163.AutoSize = True
+        Label163.BackColor = Color.Transparent
+        Label163.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
+        Label163.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        Label163.Location = New Point(569, 529)
+        Label163.Name = "Label163"
+        Label163.Size = New Size(181, 30)
+        Label163.TabIndex = 233
+        Label163.Text = "Evaluation Grade"
+        ' 
+        ' nudEvaluationGrade
+        ' 
+        nudEvaluationGrade.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        nudEvaluationGrade.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
+        nudEvaluationGrade.Location = New Point(571, 561)
+        nudEvaluationGrade.Name = "nudEvaluationGrade"
+        nudEvaluationGrade.Size = New Size(120, 38)
+        nudEvaluationGrade.TabIndex = 232
         ' 
         ' Panel2
         ' 
@@ -2789,17 +2820,6 @@ Partial Class FormDashboards
         btnAdd6.TabIndex = 219
         btnAdd6.Text = "ADD"
         btnAdd6.UseVisualStyleBackColor = False
-        ' 
-        ' txtFacultyID6
-        ' 
-        txtFacultyID6.Cursor = Cursors.IBeam
-        txtFacultyID6.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        txtFacultyID6.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        txtFacultyID6.Location = New Point(568, 261)
-        txtFacultyID6.Multiline = True
-        txtFacultyID6.Name = "txtFacultyID6"
-        txtFacultyID6.Size = New Size(471, 38)
-        txtFacultyID6.TabIndex = 202
         ' 
         ' Label65
         ' 
@@ -6170,7 +6190,7 @@ Partial Class FormDashboards
         ComboBox1.FormattingEnabled = True
         ComboBox1.Location = New Point(753, 530)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(471, 39)
+        ComboBox1.Size = New Size(471, 40)
         ComboBox1.TabIndex = 206
         ' 
         ' Label30
@@ -6285,7 +6305,7 @@ Partial Class FormDashboards
         ComboBox2.FormattingEnabled = True
         ComboBox2.Location = New Point(144, 530)
         ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(471, 39)
+        ComboBox2.Size = New Size(471, 40)
         ComboBox2.TabIndex = 196
         ' 
         ' Label37
@@ -6317,7 +6337,7 @@ Partial Class FormDashboards
         ComboBox3.FormattingEnabled = True
         ComboBox3.Location = New Point(144, 340)
         ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(471, 39)
+        ComboBox3.Size = New Size(471, 40)
         ComboBox3.TabIndex = 193
         ' 
         ' TextBox6
@@ -6390,7 +6410,7 @@ Partial Class FormDashboards
         ComboBox4.FormattingEnabled = True
         ComboBox4.Location = New Point(753, 530)
         ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(471, 39)
+        ComboBox4.Size = New Size(471, 40)
         ComboBox4.TabIndex = 206
         ' 
         ' Label39
@@ -6528,7 +6548,7 @@ Partial Class FormDashboards
         ComboBox6.FormattingEnabled = True
         ComboBox6.Location = New Point(144, 340)
         ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(471, 39)
+        ComboBox6.Size = New Size(471, 40)
         ComboBox6.TabIndex = 193
         ' 
         ' TextBox11
@@ -6723,27 +6743,6 @@ Partial Class FormDashboards
         Label172.TabIndex = 114
         Label172.Text = "Welcome Back!"
         ' 
-        ' nudEvaluationGrade
-        ' 
-        nudEvaluationGrade.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        nudEvaluationGrade.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        nudEvaluationGrade.Location = New Point(571, 561)
-        nudEvaluationGrade.Name = "nudEvaluationGrade"
-        nudEvaluationGrade.Size = New Size(120, 38)
-        nudEvaluationGrade.TabIndex = 232
-        ' 
-        ' Label163
-        ' 
-        Label163.AutoSize = True
-        Label163.BackColor = Color.Transparent
-        Label163.Font = New Font("Segoe UI Semibold", 13.0F, FontStyle.Bold)
-        Label163.ForeColor = Color.FromArgb(CByte(8), CByte(48), CByte(25))
-        Label163.Location = New Point(569, 529)
-        Label163.Name = "Label163"
-        Label163.Size = New Size(181, 30)
-        Label163.TabIndex = 233
-        Label163.Text = "Evaluation Grade"
-        ' 
         ' FormDashboards
         ' 
         AutoScaleDimensions = New SizeF(8.0F, 20.0F)
@@ -6751,8 +6750,8 @@ Partial Class FormDashboards
         BackColor = Color.White
         ClientSize = New Size(1902, 1066)
         Controls.Add(pnlEvaluationInformation)
-        Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlStudentInformation)
+        Controls.Add(pnlInternshipInformation)
         Controls.Add(pnlHome)
         Controls.Add(pnlCompanyContactInformation)
         Controls.Add(pnlCompanyInformation)
@@ -6815,6 +6814,7 @@ Partial Class FormDashboards
         pnlEvaluationInformation.PerformLayout()
         pnlAddNewInternshipEvaluationRecord.ResumeLayout(False)
         pnlAddNewInternshipEvaluationRecord.PerformLayout()
+        CType(nudEvaluationGrade, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvEvaluationFiles5, ComponentModel.ISupportInitialize).EndInit()
         CType(dgvEvaluationLogs5, ComponentModel.ISupportInitialize).EndInit()
         pnlCompanyInformation.ResumeLayout(False)
@@ -6873,7 +6873,6 @@ Partial Class FormDashboards
         pnlPending.PerformLayout()
         Panel17.ResumeLayout(False)
         Panel17.PerformLayout()
-        CType(nudEvaluationGrade, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
     Friend WithEvents btnHome As RoundedButton
@@ -7014,7 +7013,6 @@ Partial Class FormDashboards
     Friend WithEvents pnlEvaluationInformation As Panel
     Friend WithEvents pnlAddNewInternshipEvaluationRecord As roundedpanel
     Friend WithEvents Label64 As Label
-    Friend WithEvents txtFacultyID6 As TextBox
     Friend WithEvents Label65 As Label
     Friend WithEvents Label68 As Label
     Friend WithEvents Label69 As Label
@@ -7351,5 +7349,6 @@ Partial Class FormDashboards
     Friend WithEvents txtFNameUpdateInternship As TextBox
     Friend WithEvents Label163 As Label
     Friend WithEvents nudEvaluationGrade As NumericUpDown
+    Friend WithEvents cmbFaculty6 As ComboBox
 
 End Class

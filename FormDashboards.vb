@@ -121,6 +121,7 @@ Public Class FormDashboards
         ' 3. APPLY STYLE (COLUMNS EXIST NA)
         dgvInternshipFiles4Styles(dgvInternshipFiles4)
 
+
         'FOR CMB HOVER
 
         For Each cmb As ComboBox In {cmbGender2, cmbGender3,
@@ -128,7 +129,7 @@ Public Class FormDashboards
                                      cmbDepartment2, cmbDepartment3,
                                      cmbCourse2, cmbCourse3,
                                      cmbCompanyInternship, cmbCompanyContactInternship,
-                                     cmbStatusUpdateInternship}
+                                     cmbStatusUpdateInternship, cmbStatus6}
             cmb.DrawMode = DrawMode.OwnerDrawFixed
             AddHandler cmb.DrawItem, AddressOf DrawComboItem
 
@@ -186,39 +187,105 @@ Public Class FormDashboards
 
     Private Sub loadStudentRecord()
         Dim dt As DataTable = loadTable("SELECT 
-                                                s.student_id AS 'Student ID',
-                                                s.first_name AS 'First Name',
-                                                s.last_name AS 'Last Name',
-                                                s.gender AS 'Gender',
-                                                s.section_name AS 'Section',
-                                                s.contact_no AS 'Contact Number',
-                                                s.email AS 'Email',
-                                                d.department_name AS 'Department',
-                                                c.course_name AS 'Course'
-                                                FROM student s
-                                                INNER JOIN department d ON s.department_id = d.department_id
-                                                INNER JOIN course c ON s.course_id = c.course_id;"
-                                               )
+                                        s.student_id AS 'Student ID',
+                                        s.first_name AS 'First Name',
+                                        s.last_name AS 'Last Name',
+                                        s.gender AS 'Gender',
+                                        s.section_name AS 'Section',
+                                        s.contact_no AS 'Contact Number',
+                                        s.email AS 'Email',
+                                        d.department_name AS 'Department',
+                                        c.course_name AS 'Course'
+                                      FROM student s
+                                      INNER JOIN department d ON s.department_id = d.department_id
+                                      INNER JOIN course c ON s.course_id = c.course_id;")
 
-        If Not dt.Columns.Contains("Hidden") Then
-            dt.Columns.Add("Hidden", GetType(Boolean))
-        End If
-
-        ' Default all rows to not hidden
+        ' Add Hidden column if not exists
+        If Not dt.Columns.Contains("Hidden") Then dt.Columns.Add("Hidden", GetType(Boolean))
         For Each row As DataRow In dt.Rows
             row("Hidden") = False
         Next
 
-        'Styles for dgv
-        dgvStudentFilesStyles(dgvStudentFiles, dt)
+        ' Column widths dictionary
+        Dim widths As New Dictionary(Of String, Integer) From {
+        {"Student ID", 120},
+        {"First Name", 200},
+        {"Last Name", 200},
+        {"Gender", 150},
+        {"Section", 200},
+        {"Contact Number", 150},
+        {"Email", 350},
+        {"Department", 350},
+        {"Course", 350}
+    }
+
+        ' Apply styling & hover
+        DGVHelper.BindAndStyleDGV(dgvStudentFiles, dt, widths)
+        DGVHelper.BindAndStyleDGV(dgvStudentSearch, dt, widths)
 
     End Sub
 
+    'FOR COLUMNS STYLES INTERNSHIPS
+    Private Sub dgvInternshipFiles4Styles(dgv As DataGridView)
+
+        If dgv.Columns.Count = 0 Then Exit Sub  ' ← Prevent crash
+
+        dgv.Columns("Internship ID").Width = 170
+        dgv.Columns("First Name").Width = 200
+        dgv.Columns("Last Name").Width = 200
+        dgv.Columns("Company Name").Width = 300
+        dgv.Columns("Supervisor Last Name").Width = 200
+        dgv.Columns("Supervisor Contact").Width = 150
+        dgv.Columns("Start_Date").Width = 170
+        dgv.Columns("End_Date").Width = 170
+        dgv.Columns("Status").Width = 150
+
+        dgv.EnableHeadersVisualStyles = False
+        dgv.AdvancedColumnHeadersBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None
+
+        With dgvInternshipFiles4
+            .EnableHeadersVisualStyles = False
+            .RowHeadersDefaultCellStyle.BackColor = Color.MintCream   ' Palitan ng gusto mong kulay
+            .RowHeadersDefaultCellStyle.SelectionBackColor = Color.LightYellow
+            .RowHeadersWidth = 20
+        End With
+
+
     End Sub
 
-    'Search Student Style DGV
-    Private Sub dgvStudentSearchsStyles(dgv As DataGridView)
+    'FOR HOVER EFFECT DGVINTERNSHIP 
 
+
+    Private Sub dgvInternshipFiles4_CellMouseEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInternshipFiles4.CellMouseEnter
+        If e.RowIndex >= 0 Then
+
+            ' Ibabalik yung last row sa original color
+            If lastRowInternship >= 0 Then
+                dgvInternshipFiles4.Rows(lastRowInternship).DefaultCellStyle.BackColor = Color.White
+
+            End If
+
+            ' Highlight current hovered row
+            dgvInternshipFiles4.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Honeydew
+
+            lastRowInternship = e.RowIndex
+        End If
+    End Sub
+
+    Private Sub dgvInternshipFiles_CellMouseLeave(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInternshipFiles4.CellMouseLeave
+        If lastRowInternship >= 0 Then
+            dgvInternshipFiles4.Rows(lastRowInternship).DefaultCellStyle.BackColor = Color.White
+        End If
+    End Sub
+
+    Private Sub dgvInternshipFiles4_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgvStudentFiles.DataBindingComplete
+
+        dgvInternshipFiles4.ClearSelection()
+        dgvInternshipFiles4.CurrentCell = Nothing
+        Me.ActiveControl = Nothing
+
+
+    End Sub
     Private Sub loadInternRecord()
         'Dim dt As DataTable = loadTable("SELECT * FROM vinternship_record") use this to hide the pending
         Dim dt As DataTable = loadTable("SELECT * FROM vall_internship")
@@ -373,6 +440,8 @@ Public Class FormDashboards
         hidePanel()
         pnlHome.Show()
         displayCount()
+
+
     End Sub
 
     Private Sub btnStudents_Click(sender As Object, e As EventArgs) Handles btnStudents.Click
@@ -381,6 +450,9 @@ Public Class FormDashboards
         lblTotalRecords1.Text = countStudentRecord()
         loadStudentRecord()
         pnlHome.Hide()
+
+        ' Clear DataGridView initially
+        dgvStudentSearch.DataSource = Nothing
     End Sub
     'BUTTON HOVER
 
@@ -621,17 +693,29 @@ Public Class FormDashboards
 
     Private Sub btnSearch1_Click(sender As Object, e As EventArgs) Handles btnSearch1.Click
         If txtSearchStudentID1.Text = "" Then
-            MessageBox.Show("Please Enter Student ID",
-                                     "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Please Enter Student ID", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        dgvStudentSearch.DataSource = searchStudentTable(txtSearchStudentID1.Text.Trim())
+        Dim dt As DataTable = searchStudentTable(txtSearchStudentID1.Text.Trim())
 
-        'Styles for dgv
-        dgvStudentSearchsStyles(dgvStudentSearch)
+        ' Bind & style only when search button is pressed
+        Dim widths As New Dictionary(Of String, Integer) From {
+            {"Student ID", 120},
+            {"First Name", 200},
+            {"Last Name", 200},
+            {"Gender", 150},
+            {"Section", 200},
+            {"Contact Number", 150},
+            {"Email", 350},
+            {"Department", 350},
+            {"Course", 350}
+        }
 
+        DGVHelper.BindAndStyleDGV(dgvStudentSearch, dt, widths)
     End Sub
+
+
     'BUTTON HOVER
     'BUTTON SEARCH 1 HOVER STUDENTS
     Private Sub btnSearch1_MouseEnter(sender As Object, e As EventArgs) Handles btnSearch1.MouseEnter
@@ -1059,31 +1143,44 @@ Public Class FormDashboards
     ' Private Sub pnlEvaluationLogs_Paint(sender As Object, e As PaintEventArgs) Handles pnlEvaluationLogs.Paint
 
     ' End Sub
+    Private Sub txtSearchID5_TextChanged(sender As Object, e As EventArgs) Handles txtSearchID5.TextChanged
 
+    End Sub
 
     Private Sub btnSearch5_Click(sender As Object, e As EventArgs) Handles btnSearch5.Click
         Dim searchText As String = txtSearchID5.Text.Trim()
 
-        If searchText = "" Then
+        ' Check if search textbox is empty
+        If String.IsNullOrWhiteSpace(searchText) Then
             MessageBox.Show("Please enter a value to search.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            txtSearchID5.Focus()
             Exit Sub
         End If
 
+        ' Perform search (case-insensitive)
         Dim dt As DataTable = searchEvaluationTable(searchText)
 
+        ' Handle no results
         If dt.Rows.Count = 0 Then
             MessageBox.Show("No matching records found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             dgvEvaluationLogs5.DataSource = Nothing
             Exit Sub
         End If
 
+        ' Bind DataTable to DataGridView
         dgvEvaluationLogs5.DataSource = dt
 
-        ' Optional: DataGridView settings
+        ' DataGridView settings
         dgvEvaluationLogs5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvEvaluationLogs5.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvEvaluationLogs5.MultiSelect = False
         dgvEvaluationLogs5.ReadOnly = True
+        dgvEvaluationLogs5.AllowUserToAddRows = False  ' Remove blinking asterisk
+
+        ' Optional: select first row
+        dgvEvaluationLogs5.ClearSelection()
+        dgvEvaluationLogs5.Rows(0).Selected = True
+        dgvEvaluationLogs5.FirstDisplayedScrollingRowIndex = 0
     End Sub
 
     Private Sub dgvEvaluationLogs5_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEvaluationLogs5.CellContentClick
@@ -1128,7 +1225,7 @@ Public Class FormDashboards
 
     End Sub
 
-    Private Sub txtFacultyID6_TextChanged(sender As Object, e As EventArgs) Handles txtFacultyID6.TextChanged
+    Private Sub txtFacultyID6_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -1150,50 +1247,88 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnAdd6_Click(sender As Object, e As EventArgs) Handles btnAdd6.Click
+
+        ' ----------------------
         ' Validate required fields
+        ' ----------------------
         If String.IsNullOrWhiteSpace(txtInternshipID6.Text) OrElse
        String.IsNullOrWhiteSpace(txtEvaluationReport6.Text) OrElse
-       cmbStatus6.Text = "" Then
+       cmbStatus6.SelectedIndex = -1 OrElse
+       cmbFaculty6.SelectedIndex = -1 Then
 
             MessageBox.Show("Please complete all required fields.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        ' Confirm add
+        ' ----------------------
+        ' Confirm Add
+        ' ----------------------
         Dim result = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If result = DialogResult.No Then
-            Exit Sub
-        End If
+        If result = DialogResult.No Then Exit Sub
 
-        ' Get grade (optional)
+        ' ----------------------
+        ' Generate evaluation_id
+        ' ----------------------
+        Dim newEvaluationID As String = GenerateEvaluationID()
+        txtEvaluationID6.Text = newEvaluationID  ' show in textbox (read-only)
+
+        ' ----------------------
+        ' Get optional grade
+        ' ----------------------
         Dim gradeValue As Decimal? = Nothing
         If nudEvaluationGrade.Value > 0 Then
             gradeValue = nudEvaluationGrade.Value
         End If
 
-        ' Call function to save to database
+        ' ----------------------
+        ' Get selected Faculty ID
+        ' ----------------------
+        Dim selectedFaculty As String = cmbFaculty6.SelectedItem.ToString()
+
+        ' ----------------------
+        ' Insert into database
+        ' ----------------------
         Dim success As Boolean = AddEvaluationRecord(
-                                                        txtInternshipID6.Text.Trim(),
-                                                        txtEvaluationReport6.Text.Trim(),
-                                                         cmbStatus6.Text,
-             If(nudEvaluationGrade.Value > 0, nudEvaluationGrade.Value, CType(Nothing, Decimal?))
-)
+                                txtInternshipID6.Text.Trim(),
+                                txtEvaluationReport6.Text.Trim(),
+                                cmbStatus6.Text,
+                                gradeValue,
+                                selectedFaculty,
+                                newEvaluationID) ' pass generated ID if your function supports it
 
         If success Then
             MessageBox.Show("Evaluation added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+            ' ----------------------
+            ' Reload DataGridView and select last row
+            ' ----------------------
             LoadEvaluationDGV()
+            dgvEvaluationFiles5.AllowUserToAddRows = False
 
+            If dgvEvaluationFiles5.Rows.Count > 0 Then
+                Dim lastIndex As Integer = dgvEvaluationFiles5.Rows.Count - 1
+                dgvEvaluationFiles5.ClearSelection()
+                dgvEvaluationFiles5.Rows(lastIndex).Selected = True
+                dgvEvaluationFiles5.FirstDisplayedScrollingRowIndex = lastIndex
+            End If
+
+            ' ----------------------
             ' Clear form for next entry
-            txtEvaluationID6.Text = ""    ' auto-generated
+            ' ----------------------
+            txtEvaluationID6.Text = GenerateEvaluationID() ' generate next ID
             txtInternshipID6.Clear()
             txtEvaluationReport6.Clear()
             cmbStatus6.SelectedIndex = -1
             nudEvaluationGrade.Value = 0
+            cmbFaculty6.SelectedIndex = -1
 
+            ' ----------------------
+            ' Show main panel, hide add panel
+            ' ----------------------
             pnlInternshipInformation.Show()
             pnlAddNewInternshipEvaluationRecord.Hide()
         End If
+
     End Sub
 
     'Edit intern eval record
@@ -2384,13 +2519,42 @@ Public Class FormDashboards
         loadedInternshipID = ""
     End Sub
 
+
     'EVALUATION DGV
+
+    Private Sub loadEvaluationRecord()
+
+        Dim evalWidths As New Dictionary(Of String, Integer) From {
+    {"Evaluation ID", 120},
+    {"Internship ID", 150},
+    {"First Name", 200},
+    {"Last Name", 200},
+    {"Company Name", 300},
+    {"Grade", 100},
+    {"Evaluation Report", 250},
+    {"Faculty ID", 120}
+}
+        Dim dt As DataTable = LoadEvaluationTable()
+
+        ' Add Hidden column if not exists
+        If Not dt.Columns.Contains("Hidden") Then dt.Columns.Add("Hidden", GetType(Boolean))
+        For Each row As DataRow In dt.Rows
+            row("Hidden") = False
+        Next
+
+        ' Apply styling & hover effect using DGVHelper
+        DGVHelper.BindAndStyleDGV(dgvEvaluationFiles5, dt, evalWidths)
+    End Sub
+
+
     Private Sub LoadEvaluationDGV(Optional searchItem As String = "")
         dgvEvaluationFiles5.DataSource = LoadEvaluationTable()
         dgvEvaluationFiles5.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvEvaluationFiles5.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvEvaluationFiles5.MultiSelect = False
         dgvEvaluationFiles5.ReadOnly = True
+        dgvEvaluationFiles5.AllowUserToAddRows = False  ' <- dito mawawala yung asterisk
+        txtEvaluationID6.Text = GenerateEvaluationID()
     End Sub
 
     'EVALUATION ADD
@@ -2412,6 +2576,9 @@ Public Class FormDashboards
 
     Private Sub pnlAddNewInternshipEvaluationRecord_VisibleChanged(sender As Object, e As EventArgs) Handles pnlAddNewInternshipEvaluationRecord.VisibleChanged
         If pnlAddNewInternshipEvaluationRecord.Visible Then
+            LoadStatusOptions()
+            LoadFacultyCombo()
+            cmbStatus6.SelectedIndex = -1 ' no preselected
             txtEvaluationID6.Text = GenerateEvaluationID()
             txtEvaluationID6.ReadOnly = True
             txtInternshipID6.Clear()
@@ -2420,6 +2587,34 @@ Public Class FormDashboards
         End If
     End Sub
 
+    Private Sub LoadStatusOptions()
+        cmbStatus6.Items.Clear()
+        cmbStatus6.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbStatus6.Items.Add("Passed")
+        cmbStatus6.Items.Add("Failed")
+        cmbStatus6.Items.Add("Incomplete")
+        cmbStatus6.SelectedIndex = -1
+
+    End Sub
+    Private Sub LoadFacultyCombo()
+        cmbFaculty6.Items.Clear()
+
+        Try
+            Using con As MySqlConnection = GetConnection()
+                con.Open()
+                Using cmd As New MySqlCommand("SELECT faculty_id FROM faculty ORDER BY faculty_id", con)
+                    Using reader = cmd.ExecuteReader()
+                        While reader.Read()
+                            cmbFaculty6.Items.Add(reader("faculty_id").ToString())
+                        End While
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+    End Sub
 
 
 
