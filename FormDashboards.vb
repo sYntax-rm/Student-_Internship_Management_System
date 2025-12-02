@@ -303,12 +303,15 @@ Public Class FormDashboards
 
     End Sub
 
-    Private Function validInputbox(ParamArray boxes()) As Boolean
+    Private Function validInputbox(ParamArray boxes() As TextBox) As Boolean
         For Each txt In boxes
-            If txt = "" Then
+            If txt.Text = "" Then
                 MessageBox.Show("Please Fill Out The Boxes", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
             End If
         Next
+
+        Return True
     End Function
 
 
@@ -1953,7 +1956,7 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnAdd15_Click(sender As Object, e As EventArgs) Handles btnAdd15.Click
-        If validInputbox(txtFName15, txtLName15, txtContactNumber15, txtPosition15) Then
+        If Not validInputbox(txtFName15, txtLName15, txtContactNumber15, txtPosition15) Then
             Exit Sub
         End If
 
