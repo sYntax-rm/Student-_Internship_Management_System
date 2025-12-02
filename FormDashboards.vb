@@ -303,6 +303,14 @@ Public Class FormDashboards
 
     End Sub
 
+    Private Function validInputbox(ParamArray boxes()) As Boolean
+        For Each txt In boxes
+            If txt = "" Then
+                MessageBox.Show("Please Fill Out The Boxes", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+        Next
+    End Function
+
 
     Private Function validStudentInputBx(email As TextBox, ParamArray txtBoxes() As TextBox) As Boolean
 
@@ -1751,8 +1759,6 @@ Public Class FormDashboards
         pnlEditCompanyCompanyContact.BringToFront()
 
 
-
-
     End Sub
 
     Private Sub btnDelete11_Click(sender As Object, e As EventArgs) Handles btnDelete11.Click
@@ -1935,25 +1941,6 @@ Public Class FormDashboards
 
     '  End Sub
 
-
-
-    Private Sub txtFName15_TextChanged(sender As Object, e As EventArgs) Handles txtFName15.TextChanged
-
-    End Sub
-
-    Private Sub txtLName15_TextChanged(sender As Object, e As EventArgs) Handles txtLName15.TextChanged
-
-    End Sub
-
-    Private Sub txtPosition15_TextChanged(sender As Object, e As EventArgs) Handles txtPosition15.TextChanged
-
-    End Sub
-
-
-    Private Sub txtContactNumber15_TextChanged(sender As Object, e As EventArgs) Handles txtContactNumber15.TextChanged
-
-    End Sub
-
     Private Sub btnCancel15_Click(sender As Object, e As EventArgs) Handles btnCancel15.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to cancel?", "Confirm Cancel", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
@@ -1966,6 +1953,10 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnAdd15_Click(sender As Object, e As EventArgs) Handles btnAdd15.Click
+        If validInputbox(txtFName15, txtLName15, txtContactNumber15, txtPosition15) Then
+            Exit Sub
+        End If
+
         Dim result As DialogResult = MessageBox.Show("Do you want to add this record?", "Confirm Add", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If result = DialogResult.Yes Then
@@ -1973,15 +1964,13 @@ Public Class FormDashboards
             pnlAddNewFacultyRecord.Hide()
         End If
 
+
+
     End Sub
 
     'Edit faculty Record
 
     Private Sub pnlEditFacultyRecord_Paint(sender As Object, e As PaintEventArgs) Handles pnlEditFacultyRecord.Paint
-
-    End Sub
-
-    Private Sub txtSearchID16_TextChanged(sender As Object, e As EventArgs) Handles txtSearchID16.TextChanged
 
     End Sub
 
