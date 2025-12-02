@@ -629,5 +629,290 @@ Module Query
         Return dataTable
     End Function
 
+    Public Function countFaculty() As String
+        Dim result As Integer
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("SELECT COUNT(*) 
+                                               FROM faculty;", con)
+                    con.Open()
+
+                    result = CInt(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return result.ToString()
+    End Function
+
+    Public Function countEvaluation() As String
+        Dim result As Integer
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("SELECT COUNT(*) 
+                                               FROM internship_evaluation;", con)
+                    con.Open()
+
+                    result = CInt(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return result.ToString()
+    End Function
+
+    'IRIS CODE FOR COMPANY
+    Public Function LoadCompanyTable() As DataTable
+        Dim dt As New DataTable()
+        Dim query As String = "
+     SELECT 
+         company_id AS 'Company ID',
+         company_name AS 'Company Name',
+         company_address AS 'Company Address',
+         industry_type AS 'Industry Type',
+         company_contact_no AS 'Contact Number',
+         company_email AS 'Email'
+     FROM company
+     ORDER BY company_id ASC
+ "
+
+        Using con As MySqlConnection = GetConnection()
+            Using cmd As New MySqlCommand(query, con)
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        End Using
+
+        Return dt
+    End Function
+
+    Public Function SearchCompany(searchText As String) As DataTable
+        Dim dt As New DataTable()
+
+        Dim query As String = "
+     SELECT 
+         c.company_id AS 'Company ID',
+         c.company_name AS 'Company Name',
+         c.company_address AS 'Company Address',
+         c.industry_type AS 'Industry Type',
+         c.company_contact_no AS 'Contact No',
+         c.company_email AS 'Email'
+     FROM company c
+     WHERE UPPER(c.company_id) = UPPER(@idSearch)
+        OR UPPER(c.company_name) LIKE CONCAT('%', UPPER(@nameSearch), '%')
+ "
+
+        Using con As MySqlConnection = GetConnection()
+            Using cmd As New MySqlCommand(query, con)
+
+                cmd.Parameters.AddWithValue("@idSearch", searchText)
+                cmd.Parameters.AddWithValue("@nameSearch", searchText)
+
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        End Using
+
+        Return dt
+    End Function
+
+    Public Function countCompany() As String
+        Dim result As Integer
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("SELECT COUNT(*) 
+                                               FROM company;", con)
+                    con.Open()
+
+                    result = CInt(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return result.ToString()
+    End Function
+
+    Public Function LoadCompanyContacts() As DataTable
+        Dim dt As New DataTable()
+
+        Dim query As String = "
+        SELECT
+            cc.contact_id AS 'Contact ID',
+            cc.company_id AS 'Company ID',
+            c.company_name AS 'Company Name',
+            cc.contact_first_name AS 'Contact First Name',
+            cc.contact_last_name AS 'Contact Last Name',
+            cc.contact_position AS 'Position',
+            cc.contact_contact_no AS 'Contact No',
+            cc.email AS 'Email',
+            s.first_name AS 'Student First Name',
+            s.last_name AS 'Student Last Name',
+            cc.grade_student AS 'Grade'
+        FROM company_contact cc
+        LEFT JOIN company c ON cc.company_id = c.company_id
+        LEFT JOIN student s ON cc.student_id = s.student_id
+        ORDER BY cc.contact_id ASC
+    "
+
+        Using con As MySqlConnection = GetConnection()
+            Using cmd As New MySqlCommand(query, con)
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        End Using
+
+        Return dt
+    End Function
+
+    Public Function SearchCompanyContacts(searchText As String) As DataTable
+        Dim dt As New DataTable()
+
+        Dim query As String = "
+        SELECT
+            cc.contact_id AS 'Contact ID',
+            cc.company_id AS 'Company ID',
+            c.company_name AS 'Company Name',
+            cc.contact_first_name AS 'Contact First Name',
+            cc.contact_last_name AS 'Contact Last Name',
+            cc.contact_position AS 'Position',
+            cc.contact_contact_no AS 'Contact No',
+            cc.email AS 'Email',
+            s.first_name AS 'Student First Name',
+            s.last_name AS 'Student Last Name',
+            cc.grade_student AS 'Grade'
+        FROM company_contact cc
+        LEFT JOIN company c ON cc.company_id = c.company_id
+        LEFT JOIN student s ON cc.student_id = s.student_id
+        WHERE 
+            UPPER(cc.contact_id) = UPPER(@exactSearch)
+            OR UPPER(c.company_name) LIKE CONCAT('%', UPPER(@likeSearch), '%')
+            OR UPPER(cc.contact_first_name) LIKE CONCAT('%', UPPER(@likeSearch), '%')
+            OR UPPER(cc.contact_last_name) LIKE CONCAT('%', UPPER(@likeSearch), '%')
+            OR UPPER(s.first_name) LIKE CONCAT('%', UPPER(@likeSearch), '%')
+            OR UPPER(s.last_name) LIKE CONCAT('%', UPPER(@likeSearch), '%')
+            OR UPPER(cc.grade_student) LIKE CONCAT('%', UPPER(@likeSearch), '%')
+        ORDER BY cc.contact_id ASC
+    "
+
+        Using con As MySqlConnection = GetConnection()
+            Using cmd As New MySqlCommand(query, con)
+
+                cmd.Parameters.AddWithValue("@exactSearch", searchText)
+                cmd.Parameters.AddWithValue("@likeSearch", searchText)
+
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        End Using
+
+        Return dt
+    End Function
+    Public Function countCompanyContact() As String
+        Dim result As Integer
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("SELECT COUNT(*) 
+                                               FROM company_contact;", con)
+                    con.Open()
+
+                    result = CInt(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return result.ToString()
+    End Function
+    Public Function LoadVisitLogs() As DataTable
+        Dim dt As New DataTable()
+
+        Dim query As String = "
+        SELECT
+            v.visit_id AS 'Visit ID',
+            v.internship_id AS 'Internship ID',
+            v.faculty_id AS 'Faculty ID',
+            f.faculty_first_name AS 'Faculty First Name',
+            f.faculty_last_name AS 'Faculty Last Name',
+            v.visit_date AS 'Visit Date',
+            IFNULL(v.remarks, 'No Remarks') AS 'Remarks',
+            v.score AS 'Score'
+        FROM visitlog v
+        LEFT JOIN faculty f ON v.faculty_id = f.faculty_id
+        ORDER BY v.visit_id ASC
+    "
+
+        Using con As MySqlConnection = GetConnection()
+            Using cmd As New MySqlCommand(query, con)
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        End Using
+
+        Return dt
+    End Function
+
+    Public Function SearchVisitLogs(searchText As String) As DataTable
+        Dim dt As New DataTable()
+
+        Dim query As String = "
+        SELECT
+            v.visit_id AS 'Visit ID',
+            v.internship_id AS 'Internship ID',
+            v.faculty_id AS 'Faculty ID',
+            f.faculty_first_name AS 'Faculty First Name',
+            f.faculty_last_name AS 'Faculty Last Name',
+            v.visit_date AS 'Visit Date',
+            IFNULL(v.remarks, 'No Remarks') AS 'Remarks',
+            v.score AS 'Score'
+        FROM visitlog v
+        LEFT JOIN faculty f ON v.faculty_id = f.faculty_id
+        WHERE 
+            UPPER(v.visit_id) = UPPER(@exactSearch)
+            OR UPPER(v.internship_id) LIKE CONCAT('%', UPPER(@likeSearch), '%')
+            OR UPPER(f.faculty_first_name) LIKE CONCAT('%', UPPER(@likeSearch), '%')
+            OR UPPER(f.faculty_last_name) LIKE CONCAT('%', UPPER(@likeSearch), '%')
+            OR UPPER(v.remarks) LIKE CONCAT('%', UPPER(@likeSearch), '%')
+        ORDER BY v.visit_id ASC
+    "
+
+        Using con As MySqlConnection = GetConnection()
+            Using cmd As New MySqlCommand(query, con)
+
+                cmd.Parameters.AddWithValue("@exactSearch", searchText)
+                cmd.Parameters.AddWithValue("@likeSearch", searchText)
+
+                Using adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            End Using
+        End Using
+
+        Return dt
+    End Function
+
+    Public Function countVisitlog() As String
+        Dim result As Integer
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand("SELECT COUNT(*) 
+                                               FROM visitlog;", con)
+                    con.Open()
+
+                    result = CInt(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return result.ToString()
+    End Function
 
 End Module

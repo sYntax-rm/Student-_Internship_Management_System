@@ -142,9 +142,12 @@ Public Class FormDashboards
         cmbCompanyInternship.DropDownStyle = ComboBoxStyle.DropDown
         cmbCompanyContactInternship.DropDownStyle = ComboBoxStyle.DropDown
 
+        'LOAD OF DGV FOR COMPANY
+        LoadCompanyDataToDGV()
 
+        LoadCompanyContactsTable()
 
-
+        LoadVisitLogTable()
     End Sub
 
 
@@ -303,12 +306,14 @@ Public Class FormDashboards
 
     End Sub
 
-    Private Function validInputbox(ParamArray boxes()) As Boolean
-        For Each txt In boxes
-            If txt = "" Then
+    Private Function validInputbox(ParamArray boxes() As TextBox) As Boolean
+        For Each txt As TextBox In boxes
+            If txt.Text.Trim() = "" Then
                 MessageBox.Show("Please Fill Out The Boxes", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
             End If
         Next
+        Return True
     End Function
 
 
@@ -502,6 +507,7 @@ Public Class FormDashboards
     Private Sub btnInternships_Click(sender As Object, e As EventArgs) Handles btnInternships.Click
         hidePanel()
         pnlHome.Hide()
+        lblTotalRecords4.Text = countIntern()
         pnlInternshipInformation.Show()
         loadInternRecord()
     End Sub
@@ -534,6 +540,7 @@ Public Class FormDashboards
     Private Sub btnEvaluation_Click(sender As Object, e As EventArgs) Handles btnEvaluation.Click
         hidePanel()
         pnlEvaluationInformation.Show()
+        lblTotalRecords5.Text = countEvaluation()
         pnlHome.Hide()
         LoadEvaluationDGV()
     End Sub
@@ -566,6 +573,8 @@ Public Class FormDashboards
     Private Sub btnCompany_Click(sender As Object, e As EventArgs) Handles btnCompany.Click
         hidePanel()
         pnlCompanyInformation.Show()
+        lblTotalRecords8.Text = countCompany()
+        lblTotalRecords11.Text = countCompanyContact()
         pnlHome.Hide()
     End Sub
 
@@ -596,6 +605,7 @@ Public Class FormDashboards
     Private Sub btnFaculty_Click(sender As Object, e As EventArgs) Handles btnFaculty.Click
         hidePanel()
         pnlFacultyInformation.Show()
+        lblTotalRecords14.Text = countFaculty()
         pnlHome.Hide()
         loadFacultyRecord()
     End Sub
@@ -628,6 +638,7 @@ Public Class FormDashboards
     Private Sub btnVisitLog_Click(sender As Object, e As EventArgs) Handles btnVisitLog.Click
         hidePanel()
         pnlVisitInformation.Show()
+        lblTotalRecords17.Text = countVisitlog()
         pnlHome.Hide()
     End Sub
 
@@ -1721,7 +1732,8 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnSearch11_Click(sender As Object, e As EventArgs) Handles btnSearch11.Click
-
+        Dim searchText As String = txtSearchID11.Text.Trim()
+        dgvCompanyContactLogs11.DataSource = SearchCompanyContacts(searchText)
     End Sub
 
     Private Sub dgvCompanyContactLogs11_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvCompanyContactLogs11.CellContentClick
@@ -2033,7 +2045,8 @@ Public Class FormDashboards
     End Sub
 
     Private Sub btnSearch17_Click(sender As Object, e As EventArgs) Handles btnSearch17.Click
-
+        Dim searchText As String = txtSearchID17.Text.Trim()
+        dgvVisitLogs17.DataSource = SearchVisitLogs(searchText)
     End Sub
 
     Private Sub dgvVisitLogs17_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvVisitLogs17.CellContentClick
@@ -2801,6 +2814,143 @@ Public Class FormDashboards
         Me.ActiveControl = Nothing
 
 
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Dim filePath As String = "C:/C/Evaluation_Summary_Form.docx"
+
+        If IO.File.Exists(filePath) Then
+            Process.Start(New ProcessStartInfo() With {
+                .FileName = filePath,
+                .UseShellExecute = True
+            })
+        Else
+            MessageBox.Show("Word file not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked_1(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Dim filePath As String = "C:/C/Evaluation_Summary_Form.docx"
+
+        If IO.File.Exists(filePath) Then
+            Process.Start(New ProcessStartInfo() With {
+                .FileName = filePath,
+                .UseShellExecute = True
+            })
+        Else
+            MessageBox.Show("Word file not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub lblTotalRecords1_Click(sender As Object, e As EventArgs) Handles lblTotalRecords1.Click
+
+    End Sub
+
+    Private Sub dgvStudentFiles_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentFiles.CellContentClick
+
+    End Sub
+
+    Private Sub dgvStudentSearch_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvStudentSearch.CellContentClick
+
+    End Sub
+
+    Private Sub Panel17_Paint(sender As Object, e As PaintEventArgs) Handles Panel17.Paint
+
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked_2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1_LinkClicked_2.LinkClicked
+        Dim filePath = "C:/C/Evaluation_Summary_Form.docx"
+
+        If IO.File.Exists(filePath) Then
+            Process.Start(New ProcessStartInfo() With {
+                .FileName = filePath,
+                .UseShellExecute = True
+            })
+        Else
+            MessageBox.Show("Word file not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked_3(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Dim filePath = "C:/C/Evaluation_Summary_Form.pdf"
+
+        If Not IO.File.Exists(filePath) Then
+            MessageBox.Show("PDF file not found!" & vbCrLf & "Please check the path: " & filePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
+        End If
+
+        Try
+            ' Buksan ang PDF gamit ang default viewer
+            Dim psi As New ProcessStartInfo() With {
+            .FileName = filePath,
+            .UseShellExecute = True
+        }
+            Process.Start(psi)
+        Catch ex As Exception
+            ' Kung may error sa pagbukas ng PDF
+            MessageBox.Show("Failed to open PDF!" & vbCrLf & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub LoadCompanyDataToDGV()
+        Try
+            dgvCompanyFiles8.DataSource = LoadCompanyTable()
+            dgvCompanyFiles8.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        Catch ex As Exception
+            MessageBox.Show("Error loading company data: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnSearch8_Click(sender As Object, e As EventArgs) Handles btnSearch8.Click
+        Dim searchText As String = txtSearchID8.Text.Trim()
+
+        If searchText = "" Then
+            MessageBox.Show("Please enter Company ID or Company Name.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        Dim dt As DataTable = SearchCompany(searchText)
+
+        If dt.Rows.Count = 0 Then
+            MessageBox.Show("No results found for: " & searchText, "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            dgvCompanyLogs8.DataSource = Nothing
+            Exit Sub
+        End If
+
+        dgvCompanyLogs8.DataSource = dt
+        dgvCompanyLogs8.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+    End Sub
+
+    Private Sub LoadCompanyContactsTable()
+        Dim dt As DataTable = LoadCompanyContacts()
+
+        If dt.Rows.Count = 0 Then
+            dgvCompanyContactFiles.DataSource = Nothing
+            Exit Sub
+        End If
+
+        dgvCompanyContactFiles.DataSource = dt
+
+        dgvCompanyContactFiles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvCompanyContactFiles.RowHeadersVisible = False
+    End Sub
+
+    Private Sub LoadVisitLogTable()
+        Dim dt As DataTable = LoadVisitLogs()
+        dgvVisitLogFiles17.DataSource = dt
+
+        ' OPTIONAL formatting
+        dgvVisitLogFiles17.Columns("Visit ID").HeaderText = "Visit ID"
+        dgvVisitLogFiles17.Columns("Internship ID").HeaderText = "Internship ID"
+        dgvVisitLogFiles17.Columns("Faculty ID").HeaderText = "Faculty ID"
+        dgvVisitLogFiles17.Columns("Faculty First Name").HeaderText = "Faculty First Name"
+        dgvVisitLogFiles17.Columns("Faculty Last Name").HeaderText = "Faculty Last Name"
+        dgvVisitLogFiles17.Columns("Visit Date").HeaderText = "Visit Date"
+        dgvVisitLogFiles17.Columns("Remarks").HeaderText = "Remarks"
+        dgvVisitLogFiles17.Columns("Score").HeaderText = "Score"
+
+        dgvVisitLogFiles17.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvVisitLogFiles17.RowHeadersVisible = False
     End Sub
 
 

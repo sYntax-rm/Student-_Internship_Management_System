@@ -242,7 +242,7 @@ Partial Class FormSignup
         pnlTermsAndCondition.Controls.Add(Label11)
         pnlTermsAndCondition.Location = New Point(34, 38)
         pnlTermsAndCondition.Name = "pnlTermsAndCondition"
-        pnlTermsAndCondition.Size = New Size(911, 549)
+        pnlTermsAndCondition.Size = New Size(911, 447)
         pnlTermsAndCondition.TabIndex = 82
         ' 
         ' btnBack
