@@ -593,5 +593,41 @@ Module Query
     End Function
 
 
+    'CODE DUNGO FOR FACULTY
+    Public Function searchFacultyTable(searchItem As String) As DataTable
+        Dim dataTable As New DataTable()
+
+        Dim query As String = "SELECT
+                                f.faculty_id AS 'Faculty ID',
+                                f.faculty_first_name AS 'First Name',
+                                f.faculty_last_name AS 'Last Name',
+                                f.faculty_position AS 'position',
+                                d.department_name AS 'Department',
+                                f.faculty_contact_no AS 'Faculty Contact'
+                                FROM faculty f
+                                INNER JOIN department d ON f.department_id = d.department_id
+                                WHERE f.faculty_first_name LIKE @search OR f.faculty_last_name LIKE @search OR
+                                f.faculty_id LIKE @search;
+                                "
+
+        Try
+            Using con As MySqlConnection = GetConnection()
+                Using cmd As New MySqlCommand(query, con)
+                    con.Open()
+                    cmd.Parameters.AddWithValue("@search", "%" & searchItem & "%")
+                    Using dA As New MySqlDataAdapter(cmd)
+                        dA.Fill(dataTable)
+                    End Using
+                    con.Close()
+                End Using
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+        Return dataTable
+    End Function
+
 
 End Module

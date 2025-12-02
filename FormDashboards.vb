@@ -229,6 +229,18 @@ Public Class FormDashboards
 
     End Sub
 
+    Private Sub loadInternRecord()
+        'Dim dt As DataTable = loadTable("SELECT * FROM vinternship_record") use this to hide the pending
+        Dim dt As DataTable = loadTable("SELECT * FROM vall_internship")
+        dgvInternshipFiles4.DataSource = dt
+    End Sub
+
+
+    Private Sub loadFacultyRecord()
+        Dim dt As DataTable = loadTable("SELECT * FROM vfaculty_table")
+        dgvFacultyFiles.DataSource = dt
+    End Sub
+
     'FOR COLUMNS STYLES INTERNSHIPS
     Private Sub dgvInternshipFiles4Styles(dgv As DataGridView)
 
@@ -290,11 +302,7 @@ Public Class FormDashboards
 
 
     End Sub
-    Private Sub loadInternRecord()
-        'Dim dt As DataTable = loadTable("SELECT * FROM vinternship_record") use this to hide the pending
-        Dim dt As DataTable = loadTable("SELECT * FROM vall_internship")
-        dgvInternshipFiles4.DataSource = dt
-    End Sub
+
 
     Private Function validStudentInputBx(email As TextBox, ParamArray txtBoxes() As TextBox) As Boolean
 
@@ -581,6 +589,7 @@ Public Class FormDashboards
         hidePanel()
         pnlFacultyInformation.Show()
         pnlHome.Hide()
+        loadFacultyRecord()
     End Sub
 
     'BUTTON HOVER
@@ -1874,12 +1883,18 @@ Public Class FormDashboards
 
     '  End Sub
 
-    Private Sub txtSearchID14_TextChanged(sender As Object, e As EventArgs) Handles txtSearchID14.TextChanged
+    Private Sub txtSearchID14_TextChanged(sender As Object, e As EventArgs) Handles txtSearchFacultyID14.TextChanged
 
     End Sub
 
     Private Sub btnSearch14_Click(sender As Object, e As EventArgs) Handles btnSearch14.Click
+        If txtSearchFacultyID14.Text = "" Then
+            MessageBox.Show("Please Enter Faculty ID", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
 
+        Dim dt As DataTable = searchFacultyTable(txtSearchFacultyID14.Text.Trim())
+        dgvFacultyLogs14.DataSource = dt
     End Sub
 
     Private Sub dgvFacultyLogs14_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvFacultyLogs14.CellContentClick
@@ -1897,6 +1912,7 @@ Public Class FormDashboards
     Private Sub btnAdd14_Click(sender As Object, e As EventArgs) Handles btnAdd14.Click
         pnlAddNewFacultyRecord.Show()
         loadDepartmentComboBx(cmbDepartment15)
+        txtFacultyID15.Text = GenerateFacultyID()
     End Sub
 
     Private Sub btnEdit14_Click(sender As Object, e As EventArgs) Handles btnEdit14.Click
@@ -1919,9 +1935,7 @@ Public Class FormDashboards
 
     '  End Sub
 
-    Private Sub txtFacultyID15_TextChanged(sender As Object, e As EventArgs) Handles txtFacultyID15.TextChanged
 
-    End Sub
 
     Private Sub txtFName15_TextChanged(sender As Object, e As EventArgs) Handles txtFName15.TextChanged
 
