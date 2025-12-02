@@ -1896,6 +1896,7 @@ Public Class FormDashboards
 
     Private Sub btnAdd14_Click(sender As Object, e As EventArgs) Handles btnAdd14.Click
         pnlAddNewFacultyRecord.Show()
+        loadDepartmentComboBx(cmbDepartment15)
     End Sub
 
     Private Sub btnEdit14_Click(sender As Object, e As EventArgs) Handles btnEdit14.Click
@@ -1934,9 +1935,6 @@ Public Class FormDashboards
 
     End Sub
 
-    Private Sub txtDepartmentID15_TextChanged(sender As Object, e As EventArgs) Handles txtDepartmentID15.TextChanged
-
-    End Sub
 
     Private Sub txtContactNumber15_TextChanged(sender As Object, e As EventArgs) Handles txtContactNumber15.TextChanged
 
